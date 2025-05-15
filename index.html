@@ -211,53 +211,8 @@
     document.getElementById(sectionId).classList.add('active');
   }
 
-  const timelineData = [
-    {
-      day: "Day 1",
-      title: "Bangkok Arrival",
-      date: "June 1",
-      description: "Arrived in Bangkok and walked through the night markets.",
-      weather: "90°F, Humid with scattered clouds",
-      photos: [
-        { id: 1015, caption: "Arrival street view" },
-        { id: 1016, caption: "Local vendor" },
-        { id: 1018, caption: "Evening street scene" }
-      ]
-    },
-    {
-      day: "Day 5",
-      title: "Chiang Mai Temples",
-      date: "June 5",
-      description: "Visited Doi Suthep and explored the Old City.",
-      weather: "85°F, Sunny with light breeze",
-      photos: [
-        { id: 1020, caption: "Temple entrance" },
-        { id: 1021, caption: "View from the hill" }
-      ]
-    }
-  ];
-
   let modalIndex = 0;
   let modalPhotos = [];
-
-  const container = document.getElementById("timeline-container");
-
-  timelineData.forEach(entry => {
-    const html = `
-      <div class="timeline-entry">
-        <div class="timeline-photos">
-          ${entry.photos.map((photo, i) => `<img src="https://picsum.photos/id/${photo.id}/60/60" onclick="openModal(${JSON.stringify(entry.photos).replace(/"/g, '&quot;')}, ${i})" />`).join("")}
-          <div class="more">+${Math.max(0, 6 - entry.photos.length)} more</div>
-        </div>
-        <div class="timeline-text">
-          <h3>${entry.day}: ${entry.title}</h3>
-          <small>${entry.date}</small>
-          <p>${entry.description}</p>
-          <div class="weather">${entry.weather}</div>
-        </div>
-      </div>`;
-    container.insertAdjacentHTML("beforeend", html);
-  });
 
   function openModal(photos, index) {
     modalPhotos = photos;
@@ -289,6 +244,30 @@
     modalIndex = (modalIndex - 1 + modalPhotos.length) % modalPhotos.length;
     updateModal();
   }
+
+  fetch('timeline.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("timeline-container");
+      data.forEach(entry => {
+        const html = `
+          <div class="timeline-entry">
+            <div class="timeline-photos">
+              ${entry.photos.map((photo, i) =>
+                `<img src="https://picsum.photos/id/${photo.id}/60/60" onclick='openModal(${JSON.stringify(entry.photos).replace(/'/g, "\'")}, ${i})' />`
+              ).join("")}
+              <div class="more">+${Math.max(0, 6 - entry.photos.length)} more</div>
+            </div>
+            <div class="timeline-text">
+              <h3>${entry.day}: ${entry.title}</h3>
+              <small>${entry.date}</small>
+              <p>${entry.description}</p>
+              <div class="weather">${entry.weather}</div>
+            </div>
+          </div>`;
+        container.insertAdjacentHTML("beforeend", html);
+      });
+    });
 </script>
 
 </body>
