@@ -1,44 +1,121 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title>Southeast Asia Trip</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <style>
-        body { margin: 0; padding: 0; }
-        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-    </style>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Southeast Asia Trip</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 { margin: 0; font-size: 1.5rem; }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 5rem 1rem 2rem;
+    }
+    #map { height: 500px; width: 100%; }
+    #visited ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #visited li {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    #comments form {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+    #comments textarea, #comments input {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+    }
+  </style>
 </head>
 <body>
-<div id="map"></div>
+
+<header>
+  <h1>Southeast Asia Trip</h1>
+  <nav>
+    <a href="#map-section">Map</a>
+    <a href="#visited">Visited</a>
+    <a href="#comments">Comments</a>
+  </nav>
+</header>
+
+<section id="map-section">
+  <div id="map"></div>
+</section>
+
+<section id="visited">
+  <h2>Visited</h2>
+  <ul>
+    <li><strong>June 1:</strong> Arrive in Bangkok</li>
+    <li><strong>June 5:</strong> Fly to Chiang Mai</li>
+    <li><strong>June 10:</strong> Bus to Pai</li>
+    <li><strong>June 15:</strong> Chiang Rai and on to Laos</li>
+    <!-- Add more entries as your trip progresses -->
+  </ul>
+</section>
+
+<section id="comments">
+  <h2>Comments</h2>
+  <form>
+    <input type="text" placeholder="Your name" required />
+    <textarea rows="4" placeholder="Leave a message..." required></textarea>
+    <input type="submit" value="Send" />
+  </form>
+</section>
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
-    const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v12',
-        center: [100.5018, 13.7563], // Bangkok
-        zoom: 5
-    });
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [100.5018, 13.7563],
+    zoom: 5
+  });
 
-    const locations = [
-        { name: "Bangkok", coords: [100.5018, 13.7563] },
-        { name: "Chiang Mai", coords: [98.9817, 18.7961] },
-        { name: "Pai", coords: [98.4368, 19.3586] },
-        { name: "Chiang Rai", coords: [99.8325, 19.9105] },
-        { name: "Luang Prabang", coords: [102.1350, 19.8833] },
-        { name: "Hanoi", coords: [105.8544, 21.0285] },
-        { name: "Siem Reap", coords: [103.8554, 13.3633] },
-        { name: "Phnom Penh", coords: [104.9174, 11.5449] }
-    ];
+  const locations = [
+    { name: "Bangkok", coords: [100.5018, 13.7563] },
+    { name: "Chiang Mai", coords: [98.9817, 18.7961] },
+    { name: "Pai", coords: [98.4368, 19.3586] },
+    { name: "Chiang Rai", coords: [99.8325, 19.9105] },
+    { name: "Luang Prabang", coords: [102.1350, 19.8833] },
+    { name: "Hanoi", coords: [105.8544, 21.0285] },
+    { name: "Siem Reap", coords: [103.8554, 13.3633] },
+    { name: "Phnom Penh", coords: [104.9174, 11.5449] }
+  ];
 
-    for (const place of locations) {
-        new mapboxgl.Marker().setLngLat(place.coords).setPopup(
-            new mapboxgl.Popup().setText(place.name)
-        ).addTo(map);
-    }
+  for (const place of locations) {
+    new mapboxgl.Marker().setLngLat(place.coords).setPopup(
+      new mapboxgl.Popup().setText(place.name)
+    ).addTo(map);
+  }
 </script>
+
 </body>
 </html>
