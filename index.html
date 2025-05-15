@@ -9,7 +9,13 @@
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
-    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f8f9fa;
+      width: 100%;
+    }
 
     header {
       background-color: #fff;
@@ -20,8 +26,9 @@
       width: 100%;
       z-index: 1000;
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
@@ -32,17 +39,16 @@
     }
 
     nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       margin-left: auto;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     nav a {
       color: #007acc;
       text-decoration: none;
       font-weight: bold;
-      white-space: nowrap;
     }
 
     nav a:hover {
@@ -62,11 +68,14 @@
 
     #map-section {
       padding: 0;
+      margin: 0;
     }
 
     #map {
       width: 100vw;
       height: 100vh;
+      margin: 0;
+      padding: 0;
     }
 
     .timeline-entry {
@@ -182,6 +191,7 @@
 
 <div id="visited" class="section">
   <h2>Journey Timeline</h2>
+  <p>To update photos or entries, edit the <code>timeline.json</code> file and add a new block like the examples shown below.</p>
   <div id="timeline-container"></div>
 </div>
 
