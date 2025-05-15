@@ -7,11 +7,11 @@
   <title>Southeast Asia Trip</title>
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: sans-serif; }
+    body { margin: 0; font-family: 'Segoe UI', sans-serif; background: #f8f9fa; }
     header {
-      background-color: white;
+      background-color: #fff;
       color: #007acc;
-      padding: 1rem;
+      padding: 1rem 2rem;
       position: fixed;
       top: 0;
       width: 100%;
@@ -19,12 +19,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     header h1 { margin: 0; font-size: 1.5rem; }
     nav a {
       color: #007acc;
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       text-decoration: none;
       font-weight: bold;
     }
@@ -33,7 +33,7 @@
     }
     .section {
       display: none;
-      padding: 5rem 1rem 2rem;
+      padding: 6rem 2rem 2rem;
     }
     .active {
       display: block;
@@ -41,15 +41,21 @@
     #map {
       height: 500px;
       width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-    #visited ul {
-      list-style: none;
-      padding-left: 0;
+    .timeline-entry {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
     }
-    #visited li {
-      margin-bottom: 1rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5rem;
+    .timeline-entry h3 {
+      margin: 0 0 0.3rem;
+    }
+    .timeline-entry small {
+      color: gray;
     }
   </style>
 </head>
@@ -68,14 +74,18 @@
 </div>
 
 <div id="visited" class="section">
-  <h2>Visited</h2>
-  <ul>
-    <li><strong>June 1:</strong> Arrive in Bangkok</li>
-    <li><strong>June 5:</strong> Fly to Chiang Mai</li>
-    <li><strong>June 10:</strong> Bus to Pai</li>
-    <li><strong>June 15:</strong> Chiang Rai and on to Laos</li>
-    <!-- Add more entries as your trip progresses -->
-  </ul>
+  <h2>Journey Timeline</h2>
+  <div class="timeline-entry">
+    <h3>Day 1: Bangkok Arrival</h3>
+    <small>June 1</small>
+    <p>Landed in Bangkok! Got settled in a hotel and explored local street food.</p>
+  </div>
+  <div class="timeline-entry">
+    <h3>Day 5: Chiang Mai</h3>
+    <small>June 5</small>
+    <p>Flew north to Chiang Mai, visited temples and the night market.</p>
+  </div>
+  <!-- Add more timeline entries here -->
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
