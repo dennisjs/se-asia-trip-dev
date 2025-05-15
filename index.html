@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Southeast Asia Trip</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+<body>
+<div id="map"></div>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v12',
+        center: [100.5018, 13.7563], // Bangkok
+        zoom: 5
+    });
+
+    const locations = [
+        { name: "Bangkok", coords: [100.5018, 13.7563] },
+        { name: "Chiang Mai", coords: [98.9817, 18.7961] },
+        { name: "Pai", coords: [98.4368, 19.3586] },
+        { name: "Chiang Rai", coords: [99.8325, 19.9105] },
+        { name: "Luang Prabang", coords: [102.1350, 19.8833] },
+        { name: "Hanoi", coords: [105.8544, 21.0285] },
+        { name: "Siem Reap", coords: [103.8554, 13.3633] },
+        { name: "Phnom Penh", coords: [104.9174, 11.5449] }
+    ];
+
+    for (const place of locations) {
+        new mapboxgl.Marker().setLngLat(place.coords).setPopup(
+            new mapboxgl.Popup().setText(place.name)
+        ).addTo(map);
+    }
+</script>
+</body>
+</html>
