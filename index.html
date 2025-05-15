@@ -7,40 +7,44 @@
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; }
-    body, html {
-      margin: 0;
-      padding: 0;
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      width: 100%;
       font-family: 'Trebuchet MS', sans-serif;
       background: #f8f9fa;
     }
 
     header {
-      background-color: #fff;
-      color: #004080;
-      padding: 1rem 2rem;
       position: fixed;
       top: 0;
       width: 100%;
-      z-index: 1000;
+      background: #fff;
+      color: #003366;
+      padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
     }
 
-    .nav-wrapper {
+    .nav-center {
       display: flex;
       align-items: center;
       gap: 2rem;
       margin: auto;
     }
 
+    .nav-center h1 {
+      margin-right: 1rem;
+      font-size: 1.1rem;
+    }
+
     nav a {
       color: #003366;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1rem;
     }
 
     nav a:hover {
@@ -49,45 +53,37 @@
 
     .status-info {
       font-size: 0.85rem;
-      color: #004080;
       text-align: right;
     }
 
     .section {
       display: none;
-      padding: 6rem 2rem 2rem;
-      max-width: 900px;
-      margin: auto;
+      padding-top: 80px;
     }
 
     .active {
       display: block;
     }
 
-    #map-section {
-      padding: 0;
-    }
-
     #map {
-      width: 100vw;
       height: 100vh;
-      margin: 0;
+      width: 100vw;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="nav-wrapper">
-    <h1 style="margin-right: 2rem;">SE Asia 2025</h1>
+  <div class="nav-center">
+    <h1>SE Asia 2025</h1>
     <nav>
       <a href="#" onclick="showSection('map-section')">Map</a>
       <a href="#" onclick="showSection('visited')">Visited</a>
     </nav>
   </div>
-  <div class="status-info" id="status-info">
-    <div id="local-time">🕒 Loading local time...</div>
-    <div id="local-weather">⛅️ Loading weather...</div>
+  <div class="status-info">
+    <div id="local-time">🕒 Loading time...</div>
+    <div id="local-weather">⛅ Loading weather...</div>
   </div>
 </header>
 
@@ -96,45 +92,63 @@
 </div>
 
 <div id="visited" class="section">
-  <h2>Journey Timeline</h2>
-  <p>This section is a placeholder for your trip logs.</p>
+  <h2 style="padding: 2rem;">Visited section coming soon...</h2>
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [100.5602, 13.7417],
-    zoom: 13
-  });
 
-  new mapboxgl.Marker({ color: "red" })
-    .setLngLat([100.5602, 13.7417])
-    .setPopup(new mapboxgl.Popup().setText("Solitaire Bangkok Hotel – Current Location"))
-    .addTo(map);
+  let map;
 
-  function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
+  async function fetchLocation() {
+    const res = await fetch("location.json");
+    return await res.json();
   }
 
-  // Static Bangkok data for now
-  function updateTimeWeather() {
+  function showSection(id) {
+    document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  function updateTime(lat, lng) {
     const now = new Date();
-    const bangkokOffset = 7 * 60; // UTC+7
-    const local = new Date(now.getTime() + (bangkokOffset - now.getTimezoneOffset()) * 60000);
-    document.getElementById("local-time").textContent = "🕒 " + local.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
-    // Hardcoded for now; replace with API later if needed
-    document.getElementById("local-weather").textContent = "⛅️ 90°F, Humid";
+    const offsetMinutes = Math.round((lng / 15) * 60); // rough estimate of timezone
+    const localTime = new Date(now.getTime() + offsetMinutes * 60000);
+    document.getElementById("local-time").textContent = "🕒 " + localTime.toLocaleString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
   }
 
-  updateTimeWeather();
-  setInterval(updateTimeWeather, 60000);
+  async function updateWeather(lat, lng) {
+    const apiKey = "demo"; // placeholder
+    // Replace with actual API call or server proxy
+    document.getElementById("local-weather").textContent = "⛅ 90°F, Humid"; // Placeholder
+  }
+
+  async function initialize() {
+    const location = await fetchLocation();
+    const { lat, lng, place } = location;
+
+    map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: 13
+    });
+
+    new mapboxgl.Marker({ color: "red" })
+      .setLngLat([lng, lat])
+      .setPopup(new mapboxgl.Popup().setText(`${place} – Current Location`))
+      .addTo(map);
+
+    updateTime(lat, lng);
+    updateWeather(lat, lng);
+  }
+
+  initialize();
 </script>
 
 </body>
