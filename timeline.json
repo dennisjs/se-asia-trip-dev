@@ -1,39 +1,13 @@
 [
   {
-    "day": "Day 1",
-    "title": "Bangkok Arrival",
-    "date": "June 1",
-    "description": "Arrived in Bangkok and walked through the night markets.",
-    "weather": "90\u00b0F, Humid with scattered clouds",
+    "day": "Day 2",
+    "title": "Stormy Beach",
+    "date": "June 2",
+    "description": "Watched lightning near the shore",
     "photos": [
       {
-        "id": 1015,
-        "caption": "Arrival street view"
-      },
-      {
-        "id": 1016,
-        "caption": "Crazy place!"
-      },
-      {
-        "id": 1018,
-        "caption": "Evening street scene"
-      }
-    ]
-  },
-  {
-    "day": "Day 5",
-    "title": "Chiang Mai Temples",
-    "date": "June 5",
-    "description": "Visited Doi Suthep and explored the Old City.",
-    "weather": "85\u00b0F, Sunny with light breeze",
-    "photos": [
-      {
-        "id": 1020,
-        "caption": "Temple entrance"
-      },
-      {
-        "id": 1021,
-        "caption": "View from the hill"
+        "id": "5FF82AC3",
+        "caption": "Stormy sunset over the rocks"
       }
     ]
   }
