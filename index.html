@@ -62,11 +62,10 @@
 
     #map-section {
       padding: 0;
-      height: 100vh;
     }
 
     #map {
-      width: 100%;
+      width: 100vw;
       height: 100vh;
     }
 
@@ -126,21 +125,44 @@
     #modal {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       display: none;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
       z-index: 2000;
+      color: white;
     }
 
     #modal img {
       max-width: 90%;
-      max-height: 90%;
+      max-height: 80%;
       border-radius: 10px;
     }
 
-    #modal:target {
+    #caption {
+      margin-top: 1rem;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .modal-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
       display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+      font-weight: bold;
+      user-select: none;
+      padding: 0 2rem;
+    }
+
+    .modal-nav div {
+      cursor: pointer;
+      background: rgba(0,0,0,0.3);
+      padding: 0.5rem;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -163,8 +185,13 @@
   <div id="timeline-container"></div>
 </div>
 
-<div id="modal" onclick="this.style.display='none';">
+<div id="modal" onclick="closeModal(event)">
+  <div class="modal-nav">
+    <div onclick="prevImage(event)">&#10094;</div>
+    <div onclick="nextImage(event)">&#10095;</div>
+  </div>
   <img id="modal-img" src="" />
+  <div id="caption"></div>
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
@@ -176,17 +203,6 @@
     center: [100.5018, 13.7563],
     zoom: 5
   });
-
-  const locations = [
-    { name: "Bangkok", coords: [100.5018, 13.7563] },
-    { name: "Chiang Mai", coords: [98.9817, 18.7961] }
-  ];
-
-  for (const place of locations) {
-    new mapboxgl.Marker().setLngLat(place.coords).setPopup(
-      new mapboxgl.Popup().setText(place.name)
-    ).addTo(map);
-  }
 
   function showSection(sectionId) {
     document.querySelectorAll('.section').forEach(section => {
@@ -201,18 +217,28 @@
       title: "Bangkok Arrival",
       date: "June 1",
       description: "Arrived in Bangkok and walked through the night markets.",
-      weather: "32°C, Humid with scattered clouds",
-      images: [1015, 1016, 1018]
+      weather: "90°F, Humid with scattered clouds",
+      photos: [
+        { id: 1015, caption: "Arrival street view" },
+        { id: 1016, caption: "Local vendor" },
+        { id: 1018, caption: "Evening street scene" }
+      ]
     },
     {
       day: "Day 5",
       title: "Chiang Mai Temples",
       date: "June 5",
       description: "Visited Doi Suthep and explored the Old City.",
-      weather: "29°C, Sunny with light breeze",
-      images: [1020, 1021]
+      weather: "85°F, Sunny with light breeze",
+      photos: [
+        { id: 1020, caption: "Temple entrance" },
+        { id: 1021, caption: "View from the hill" }
+      ]
     }
   ];
+
+  let modalIndex = 0;
+  let modalPhotos = [];
 
   const container = document.getElementById("timeline-container");
 
@@ -220,8 +246,8 @@
     const html = `
       <div class="timeline-entry">
         <div class="timeline-photos">
-          ${entry.images.map(id => `<img src="https://picsum.photos/id/${id}/60/60" onclick="openModal('https://picsum.photos/id/${id}/800/600')" />`).join("")}
-          <div class="more">+${Math.max(0, 6 - entry.images.length)} more</div>
+          ${entry.photos.map((photo, i) => `<img src="https://picsum.photos/id/${photo.id}/60/60" onclick="openModal(${JSON.stringify(entry.photos).replace(/"/g, '&quot;')}, ${i})" />`).join("")}
+          <div class="more">+${Math.max(0, 6 - entry.photos.length)} more</div>
         </div>
         <div class="timeline-text">
           <h3>${entry.day}: ${entry.title}</h3>
@@ -233,11 +259,35 @@
     container.insertAdjacentHTML("beforeend", html);
   });
 
-  function openModal(src) {
-    const modal = document.getElementById('modal');
-    const img = document.getElementById('modal-img');
-    img.src = src;
-    modal.style.display = 'flex';
+  function openModal(photos, index) {
+    modalPhotos = photos;
+    modalIndex = index;
+    updateModal();
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function updateModal() {
+    const photo = modalPhotos[modalIndex];
+    document.getElementById("modal-img").src = `https://picsum.photos/id/${photo.id}/800/600`;
+    document.getElementById("caption").innerText = photo.caption || "";
+  }
+
+  function closeModal(e) {
+    if (e.target.id === "modal" || e.target.tagName === "IMG") {
+      document.getElementById("modal").style.display = "none";
+    }
+  }
+
+  function nextImage(e) {
+    e.stopPropagation();
+    modalIndex = (modalIndex + 1) % modalPhotos.length;
+    updateModal();
+  }
+
+  function prevImage(e) {
+    e.stopPropagation();
+    modalIndex = (modalIndex - 1 + modalPhotos.length) % modalPhotos.length;
+    updateModal();
   }
 </script>
 
