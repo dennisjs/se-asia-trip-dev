@@ -78,6 +78,57 @@
       max-width: 800px;
       margin: auto;
     }
+
+    .thumbnail-marker {
+      width: 40px;
+      height: 40px;
+      border-radius: 4px;
+      border: 2px solid white;
+      box-shadow: 0 0 4px rgba(0,0,0,0.6);
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255,255,255,0.95);
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: none;
+      max-width: 90%;
+      text-align: center;
+      z-index: 1001;
+    }
+
+    .overlay img {
+      max-width: 100%;
+      max-height: 400px;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .overlay .close-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    #photo-toggle {
+      margin-left: 1rem;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.5rem;
+      background: #eee;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -89,6 +140,7 @@
       <a href="#" onclick="showSection('map-section')">Map</a>
       <a href="#" onclick="showSection('visited')">Visited</a>
     </nav>
+    <button id="photo-toggle" onclick="toggleThumbnails()">📷 Show Photos</button>
   </div>
   <div class="status-info">
     <div id="local-time">🕒 Loading time...</div>
@@ -105,28 +157,37 @@
   <p>This section will show your timeline and photo posts.</p>
 </div>
 
+<div id="photo-overlay" class="overlay">
+  <div class="close-btn" onclick="hideOverlay()">×</div>
+  <img id="overlay-img" src="" alt="photo" />
+  <p id="overlay-caption"></p>
+</div>
+
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
 
-  let map;
+  let map, photoMarkers = [], captions = { };
 
   async function fetchLocation() {
     try {
       const res = await fetch("location.json");
       return await res.json();
-    } catch (e) {
-      return {
-        place: "Solitaire Bangkok Hotel",
-        lat: 13.7417,
-        lng: 100.5602
-      };
+    } catch {
+      return { place: "Solitaire Bangkok Hotel", lat: 13.7417, lng: 100.5602 };
     }
   }
 
-  function showSection(id) {
-    document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
-    document.getElementById(id).classList.add("active");
+  async function fetchCaptions() {
+    try {
+      const res = await fetch("timeline.json");
+      const timeline = await res.json();
+      timeline.forEach(entry => {
+        (entry.photos || []).forEach(photo => {
+          captions[photo.id] = photo.caption || "";
+        });
+      });
+    } catch {}
   }
 
   function updateTime(lat, lng) {
@@ -136,28 +197,65 @@
     document.getElementById("local-time").textContent = "🕒 " + localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
-  async function updateWeather(lat, lng) {
+  function updateWeather(lat, lng) {
     document.getElementById("local-weather").textContent = "⛅ 90°F, Humid";
   }
 
-  async function initialize() {
-    const location = await fetchLocation();
-    const { lat, lng, place } = location;
+  function showSection(id) {
+    document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
 
+  async function toggleThumbnails() {
+    if (photoMarkers.length > 0) {
+      photoMarkers.forEach(m => m.remove());
+      photoMarkers = [];
+      document.getElementById("photo-toggle").innerText = "📷 Show Photos";
+      return;
+    }
+
+    const res = await fetch("photo_metadata.json");
+    const photos = await res.json();
+    await fetchCaptions();
+
+    photos.forEach(({ id, lat, lng }) => {
+      const el = document.createElement('div');
+      el.className = 'thumbnail-marker';
+      el.style.backgroundImage = `url(images/${id}.jpg)`;
+      el.onclick = () => showOverlay(id);
+      const marker = new mapboxgl.Marker(el).setLngLat([lng, lat]).addTo(map);
+      photoMarkers.push(marker);
+    });
+
+    document.getElementById("photo-toggle").innerText = "📷 Hide Photos";
+  }
+
+  function showOverlay(id) {
+    document.getElementById("overlay-img").src = `images/${id}.jpg`;
+    document.getElementById("overlay-caption").textContent = captions[id] || "(no caption)";
+    document.getElementById("photo-overlay").style.display = "block";
+  }
+
+  function hideOverlay() {
+    document.getElementById("photo-overlay").style.display = "none";
+  }
+
+  async function initialize() {
+    const loc = await fetchLocation();
     map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [lng, lat],
+      center: [loc.lng, loc.lat],
       zoom: 13
     });
 
     new mapboxgl.Marker({ color: "red" })
-      .setLngLat([lng, lat])
-      .setPopup(new mapboxgl.Popup().setText(`${place} – Current Location`))
+      .setLngLat([loc.lng, loc.lat])
+      .setPopup(new mapboxgl.Popup().setText(`${loc.place} – Current Location`))
       .addTo(map);
 
-    updateTime(lat, lng);
-    updateWeather(lat, lng);
+    updateTime(loc.lat, loc.lng);
+    updateWeather(loc.lat, loc.lng);
   }
 
   initialize();
