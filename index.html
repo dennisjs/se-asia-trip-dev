@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,38 +8,39 @@
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     html, body {
-      height: 100%;
+      margin: 0;
+      padding: 0;
       width: 100%;
+      height: 100%;
       font-family: 'Trebuchet MS', sans-serif;
       background: #f8f9fa;
     }
 
     header {
+      background-color: #fff;
+      color: #004080;
+      padding: 1rem 2rem;
       position: fixed;
       top: 0;
       width: 100%;
-      background: #fff;
-      color: #003366;
-      padding: 1rem 2rem;
+      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      z-index: 1000;
     }
 
-    .nav-center {
+    .nav-wrapper {
       display: flex;
       align-items: center;
       gap: 2rem;
       margin: auto;
     }
 
-    .nav-center h1 {
-      margin-right: 1rem;
-      font-size: 1.1rem;
+    .nav-wrapper h1 {
+      font-size: 1.2rem;
     }
 
     nav a {
@@ -53,6 +55,7 @@
 
     .status-info {
       font-size: 0.85rem;
+      color: #004080;
       text-align: right;
     }
 
@@ -66,15 +69,21 @@
     }
 
     #map {
-      height: 100vh;
       width: 100vw;
+      height: 100vh;
+    }
+
+    #visited {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <div class="nav-center">
+  <div class="nav-wrapper">
     <h1>SE Asia 2025</h1>
     <nav>
       <a href="#" onclick="showSection('map-section')">Map</a>
@@ -92,7 +101,8 @@
 </div>
 
 <div id="visited" class="section">
-  <h2 style="padding: 2rem;">Visited section coming soon...</h2>
+  <h2>Visited</h2>
+  <p>This section will show your timeline and photo posts.</p>
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
@@ -102,8 +112,16 @@
   let map;
 
   async function fetchLocation() {
-    const res = await fetch("location.json");
-    return await res.json();
+    try {
+      const res = await fetch("location.json");
+      return await res.json();
+    } catch (e) {
+      return {
+        place: "Solitaire Bangkok Hotel",
+        lat: 13.7417,
+        lng: 100.5602
+      };
+    }
   }
 
   function showSection(id) {
@@ -113,19 +131,13 @@
 
   function updateTime(lat, lng) {
     const now = new Date();
-    const offsetMinutes = Math.round((lng / 15) * 60); // rough estimate of timezone
+    const offsetMinutes = Math.round((lng / 15) * 60);
     const localTime = new Date(now.getTime() + offsetMinutes * 60000);
-    document.getElementById("local-time").textContent = "🕒 " + localTime.toLocaleString([], {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: true
-    });
+    document.getElementById("local-time").textContent = "🕒 " + localTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
   }
 
   async function updateWeather(lat, lng) {
-    const apiKey = "demo"; // placeholder
-    // Replace with actual API call or server proxy
-    document.getElementById("local-weather").textContent = "⛅ 90°F, Humid"; // Placeholder
+    document.getElementById("local-weather").textContent = "⛅ 90°F, Humid";
   }
 
   async function initialize() {
