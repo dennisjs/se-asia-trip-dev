@@ -17,33 +17,36 @@
       width: 100%;
       z-index: 1000;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    header h1 { margin: 0; font-size: 1.5rem; }
+    header h1 { margin: 0 2rem 0 0; font-size: 1.5rem; flex-shrink: 0; }
     nav a {
       color: #007acc;
-      margin-left: 1.5rem;
+      margin-right: 1.5rem;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
     nav a:hover {
       text-decoration: underline;
     }
     .section {
       display: none;
-      padding: 6rem 2rem 2rem;
     }
     .active {
       display: block;
     }
-    #map {
-      height: 500px;
-      width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    #map-section {
+      padding-top: 4rem; /* space for fixed header */
     }
+    #map {
+      height: calc(100vh - 4rem);
+      width: 100%;
+      border-radius: 0;
+    }
+    /* Timeline styling unchanged from enhanced version */
     .timeline-entry {
       display: flex;
       align-items: flex-start;
@@ -51,7 +54,7 @@
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
+      margin: 2rem;
     }
     .timeline-photos {
       display: flex;
@@ -126,8 +129,8 @@
 </div>
 
 <div id="visited" class="section">
-  <h2>Journey Timeline</h2>
-
+  <h2 style="padding-top: 4rem; margin: 0 2rem;">Journey Timeline</h2>
+  <!-- Sample entry retained -->
   <div class="timeline-entry">
     <div class="timeline-photos">
       <img src="https://picsum.photos/id/1015/60/60" />
@@ -147,23 +150,6 @@
       </div>
     </div>
   </div>
-
-  <div class="timeline-entry">
-    <div class="timeline-photos">
-      <img src="https://picsum.photos/id/1020/60/60" />
-    </div>
-    <div class="timeline-icon">☔</div>
-    <div class="timeline-text">
-      <h3>Day 10: Racing the storm in Indiana</h3>
-      <small>Tue, May 13</small>
-      <p>Didn’t quite outride the storm. Wishing I had windshield wipers on my sunglasses 😎. Cut the day short and grabbed a hotel for the night.</p>
-      <div class="metrics">
-        <div><span>70.1 mi</span>Distance</div>
-        <div><span>1130 ft</span>Elevation</div>
-        <div><span>4h 45m</span>Duration</div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
@@ -175,7 +161,6 @@
     center: [100.5018, 13.7563],
     zoom: 5
   });
-
   const locations = [
     { name: "Bangkok", coords: [100.5018, 13.7563] },
     { name: "Chiang Mai", coords: [98.9817, 18.7961] },
@@ -186,17 +171,13 @@
     { name: "Siem Reap", coords: [103.8554, 13.3633] },
     { name: "Phnom Penh", coords: [104.9174, 11.5449] }
   ];
-
   for (const place of locations) {
     new mapboxgl.Marker().setLngLat(place.coords).setPopup(
       new mapboxgl.Popup().setText(place.name)
     ).addTo(map);
   }
-
   function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-      section.classList.remove('active');
-    });
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
     document.getElementById(sectionId).classList.add('active');
   }
 </script>
