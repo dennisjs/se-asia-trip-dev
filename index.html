@@ -5,63 +5,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dennis in Southeast Asia 2025</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    body { margin: 0; font-family: sans-serif; background: #f8f9fa; }
-    header {
-      background: white; padding: 1rem 2rem;
-      display: flex; justify-content: space-between;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      position: fixed; top: 0; width: 100%; z-index: 1000;
+    html, body {
+      margin: 0; padding: 0;
+      font-family: sans-serif;
+      background: #f8f9fa;
+      width: 100%; height: 100%;
     }
-    .section { padding-top: 80px; }
-    #visited { max-width: 900px; margin: auto; padding: 2rem; }
+    header {
+      background: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .header-right {
+      text-align: right;
+      font-size: 0.9rem;
+      color: #004080;
+    }
+    nav a {
+      margin-right: 1rem;
+      color: #3366cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      display: none;
+      padding-top: 80px;
+    }
+    .active {
+      display: block;
+    }
+    #map {
+      height: calc(100vh - 80px);
+      width: 100%;
+    }
+    #visited {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+    }
     .day-block {
-      background: white; border-radius: 8px;
-      padding: 1rem; margin-bottom: 2rem;
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 2rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .photo-row {
-      display: flex; gap: 1rem; flex-wrap: wrap;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
     }
     .photo-thumb {
-      width: 160px; height: 120px;
-      object-fit: cover; border-radius: 6px;
-      cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
     .photo-overlay {
-      position: fixed; top: 60px; left: 50%;
+      position: fixed;
+      top: 60px;
+      left: 50%;
       transform: translateX(-50%);
       background: rgba(255,255,255,0.95);
-      padding: 1rem; border-radius: 10px;
+      padding: 1rem;
+      border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.4);
-      display: none; max-width: 90%;
-      max-height: 90%; text-align: center;
+      display: none;
+      max-width: 90%;
+      max-height: 90%;
+      text-align: center;
       z-index: 2000;
     }
     .photo-overlay img {
-      max-width: 100%; max-height: 70vh;
-      border-radius: 8px; margin-bottom: 0.5rem;
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
     }
     .close-btn {
-      position: absolute; top: 10px; right: 15px;
-      font-size: 1.4rem; font-weight: bold; cursor: pointer;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Dennis in Southeast Asia 2025</h1>
-  <nav>
-    <a href="index.html">Map</a>
-    <a href="#">Visited</a>
-  </nav>
+  <div class="header-left">
+    <h1 style="font-size: 1.1rem;">Dennis in Southeast Asia 2025</h1>
+    <nav>
+      <a href="#" onclick="showSection('map-section')">Map</a>
+      <a href="#" onclick="showSection('visited')">Visited</a>
+    </nav>
+  </div>
+  <div class="header-right">
+    <div id="local-time">🕒 Loading time...</div>
+    <div id="local-weather">⛅ Loading weather...</div>
+  </div>
 </header>
 
-<div id="visited" class="section" style="display: none;">
+<div id="map-section" class="section active">
+  <div id="map"></div>
+</div>
+
+<div id="visited" class="section">
   <h2>Journey Timeline</h2>
   <div id="timeline-content">Loading timeline...</div>
-<div id="map-section" class="section active"><div id="map" style="height: 90vh;"></div></div>
 </div>
 
 <div id="photo-overlay" class="photo-overlay">
@@ -70,7 +143,12 @@
   <p id="overlay-caption"></p>
 </div>
 
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
+function showSection(id) {
+  document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
+}
 function showOverlay(src, caption) {
   document.getElementById("overlay-img").src = src;
   document.getElementById("overlay-caption").textContent = caption || "(no caption)";
@@ -79,13 +157,11 @@ function showOverlay(src, caption) {
 function hideOverlay() {
   document.getElementById("photo-overlay").style.display = "none";
 }
-
 async function loadTimeline() {
   const res = await fetch("timeline.json");
   const timeline = await res.json();
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
-
   timeline.forEach(day => {
     const block = document.createElement("div");
     block.className = "day-block";
@@ -123,17 +199,27 @@ async function loadTimeline() {
     block.appendChild(desc);
     block.appendChild(weather);
     block.appendChild(photoRow);
-
     container.appendChild(block);
   });
 }
 
+function updateTimeAndWeather() {
+  const now = new Date();
+  const localTime = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+  document.getElementById("local-time").textContent = "🕒 " + localTime;
+  document.getElementById("local-weather").textContent = "⛅ 90°F, Humid";
+}
+
 window.onload = () => {
-  document.getElementById("photo-overlay").querySelector(".close-btn").addEventListener("click", hideOverlay);
   loadTimeline();
-  // Simulate map as default section
-  document.getElementById("map-section").style.display = "block";
-  document.getElementById("visited").style.display = "none";
+  updateTimeAndWeather();
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v12',
+    center: [100.5602, 13.7417],
+    zoom: 12
+  });
+  new mapboxgl.Marker().setLngLat([100.5602, 13.7417]).addTo(map);
 };
 </script>
 </body>
