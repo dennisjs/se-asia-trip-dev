@@ -1,3 +1,4 @@
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
 
 function initMapWithPhotos() {
   fetch("location.json").then(r => r.json()).then(loc => {
