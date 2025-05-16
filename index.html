@@ -58,9 +58,10 @@
   </nav>
 </header>
 
-<div id="visited" class="section">
+<div id="visited" class="section" style="display: none;">
   <h2>Journey Timeline</h2>
   <div id="timeline-content">Loading timeline...</div>
+<div id="map-section" class="section active"><div id="map" style="height: 90vh;"></div></div>
 </div>
 
 <div id="photo-overlay" class="photo-overlay">
@@ -127,7 +128,13 @@ async function loadTimeline() {
   });
 }
 
-window.onload = loadTimeline;
+window.onload = () => {
+  document.getElementById("photo-overlay").querySelector(".close-btn").addEventListener("click", hideOverlay);
+  loadTimeline();
+  // Simulate map as default section
+  document.getElementById("map-section").style.display = "block";
+  document.getElementById("visited").style.display = "none";
+};
 </script>
 </body>
 </html>
