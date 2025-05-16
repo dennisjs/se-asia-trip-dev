@@ -8,12 +8,18 @@ function loadWeather() {
         .then(weather => {
           const now = new Date(new Date().getTime() + loc.lng * 4 * 60000);
           const timeStr = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-          document.getElementById("status-info").textContent =
-            `${loc.place} | 🕒 ${timeStr} | ⛅ ${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
+          const box = document.createElement("div");
+          box.className = "location-box";
+          box.innerHTML = `
+            <strong>My Current Location:</strong>
+            ${loc.place}<br>
+            🕒 ${timeStr}<br>
+            ⛅ ${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}
+          `;
+          document.getElementById("map-section").appendChild(box);
         });
     })
     .catch(err => {
-      document.getElementById("status-info").textContent = "Weather unavailable";
-      console.error("Weather error:", err);
+      console.error("Weather info error:", err);
     });
 }
