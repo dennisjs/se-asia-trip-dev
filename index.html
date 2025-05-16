@@ -7,20 +7,40 @@
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    html, body { margin: 0; padding: 0; font-family: 'Inter', sans-serif; background: #f8f9fa; }
+    html, body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f8f9fa;
+    }
     header {
-      background-color: #fff; color: #004080;
-      padding: 1rem 2rem; position: fixed; top: 0; width: 100%; z-index: 1000;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap;
+      background: white;
+      padding: 1rem 2rem;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
     }
-    .nav-wrapper { display: flex; align-items: center; gap: 2rem; }
-    nav a { color: #3366cc; text-decoration: none; font-weight: 600; }
-    nav a:hover { text-decoration: underline; }
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    nav a {
+      color: #3366cc;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
     .status-info {
-      font-size: 0.85rem; color: #004080;
+      font-size: 0.85rem;
+      color: #004080;
       text-align: right;
       max-width: 300px;
       overflow: hidden;
@@ -31,21 +51,42 @@
     .active { display: block; }
     #map { width: 100vw; height: calc(100vh - 80px); }
     #visited { padding: 2rem; max-width: 900px; margin: auto; }
-    .photos { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .photos img {
-      width: 160px; height: 120px; object-fit: cover; border-radius: 6px; cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    .map-thumb {
+      width: 32px; height: 32px;
+      border: 2px solid white;
+      border-radius: 4px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      box-shadow: 0 0 4px rgba(0,0,0,0.5);
     }
     .overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7);
-      display: flex; align-items: center; justify-content: center; z-index: 2000;
-      visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.97);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      max-width: 90%;
+      text-align: center;
+      z-index: 1500;
+      display: none;
     }
-    .overlay.active { visibility: visible; opacity: 1; }
-    .overlay img { max-width: 90%; max-height: 80%; border-radius: 8px; }
-    .close-btn {
-      position: absolute; top: 20px; right: 20px; background: white;
-      padding: 5px 10px; border-radius: 5px; cursor: pointer; font-weight: bold;
+    .overlay img {
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 8px;
+    }
+    .overlay .close-btn {
+      margin-top: 0.5rem;
+      display: inline-block;
+      background: #ccc;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -53,10 +94,10 @@
 
 <header>
   <div class="nav-wrapper">
-    <h1 style="margin:0;">SE Asia 2025</h1>
+    <h1>SE Asia 2025</h1>
     <nav>
       <a href="#" onclick="showSection('map-section')">Map</a>
-      <a href="#" onclick="showSection('visited')">Visited</a>
+      <a href="#" onclick="showSection('visited')">Places & Pics</a>
     </nav>
   </div>
   <div class="status-info" id="status-info">
@@ -73,82 +114,57 @@
   <div id="timeline-content">Loading timeline...</div>
 </div>
 
-<div id="overlay" class="overlay">
-  <div class="close-btn">✖ Close</div>
-  <img id="overlay-img" src="" alt="Photo">
+<div class="overlay" id="photo-overlay">
+  <img id="overlay-img" src="" alt="Photo" />
+  <p id="overlay-caption"></p>
+  <div class="close-btn" onclick="hideOverlay()">Close</div>
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
 
-const WEATHER_API_KEY = '0f8e3622808ddddedef556c32d470ffa';
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
 
-async function fetchLocation() {
-  const res = await fetch("location.json");
-  return await res.json();
-}
+  function hideOverlay() {
+    document.getElementById("photo-overlay").style.display = "none";
+  }
 
-async function fetchWeather(lat, lng) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${WEATHER_API_KEY}`;
-  const res = await fetch(url);
-  return await res.json();
-}
+  async function initMapWithPhotos() {
+    const loc = await fetch("location.json").then(r => r.json());
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [loc.lng, loc.lat],
+      zoom: 12
+    });
 
-function updateStatus(location, weather) {
-  const offsetMinutes = location.lng * 4;
-  const now = new Date(new Date().getTime() + offsetMinutes * 60000);
-  const timeStr = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-  const temp = Math.round(weather.main.temp);
-  const condition = weather.weather[0].description;
-  document.getElementById("status-info").textContent =
-    `${location.place} | 🕒 ${timeStr} | ⛅ ${temp}°F, ${condition}`;
-}
+    new mapboxgl.Marker({ color: "red" }).setLngLat([loc.lng, loc.lat]).addTo(map);
 
-function initMap(loc) {
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [loc.lng, loc.lat], zoom: 12
-  });
-  new mapboxgl.Marker().setLngLat([loc.lng, loc.lat]).addTo(map);
-}
+    const timeline = await fetch("timeline.json").then(r => r.json());
 
-async function loadTimeline() {
-  const res = await fetch("timeline.json");
-  const timeline = await res.json();
-  const container = document.getElementById("timeline-content");
-  container.innerHTML = "";
+    timeline.forEach(day => {
+      (day.photos || []).forEach(photo => {
+        if (!photo.lat || !photo.lng) return;
+        const el = document.createElement('div');
+        el.className = 'map-thumb';
+        el.style.backgroundImage = `url(images/${photo.id}.jpg)`;
+        el.onclick = () => {
+          document.getElementById("overlay-img").src = `images/${photo.id}.jpg`;
+          document.getElementById("overlay-caption").textContent = photo.caption || '';
+          document.getElementById("photo-overlay").style.display = "block";
+        };
+        new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
+      });
+    });
+  }
 
-  timeline.forEach(day => {
-    const daySection = document.createElement("div");
-    daySection.innerHTML = `
-      <h3>${day.day}: ${day.title}</h3><p><em>${day.date}</em></p><p>${day.description}</p>
-      <div class="photos">${day.photos.map(photo => `<img src="images/${photo.id}.jpg" data-src="images/${photo.id}.jpg"/>`).join('')}</div>`;
-    container.appendChild(daySection);
-  });
-
-  document.querySelectorAll(".photos img").forEach(img => img.onclick = () => {
-    document.getElementById("overlay-img").src = img.dataset.src;
-    document.getElementById("overlay").classList.add("active");
-  });
-}
-
-document.querySelector(".close-btn").onclick = () => document.getElementById("overlay").classList.remove("active");
-
-function showSection(id) {
-  document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
-
-window.onload = async () => {
-  const loc = await fetchLocation();
-  const weather = await fetchWeather(loc.lat, loc.lng);
-  updateStatus(loc, weather);
-  initMap(loc);
-  loadTimeline();
-};
+  window.onload = () => {
+    initMapWithPhotos();
+  };
 </script>
-
 </body>
 </html>
