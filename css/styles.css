@@ -34,9 +34,12 @@ nav a {
 .status-info {
   font-size: 0.85rem;
   color: #004080;
-  white-space: nowrap;
+  max-width: 250px;         /* Limit width */
   overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
+  text-align: right;
+  margin-left: auto;        /* Pushes left instead of overflowing */
 }
 .section {
   display: none;
