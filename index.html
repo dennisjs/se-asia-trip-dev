@@ -130,8 +130,7 @@ async function loadTimeline() {
       <div class="photo-row">
         ${(day.photos || []).map(photo => {
           const captionEscaped = (photo.caption || "").replace(/"/g, '&quot;');
-          return \`<img class="photo-thumb" src="images/\${photo.id}.jpg" alt="" data-src="images/\${photo.id}.jpg" data-caption="\${captionEscaped}">\`;
-        }).join("")}
+          return '<img class="photo-thumb" src="images/' + photo.id + '.jpg" alt="" data-src="images/' + photo.id + '.jpg" data-caption="' + captionEscaped + '">';
       </div>
     `;
     container.appendChild(block);
