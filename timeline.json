@@ -1,13 +1,34 @@
 [
   {
-    "day": "Day 2",
-    "title": "Stormy Beach",
-    "date": "June 2",
-    "description": "Watched lightning near the shore",
+    "day": "Day 1",
+    "title": "Bangkok Arrival",
+    "date": "June 1",
+    "description": "Exploring the city streets and local food.",
+    "weather": "90\u00b0F, Humid with scattered clouds",
     "photos": [
       {
-        "id": "5FF82AC3",
-        "caption": "Stormy sunset over the rocks"
+        "id": "IMG_1079",
+        "caption": "Koh Pi Pi sunset",
+        "lat": 6.486461111111111,
+        "lng": 99.3038111111111
+      },
+      {
+        "id": "IMG_1137",
+        "caption": "Koh Lipe stormy beach",
+        "lat": 6.484152777777778,
+        "lng": 99.31090555555555
+      },
+      {
+        "id": "IMG_1160",
+        "caption": "Phad Thai in Koh Lipe",
+        "lat": 6.483416666666667,
+        "lng": 99.31092777777778
+      },
+      {
+        "id": "IMG_1161",
+        "caption": "Sunset in Koh Lipe",
+        "lat": 6.483430555555556,
+        "lng": 99.31101111111111
       }
     ]
   }
