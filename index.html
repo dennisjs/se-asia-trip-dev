@@ -25,9 +25,18 @@
       color: #3366cc; text-decoration: none; font-weight: 600; font-size: 1rem;
     }
     nav a:hover { text-decoration: underline; }
+
+    /* FIXED CSS: Prevents weather from clipping */
     .status-info {
-      font-size: 0.85rem; color: #004080; text-align: right; max-width: 40%;
+      font-size: 0.85rem;
+      color: #004080;
+      max-width: 180px; /* limits width to avoid overflow */
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
+
     .section { display: none; padding-top: 80px; }
     .active { display: block; }
     #map { width: 100vw; height: calc(100vh - 80px); }
@@ -86,7 +95,7 @@
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 <script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw'; // Replace with your token
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
 
 // Initialize map
 function initMap() {
@@ -99,37 +108,13 @@ function initMap() {
   new mapboxgl.Marker().setLngLat([loc.lng, loc.lat]).addTo(map);
 }
 
-// Load timeline JSON
-async function loadTimeline() {
-  const res = await fetch("timeline.json");
-  const timeline = await res.json();
-  const container = document.getElementById("timeline-content");
-  container.innerHTML = "";
-
-  timeline.forEach(day => {
-    const daySection = document.createElement("div");
-    daySection.className = "day-section";
-    daySection.innerHTML = `
-      <h3>${day.day}: ${day.title}</h3>
-      <p><em>${day.date}</em></p>
-      <p>${day.description}</p>
-      <div class="photos">${day.photos.map(photo => `
-        <img src="images/${photo.id}.jpg" alt="${photo.caption}" data-src="images/${photo.id}.jpg"/>
-      `).join('')}</div>`;
-    container.appendChild(daySection);
-  });
-
-  document.querySelectorAll(".photos img").forEach(img => {
-    img.addEventListener("click", function() {
-      const overlay = document.getElementById("overlay");
-      const overlayImg = document.getElementById("overlay-img");
-      overlayImg.src = this.dataset.src;
-      overlay.classList.add("active");
-    });
-  });
+// Simple section toggle
+function showSection(id) {
+  document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
+  document.getElementById(id).classList.add("active");
 }
 
-// Close overlay functionality
+// Close overlay button
 document.querySelector(".close-btn").addEventListener("click", () => {
   document.getElementById("overlay").classList.remove("active");
 });
@@ -141,17 +126,10 @@ function updateStatus() {
   document.getElementById("local-weather").textContent = "⛅ 90°F, Humid";
 }
 
-// Section toggle
-function showSection(id) {
-  document.querySelectorAll(".section").forEach(s => s.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
-
 window.onload = () => {
   initMap();
-  loadTimeline();
   updateStatus();
-  setInterval(updateStatus, 60000); // Update time/weather every minute
+  setInterval(updateStatus, 60000);
 };
 </script>
 
