@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,107 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Southeast Asia Trip</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
+  <link rel="stylesheet" href="css/styles.css" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
-  <style>
-    html, body {
-      margin: 0; padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f8f9fa;
-    }
-    header {
-      background: white;
-      padding: 0.6rem 2rem;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      flex-wrap: wrap;
-    }
-    .nav-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-    }
-    nav {
-      display: flex;
-      gap: 2.5rem;
-    }
-    nav a {
-      color: #3366cc;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .status-info {
-      font-size: 0.85rem;
-      color: #004080;
-      max-width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: right;
-      flex: 1;
-    }
-    .section { display: none; padding-top: 65px; }
-    .active { display: block; }
-    #map { width: 100vw; height: calc(100vh - 65px); }
-    #visited { padding: 2rem; max-width: 900px; margin: auto; }
-    .photos img {
-      width: 160px;
-      height: 120px;
-      object-fit: cover;
-      margin: 0.5rem;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    .overlay {
-      position: fixed;
-      top: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(255, 255, 255, 0.97);
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      max-width: 90%;
-      text-align: center;
-      z-index: 1500;
-      display: none;
-    }
-    .overlay img {
-      max-width: 100%;
-      max-height: 70vh;
-      border-radius: 8px;
-    }
-    .overlay .close-btn {
-      margin-top: 0.5rem;
-      display: inline-block;
-      background: #ccc;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
 
 <header>
   <div class="nav-wrapper">
-    <h1 style="margin:0;">SE Asia 2025</h1>
+    <h1>SE Asia 2025</h1>
     <nav>
       <a href="#" onclick="showSection('map-section')">Map</a>
       <a href="#" onclick="showSection('visited')">Places & Pics</a>
     </nav>
   </div>
-  <div class="status-info" id="status-info">Loading location, time, and weather...</div>
+  <div class="status-info" id="status-info">Loading...</div>
 </header>
 
 <div id="map-section" class="section active">
@@ -124,101 +38,21 @@
 </div>
 
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/map.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/weather.js"></script>
 <script>
-  mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
-
   function showSection(id) {
     document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
     document.getElementById(id).classList.add('active');
   }
 
-  function hideOverlay() {
-    document.getElementById("photo-overlay").style.display = "none";
-  }
-
-  function showOverlay(id, caption) {
-    document.getElementById("overlay-img").src = `images/${id}.jpg`;
-    document.getElementById("overlay-caption").textContent = caption || "";
-    document.getElementById("photo-overlay").style.display = "block";
-  }
-
-  async function loadTimeline() {
-    try {
-      const res = await fetch("timeline.json");
-      const timeline = await res.json();
-      const container = document.getElementById("timeline-content");
-      container.innerHTML = "";
-
-      timeline.forEach(day => {
-        const daySection = document.createElement("div");
-        daySection.innerHTML = `
-          <h3>${day.day}: ${day.title}</h3>
-          <p><em>${day.date}</em></p>
-          <p>${day.description}</p>
-          <div class="photos">
-            ${day.photos.map(photo => `
-              <img src="images/${photo.id}.jpg" alt="${photo.caption}" onclick="showOverlay('${photo.id}', \`${photo.caption}\`)"/>
-            `).join('')}
-          </div>
-        `;
-        container.appendChild(daySection);
-      });
-    } catch (e) {
-      document.getElementById("timeline-content").textContent = "Failed to load timeline.";
-      console.error("Error loading timeline.json", e);
-    }
-  }
-
-  async function initMapWithPhotos() {
-    const loc = await fetch("location.json").then(r => r.json());
-    const map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v12',
-      center: [loc.lng, loc.lat],
-      zoom: 12
-    });
-
-    new mapboxgl.Marker({ color: "red" }).setLngLat([loc.lng, loc.lat]).addTo(map);
-
-    const timeline = await fetch("timeline.json").then(r => r.json());
-
-    timeline.forEach(day => {
-      (day.photos || []).forEach(photo => {
-        if (!photo.lat || !photo.lng) return;
-        const el = document.createElement('div');
-        el.className = 'map-thumb';
-        el.style = `
-          width: 32px;
-          height: 32px;
-          border-radius: 4px;
-          background-size: cover;
-          background-position: center;
-          box-shadow: 0 0 4px rgba(0,0,0,0.5);
-          background-image: url(images/${photo.id}.jpg);
-          cursor: pointer;
-        `;
-        el.onclick = () => showOverlay(photo.id, photo.caption);
-        new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
-      });
-    });
-
-    try {
-      const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${loc.lat}&lon=${loc.lng}&units=imperial&appid=0f8e3622808ddddedef556c32d470ffa`);
-      const weather = await res.json();
-      const now = new Date(new Date().getTime() + loc.lng * 4 * 60000);
-      const timeStr = now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-      const display = `${loc.place} | 🕒 ${timeStr} | ⛅ ${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
-      document.getElementById("status-info").textContent = display;
-    } catch (e) {
-      document.getElementById("status-info").textContent = `${loc.place}`;
-    }
-  }
-
   window.onload = () => {
     initMapWithPhotos();
-    loadTimeline(); // ← this was missing
+    loadTimeline();
+    loadWeather();
   };
 </script>
-
 </body>
 </html>
