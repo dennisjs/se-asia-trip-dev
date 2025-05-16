@@ -56,6 +56,15 @@
     .section { display: none; padding-top: 65px; }
     .active { display: block; }
     #map { width: 100vw; height: calc(100vh - 65px); }
+    #visited { padding: 2rem; max-width: 900px; margin: auto; }
+    .photos img {
+      width: 160px;
+      height: 120px;
+      object-fit: cover;
+      margin: 0.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
     .overlay {
       position: fixed;
       top: 60px;
@@ -101,6 +110,11 @@
 
 <div id="map-section" class="section active">
   <div id="map"></div>
+</div>
+
+<div id="visited" class="section">
+  <h2>Visited Locations</h2>
+  <div id="timeline-content">Loading timeline...</div>
 </div>
 
 <div class="overlay" id="photo-overlay">
