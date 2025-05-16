@@ -6,78 +6,45 @@
   <title>Dennis in Southeast Asia 2025</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: #f8f9fa;
-    }
+    body { margin: 0; font-family: sans-serif; background: #f8f9fa; }
     header {
-      background: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
+      background: white; padding: 1rem 2rem;
+      display: flex; justify-content: space-between;
       box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
+      position: fixed; top: 0; width: 100%; z-index: 1000;
     }
-    .section {
-      padding-top: 80px;
-    }
-    #visited {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem;
-    }
+    .section { padding-top: 80px; }
+    #visited { max-width: 900px; margin: auto; padding: 2rem; }
     .day-block {
-      background: white;
-      border-radius: 8px;
-      padding: 1rem;
-      margin-bottom: 2rem;
+      background: white; border-radius: 8px;
+      padding: 1rem; margin-bottom: 2rem;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .photo-row {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+      display: flex; gap: 1rem; flex-wrap: wrap;
     }
     .photo-thumb {
-      width: 160px;
-      height: 120px;
-      object-fit: cover;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+      width: 160px; height: 120px;
+      object-fit: cover; border-radius: 6px;
+      cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,0.2);
     }
     .photo-overlay {
-      position: fixed;
-      top: 60px;
-      left: 50%;
+      position: fixed; top: 60px; left: 50%;
       transform: translateX(-50%);
       background: rgba(255,255,255,0.95);
-      padding: 1rem;
-      border-radius: 10px;
+      padding: 1rem; border-radius: 10px;
       box-shadow: 0 0 12px rgba(0,0,0,0.4);
-      display: none;
-      max-width: 90%;
-      max-height: 90%;
-      text-align: center;
+      display: none; max-width: 90%;
+      max-height: 90%; text-align: center;
       z-index: 2000;
     }
     .photo-overlay img {
-      max-width: 100%;
-      max-height: 70vh;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
+      max-width: 100%; max-height: 70vh;
+      border-radius: 8px; margin-bottom: 0.5rem;
     }
     .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 1.4rem;
-      font-weight: bold;
-      cursor: pointer;
+      position: absolute; top: 10px; right: 15px;
+      font-size: 1.4rem; font-weight: bold; cursor: pointer;
     }
   </style>
 </head>
@@ -108,7 +75,6 @@ function showOverlay(src, caption) {
   document.getElementById("overlay-caption").textContent = caption || "(no caption)";
   document.getElementById("photo-overlay").style.display = "block";
 }
-
 function hideOverlay() {
   document.getElementById("photo-overlay").style.display = "none";
 }
@@ -122,24 +88,42 @@ async function loadTimeline() {
   timeline.forEach(day => {
     const block = document.createElement("div");
     block.className = "day-block";
-    block.innerHTML = `
-      <h3>${day.day}: ${day.title}</h3>
-      <p><em>${day.date}</em></p>
-      <p>${day.description}</p>
-      <p><strong>${day.weather}</strong></p>
-      <div class="photo-row">
-        ${(day.photos || []).map(photo => {
-          const captionEscaped = (photo.caption || "").replace(/"/g, '&quot;');
-          return '<img class="photo-thumb" src="images/' + photo.id + '.jpg" alt="" data-src="images/' + photo.id + '.jpg" data-caption="' + captionEscaped + '">';
-      </div>
-    `;
-    container.appendChild(block);
-  });
 
-  document.querySelectorAll(".photo-thumb").forEach(img => {
-    img.addEventListener("click", () => {
-      showOverlay(img.dataset.src, img.dataset.caption);
+    const title = document.createElement("h3");
+    title.textContent = `${day.day}: ${day.title}`;
+
+    const date = document.createElement("p");
+    date.innerHTML = `<em>${day.date}</em>`;
+
+    const desc = document.createElement("p");
+    desc.textContent = day.description;
+
+    const weather = document.createElement("p");
+    weather.innerHTML = `<strong>${day.weather}</strong>`;
+
+    const photoRow = document.createElement("div");
+    photoRow.className = "photo-row";
+
+    (day.photos || []).forEach(photo => {
+      const img = document.createElement("img");
+      img.className = "photo-thumb";
+      img.src = `images/${photo.id}.jpg`;
+      img.alt = "";
+      img.dataset.src = img.src;
+      img.dataset.caption = photo.caption || "";
+      img.addEventListener("click", () => {
+        showOverlay(img.dataset.src, img.dataset.caption);
+      });
+      photoRow.appendChild(img);
     });
+
+    block.appendChild(title);
+    block.appendChild(date);
+    block.appendChild(desc);
+    block.appendChild(weather);
+    block.appendChild(photoRow);
+
+    container.appendChild(block);
   });
 }
 
@@ -147,4 +131,3 @@ window.onload = loadTimeline;
 </script>
 </body>
 </html>
-
