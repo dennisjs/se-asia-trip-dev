@@ -116,10 +116,9 @@
         <p>\${day.description}</p>
         <p><strong>\${day.weather}</strong></p>
         <div class="photo-row">
-          \${(day.photos || []).map(photo => {
-            const caption = JSON.stringify(photo.caption || "").slice(1, -1); // escape quotes
-            return \`<img class="photo-thumb" src="images/\${photo.id}.jpg" alt="" onclick="showOverlay('images/\${photo.id}.jpg', \${JSON.stringify(photo.caption || "")})" />\`;
-          }).join("")}
+          \${(day.photos || []).map(photo => \`
+            <img class="photo-thumb" src="images/\${photo.id}.jpg" alt="\${photo.caption}" onclick="showOverlay('images/\${photo.id}.jpg', \'\${photo.caption.replace(/'/g, "\'")}\')" />
+          \`).join("")}
         </div>
       \`;
       container.appendChild(block);
@@ -127,6 +126,12 @@
   }
 
   window.onload = () => {
+    document.addEventListener("click", function(e) {
+      if (e.target.classList.contains("photo-thumb")) {
+        showOverlay(e.target.dataset.src, e.target.dataset.caption);
+      }
+    });
+
     loadTimeline();
   };
 </script>
