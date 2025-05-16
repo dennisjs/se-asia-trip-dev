@@ -1,137 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Southeast Asia Trip</title>
-  <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
-  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-    html, body {
-      margin: 0; padding: 0; height: 100%; width: 100%;
-      font-family: 'Inter', sans-serif; background: #f8f9fa;
-    }
-    header {
-      background-color: #fff; color: #004080;
-      padding: 1rem 2rem; position: fixed; top: 0; width: 100%;
-      z-index: 1000; display: flex; justify-content: space-between; align-items: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    .nav-wrapper {
-      display: flex; align-items: center; gap: 2.5rem; margin: auto;
-    }
-    nav a {
-      color: #3366cc; text-decoration: none; font-weight: 600; font-size: 1rem;
-    }
-    nav a:hover { text-decoration: underline; }
+// Load and display timeline data from timeline.json
+async function loadTimeline() {
+  try {
+    const res = await fetch("timeline.json");
+    const timeline = await res.json();
+    const container = document.getElementById("timeline-content");
+    container.innerHTML = "";
 
-    /* FIXED CSS: Prevents weather from clipping */
-    .status-info {
-      font-size: 0.85rem;
-      color: #004080;
-      max-width: 180px; /* limits width to avoid overflow */
-      text-align: right;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+    timeline.forEach(day => {
+      const daySection = document.createElement("div");
+      daySection.className = "day-section";
+      daySection.innerHTML = `
+        <h3>${day.day}: ${day.title}</h3>
+        <p><em>${day.date}</em></p>
+        <p>${day.description}</p>
+        <div class="photos">${day.photos.map(photo => `
+          <img src="images/${photo.id}.jpg" alt="${photo.caption}" data-src="images/${photo.id}.jpg"/>
+        `).join('')}</div>`;
+      container.appendChild(daySection);
+    });
 
-    .section { display: none; padding-top: 80px; }
-    .active { display: block; }
-    #map { width: 100vw; height: calc(100vh - 80px); }
-    #visited { padding: 2rem; max-width: 900px; margin: auto; }
-    .photos { display: flex; gap: 1rem; flex-wrap: wrap; }
-    .photos img {
-      width: 160px; height: 120px; object-fit: cover; border-radius: 6px; cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .overlay {
-      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center;
-      z-index: 2000; visibility: hidden; opacity: 0; transition: opacity 0.3s ease;
-    }
-    .overlay.active { visibility: visible; opacity: 1; }
-    .overlay img {
-      max-width: 90%; max-height: 80%; border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.6);
-    }
-    .close-btn {
-      position: absolute; top: 20px; right: 20px;
-      background: white; padding: 5px 10px; border-radius: 5px; cursor: pointer;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <div class="nav-wrapper">
-    <h1>SE Asia 2025</h1>
-    <nav>
-      <a href="#" onclick="showSection('map-section')">Map</a>
-      <a href="#" onclick="showSection('visited')">Visited</a>
-    </nav>
-  </div>
-  <div class="status-info">
-    <div id="local-time">🕒 Loading...</div>
-    <div id="local-weather">⛅ Loading...</div>
-  </div>
-</header>
-
-<div id="map-section" class="section active">
-  <div id="map"></div>
-</div>
-
-<div id="visited" class="section">
-  <h2>Visited Locations</h2>
-  <div id="timeline-content">Loading timeline...</div>
-</div>
-
-<div id="overlay" class="overlay">
-  <div class="close-btn">✖ Close</div>
-  <img id="overlay-img" src="" alt="Full-size photo">
-</div>
-
-<script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
-
-// Initialize map
-function initMap() {
-  const loc = {lat: 13.7417, lng: 100.5602};
-  const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v12',
-    center: [loc.lng, loc.lat], zoom: 12
-  });
-  new mapboxgl.Marker().setLngLat([loc.lng, loc.lat]).addTo(map);
-}
-
-// Simple section toggle
-function showSection(id) {
-  document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
-
-// Close overlay button
-document.querySelector(".close-btn").addEventListener("click", () => {
-  document.getElementById("overlay").classList.remove("active");
-});
-
-// Update time & weather (static example for now)
-function updateStatus() {
-  const now = new Date();
-  document.getElementById("local-time").textContent = "🕒 " + now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-  document.getElementById("local-weather").textContent = "⛅ 90°F, Humid";
+    document.querySelectorAll(".photos img").forEach(img => {
+      img.addEventListener("click", function() {
+        const overlay = document.getElementById("overlay");
+        const overlayImg = document.getElementById("overlay-img");
+        overlayImg.src = this.dataset.src;
+        overlay.classList.add("active");
+      });
+    });
+  } catch (e) {
+    document.getElementById("timeline-content").textContent = "Failed to load timeline data.";
+    console.error(e);
+  }
 }
 
 window.onload = () => {
   initMap();
   updateStatus();
+  loadTimeline(); // <--- IMPORTANT: call this function here
   setInterval(updateStatus, 60000);
 };
-</script>
-
-</body>
-</html>
