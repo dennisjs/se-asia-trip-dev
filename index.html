@@ -136,6 +136,39 @@
     document.getElementById("photo-overlay").style.display = "none";
   }
 
+  function showOverlay(id, caption) {
+    document.getElementById("overlay-img").src = `images/${id}.jpg`;
+    document.getElementById("overlay-caption").textContent = caption || "";
+    document.getElementById("photo-overlay").style.display = "block";
+  }
+
+  async function loadTimeline() {
+    try {
+      const res = await fetch("timeline.json");
+      const timeline = await res.json();
+      const container = document.getElementById("timeline-content");
+      container.innerHTML = "";
+
+      timeline.forEach(day => {
+        const daySection = document.createElement("div");
+        daySection.innerHTML = `
+          <h3>${day.day}: ${day.title}</h3>
+          <p><em>${day.date}</em></p>
+          <p>${day.description}</p>
+          <div class="photos">
+            ${day.photos.map(photo => `
+              <img src="images/${photo.id}.jpg" alt="${photo.caption}" onclick="showOverlay('${photo.id}', \`${photo.caption}\`)"/>
+            `).join('')}
+          </div>
+        `;
+        container.appendChild(daySection);
+      });
+    } catch (e) {
+      document.getElementById("timeline-content").textContent = "Failed to load timeline.";
+      console.error("Error loading timeline.json", e);
+    }
+  }
+
   async function initMapWithPhotos() {
     const loc = await fetch("location.json").then(r => r.json());
     const map = new mapboxgl.Map({
@@ -164,11 +197,7 @@
           background-image: url(images/${photo.id}.jpg);
           cursor: pointer;
         `;
-        el.onclick = () => {
-          document.getElementById("overlay-img").src = `images/${photo.id}.jpg`;
-          document.getElementById("overlay-caption").textContent = photo.caption || '';
-          document.getElementById("photo-overlay").style.display = "block";
-        };
+        el.onclick = () => showOverlay(photo.id, photo.caption);
         new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
       });
     });
@@ -187,6 +216,7 @@
 
   window.onload = () => {
     initMapWithPhotos();
+    loadTimeline(); // ← this was missing
   };
 </script>
 
