@@ -6,8 +6,6 @@ async function fetchLatestLocation() {
     const res = await fetch("location.json");
     const locations = await res.json();
     if (!Array.isArray(locations)) return [locations];
-
-    locations.sort((a, b) => new Date(b.arrival_date) - new Date(a.arrival_date));
     return locations;
   } catch (e) {
     console.error("Location fetch error:", e);
@@ -21,7 +19,7 @@ window.initMapWithPhotos = function () {
   fetchLatestLocation().then(locations => {
     if (locations.length === 0) return;
 
-    const current = locations[locations.length - 1];
+    const current = locations[locations.length - 1]; // last item is most recent
     const { lat, lng, place } = current;
 
     const map = new mapboxgl.Map({
