@@ -59,7 +59,6 @@ window.initMapWithPhotos = function () {
         infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`;
       });
 
-    // Add gray markers and floating boxes for previous locations
     const previousLocations = locations.slice(1);
 
     previousLocations.forEach((loc, i) => {
@@ -73,7 +72,7 @@ window.initMapWithPhotos = function () {
       box.className = "location-info-box";
 
       const arrival = new Date(loc.arrival_date);
-      const next = i > 0 ? new Date(previousLocations[i - 1].arrival_date) : null;
+      const next = i < previousLocations.length - 1 ? new Date(previousLocations[i + 1].arrival_date) : null;
 
       const arrivalStr = arrival.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
       let rangeStr = `Arrived: ${arrivalStr}`;
