@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
+mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
 async function fetchLatestLocation() {
   try {
@@ -28,14 +28,24 @@ function initMapWithPhotos() {
       zoom: 12
     });
 
-    new mapboxgl.Marker({ color: "red" })
+    const marker = new mapboxgl.Marker({ color: "red" })
       .setLngLat([lng, lat])
-      .setPopup(new mapboxgl.Popup().setText(`My Current Location: ${place}`))
       .addTo(map);
 
-    if (window.updateWeatherBox) {
-      updateWeatherBox(lat, lng, place);
-    }
+    const popup = new mapboxgl.Popup({ offset: 25 })
+      .setLngLat([lng, lat])
+      .setHTML(`<strong>My Current Location:</strong><br>${place}<br>Loading weather...`)
+      .addTo(map);
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
+      .then(res => res.json())
+      .then(weather => {
+        const weatherStr = `${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
+        popup.setHTML(`<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`);
+      })
+      .catch(err => {
+        popup.setHTML(`<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`);
+      });
 
     fetch("timeline.json").then(r => r.json()).then(timeline => {
       timeline.forEach(day => {
