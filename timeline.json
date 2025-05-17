@@ -9,7 +9,7 @@
         "caption": "Koh Lanta sunset",
         "lat": 6.486461111111111,
         "lng": 99.3038111111111,
-        "weather": "83\u00b0F, 79% humidity, overcast clouds"
+        "weather": "83\u00b0F \u2022\ud83d\udca7 79% \u2022 overcast clouds"
       },
       {
         "id": "IMG_0597",
@@ -30,14 +30,14 @@
         "caption": "Storm off Koh Lanta",
         "lat": 6.484152777777778,
         "lng": 99.31090555555555,
-        "weather": "85\u00b0F \u2022\ud83d\udca7 73% humidity \u2022 overcast clouds"
+        "weather": "85\u00b0F \u2022\ud83d\udca7 73% \u2022 overcast clouds"
       },
       {
         "id": "IMG_1160",
         "caption": "Pad Thai!",
         "lat": 6.483416666666667,
         "lng": 99.31092777777778,
-        "weather": "85\u00b0F \u2022\ud83d\udca7 73% humidity \u2022 overcast clouds"
+        "weather": "85\u00b0F \u2022\ud83d\udca7 73% \u2022 overcast clouds"
       }
     ]
   },
@@ -51,7 +51,7 @@
         "caption": "Sunrise Koh Lanta",
         "lat": 6.483430555555556,
         "lng": 99.31101111111111,
-        "weather": "85\u00b0F \u2022\ud83d\udca7 75% humidity \u2022 overcast clouds"
+        "weather": "85\u00b0F \u2022\ud83d\udca7 75% \u2022 overcast clouds"
       }
     ]
   }
