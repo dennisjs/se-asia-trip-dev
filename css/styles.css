@@ -24,7 +24,7 @@ header {
 .nav-wrapper h1 {
   font-size: 1.6rem;
   color: #0077b6; /* light blue */
-  font-weight: 400; /* normal (not bold) */
+  font-weight: 500; /* normal (not bold) */
 }
 nav {
   display: flex;
