@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dennis goes somewhere that's not here1</title>
+  <title>a place that's not here4</title>
   <link rel="icon" href="https://img.icons8.com/ios-filled/50/airplane-take-off.png" />
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
@@ -13,7 +13,7 @@
 
 <header>
   <div class="nav-wrapper">
-    <h1>Dennis goes somewhere that's not here1: southeast Asia</h1>
+    <h1>a place that's not here4: southeast Asia</h1>
     <nav>
       <a href="#" onclick="showSection('map-section')">Map</a>
       <a href="#" onclick="showSection('visited')">Places & Pics</a>
@@ -24,7 +24,6 @@
 
 <div id="map-section" class="section active">
   <div id="map"></div>
-  <div id="location-box" class="location-box"></div>
 </div>
 
 <div id="visited" class="section">
@@ -38,22 +37,17 @@
   <div class="close-btn" onclick="hideOverlay()">Close</div>
 </div>
 
+<script src="js/config.js"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
-<script src="js/overlay.js"></script>
+<script src="js/section_control.js"></script>
 <script src="js/map.js"></script>
-<script src="js/timeline.js"></script>
 <script src="js/weather.js"></script>
+<script src="js/overlay.js"></script>
+<script src="js/timeline.js"></script>
 <script>
-  function showSection(id) {
-    document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-  }
-
-  window.onload = () => {
-    initMapWithPhotos();
+  document.addEventListener("DOMContentLoaded", () => {
     loadTimeline();
-    loadWeather();
-  };
-</script>
+  });
+</script> 
 </body>
 </html>
