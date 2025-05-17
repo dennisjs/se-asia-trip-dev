@@ -19,7 +19,7 @@ window.initMapWithPhotos = function () {
   fetchLatestLocation().then(locations => {
     if (locations.length === 0) return;
 
-    const current = locations[locations.length - 1]; // last item is most recent
+    const current = locations[locations.length - 1];
     const { lat, lng, place } = current;
 
     const map = new mapboxgl.Map({
@@ -27,6 +27,36 @@ window.initMapWithPhotos = function () {
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [lng, lat],
       zoom: 12
+    });
+
+    // Add location line
+    const coordinates = locations.map(loc => [loc.lng, loc.lat]);
+    map.on("load", () => {
+      map.addSource("route", {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          geometry: {
+            type: "LineString",
+            coordinates: coordinates
+          }
+        }
+      });
+
+      map.addLayer({
+        id: "route-line",
+        type: "line",
+        source: "route",
+        layout: {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        paint: {
+          "line-color": "#555",
+          "line-width": 2,
+          "line-dasharray": [2, 4]
+        }
+      });
     });
 
     new mapboxgl.Marker({ color: "red" })
@@ -44,8 +74,8 @@ window.initMapWithPhotos = function () {
       infoBox.style.top = (pos.y - 20) + "px";
     }
 
-    map.on('load', positionBox);
     map.on('move', positionBox);
+    positionBox();
 
     fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&units=imperial&appid=" + window.CONFIG.OPENWEATHER_KEY)
       .then(res => res.json())
@@ -86,8 +116,8 @@ window.initMapWithPhotos = function () {
         box.style.top = (pt.y - 20) + "px";
       }
 
-      map.on("load", positionGrayBox);
       map.on("move", positionGrayBox);
+      positionGrayBox();
     });
 
     fetch("timeline.json").then(r => r.json()).then(timeline => {
