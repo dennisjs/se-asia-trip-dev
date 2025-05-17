@@ -28,11 +28,10 @@ async function loadTimeline() {
         </div>
       `;
 
-const thumbs = section.querySelectorAll(".photo-thumb");
-thumbs.forEach((thumb, i) => {
-  thumb.onclick = () => initLightbox(photos, i, day.day + " – " + day.date);
-});
-
+      const thumbs = section.querySelectorAll(".photo-thumb");
+      thumbs.forEach((thumb, i) => {
+        thumb.onclick = () => initLightbox(photos, i, day.day + " – " + day.date);
+      });
 
       container.appendChild(section);
     }
