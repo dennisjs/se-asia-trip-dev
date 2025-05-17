@@ -19,14 +19,20 @@ async function loadTimeline() {
         <h3>${day.day} – ${day.date}</h3>
         ${weather ? `<div class="weather-info">🌦 ${weather}</div>` : ""}
         <div class="photos">
-          ${photos.map(photo => `
+          ${photos.map((photo, i) => `
             <figure>
-              <img src="images/${photo.id}.jpg" alt="${photo.caption}" onclick="showOverlay('images/${photo.id}.jpg', '${photo.caption.replace(/'/g, "\\'")}')">
+              <img src="images/${photo.id}.jpg" alt="${photo.caption}" data-photo-index="${i}" class="photo-thumb">
               <figcaption>${photo.caption}</figcaption>
             </figure>
           `).join("")}
         </div>
       `;
+
+const thumbs = section.querySelectorAll(".photo-thumb");
+thumbs.forEach((thumb, i) => {
+  thumb.onclick = () => initLightbox(photos, i, day.day + " – " + day.date);
+});
+
 
       container.appendChild(section);
     }
