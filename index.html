@@ -38,14 +38,16 @@
 </div>
 
 <script src="js/config.js"></script>
-<script src="js/section_control.js"></script>
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+<script src="js/section_control.js"></script>
 <script src="js/map.js"></script>
 <script src="js/weather.js"></script>
 <script src="js/overlay.js"></script>
 <script src="js/timeline.js"></script>
 <script>
-  loadTimeline();
-</script>  
+  document.addEventListener("DOMContentLoaded", () => {
+    loadTimeline();
+  });
+</script> 
 </body>
 </html>
