@@ -1,34 +1,50 @@
 [
   {
+    "date": "05-14-25",
     "day": "Day 1",
-    "title": "Bangkok Arrival",
-    "date": "June 1",
-    "description": "Exploring the city streets and local food.",
-    "weather": "90\u00b0F, Humid with scattered clouds",
+    "title": "Photos from 05-14-25",
     "photos": [
       {
         "id": "IMG_1079",
-        "caption": "Koh Pi Pi sunset",
+        "caption": "Koh Lanta sunset",
         "lat": 6.486461111111111,
-        "lng": 99.3038111111111
-      },
+        "lng": 99.3038111111111,
+        "weather": "83\u00b0F, 79% humidity, overcast clouds"
+      }
+    ]
+  },
+  {
+    "date": "05-15-25",
+    "day": "Day 2",
+    "title": "Photos from 05-15-25",
+    "photos": [
       {
         "id": "IMG_1137",
-        "caption": "Koh Lipe stormy beach",
+        "caption": "Storm off Koh Lanta",
         "lat": 6.484152777777778,
-        "lng": 99.31090555555555
+        "lng": 99.31090555555555,
+        "weather": "85\u00b0F, 73% humidity, overcast clouds"
       },
       {
         "id": "IMG_1160",
-        "caption": "Phad Thai in Koh Lipe",
+        "caption": "Pad Thai!",
         "lat": 6.483416666666667,
-        "lng": 99.31092777777778
-      },
+        "lng": 99.31092777777778,
+        "weather": "85\u00b0F, 73% humidity, overcast clouds"
+      }
+    ]
+  },
+  {
+    "date": "05-16-25",
+    "day": "Day 3",
+    "title": "Photos from 05-16-25",
+    "photos": [
       {
         "id": "IMG_1161",
-        "caption": "Sunset in Koh Lipe",
+        "caption": "Sunrise Koh Lanta",
         "lat": 6.483430555555556,
-        "lng": 99.31101111111111
+        "lng": 99.31101111111111,
+        "weather": "85\u00b0F, 75% humidity, overcast clouds"
       }
     ]
   }
