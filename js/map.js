@@ -15,7 +15,7 @@ async function fetchLatestLocation() {
   }
 }
 
-function initMapWithPhotos() {
+window.initMapWithPhotos = function () {
   // 🧹 Remove any existing location box
   document.querySelectorAll(".location-info-box").forEach(el => el.remove());
 
@@ -96,4 +96,7 @@ function initMapWithPhotos() {
   });
 }
 
-initMapWithPhotos();
+// If map is the default view, call immediately
+if (document.getElementById("map").offsetParent !== null) {
+  window.initMapWithPhotos();
+}
