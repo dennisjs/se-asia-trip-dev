@@ -27,7 +27,7 @@ function initMapWithPhotos() {
             background-image: url(images/${photo.id}.jpg);
             cursor: pointer;
           `;
-          el.onclick = () => showOverlay(photo.id, photo.caption);
+          el.onclick = () => showOverlay('images/' + photo.id + '.jpg', photo.caption || '');
           new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
         });
       });
