@@ -6,17 +6,17 @@
     "photos": [
       {
         "id": "IMG_1079",
-        "caption": "Koh Lanta garbledygood",
+        "caption": "Koh Lanta sunset",
         "lat": 6.486461111111111,
         "lng": 99.3038111111111,
-        "weather": "83F, 79% humidity, overcast clouds"
+        "weather": "83\u00b0F, 79% humidity, overcast clouds"
       },
       {
         "id": "IMG_0597",
-        "caption": "Golden Palace, Bang-ON",
+        "caption": "Golden Palace, Bangkok",
         "lat": 13.75136111111111,
         "lng": 100.49226388888889,
-        "weather": "88F, 63% humidity, light rain"
+        "weather": "88\u00b0F \u2022\ud83d\udca7 63% \u2022 light rain"
       }
     ]
   },
