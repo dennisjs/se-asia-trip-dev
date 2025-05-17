@@ -1,9 +1,13 @@
+function showOverlay(src, caption) {
+  const overlay = document.getElementById("photo-overlay");
+  const img = document.getElementById("overlay-img");
+  const cap = document.getElementById("overlay-caption");
 
-function showOverlay(id, caption) {
-  document.getElementById("overlay-img").src = `images/${id}.jpg`;
-  document.getElementById("overlay-caption").textContent = caption || "";
-  document.getElementById("photo-overlay").style.display = "block";
+  img.src = src;
+  cap.textContent = caption || "";
+  overlay.style.display = "block";
 }
+
 function hideOverlay() {
   document.getElementById("photo-overlay").style.display = "none";
 }
