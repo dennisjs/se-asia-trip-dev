@@ -21,14 +21,19 @@ header {
   align-items: center;
   gap: 3rem;
 }
+.nav-wrapper h1 {
+  font-size: 1.6rem;
+  color: #0077b6; /* light blue */
+  font-weight: 500; /* normal (not bold) */
+}
 nav {
   display: flex;
   gap: 2.5rem;
 }
 nav a {
-  color: #3366cc;
+  color: #000000;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
 }
 .section {
   display: none;
@@ -99,4 +104,9 @@ nav a {
   display: block;
   color: #004080;
   margin-bottom: 0.25rem;
+}
+.weather-info {
+  font-family: "Inter", "Segoe UI Emoji", sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
 }

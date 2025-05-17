@@ -1,5 +1,14 @@
-{
-  "place": "Solitaire Bangkok Hotel",
-  "lat": 13.7417,
-  "lng": 100.5602
-}
+[
+  {
+    "place": "Bangkok",
+    "lat": 13.7417,
+    "lng": 100.5602,
+    "arrival_date": "06-02-25"
+  },
+  {
+    "place": "Chiang Mai",
+    "lat": 18.78818,
+    "lng": 98.98797,
+    "arrival_date": "06-05-25"
+  }
+]

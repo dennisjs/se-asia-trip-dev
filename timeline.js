@@ -21,7 +21,7 @@ async function loadTimeline() {
         <div class="photos">
           ${photos.map(photo => `
             <figure>
-              <img src="images/${photo.id}.jpg" alt="${photo.caption}" onclick="showOverlay('images/${photo.id}.jpg', '${photo.caption.replace(/'/g, "\\'")}')">
+              <img src="images/${photo.id}.jpg" alt="${photo.caption}" onclick="showOverlay('images/${photo.id}.jpg', '${photo.caption.replace(/'/g, "\'")}')">
               <figcaption>${photo.caption}</figcaption>
             </figure>
           `).join("")}
