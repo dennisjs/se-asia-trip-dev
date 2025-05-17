@@ -1,4 +1,3 @@
-
 function showSection(id) {
   // Hide all content sections
   document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
