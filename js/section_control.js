@@ -1,16 +1,28 @@
 
-function showSection(id) {
-  // Hide all content sections
-  document.querySelectorAll(".section").forEach(el => el.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
+window.showSection = function(id) {
+  const allSections = document.querySelectorAll('.section');
+  const newSection = document.getElementById(id);
+  const currentSection = Array.from(allSections).find(sec => sec.classList.contains('active'));
 
-  // 🧼 Remove floating info box when leaving the map
-  if (id !== "map-section") {
-    document.querySelectorAll(".location-info-box").forEach(el => el.remove());
-  }
+  if (newSection === currentSection) return;
 
-  // 🔁 Re-initialize map if returning
-  if (id === "map-section" && typeof initMapWithPhotos === "function") {
-    initMapWithPhotos();
+  if (currentSection) {
+    currentSection.classList.remove('show-up');
+    currentSection.classList.add('hide-down');
+
+    setTimeout(() => {
+      currentSection.classList.remove('active', 'hide-down');
+      newSection.classList.add('slide-up', 'active');
+      setTimeout(() => {
+        newSection.classList.remove('slide-up');
+        newSection.classList.add('show-up');
+      }, 10);
+    }, 500);
+  } else {
+    newSection.classList.add('slide-up', 'active');
+    setTimeout(() => {
+      newSection.classList.remove('slide-up');
+      newSection.classList.add('show-up');
+    }, 10);
   }
-}
+};
