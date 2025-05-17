@@ -15,7 +15,9 @@ async function fetchLatestLocation() {
   }
 }
 
-function initMapWithPhotos() {
+window.initMapWithPhotos = function () {
+  document.querySelectorAll(".location-info-box").forEach(el => el.remove());
+
   fetchLatestLocation().then(locations => {
     if (locations.length === 0) return;
 
@@ -33,7 +35,6 @@ function initMapWithPhotos() {
       .setLngLat([lng, lat])
       .addTo(map);
 
-    // Add floating location info box
     const infoBox = document.createElement('div');
     infoBox.className = 'location-info-box';
     infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Loading weather...`;
@@ -48,27 +49,53 @@ function initMapWithPhotos() {
     map.on('load', positionBox);
     map.on('move', positionBox);
 
-    // Add weather
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
       .then(res => res.json())
       .then(weather => {
         const weatherStr = `${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
         infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
       })
-      .catch(err => {
+      .catch(() => {
         infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`;
       });
 
-    // Add gray markers for previous locations
-    locations.slice(1).forEach(loc => {
-      if (loc.lat && loc.lng) {
-        new mapboxgl.Marker({ color: "gray" })
-          .setLngLat([loc.lng, loc.lat])
-          .addTo(map);
+    // Add gray markers and floating boxes for previous locations
+    const previousLocations = locations.slice(1);
+
+    previousLocations.forEach((loc, i) => {
+      if (!loc.lat || !loc.lng || !loc.arrival_date) return;
+
+      new mapboxgl.Marker({ color: "gray" })
+        .setLngLat([loc.lng, loc.lat])
+        .addTo(map);
+
+      const box = document.createElement("div");
+      box.className = "location-info-box";
+
+      const arrival = new Date(loc.arrival_date);
+      const next = i > 0 ? new Date(previousLocations[i - 1].arrival_date) : null;
+
+      const arrivalStr = arrival.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+      let rangeStr = `Arrived: ${arrivalStr}`;
+      if (next) {
+        const depart = new Date(next.getTime() - 86400000);
+        const departStr = depart.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
+        rangeStr += `<br>Departed: ${departStr}`;
       }
+
+      box.innerHTML = `<strong>${loc.place}</strong><br>${rangeStr}`;
+      document.body.appendChild(box);
+
+      function positionGrayBox() {
+        const pt = map.project([loc.lng, loc.lat]);
+        box.style.left = `${pt.x + 20}px`;
+        box.style.top = `${pt.y - 20}px`;
+      }
+
+      map.on("load", positionGrayBox);
+      map.on("move", positionGrayBox);
     });
 
-    // Add photo thumbnails
     fetch("timeline.json").then(r => r.json()).then(timeline => {
       timeline.forEach(day => {
         (day.photos || []).forEach(photo => {
@@ -91,6 +118,8 @@ function initMapWithPhotos() {
       });
     });
   });
-}
+};
 
-initMapWithPhotos();
+if (document.getElementById("map").offsetParent !== null) {
+  window.initMapWithPhotos();
+}
