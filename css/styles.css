@@ -21,6 +21,11 @@ header {
   align-items: center;
   gap: 3rem;
 }
+.nav-wrapper h1 {
+  font-size: 1.8rem;
+  color: #0077b6; /* sea blue */
+  font-weight: 600;
+}
 nav {
   display: flex;
   gap: 2.5rem;
