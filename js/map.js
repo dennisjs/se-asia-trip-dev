@@ -53,16 +53,16 @@ function initMapWithPhotos() {
           if (!photo.lat || !photo.lng) return;
           const el = document.createElement('div');
           el.className = 'map-thumb';
-          el.style = \`
+          el.style = `
             width: 32px;
             height: 32px;
             border-radius: 4px;
             background-size: cover;
             background-position: center;
             box-shadow: 0 0 4px rgba(0,0,0,0.5);
-            background-image: url(images/\${photo.id}.jpg);
+            background-image: url(images/${photo.id}.jpg);
             cursor: pointer;
-          \`;
+          `;
           el.onclick = () => showOverlay('images/' + photo.id + '.jpg', photo.caption);
           new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
         });
