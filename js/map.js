@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw';
+mapboxgl.accessToken = 'YOUR_MAPBOX_TOKEN';
 
 async function fetchLatestLocation() {
   try {
@@ -38,23 +38,8 @@ async function initMap() {
     .setPopup(new mapboxgl.Popup().setText(`My Current Location: ${place}`))
     .addTo(map);
 
-  document.getElementById("location-box").innerHTML = `
-    <strong>My Current Location:</strong><br>
-    ${place}
-  `;
-
-  fetchWeather(lat, lng);
-}
-
-async function fetchWeather(lat, lng) {
-  try {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=YOUR_OPENWEATHER_API_KEY`;
-    const res = await fetch(url);
-    const data = await res.json();
-    const weather = `${Math.round(data.main.temp)}°F, ${data.weather[0].description}`;
-    document.getElementById("location-box").innerHTML += `<br>${weather}`;
-  } catch (e) {
-    console.error("Weather fetch error:", e);
+  if (window.updateWeatherBox) {
+    updateWeatherBox(lat, lng, place);
   }
 }
 
