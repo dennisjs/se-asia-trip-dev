@@ -31,14 +31,35 @@ function initMapWithPhotos() {
 
     new mapboxgl.Marker({ color: "red" })
       .setLngLat([lng, lat])
-      .setPopup(new mapboxgl.Popup().setText(`My Current Location: ${place}`))
       .addTo(map);
 
-    if (window.updateWeatherBox) {
-      updateWeatherBox(lat, lng, place);
+    // Add floating location info box
+    const infoBox = document.createElement('div');
+    infoBox.className = 'location-info-box';
+    infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Loading weather...`;
+    document.body.appendChild(infoBox);
+
+    function positionBox() {
+      const pos = map.project([lng, lat]);
+      infoBox.style.left = `${pos.x + 20}px`;
+      infoBox.style.top = `${pos.y - 20}px`;
     }
 
-    // Add gray markers for all previous locations
+    map.on('load', positionBox);
+    map.on('move', positionBox);
+
+    // Add weather
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
+      .then(res => res.json())
+      .then(weather => {
+        const weatherStr = `${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
+        infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
+      })
+      .catch(err => {
+        infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`;
+      });
+
+    // Add gray markers for previous locations
     locations.slice(1).forEach(loc => {
       if (loc.lat && loc.lng) {
         new mapboxgl.Marker({ color: "gray" })
@@ -47,6 +68,7 @@ function initMapWithPhotos() {
       }
     });
 
+    // Add photo thumbnails
     fetch("timeline.json").then(r => r.json()).then(timeline => {
       timeline.forEach(day => {
         (day.photos || []).forEach(photo => {
