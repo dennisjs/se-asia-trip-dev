@@ -21,7 +21,7 @@ window.initMapWithPhotos = function () {
   fetchLatestLocation().then(locations => {
     if (locations.length === 0) return;
 
-    const current = locations[0];
+    const current = locations[locations.length - 1];
     const { lat, lng, place } = current;
 
     const map = new mapboxgl.Map({
@@ -59,10 +59,11 @@ window.initMapWithPhotos = function () {
         infoBox.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`;
       });
 
-    const previousLocations = locations.slice(1);
+    // Add gray markers and static info boxes for previous locations
+    const previousLocations = locations.slice(0, -1);
 
-    previousLocations.forEach((loc, i) => {
-      if (!loc.lat || !loc.lng || !loc.arrival_date) return;
+    previousLocations.forEach(loc => {
+      if (!loc.lat || !loc.lng) return;
 
       new mapboxgl.Marker({ color: "gray" })
         .setLngLat([loc.lng, loc.lat])
@@ -71,15 +72,12 @@ window.initMapWithPhotos = function () {
       const box = document.createElement("div");
       box.className = "location-info-box";
 
-      const arrival = new Date(loc.arrival_date);
-      const next = i < previousLocations.length - 1 ? new Date(previousLocations[i + 1].arrival_date) : null;
+      const arrival = loc.arrival_date || "";
+      const departure = loc.departure_date || "";
 
-      const arrivalStr = arrival.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
-      let rangeStr = `Arrived: ${arrivalStr}`;
-      if (next) {
-        const depart = new Date(next.getTime() - 86400000);
-        const departStr = depart.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
-        rangeStr += `<br>Departed: ${departStr}`;
+      let rangeStr = `Arrived: ${arrival}`;
+      if (departure) {
+        rangeStr += `<br>Departed: ${departure}`;
       }
 
       box.innerHTML = `<strong>${loc.place}</strong><br>${rangeStr}`;
@@ -101,16 +99,16 @@ window.initMapWithPhotos = function () {
           if (!photo.lat || !photo.lng) return;
           const el = document.createElement('div');
           el.className = 'map-thumb';
-          el.style = `
+          el.style = \`
             width: 32px;
             height: 32px;
             border-radius: 4px;
             background-size: cover;
             background-position: center;
             box-shadow: 0 0 4px rgba(0,0,0,0.5);
-            background-image: url(images/${photo.id}.jpg);
+            background-image: url(images/\${photo.id}.jpg);
             cursor: pointer;
-          `;
+          \`;
           el.onclick = () => showOverlay('images/' + photo.id + '.jpg', photo.caption);
           new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
         });
