@@ -16,6 +16,9 @@ async function fetchLatestLocation() {
 }
 
 function initMapWithPhotos() {
+  // 🧹 Remove any existing location box
+  document.querySelectorAll(".location-info-box").forEach(el => el.remove());
+
   fetchLatestLocation().then(locations => {
     if (locations.length === 0) return;
 
