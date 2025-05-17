@@ -105,3 +105,8 @@ nav a {
   color: #004080;
   margin-bottom: 0.25rem;
 }
+.weather-info {
+  font-family: "Inter", "Segoe UI Emoji", sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
