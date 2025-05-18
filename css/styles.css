@@ -19,8 +19,11 @@ header {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+  justify-content: center; /* keeps nav + button centered */
+  flex-wrap: wrap; /* allows button to move below on small screens */
 }
+
 .nav-wrapper h1 {
   font-size: 1.6rem;
   color: #33adff; /* updated blue */;
@@ -180,20 +183,21 @@ nav a {
 
 .thumb-toggle-btn {
   background-color: #33adff;
-  color: white;
-  padding: 0.4rem 1rem;
-  font-size: 0.9rem;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  color: white;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   transition: background-color 0.2s ease;
+  margin-left: auto;
 }
 
 .thumb-toggle-btn:hover {
-  background-color: #2899e0;
+  background-color: #1a90e0;
 }
-
 
 .more-count {
   font-size: 0.8rem;
