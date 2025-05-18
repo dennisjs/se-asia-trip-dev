@@ -121,9 +121,12 @@ window.initMapWithPhotos = function () {
     });
 
     fetch("timeline.json").then(r => r.json()).then(timeline => {
+      const photoMarkers = [];
+    
       timeline.forEach(day => {
         (day.photos || []).forEach(photo => {
           if (!photo.lat || !photo.lng) return;
+    
           const el = document.createElement("div");
           el.className = "map-thumb";
           el.style.width = "32px";
@@ -135,9 +138,22 @@ window.initMapWithPhotos = function () {
           el.style.backgroundImage = "url(images/" + photo.id + ".jpg)";
           el.style.cursor = "pointer";
           el.onclick = () => showOverlay("images/" + photo.id + ".jpg", photo.caption);
-          new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
+    
+          const marker = new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
+          photoMarkers.push(marker);
         });
       });
+    
+      // Toggle handler
+      const toggleBtn = document.getElementById("toggle-thumbs");
+      if (toggleBtn) {
+        toggleBtn.addEventListener("click", () => {
+          photoMarkers.forEach(marker => {
+            const el = marker.getElement();
+            el.style.display = el.style.display === "none" ? "block" : "none";
+          });
+        });
+      }
     });
   });
 };
