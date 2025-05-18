@@ -173,6 +173,28 @@ nav a {
   cursor: pointer;
 }
 
+.thumb-toggle-wrapper {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.thumb-toggle-btn {
+  background-color: #33adff;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.thumb-toggle-btn:hover {
+  background-color: #2899e0;
+}
+
+
 .more-count {
   font-size: 0.8rem;
   color: #666;
