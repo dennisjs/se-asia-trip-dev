@@ -41,7 +41,7 @@ async function loadTimeline() {
     date.textContent = day.date;
 
     const desc = document.createElement("p");
-    desc.className = "description";
+    desc.className = "timeline-description";
     desc.textContent = day.description;
 
     const weather = document.createElement("div");
