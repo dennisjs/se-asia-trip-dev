@@ -19,7 +19,7 @@ async function loadTimeline() {
       img.className = "thumb";
       img.src = `images/${photo.id}.jpg`;
       img.alt = photo.caption;
-      img.onclick = () => showLightbox(photos, index);
+      img.onclick = () => initLightbox(photos, index);
       photoCol.appendChild(img);
     });
 
@@ -34,7 +34,7 @@ async function loadTimeline() {
     content.className = "content-box";
 
     const title = document.createElement("h3");
-    title.textContent = `${day.day}: ${day.title}`;
+    title.textContent = `${day.day}`;
 
     const date = document.createElement("p");
     date.className = "date";
