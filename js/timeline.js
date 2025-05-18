@@ -1,41 +1,61 @@
+async function loadTimeline() {
+  const res = await fetch("timeline.json");
+  const timeline = await res.json();
+  const container = document.getElementById("timeline-content");
+  container.innerHTML = "";
 
-function loadTimeline() {
-  fetch("timeline.json")
-    .then(r => r.json())
-    .then(data => {
-      const container = document.getElementById("timeline-content");
-      container.innerHTML = "";
+  timeline.forEach(day => {
+    const entry = document.createElement("div");
+    entry.className = "timeline-entry";
 
-      data.forEach(day => {
-        const section = document.createElement("section");
-        const weather = day.weather || "";
-        const photos = day.photos || [];
+    const photoCol = document.createElement("div");
+    photoCol.className = "photo-column";
 
-        const photoHTML = photos.map((photo, i) => 
-          '<figure>' +
-            '<img src="images/' + photo.id + '.jpg" alt="' + photo.caption + '" data-photo-index="' + i + '" class="photo-thumb">' +
-            '<figcaption>' + photo.caption + '</figcaption>' +
-          '</figure>'
-        ).join("");
+    const photos = day.photos || [];
+    const maxThumbs = 3;
 
-        section.innerHTML = 
-          '<h3>' + day.day + ' – ' + day.date + '</h3>' +
-          (weather ? '<div class="weather-info">🌦 ' + weather + '</div>' : '') +
-          '<div class="photos">' + photoHTML + '</div>';
-
-        container.appendChild(section);
-
-        const thumbs = section.querySelectorAll(".photo-thumb");
-        thumbs.forEach((thumb, i) => {
-          thumb.addEventListener("click", (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            initLightbox(photos, i, day.day + " – " + day.date);
-          });
-        });
-      });
-    })
-    .catch(err => {
-      document.getElementById("timeline-content").textContent = "Error loading timeline: " + err;
+    photos.slice(0, maxThumbs).forEach((photo, index) => {
+      const img = document.createElement("img");
+      img.className = "thumb";
+      img.src = `images/${photo.id}.jpg`;
+      img.alt = photo.caption;
+      img.onclick = () => initLightbox(photos, index);
+      photoCol.appendChild(img);
     });
+
+    if (photos.length > maxThumbs) {
+      const more = document.createElement("div");
+      more.className = "more-count";
+      more.textContent = `+${photos.length - maxThumbs} more`;
+      photoCol.appendChild(more);
+    }
+
+    const content = document.createElement("div");
+    content.className = "content-box";
+
+    const title = document.createElement("h3");
+    title.textContent = `${day.day} – ${day.date}`;
+
+    const date = document.createElement("p");
+    date.className = "date";
+    date.textContent = day.date;
+
+    const desc = document.createElement("p");
+    desc.className = "timeline-description";
+    desc.textContent = day.description;
+
+    const weather = document.createElement("div");
+    weather.className = "weather";
+    weather.textContent = `🌤 ${day.weather}`;
+
+    content.appendChild(title);
+    //content.appendChild(date);
+    content.appendChild(desc);
+    content.appendChild(weather);
+
+    entry.appendChild(photoCol);
+    entry.appendChild(content);
+    container.appendChild(entry);
+  });
 }
+
