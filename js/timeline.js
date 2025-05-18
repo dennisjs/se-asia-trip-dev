@@ -34,7 +34,7 @@ async function loadTimeline() {
     content.className = "content-box";
 
     const title = document.createElement("h3");
-    title.textContent = `${day.day}`;
+    title.textContent = `${day.day} – ${day.date}`;
 
     const date = document.createElement("p");
     date.className = "date";
@@ -49,7 +49,7 @@ async function loadTimeline() {
     weather.textContent = `🌤 ${day.weather}`;
 
     content.appendChild(title);
-    content.appendChild(date);
+    //content.appendChild(date);
     content.appendChild(desc);
     content.appendChild(weather);
 
