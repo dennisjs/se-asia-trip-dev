@@ -47,7 +47,7 @@ nav a {
   height: calc(100vh - 60px);
 }
 #visited {
-  padding: 2rem;
+  padding: 4.5rem 2rem 2rem; /* more top padding */
   max-width: 900px;
   margin: auto;
 }
