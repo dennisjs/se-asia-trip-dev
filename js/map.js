@@ -1,5 +1,5 @@
 
-mapboxgl.accessToken = MAPBOX_TOKEN;
+mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
 let map;
 
