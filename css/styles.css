@@ -19,8 +19,11 @@ header {
 .nav-wrapper {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
+  justify-content: center; /* keeps nav + button centered */
+  flex-wrap: wrap; /* allows button to move below on small screens */
 }
+
 .nav-wrapper h1 {
   font-size: 1.6rem;
   color: #33adff; /* updated blue */;
@@ -143,7 +146,7 @@ nav a {
 .timeline-title {
   font-family: 'Bangers', cursive;
   font-size: 2.5rem;
-  color: #1e1e1e
+  color: #1e1e1e;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -171,6 +174,24 @@ nav a {
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.15);
   cursor: pointer;
+}
+
+.thumb-toggle-btn {
+  background-color: #33adff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.thumb-toggle-btn:hover {
+  background-color: #1a90e0;
 }
 
 .more-count {
@@ -210,4 +231,8 @@ nav a {
   font-size: 0.9rem;
   color: #3366cc;
   font-weight: 500;
+}
+
+.itinerary-day {
+  color: #33adff;
 }
