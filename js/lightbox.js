@@ -2,21 +2,23 @@
 window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";
-  overlay.innerHTML = \`
-    <div class="lightbox-content">
-      <span class="lightbox-close">&times;</span>
-      <div class="lightbox-main">
-        <img id="lightbox-main-img" src="" alt="">
-        <div class="lightbox-caption"></div>
-      </div>
-      <div class="lightbox-nav">
-        <button id="lightbox-prev">&#10094;</button>
-        <div class="lightbox-thumbnails"></div>
-        <button id="lightbox-next">&#10095;</button>
-      </div>
-    </div>
-  \`;
 
+  const content = document.createElement("div");
+  content.className = "lightbox-content";
+
+  content.innerHTML = 
+    '<span class="lightbox-close">&times;</span>' +
+    '<div class="lightbox-main">' +
+      '<img id="lightbox-main-img" src="" alt="">' +
+      '<div class="lightbox-caption"></div>' +
+    '</div>' +
+    '<div class="lightbox-nav">' +
+      '<button id="lightbox-prev">&#10094;</button>' +
+      '<div class="lightbox-thumbnails"></div>' +
+      '<button id="lightbox-next">&#10095;</button>' +
+    '</div>';
+
+  overlay.appendChild(content);
   document.body.appendChild(overlay);
 
   const mainImg = overlay.querySelector("#lightbox-main-img");

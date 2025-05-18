@@ -1,37 +1,37 @@
 
-async function loadTimeline() {
-  try {
-    const res = await fetch("timeline.json");
-    const timeline = await res.json();
-    const container = document.getElementById("timeline-content");
-    container.innerHTML = "";
+function loadTimeline() {
+  fetch("timeline.json")
+    .then(r => r.json())
+    .then(data => {
+      const container = document.getElementById("timeline-content");
+      container.innerHTML = "";
 
-    for (const day of timeline) {
-      const photos = day.photos || [];
-      if (photos.length === 0) continue;
+      data.forEach(day => {
+        const section = document.createElement("section");
+        const weather = day.weather || "";
+        const photos = day.photos || [];
 
-      const weather = photos.find(p => p.weather)?.weather;
+        const photoHTML = photos.map((photo, i) => 
+          '<figure>' +
+            '<img src="images/' + photo.id + '.jpg" alt="' + photo.caption + '" data-photo-index="' + i + '" class="photo-thumb">' +
+            '<figcaption>' + photo.caption + '</figcaption>' +
+          '</figure>'
+        ).join("");
 
-      const section = document.createElement("div");
-      section.className = "day-section";
+        section.innerHTML = 
+          '<h3>' + day.day + ' – ' + day.date + '</h3>' +
+          (weather ? '<div class="weather-info">🌦 ' + weather + '</div>' : '') +
+          '<div class="photos">' + photoHTML + '</div>';
 
-      section.innerHTML = `
-        <h3>${day.day} – ${day.date}</h3>
-        ${weather ? `<div class="weather-info">🌦 ${weather}</div>` : ""}
-        <div class="photos">
-          ${photos.map(photo => `
-            <figure>
-              <img src="images/${photo.id}.jpg" alt="${photo.caption}" data-photo-index="${i}" class="photo-thumb">
-              <figcaption>${photo.caption}</figcaption>
-            </figure>
-          `).join("")}
-        </div>
-      `;
+        container.appendChild(section);
 
-      container.appendChild(section);
-    }
-  } catch (err) {
-    console.error("Error loading timeline:", err);
-    document.getElementById("timeline-content").textContent = "Failed to load timeline.";
-  }
+        const thumbs = section.querySelectorAll(".photo-thumb");
+        thumbs.forEach((thumb, i) => {
+          thumb.onclick = () => initLightbox(photos, i, day.day + " – " + day.date);
+        });
+      });
+    })
+    .catch(err => {
+      document.getElementById("timeline-content").textContent = "Error loading timeline: " + err;
+    });
 }
