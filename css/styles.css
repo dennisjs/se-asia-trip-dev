@@ -176,23 +176,18 @@ nav a {
   cursor: pointer;
 }
 
-.thumb-toggle-wrapper {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-
 .thumb-toggle-btn {
   background-color: #33adff;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   color: white;
-  padding: 0.35rem 0.75rem;
+  padding: 0.4rem 1rem;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-  transition: background-color 0.2s ease;
-  margin-left: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  margin-top: 0.5rem;
+  transition: background 0.3s ease;
 }
 
 .thumb-toggle-btn:hover {
