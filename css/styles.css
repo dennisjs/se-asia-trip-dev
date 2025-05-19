@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 2000;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 header h1 {
@@ -98,6 +98,7 @@ nav a {
 }
 .location-box {
   position: absolute;
+  z-index: 1500;
   top: 100px;
   right: 10px;
   background: white;
@@ -106,7 +107,7 @@ nav a {
   font-size: 0.9rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   max-width: 280px;
-  z-index: 1000;
+  z-index: 2000;
   line-height: 1.4;
 }
 .location-box strong {
@@ -139,7 +140,7 @@ nav a {
   font-size: 0.9rem;
   color: #004080;
   pointer-events: none;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .timeline-entry {
