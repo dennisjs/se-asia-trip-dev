@@ -188,6 +188,7 @@ nav a {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   margin-top: 0.5rem;
+  margin-left: 2rem;
   transition: background 0.3s ease;
 }
 
