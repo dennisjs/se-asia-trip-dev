@@ -1,92 +1,128 @@
 mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
-let map;
+async function fetchLatestLocation() {
+  try {
+    const res = await fetch("location.json");
+    const locations = await res.json();
+    if (!Array.isArray(locations)) return [locations];
+    return locations;
+  } catch (e) {
+    console.error("Location fetch error:", e);
+    return [];
+  }
+}
 
-fetch("location.json")
-  .then(r => r.json())
-  .then(locations => {
+window.initMapWithPhotos = function () {
+  document.querySelectorAll(".location-info-box").forEach(el => el.remove());
+
+  fetchLatestLocation().then(locations => {
+    if (locations.length === 0) return;
+
     const current = locations[locations.length - 1];
-    const mapCenter = [current.lng, current.lat];
+    const { lat, lng, place } = current;
 
-    map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/streets-v12",
-      center: mapCenter,
-      zoom: 11
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [lng, lat],
+      zoom: 12
     });
 
-    // Add markers and floating info boxes
-    locations.forEach((loc, i) => {
-      const isCurrent = i === locations.length - 1;
-      const color = isCurrent ? "red" : "gray";
+    // Route line
+    const coordinates = locations.map(loc => [loc.lng, loc.lat]);
+    map.on("load", () => {
+      map.addSource("route", {
+        type: "geojson",
+        data: {
+          type: "Feature",
+          geometry: {
+            type: "LineString",
+            coordinates: coordinates
+          }
+        }
+      });
 
-      // Add marker
-      new mapboxgl.Marker({ color }).setLngLat([loc.lng, loc.lat]).addTo(map);
-
-      // Create info box
-      const box = document.createElement("div");
-      box.className = "location-label";
-
-      if (isCurrent) {
-        box.innerHTML = `<strong>${loc.place}</strong><br>${window.latestWeather || "Loading weather..."}`;
-      } else {
-        const dateStr = `<small>${loc.arrival || "?"} – ${loc.departure || "?"}</small>`;
-        box.innerHTML = `<strong>${loc.place}</strong><br>${dateStr}`;
-      }
-
-      // Position box near marker
-      const markerPixel = map.project([loc.lng, loc.lat]);
-      box.style.left = markerPixel.x + 20 + "px";
-      box.style.top = markerPixel.y - 10 + "px";
-      box.style.position = "absolute";
-      box.style.zIndex = 500;
-      map.getContainer().appendChild(box);
-
-      // Keep box synced on map move
-      map.on("move", () => {
-        const updated = map.project([loc.lng, loc.lat]);
-        box.style.left = updated.x + 20 + "px";
-        box.style.top = updated.y - 10 + "px";
+      map.addLayer({
+        id: "route-line",
+        type: "line",
+        source: "route",
+        layout: {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        paint: {
+          "line-color": "#555",
+          "line-width": 2,
+          "line-dasharray": [2, 4]
+        }
       });
     });
 
-    // Draw dotted lines between locations
-    if (locations.length >= 2) {
-      const coords = locations.map(loc => [loc.lng, loc.lat]);
-      map.on("load", () => {
-        map.addSource("travel-line", {
-          type: "geojson",
-          data: {
-            type: "Feature",
-            geometry: {
-              type: "LineString",
-              coordinates: coords
-            }
-          }
-        });
-        map.addLayer({
-          id: "travel-line",
-          type: "line",
-          source: "travel-line",
-          layout: {
-            "line-join": "round",
-            "line-cap": "round"
-          },
-          paint: {
-            "line-color": "#33adff",
-            "line-width": 2,
-            "line-dasharray": [2, 4]
-          }
-        });
-      });
+    // Red pin for current location
+    new mapboxgl.Marker({ color: "red" }).setLngLat([lng, lat]).addTo(map);
+
+    // Floating weather box
+    const infoBox = document.createElement('div');
+    infoBox.className = 'location-info-box';
+    infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>Loading weather...";
+    document.body.appendChild(infoBox);
+
+    function positionBox() {
+      const pos = map.project([lng, lat]);
+      infoBox.style.left = (pos.x + 20) + "px";
+      infoBox.style.top = (pos.y - 20) + "px";
     }
 
-    // Add photo thumbnails
+    map.on('move', positionBox);
+    positionBox();
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
+      .then(res => res.json())
+      .then(weather => {
+        const weatherStr = Math.round(weather.main.temp) + "°F, " + weather.weather[0].description;
+        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>⛅ " + weatherStr;
+      })
+      .catch(() => {
+        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>Weather unavailable";
+      });
+
+    // Prior grey pins
+    const previousLocations = locations.slice(0, -1);
+    previousLocations.forEach(loc => {
+      if (!loc.lat || !loc.lng) return;
+
+      new mapboxgl.Marker({ color: "gray" }).setLngLat([loc.lng, loc.lat]).addTo(map);
+
+      const box = document.createElement("div");
+      box.className = "location-info-box";
+
+      const arrival = loc.arrival_date || "";
+      const departure = loc.departure_date || "";
+
+      let rangeStr = "Arrived: " + arrival;
+      if (departure) {
+        rangeStr += "<br>Departed: " + departure;
+      }
+
+      box.innerHTML = "<strong>" + loc.place + "</strong><br>" + rangeStr;
+      document.body.appendChild(box);
+
+      function positionGrayBox() {
+        const pt = map.project([loc.lng, loc.lat]);
+        box.style.left = (pt.x + 20) + "px";
+        box.style.top = (pt.y - 20) + "px";
+      }
+
+      map.on("move", positionGrayBox);
+      positionGrayBox();
+    });
+
+    // Thumbnails from timeline.json
+    let photoMarkers = [];
+
     fetch("timeline.json")
       .then(r => r.json())
       .then(timeline => {
-        const photoMarkers = [];
-
         timeline.forEach(day => {
           (day.photos || []).forEach(photo => {
             if (!photo.lat || !photo.lng) return;
@@ -108,6 +144,7 @@ fetch("location.json")
           });
         });
 
+        // Toggle button
         const toggleBtn = document.getElementById("toggle-thumbs");
         if (toggleBtn) {
           toggleBtn.addEventListener("click", () => {
@@ -119,3 +156,8 @@ fetch("location.json")
         }
       });
   });
+};
+
+if (document.getElementById("map")?.offsetParent !== null) {
+  window.initMapWithPhotos();
+}
