@@ -16,6 +16,10 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+header h1 {
+  margin: 0; /* remove extra vertical space */
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;
