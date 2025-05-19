@@ -114,6 +114,17 @@ nav a {
   color: #004080;
   margin-bottom: 0.25rem;
 }
+.location-label {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  pointer-events: none;
+  white-space: nowrap;
+}
 .weather-info {
   font-family: "Inter", "Segoe UI Emoji", sans-serif;
   font-size: 0.95rem;
