@@ -37,6 +37,7 @@ nav a {
   color: #33adff; /* updated blue */;
   text-decoration: none;
   font-weight: 400;
+  margin-left: 1rem; /* add this if it's missing */
 }
 .section {
   display: none;
