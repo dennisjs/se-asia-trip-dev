@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,15 +51,20 @@
       font-weight: bold;
     }
     input, textarea {
-      width: 100%;
+      width: 95%;
+      max-width: 600px;
       padding: 0.7rem;
       margin-bottom: 1rem;
       border: 1px solid #ccc;
       border-radius: 6px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     button {
       display: block;
-      width: 100%;
+      width: 200px;
+      margin: auto;
       background-color: #33adff;
       color: white;
       padding: 0.75rem;
@@ -92,14 +96,6 @@
       color: #33adff;
       font-size: 0.9rem;
     }
-    .footer-link {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .footer-link a {
-      color: #33adff;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -109,40 +105,66 @@
   </header>
   <div class="container">
     <h2>Leave a Message</h2>
-    <form>
+    <form id="message-form">
       <label for="name">Your Name</label>
-      <input type="text" id="name" placeholder="Enter your name" />
-
+      <input type="text" name="name" required placeholder="Enter your name" />
       <label for="location">Your Location</label>
-      <input type="text" id="location" placeholder="City, State or Country" />
-
+      <input type="text" name="location" required placeholder="City, State or Country" />
       <label for="message">Your Message</label>
-      <textarea id="message" rows="5" placeholder="Share your words of encouragement..."></textarea>
-
+      <textarea name="message" rows="5" required placeholder="Share your words of encouragement..."></textarea>
       <button type="submit">Submit</button>
     </form>
 
     <div class="messages">
       <h2>Recent Messages</h2>
-      <div class="message">
-        <span class="name">Symone</span>
-        <span class="date">5/13/2025</span><br/>
-        <span class="location">Seattle</span>
-        <p>Keep it up you guys!!!!!!! Can't wait for your arrival!!!!!!</p>
-      </div>
-      <div class="message">
-        <span class="name">Jake</span>
-        <span class="date">5/12/2025</span><br/>
-        <span class="location">San Diego</span>
-        <p>Looks like a blast! Really appreciate the website, it's awesome to see the updates.</p>
-      </div>
-      <div class="message">
-        <span class="name">Maddi S</span>
-        <span class="date">5/10/2025</span><br/>
-        <span class="location">New York</span>
-        <p>So inspiring. Hope you have good weather the whole way!</p>
-      </div>
+      <div id="messages-container"></div>
     </div>
   </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script>
+    
+  const firebaseConfig = {
+    apiKey: "AIzaSyAmUOeLu5cvXiNz3yT2c24kh4Z07T_tTtk",
+    authDomain: "se-asia-msg-board.firebaseapp.com",
+    databaseURL: "https://se-asia-msg-board-default-rtdb.firebaseio.com",
+    projectId: "se-asia-msg-board",
+    storageBucket: "se-asia-msg-board.firebasestorage.app",
+    messagingSenderId: "732937261766",
+    appId: "1:732937261766:web:9068f12e8cd58ca7997dc7"
+  };
+
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const form = document.getElementById('message-form');
+    const container = document.getElementById('messages-container');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const location = form.location.value.trim();
+      const message = form.message.value.trim();
+      const timestamp = new Date().toISOString();
+
+      db.ref('messages').push({ name, location, message, timestamp });
+      form.reset();
+    });
+
+    db.ref('messages').limitToLast(20).on('child_added', function(snapshot) {
+      const msg = snapshot.val();
+      const div = document.createElement('div');
+      div.className = 'message';
+      div.innerHTML = `
+        <span class="name">{msg.name}</span>
+        <span class="date">{new Date(msg.timestamp).toLocaleDateString()}</span><br/>
+        <span class="location">{msg.location}</span>
+        <p>{msg.message}</p>
+      `.replace(/{(.*?)}/g, (_, key) => eval(key));
+      container.prepend(div);
+    });
+  </script>
 </body>
 </html>
