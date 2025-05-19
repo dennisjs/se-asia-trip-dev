@@ -107,7 +107,7 @@ nav a {
   font-size: 0.9rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   max-width: 280px;
-  z-index: 2000;
+  z-index: 1800;
   line-height: 1.4;
 }
 .location-box strong {
@@ -140,7 +140,7 @@ nav a {
   font-size: 0.9rem;
   color: #004080;
   pointer-events: none;
-  z-index: 2000;
+  z-index: 1800;
 }
 
 .timeline-entry {
