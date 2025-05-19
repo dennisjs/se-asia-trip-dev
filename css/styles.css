@@ -6,7 +6,7 @@ body, html {
 }
 header {
   background: white;
-  padding: 0.4rem 1.5rem;
+  padding: 0.2rem 1.5rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,6 +16,10 @@ header {
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
+header h1 {
+  margin: 0; /* remove extra vertical space */
+}
+
 .nav-wrapper {
   display: flex;
   align-items: center;
@@ -25,7 +29,8 @@ header {
 }
 
 .nav-wrapper h1 {
-  font-size: 1.6rem;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
   color: #33adff; /* updated blue */;
   font-weight: 500; /* normal (not bold) */
 }
@@ -145,7 +150,7 @@ nav a {
 }
 
 .timeline-title {
-  font-family: 'Bangers', cursive;
+  font-family: 'Shadows Into Light', cursive; 
   font-size: 2.5rem;
   color: #1e1e1e;
   text-align: center;
@@ -188,6 +193,7 @@ nav a {
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   margin-top: 0.5rem;
+  margin-left: 4rem;
   transition: background 0.3s ease;
 }
 
