@@ -25,6 +25,7 @@ header {
 }
 
 .nav-wrapper h1 {
+  font-family: 'Shadows Into Light', cursive;
   font-size: 1.6rem;
   color: #33adff; /* updated blue */;
   font-weight: 500; /* normal (not bold) */
