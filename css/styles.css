@@ -145,9 +145,9 @@ nav a {
 }
 
 .timeline-title {
-  /*font-family: 'Bangers', cursive; */
+  font-family: 'Bangers', cursive; 
   /*font-family: 'Roboto Mono', monospace; */
-  font-family: 'Shadows Into Light', cursive;
+  /*font-family: 'Shadows Into Light', cursive; */
   font-size: 2.5rem;
   color: #1e1e1e;
   text-align: center;
