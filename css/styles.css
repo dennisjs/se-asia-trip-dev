@@ -243,3 +243,7 @@ nav a {
 .itinerary-day {
   color: #33adff;
 }
+
+.messages h2 {
+  font-size: 1.3rem; /* or 1.25rem, tweak as needed */
+}
