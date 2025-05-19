@@ -1,4 +1,3 @@
-
 mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
 let map;
@@ -16,14 +15,39 @@ fetch("location.json")
       zoom: 11
     });
 
-    // Add markers for all locations
+    // Add markers and floating info boxes
     locations.forEach((loc, i) => {
       const isCurrent = i === locations.length - 1;
       const color = isCurrent ? "red" : "gray";
 
-      new mapboxgl.Marker({ color })
-        .setLngLat([loc.lng, loc.lat])
-        .addTo(map);
+      // Add marker
+      new mapboxgl.Marker({ color }).setLngLat([loc.lng, loc.lat]).addTo(map);
+
+      // Create info box
+      const box = document.createElement("div");
+      box.className = "location-label";
+
+      if (isCurrent) {
+        box.innerHTML = `<strong>${loc.place}</strong><br>${window.latestWeather || "Loading weather..."}`;
+      } else {
+        const dateStr = `<small>${loc.arrival || "?"} – ${loc.departure || "?"}</small>`;
+        box.innerHTML = `<strong>${loc.place}</strong><br>${dateStr}`;
+      }
+
+      // Position box near marker
+      const markerPixel = map.project([loc.lng, loc.lat]);
+      box.style.left = markerPixel.x + 20 + "px";
+      box.style.top = markerPixel.y - 10 + "px";
+      box.style.position = "absolute";
+      box.style.zIndex = 500;
+      map.getContainer().appendChild(box);
+
+      // Keep box synced on map move
+      map.on("move", () => {
+        const updated = map.project([loc.lng, loc.lat]);
+        box.style.left = updated.x + 20 + "px";
+        box.style.top = updated.y - 10 + "px";
+      });
     });
 
     // Draw dotted lines between locations
@@ -57,7 +81,7 @@ fetch("location.json")
       });
     }
 
-    // Add photo thumbnails from timeline
+    // Add photo thumbnails
     fetch("timeline.json")
       .then(r => r.json())
       .then(timeline => {
