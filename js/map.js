@@ -80,11 +80,10 @@ window.initMapWithPhotos = function () {
       .then(res => res.json())
       .then(weather => {
         const weatherStr = Math.round(weather.main.temp) + "°F, " + weather.weather[0].description;
-        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>⛅ " + weatherStr;
+        window.latestWeather = "⛅ " + weatherStr;
+        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>" + window.latestWeather;
       })
-      .catch(() => {
-        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>Weather unavailable";
-      });
+
 
     // Prior grey pins
     const previousLocations = locations.slice(0, -1);
@@ -96,8 +95,8 @@ window.initMapWithPhotos = function () {
       const box = document.createElement("div");
       box.className = "location-info-box";
 
-      const arrival = loc.arrival_date || "";
-      const departure = loc.departure_date || "";
+      const arrival = loc.arrival_date || "?";
+      const departure = loc.departure_date || "?";
 
       let rangeStr = "Arrived: " + arrival;
       if (departure) {
