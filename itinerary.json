@@ -1,0 +1,113 @@
+[
+  {
+    "country": "Thailand",
+    "location": "Bangkok",
+    "nights": 4,
+    "activities": [
+      "Grand Palace, Wat Pho, Wat Arun",
+      "Explore Chinatown, Chatuchak Market (weekend)",
+      "Day trip to Ayutthaya (ancient capital ruins)",
+      "Khao San Road / Sukhumvit for nightlife"
+    ],
+    "arrival_method": "International flight",
+    "journey_time": "",
+    "arrival_date": "2025-06-01"
+  },
+  {
+    "country": "Thailand",
+    "location": "Chiang Mai",
+    "nights": 3,
+    "activities": [
+      "Old City temples: Wat Phra Singh, Wat Chedi Luang",
+      "Doi Suthep mountain temple",
+      "Night Bazaar & Nimmanhaemin Road caf\u00e9s",
+      "Elephant Nature Park (ethical sanctuary day trip)"
+    ],
+    "arrival_method": "Flight from Bangkok",
+    "journey_time": "1.5 hrs",
+    "arrival_date": "2025-06-05"
+  },
+  {
+    "country": "Thailand",
+    "location": "Pai",
+    "nights": 4,
+    "activities": [
+      "Pai Canyon, hot springs, bamboo bridge",
+      "Waterfalls: Mo Paeng & Pam Bok",
+      "Chill caf\u00e9s, walking street night market",
+      "Rent a scooter to explore countryside"
+    ],
+    "arrival_method": "3-hour scenic drive from Chiang Mai",
+    "journey_time": "3 hrs",
+    "arrival_date": "2025-06-08"
+  },
+  {
+    "country": "Thailand",
+    "location": "Chiang Rai",
+    "nights": 4,
+    "activities": [
+      "White Temple (Wat Rong Khun), Blue Temple (Wat Rong Suea Ten)",
+      "Black House Museum (Baan Dam)",
+      "Golden Triangle (Mekong river trip to Laos border area)",
+      "Night Bazaar & Clock Tower light show"
+    ],
+    "arrival_method": "Drive from Pai",
+    "journey_time": "6 hrs",
+    "arrival_date": "2025-06-12"
+  },
+  {
+    "country": "Laos",
+    "location": "Mekong Slow Boat",
+    "nights": 2,
+    "activities": [
+      "Enter Laos (via Chiang Khong / Huay Xai border)",
+      "2-day Mekong Slow Boat to Luang Prabang (beautiful journey)"
+    ],
+    "arrival_method": "Boat",
+    "journey_time": "2 days",
+    "arrival_date": "2025-06-16"
+  },
+  {
+    "country": "Laos",
+    "location": "Luang Prabang",
+    "nights": 7,
+    "activities": [
+      "Kuang Si waterfalls",
+      "Mount Phousi sunset hike",
+      "Alms giving ceremony at dawn",
+      "Night market and riverside caf\u00e9s",
+      "Optional: day trip to Pak Ou Caves"
+    ],
+    "arrival_method": "Slow boat arrival",
+    "journey_time": "",
+    "arrival_date": "2025-06-18"
+  },
+  {
+    "country": "Laos",
+    "location": "Vang Vieng",
+    "nights": 6,
+    "activities": [
+      "Tubing / kayaking Nam Song River",
+      "Blue Lagoon swimming",
+      "Hot air balloon ride at sunset",
+      "Scenic karst landscape hikes"
+    ],
+    "arrival_method": "Bus from Luang Prabang",
+    "journey_time": "4\u20135 hrs",
+    "arrival_date": "2025-06-25"
+  },
+  {
+    "country": "Laos",
+    "location": "Vientiane",
+    "nights": 5,
+    "activities": [
+      "Pha That Luang (golden stupa)",
+      "Buddha Park",
+      "Mekong riverside night market",
+      "Caf\u00e9 culture & massage spas"
+    ],
+    "arrival_method": "Bus from Vang Vieng",
+    "journey_time": "4 hrs",
+    "arrival_date": "2025-07-01"
+  }
+]
