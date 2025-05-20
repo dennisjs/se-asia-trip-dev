@@ -2,112 +2,111 @@
   {
     "country": "Thailand",
     "location": "Bangkok",
+    "arrival_date": "2025-06-01",
     "nights": 4,
+    "arrival_method": "Flight",
+    "journey_time": "\u2014",
     "activities": [
       "Grand Palace, Wat Pho, Wat Arun",
       "Explore Chinatown, Chatuchak Market (weekend)",
       "Day trip to Ayutthaya (ancient capital ruins)",
       "Khao San Road / Sukhumvit for nightlife"
-    ],
-    "arrival_method": "International flight",
-    "journey_time": "",
-    "arrival_date": "2025-06-01"
+    ]
   },
   {
     "country": "Thailand",
     "location": "Chiang Mai",
+    "arrival_date": "2025-06-05",
     "nights": 3,
+    "arrival_method": "Flight",
+    "journey_time": "1h 15m",
     "activities": [
       "Old City temples: Wat Phra Singh, Wat Chedi Luang",
       "Doi Suthep mountain temple",
       "Night Bazaar & Nimmanhaemin Road caf\u00e9s",
       "Elephant Nature Park (ethical sanctuary day trip)"
-    ],
-    "arrival_method": "Flight from Bangkok",
-    "journey_time": "1.5 hrs",
-    "arrival_date": "2025-06-05"
+    ]
   },
   {
     "country": "Thailand",
     "location": "Pai",
+    "arrival_date": "2025-06-08",
     "nights": 4,
+    "arrival_method": "Scenic drive",
+    "journey_time": "3h",
     "activities": [
       "Pai Canyon, hot springs, bamboo bridge",
       "Waterfalls: Mo Paeng & Pam Bok",
       "Chill caf\u00e9s, walking street night market",
       "Rent a scooter to explore countryside"
-    ],
-    "arrival_method": "3-hour scenic drive from Chiang Mai",
-    "journey_time": "3 hrs",
-    "arrival_date": "2025-06-08"
+    ]
   },
   {
     "country": "Thailand",
     "location": "Chiang Rai",
+    "arrival_date": "2025-06-12",
     "nights": 4,
+    "arrival_method": "Bus",
+    "journey_time": "4\u20135h",
     "activities": [
       "White Temple (Wat Rong Khun), Blue Temple (Wat Rong Suea Ten)",
       "Black House Museum (Baan Dam)",
       "Golden Triangle (Mekong river trip to Laos border area)",
       "Night Bazaar & Clock Tower light show"
-    ],
-    "arrival_method": "Drive from Pai",
-    "journey_time": "6 hrs",
-    "arrival_date": "2025-06-12"
+    ]
   },
   {
     "country": "Laos",
-    "location": "Mekong Slow Boat",
+    "location": "Mekong River Journey",
+    "arrival_date": "2025-06-16",
     "nights": 2,
-    "activities": [
-      "Enter Laos (via Chiang Khong / Huay Xai border)",
-      "2-day Mekong Slow Boat to Luang Prabang (beautiful journey)"
-    ],
-    "arrival_method": "Boat",
+    "arrival_method": "Boat (Slow boat from Chiang Rai border)",
     "journey_time": "2 days",
-    "arrival_date": "2025-06-16"
+    "activities": [
+      "2-day Mekong Slow Boat to Luang Prabang (beautiful journey)"
+    ]
   },
   {
     "country": "Laos",
     "location": "Luang Prabang",
+    "arrival_date": "2025-06-18",
     "nights": 7,
+    "arrival_method": "Boat",
+    "journey_time": "\u2014",
     "activities": [
       "Kuang Si waterfalls",
       "Mount Phousi sunset hike",
       "Alms giving ceremony at dawn",
       "Night market and riverside caf\u00e9s",
       "Optional: day trip to Pak Ou Caves"
-    ],
-    "arrival_method": "Slow boat arrival",
-    "journey_time": "",
-    "arrival_date": "2025-06-18"
+    ]
   },
   {
     "country": "Laos",
     "location": "Vang Vieng",
+    "arrival_date": "2025-06-25",
     "nights": 6,
+    "arrival_method": "Bus",
+    "journey_time": "4\u20135h",
     "activities": [
       "Tubing / kayaking Nam Song River",
       "Blue Lagoon swimming",
       "Hot air balloon ride at sunset",
       "Scenic karst landscape hikes"
-    ],
-    "arrival_method": "Bus from Luang Prabang",
-    "journey_time": "4\u20135 hrs",
-    "arrival_date": "2025-06-25"
+    ]
   },
   {
     "country": "Laos",
     "location": "Vientiane",
+    "arrival_date": "2025-07-01",
     "nights": 5,
+    "arrival_method": "Bus",
+    "journey_time": "4h",
     "activities": [
       "Pha That Luang (golden stupa)",
       "Buddha Park",
       "Mekong riverside night market",
       "Caf\u00e9 culture & massage spas"
-    ],
-    "arrival_method": "Bus from Vang Vieng",
-    "journey_time": "4 hrs",
-    "arrival_date": "2025-07-01"
+    ]
   }
 ]
