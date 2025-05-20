@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Itinerary Viewer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #007acc;
+      margin-bottom: 2rem;
+    }
+    .entry {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .entry h2 {
+      margin-top: 0;
+      color: #005f99;
+    }
+    .meta {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Trip Itinerary Overview</h1>
+<div id="itinerary-container">Loading itinerary...</div>
+
+<script>
+fetch('itinerary.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('itinerary-container');
+    container.innerHTML = "";
+    data.forEach(entry => {
+      const div = document.createElement('div');
+      div.className = 'entry';
+      div.innerHTML = `
+        <h2>${entry.location} (${entry.country})</h2>
+        <div class="meta"><strong>Arrival:</strong> ${entry.arrival_date} &nbsp; | &nbsp; 
+                         <strong>Nights:</strong> ${entry.nights}</div>
+        <div class="meta"><strong>Arrival Method:</strong> ${entry.arrival_method} &nbsp; | &nbsp; 
+                         <strong>Journey Time:</strong> ${entry.journey_time}</div>
+        <ul>
+          ${entry.activities.map(act => `<li>${act}</li>`).join('')}
+        </ul>
+      `;
+      container.appendChild(div);
+    });
+  })
+  .catch(err => {
+    document.getElementById('itinerary-container').textContent = 'Failed to load itinerary.';
+    console.error(err);
+  });
+</script>
+
+</body>
+</html>
