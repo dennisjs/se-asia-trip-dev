@@ -93,29 +93,20 @@ async function loadCalendarWeather() {
   const calendarDiv = document.getElementById("calendarGrid");
   calendarDiv.innerHTML = "";
 
-  // Handle trip-over case
   if (today > itineraryEnd) {
     const msg = document.createElement("div");
     msg.className = "location-name";
-    msg.style.gridColumn = "1 / -1";
     msg.textContent = "Trip Over — No Forecast Available";
     calendarDiv.appendChild(msg);
     return;
   }
 
-  // Use trip start if we're still before the trip
-  const startDate = today < itineraryStart ? itineraryStart : today;
-
-  // Header
-  calendarDiv.appendChild(createCell("Date", "location-name"));
-  calendarDiv.appendChild(createCell("Location", "location-name"));
-  calendarDiv.appendChild(createCell("Forecast", "location-name"));
+  const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
 
   for (let i = 0; i < forecastDays; i++) {
-    const date = new Date(startDate);
-    date.setDate(startDate.getDate() + i);
+    const date = new Date(forecastBaseDate);
+    date.setDate(forecastBaseDate.getDate() + i);
 
-    // Match itinerary location
     const matched = itinerary.find(loc => {
       const arrival = new Date(loc.arrival_date);
       const departure = new Date(arrival);
@@ -123,47 +114,39 @@ async function loadCalendarWeather() {
       return date >= arrival && date < departure;
     });
 
-    const rowDate = createCell(date.toLocaleDateString());
-    const rowLoc = createCell(matched ? matched.location : "—");
-    const rowWeather = document.createElement("div");
+    const card = document.createElement("div");
+    card.className = "forecast-card";
 
-    calendarDiv.appendChild(rowDate);
-    calendarDiv.appendChild(rowLoc);
-    calendarDiv.appendChild(rowWeather);
+    const dateEl = `<div class="forecast-date">${date.toLocaleDateString()}</div>`;
+    const locEl = `<div class="forecast-location">${matched ? matched.location : "—"}</div>`;
+    let forecastHTML = `<div>N/A</div>`;
 
-    if (!matched) {
-      rowWeather.textContent = "N/A";
-      continue;
+    if (matched) {
+      const forecast = await getForecast(matched.lat, matched.lng);
+      const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
+
+      if (offset >= 0 && offset < forecast.length) {
+        const day = forecast[offset];
+        if (day) {
+          const icon = day.weather[0].icon;
+          const desc = day.weather[0].description;
+          const temp = Math.round(day.temp.day);
+          const hum = day.humidity;
+
+          forecastHTML = `
+            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
+            <div>${temp}°F, ${hum}%</div>
+            <small>${desc}</small>
+          `;
+        }
+      }
     }
 
-	const forecast = await getForecast(matched.lat, matched.lng);
-
-	// Use forecastBaseDate to align with what the API actually returns
-	const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
-	const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
-
-	if (offset < 0 || offset > 6) {
-	  rowWeather.textContent = "N/A";
-	  continue;
-	}
-    const day = forecast[offset];
-    if (!day) {
-      console.log("day out of bounds: ", day);
-      rowWeather.textContent = "N/A";
-      continue;
-    }
-
-    const icon = day.weather[0].icon;
-    const desc = day.weather[0].description;
-    const temp = Math.round(day.temp.day);
-    const hum = day.humidity;
-
-    rowWeather.innerHTML = `
-      <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
-      <br>${temp}°F, ${hum}%
-      <br><small>${desc}</small>`;
+    card.innerHTML = `${dateEl}${locEl}${forecastHTML}`;
+    calendarDiv.appendChild(card);
   }
 }
+
 
 
 
