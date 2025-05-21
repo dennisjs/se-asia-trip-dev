@@ -76,7 +76,7 @@ window.initMapWithPhotos = function () {
     map.on('move', positionBox);
     positionBox();
 
-    fetch(`https://api.openweathermap.org/data/3.0/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
+    fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
       .then(res => res.json())
       .then(weather => {
         const weatherStr = Math.round(weather.main.temp) + "°F, " + weather.weather[0].description;
