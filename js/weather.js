@@ -7,8 +7,6 @@ function updateWeatherBox(lat, lng, place) {
   fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
     .then(res => res.json())
     .then(weather => {
-      //console.log("weather string:", weather);
-      //console.log("temp: ", weather.current.weather);
       const weatherStr = `${Math.round(weather.current.temp)}°F, ${weather.current.weather[0].description}`;
       box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
     })
@@ -20,12 +18,10 @@ function updateWeatherBox(lat, lng, place) {
 
 async function getForecast(lat, lon) {
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
-  //console.log("Using OpenWeather API key:", API_KEY);
   if (!API_KEY) {
     console.error("Missing OpenWeatherMap API key in config.js");
     return [];
   }
-  //const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=0f8e3622808ddddedef556c32d470ffa`;
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
@@ -38,7 +34,6 @@ async function loadItineraryWeather() {
   const itinerary = await res.json();
   const today = new Date();
 
-  // Get next 4 itinerary locations starting today or later
   const upcoming = itinerary
     .filter(loc => new Date(loc.arrival_date) >= today)
     .slice(0, 4);
@@ -46,7 +41,6 @@ async function loadItineraryWeather() {
   const grid = document.getElementById("weatherGrid");
   grid.innerHTML = "";
 
-  // --- HEADER ROW ---
   grid.appendChild(createCell("Location / Date", "location-name"));
   for (let i = 0; i < 7; i++) {
     const future = new Date(today);
@@ -54,12 +48,10 @@ async function loadItineraryWeather() {
     grid.appendChild(createCell(future.toLocaleDateString()));
   }
 
-  // --- EACH LOCATION ROW ---
   for (const stop of upcoming) {
     const rowLabel = createCell(stop.location, "location-name");
     grid.appendChild(rowLabel);
 
-    // Fetch forecast
     const forecast = await getForecast(stop.lat, stop.lng);
     for (let i = 0; i < 7; i++) {
       const day = forecast[i];
@@ -147,13 +139,9 @@ async function loadCalendarWeather() {
   }
 }
 
-
-
-
 function createCell(content, className = "") {
   const div = document.createElement("div");
   div.innerHTML = content;
   if (className) div.className = className;
   return div;
 }
-
