@@ -29,7 +29,7 @@ async function getForecast(lat, lon) {
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
-  console.log("weather data:", data);
+  //console.log("weather data:", data);
   return data.daily.slice(0, 7);
 }
 
@@ -141,12 +141,14 @@ async function loadCalendarWeather() {
     // Align forecast data to today’s date range
     const offset = Math.floor((date - today) / (1000 * 60 * 60 * 24));
     if (offset < 0 || offset > 6) {
+      console.log("offset out of bounds: ", offset);
       rowWeather.textContent = "N/A";
       continue;
     }
 
     const day = forecast[offset];
     if (!day) {
+      console.log("day out of bounds: ", day);
       rowWeather.textContent = "N/A";
       continue;
     }
