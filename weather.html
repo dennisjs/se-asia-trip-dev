@@ -3,85 +3,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>7-Day Weather Forecast</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Weather Forecast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f0f4f8;
+      font-family: 'Inter', sans-serif;
+      background: #f5f8fc;
       margin: 0;
       padding: 1rem;
     }
+
     h1 {
       text-align: center;
-      color: #33adff;
+      color: #3366cc;
     }
+
     .weather-grid {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      gap: 0.5rem;
-      max-width: 1000px;
-      margin: 0 auto;
+      gap: 10px;
+      margin-top: 2rem;
     }
-    .weather-cell {
+
+    .weather-grid div {
+      padding: 0.5rem;
       background: white;
       border-radius: 6px;
-      padding: 0.6rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       font-size: 0.9rem;
     }
-    .weather-header {
+
+    .location-name {
       font-weight: bold;
-      background: #e1f3ff;
+      background: #e6f0ff;
+    }
+
+    .weather-icon {
+      width: 40px;
+      height: 40px;
     }
   </style>
 </head>
 <body>
-  <h1>Upcoming 7-Day Weather Forecast</h1>
-  <div class="weather-grid">
-    <div class="weather-cell weather-header">Location</div>
-    <div class="weather-cell weather-header">05-20</div>
-    <div class="weather-cell weather-header">05-21</div>
-    <div class="weather-cell weather-header">05-22</div>
-    <div class="weather-cell weather-header">05-23</div>
-    <div class="weather-cell weather-header">05-24</div>
-    <div class="weather-cell weather-header">05-25</div>
-    <div class="weather-cell weather-header">05-26</div>
-    <div class="weather-cell weather-header">Bangkok</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell weather-header">Chiang Mai</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell weather-header">Pai</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell weather-header">Chiang Rai</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-    <div class="weather-cell">Loading...</div>
-
+  <h1>7-Day Forecast: Upcoming Itinerary</h1>
+  <div class="weather-grid" id="weatherGrid">
+    <!-- Weather data will be injected here -->
   </div>
+
+  <script>
+    const API_KEY = '0f8e3622808ddddedef556c32d470ffa';
+
+    async function getForecast(lat, lon) {
+      const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
+      const response = await fetch(url);
+      const data = await response.json();
+      return data.daily.slice(0, 7);
+    }
+
+    async function loadItineraryWeather() {
+      const res = await fetch("itinerary.json");
+      const itinerary = await res.json();
+      const today = new Date();
+
+      const upcoming = itinerary.filter(loc => {
+        const arrival = new Date(loc.arrival_date);
+        return arrival >= today;
+      }).slice(0, 4);
+
+      const grid = document.getElementById("weatherGrid");
+
+      const headerRow = document.createElement("div");
+      headerRow.className = "location-name";
+      headerRow.textContent = "Location / Date";
+      grid.appendChild(headerRow);
+
+      for (let i = 0; i < 7; i++) {
+        const cell = document.createElement("div");
+        const future = new Date();
+        future.setDate(today.getDate() + i);
+        cell.innerHTML = future.toLocaleDateString();
+        grid.appendChild(cell);
+      }
+
+      for (const stop of upcoming) {
+        const locCell = document.createElement("div");
+        locCell.className = "location-name";
+        locCell.textContent = stop.location;
+        grid.appendChild(locCell);
+
+        const forecast = await getForecast(stop.lat, stop.lng);
+        forecast.forEach(day => {
+          const div = document.createElement("div");
+          const icon = day.weather[0].icon;
+          const desc = day.weather[0].description;
+          const temp = Math.round(day.temp.day);
+          div.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F<br><small>${desc}</small>`;
+          grid.appendChild(div);
+        });
+      }
+    }
+
+    loadItineraryWeather();
+  </script>
 </body>
 </html>
