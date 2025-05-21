@@ -87,9 +87,8 @@ async function loadCalendarWeather() {
   const itineraryStart = new Date(itinerary[0].arrival_date);
   const startDate = today >= itineraryStart ? today : itineraryStart;
 
-  const forecastDays = 5;
-  const calendarDiv = document.getElementById("calendarGrid");
-  calendarDiv.innerHTML = "";
+  const offset = Math.floor((date - today) / (1000 * 60 * 60 * 24));
+  const forecastDay = forecast[offset];
 
   // Create header row
   const header = document.createElement("div");
