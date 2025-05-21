@@ -18,7 +18,7 @@ function updateWeatherBox(lat, lng, place) {
 
 async function getForecast(lat, lon) {
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
-  console.log("Using OpenWeather API key:", API_KEY);
+  //console.log("Using OpenWeather API key:", API_KEY);
   if (!API_KEY) {
     console.error("Missing OpenWeatherMap API key in config.js");
     return [];
