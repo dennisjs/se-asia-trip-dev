@@ -26,8 +26,8 @@ async function getForecast(lat, lon) {
   //const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=0f8e3622808ddddedef556c32d470ffa`;
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
   const response = await fetch(url);
-  console.log("weather response:", response);
   const data = await response.json();
+  console.log("weather data:", data);
   return data.daily.slice(0, 7);
 }
 
