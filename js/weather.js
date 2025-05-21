@@ -70,7 +70,6 @@ async function loadItineraryWeather() {
   }
 }
 
-
 async function loadCalendarWeather() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
@@ -85,7 +84,6 @@ async function loadCalendarWeather() {
   const calendarDiv = document.getElementById("calendarGrid");
   calendarDiv.innerHTML = "";
 
-  // Handle trip-over case
   if (today > itineraryEnd) {
     const msg = document.createElement("div");
     msg.className = "location-name";
@@ -140,7 +138,6 @@ async function loadCalendarWeather() {
     calendarDiv.appendChild(card);
   }
 }
-
 
 function createCell(content, className = "") {
   const div = document.createElement("div");
