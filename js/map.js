@@ -63,7 +63,9 @@ window.initMapWithPhotos = function () {
 
     // Floating weather box
     const infoBox = document.createElement('div');
+    infoBox.id = 'location-box';
     infoBox.className = 'location-info-box';
+
     infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>Loading weather...";
     document.body.appendChild(infoBox);
 
