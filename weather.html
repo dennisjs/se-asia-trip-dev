@@ -58,6 +58,46 @@
       margin-top: 2rem;
     }
 
+    .calendar-forecast-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    
+    .forecast-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      width: 240px;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    
+    .forecast-card .weather-icon {
+      width: 60px;
+      height: 60px;
+    }
+    
+    .forecast-card .forecast-date {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      color: #3366cc;
+    }
+    
+    .forecast-card .forecast-location {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .forecast-card small {
+      color: #555;
+    }
+
+
   </style>
 </head>
 <body>
@@ -66,7 +106,7 @@
   </div>
 
   <h2 class="timeline-title">7-Day Forecast: Upcoming Itinerary</h2>
-  <div class="weather-grid" id="weatherGrid">
+  <div class="calendar-forecast-container" id="calendarGrid">
     <!-- Weather data will be injected here -->
   </div>
 
