@@ -79,6 +79,78 @@ async function loadItineraryWeather() {
   }
 }
 
+async function loadCalendarWeather() {
+  const res = await fetch("itinerary.json");
+  const itinerary = await res.json();
+
+  const today = new Date();
+  const itineraryStart = new Date(itinerary[0].arrival_date);
+  const startDate = today >= itineraryStart ? today : itineraryStart;
+
+  const forecastDays = 5;
+  const calendarDiv = document.getElementById("calendarGrid");
+  calendarDiv.innerHTML = "";
+
+  // Create header row
+  const header = document.createElement("div");
+  header.className = "location-name";
+  header.textContent = "5-Day Forecast by Date";
+  header.style.gridColumn = "span 3";
+  calendarDiv.appendChild(header);
+
+  // Column headers
+  calendarDiv.appendChild(createCell("Date", "location-name"));
+  calendarDiv.appendChild(createCell("Location", "location-name"));
+  calendarDiv.appendChild(createCell("Forecast", "location-name"));
+
+  for (let i = 0; i < forecastDays; i++) {
+    const date = new Date(startDate);
+    date.setDate(date.getDate() + i);
+    const dateStr = date.toISOString().split("T")[0];
+
+    // Find which itinerary location matches this day
+    const matched = itinerary.find(loc => {
+      const arrival = new Date(loc.arrival_date);
+      const departure = new Date(arrival);
+      departure.setDate(arrival.getDate() + loc.nights);
+      return date >= arrival && date < departure;
+    });
+
+    if (!matched) continue;
+
+    const rowDate = createCell(date.toLocaleDateString());
+    const rowLoc = createCell(matched.location);
+    const rowWeather = document.createElement("div");
+
+    rowWeather.innerHTML = "Loading...";
+    calendarDiv.appendChild(rowDate);
+    calendarDiv.appendChild(rowLoc);
+    calendarDiv.appendChild(rowWeather);
+
+    // Fetch forecast and find matching day
+    const forecast = await getForecast(matched.lat, matched.lng);
+    const forecastDay = forecast.find(day => {
+      const forecastDate = new Date(day.dt * 1000);
+      return forecastDate.toDateString() === date.toDateString();
+    });
+
+    if (forecastDay) {
+      const icon = forecastDay.weather[0].icon;
+      const desc = forecastDay.weather[0].description;
+      const temp = Math.round(forecastDay.temp.day);
+      const hum = forecastDay.humidity;
+
+      rowWeather.innerHTML = `
+        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
+        <br>${temp}°F, ${hum}%
+        <br><small>${desc}</small>`;
+    } else {
+      rowWeather.textContent = "N/A";
+    }
+  }
+}
+
+
 function createCell(content, className = "") {
   const div = document.createElement("div");
   div.innerHTML = content;
