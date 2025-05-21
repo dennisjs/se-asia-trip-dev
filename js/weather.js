@@ -85,29 +85,37 @@ async function loadCalendarWeather() {
 
   const today = new Date();
   const itineraryStart = new Date(itinerary[0].arrival_date);
-  const startDate = today >= itineraryStart ? today : itineraryStart;
+  const lastStop = itinerary[itinerary.length - 1];
+  const itineraryEnd = new Date(lastStop.arrival_date);
+  itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
-  const offset = Math.floor((date - today) / (1000 * 60 * 60 * 24));
-  const forecastDay = forecast[offset];
+  const forecastDays = 5;
+  const calendarDiv = document.getElementById("calendarGrid");
+  calendarDiv.innerHTML = "";
 
-  // Create header row
-  const header = document.createElement("div");
-  header.className = "location-name";
-  header.textContent = "5-Day Forecast by Date";
-  header.style.gridColumn = "span 3";
-  calendarDiv.appendChild(header);
+  // Handle trip-over case
+  if (today > itineraryEnd) {
+    const msg = document.createElement("div");
+    msg.className = "location-name";
+    msg.style.gridColumn = "1 / -1";
+    msg.textContent = "Trip Over — No Forecast Available";
+    calendarDiv.appendChild(msg);
+    return;
+  }
 
-  // Column headers
+  // Use trip start if we're still before the trip
+  const startDate = today < itineraryStart ? itineraryStart : today;
+
+  // Header
   calendarDiv.appendChild(createCell("Date", "location-name"));
   calendarDiv.appendChild(createCell("Location", "location-name"));
   calendarDiv.appendChild(createCell("Forecast", "location-name"));
 
   for (let i = 0; i < forecastDays; i++) {
     const date = new Date(startDate);
-    date.setDate(date.getDate() + i);
-    const dateStr = date.toISOString().split("T")[0];
+    date.setDate(startDate.getDate() + i);
 
-    // Find which itinerary location matches this day
+    // Match itinerary location
     const matched = itinerary.find(loc => {
       const arrival = new Date(loc.arrival_date);
       const departure = new Date(arrival);
@@ -115,39 +123,46 @@ async function loadCalendarWeather() {
       return date >= arrival && date < departure;
     });
 
-    if (!matched) continue;
-
     const rowDate = createCell(date.toLocaleDateString());
-    const rowLoc = createCell(matched.location);
+    const rowLoc = createCell(matched ? matched.location : "—");
     const rowWeather = document.createElement("div");
 
-    rowWeather.innerHTML = "Loading...";
     calendarDiv.appendChild(rowDate);
     calendarDiv.appendChild(rowLoc);
     calendarDiv.appendChild(rowWeather);
 
-    // Fetch forecast and find matching day
-    const forecast = await getForecast(matched.lat, matched.lng);
-    const forecastDay = forecast.find(day => {
-      const forecastDate = new Date(day.dt * 1000);
-      return forecastDate.toDateString() === date.toDateString();
-    });
-
-    if (forecastDay) {
-      const icon = forecastDay.weather[0].icon;
-      const desc = forecastDay.weather[0].description;
-      const temp = Math.round(forecastDay.temp.day);
-      const hum = forecastDay.humidity;
-
-      rowWeather.innerHTML = `
-        <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
-        <br>${temp}°F, ${hum}%
-        <br><small>${desc}</small>`;
-    } else {
+    if (!matched) {
       rowWeather.textContent = "N/A";
+      continue;
     }
+
+    const forecast = await getForecast(matched.lat, matched.lng);
+
+    // Align forecast data to today’s date range
+    const offset = Math.floor((date - today) / (1000 * 60 * 60 * 24));
+    if (offset < 0 || offset > 6) {
+      rowWeather.textContent = "N/A";
+      continue;
+    }
+
+    const day = forecast[offset];
+    if (!day) {
+      rowWeather.textContent = "N/A";
+      continue;
+    }
+
+    const icon = day.weather[0].icon;
+    const desc = day.weather[0].description;
+    const temp = Math.round(day.temp.day);
+    const hum = day.humidity;
+
+    rowWeather.innerHTML = `
+      <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
+      <br>${temp}°F, ${hum}%
+      <br><small>${desc}</small>`;
   }
 }
+
 
 
 function createCell(content, className = "") {
