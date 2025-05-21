@@ -68,7 +68,7 @@ async function loadItineraryWeather() {
 
       const icon = day.weather[0].icon;
       //const desc = day.weather[0].description;
-      cost desc = day.summary;
+      const desc = day.summary;
       const temp = Math.round(day.temp.day);
       const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F<br><small>${desc}</small>`;
       grid.appendChild(createCell(html));
