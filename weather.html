@@ -50,6 +50,14 @@
       width: 40px;
       height: 40px;
     }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 2rem;
+    }
+
   </style>
 </head>
 <body>
@@ -63,9 +71,10 @@
   </div>
 
   <h2 class="timeline-title">5-Day Itinerary Calendar Forecast</h2>
-  <div class="weather-grid" id="calendarGrid">
+  <div class="calendar-grid" id="calendarGrid">
     <!-- Calendar forecast will go here -->
   </div>
+
 
 
   <script>
