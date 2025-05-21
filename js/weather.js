@@ -123,13 +123,13 @@ async function loadCalendarWeather() {
       return date >= arrival && date < departure;
     });
 
-    const rowDate = createCell(date.toLocaleDateString());
-    const rowLoc = createCell(matched ? matched.location : "—");
-    const rowWeather = document.createElement("div");
+    const card = document.createElement("div");
+    card.className = "forecast-card";
+    
+    const dateEl = `<div class="forecast-date">${date.toLocaleDateString()}</div>`;
+    const locEl = `<div class="forecast-location">${matched ? matched.location : "—"}</div>`;
+    let forecastHTML = `<div>N/A</div>`;
 
-    calendarDiv.appendChild(rowDate);
-    calendarDiv.appendChild(rowLoc);
-    calendarDiv.appendChild(rowWeather);
 
     if (!matched) {
       rowWeather.textContent = "N/A";
@@ -160,13 +160,18 @@ async function loadCalendarWeather() {
     const temp = Math.round(day.temp.day);
     const hum = day.humidity;
 
-    rowWeather.innerHTML = `
+    forecastHTML = `
       <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
-      <br>${temp}°F, ${hum}%
-      <br><small>${desc}</small>`;
+      <div>${temp}°F, ${hum}%</div>
+      <small>${desc}</small>
+    `;
+
+    card.innerHTML = `${dateEl}${locEl}${forecastHTML}`;
+    calendarDiv.appendChild(card);
+
   }
 }
-
+    
 
 
 function createCell(content, className = "") {
