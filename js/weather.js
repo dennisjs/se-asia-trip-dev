@@ -22,7 +22,8 @@ async function getForecast(lat, lon) {
     console.error("Missing OpenWeatherMap API key in config.js");
     return [];
   }
-  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=$0f8e3622808ddddedef556c32d470ffa`;
+  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=0f8e3622808ddddedef556c32d470ffa`;
+  // https://api.openweathermap.org/data/3.0/onecall?lat=13.7&lon=100.5&appid=0f8e3622808ddddedef556c32d470ffa
   const response = await fetch(url);
   const data = await response.json();
   return data.daily.slice(0, 7);
