@@ -33,40 +33,49 @@ async function loadItineraryWeather() {
   const itinerary = await res.json();
   const today = new Date();
 
-  const upcoming = itinerary.filter(loc => {
-    const arrival = new Date(loc.arrival_date);
-    return arrival >= today;
-  }).slice(0, 4);
+  // Get next 4 itinerary locations starting today or later
+  const upcoming = itinerary
+    .filter(loc => new Date(loc.arrival_date) >= today)
+    .slice(0, 4);
 
   const grid = document.getElementById("weatherGrid");
+  grid.innerHTML = "";
 
-  const headerRow = document.createElement("div");
-  headerRow.className = "location-name";
-  headerRow.textContent = "Location / Date";
-  grid.appendChild(headerRow);
-
+  // --- HEADER ROW ---
+  grid.appendChild(createCell("Location / Date", "location-name"));
   for (let i = 0; i < 7; i++) {
-    const cell = document.createElement("div");
-    const future = new Date();
+    const future = new Date(today);
     future.setDate(today.getDate() + i);
-    cell.innerHTML = future.toLocaleDateString();
-    grid.appendChild(cell);
+    grid.appendChild(createCell(future.toLocaleDateString()));
   }
 
+  // --- EACH LOCATION ROW ---
   for (const stop of upcoming) {
-    const locCell = document.createElement("div");
-    locCell.className = "location-name";
-    locCell.textContent = stop.location;
-    grid.appendChild(locCell);
+    const rowLabel = createCell(stop.location, "location-name");
+    grid.appendChild(rowLabel);
 
+    // Fetch forecast
     const forecast = await getForecast(stop.lat, stop.lng);
-    forecast.forEach(day => {
-      const div = document.createElement("div");
+    for (let i = 0; i < 7; i++) {
+      const day = forecast[i];
+      if (!day) {
+        grid.appendChild(createCell("N/A"));
+        continue;
+      }
+
       const icon = day.weather[0].icon;
       const desc = day.weather[0].description;
       const temp = Math.round(day.temp.day);
-      div.innerHTML = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F<br><small>${desc}</small>`;
-      grid.appendChild(div);
-    });
+      const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F<br><small>${desc}</small>`;
+      grid.appendChild(createCell(html));
+    }
   }
 }
+
+function createCell(content, className = "") {
+  const div = document.createElement("div");
+  div.innerHTML = content;
+  if (className) div.className = className;
+  return div;
+}
+
