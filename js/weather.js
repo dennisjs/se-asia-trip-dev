@@ -70,7 +70,8 @@ async function loadItineraryWeather() {
       //const desc = day.weather[0].description;
       const desc = day.summary;
       const temp = Math.round(day.temp.day);
-      const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F<br><small>${desc}</small>`;
+      const hum = day.humidity;
+      const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F, ${hum}%<br><small>${desc}</small>`;
       grid.appendChild(createCell(html));
     }
   }
