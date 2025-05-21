@@ -136,16 +136,16 @@ async function loadCalendarWeather() {
       continue;
     }
 
-    const forecast = await getForecast(matched.lat, matched.lng);
+	const forecast = await getForecast(matched.lat, matched.lng);
 
-    // Align forecast data to today’s date range
-    const offset = Math.floor((date - today) / (1000 * 60 * 60 * 24));
-    if (offset < 0 || offset > 6) {
-      console.log("offset out of bounds: ", offset);
-      rowWeather.textContent = "N/A";
-      continue;
-    }
+	// Use forecastBaseDate to align with what the API actually returns
+	const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
+	const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
 
+	if (offset < 0 || offset > 6) {
+	  rowWeather.textContent = "N/A";
+	  continue;
+	}
     const day = forecast[offset];
     if (!day) {
       console.log("day out of bounds: ", day);
