@@ -5,7 +5,6 @@
   <title>Weather Forecast</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
   <script src="js/config.js"></script>
   <script src="js/weather.js"></script> <!-- contains loadItineraryWeather -->
 
@@ -50,4 +49,13 @@
   </style>
 </head>
 <body>
-  <h1>
+  <h1>7-Day Forecast: Upcoming Itinerary</h1>
+  <div class="weather-grid" id="weatherGrid">
+    <!-- Weather data will be injected here -->
+  </div>
+
+  <script>
+    loadItineraryWeather();
+  </script>
+</body>
+</html>
