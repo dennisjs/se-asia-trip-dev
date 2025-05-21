@@ -8,7 +8,8 @@ function updateWeatherBox(lat, lng, place) {
     .then(res => res.json())
     .then(weather => {
       console.log("weather string:", weather);
-      const weatherStr = `${Math.round(weather.main.temp)}°F, ${weather.weather[0].description}`;
+      console.log("temp: ", weather.current.temp);
+      const weatherStr = `${Math.round(weather.current.temp)}°F, ${weather.weather[0].description}`;
       box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
     })
     .catch(err => {
