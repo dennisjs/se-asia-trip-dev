@@ -111,7 +111,9 @@ async function loadCalendarWeather() {
     const card = document.createElement("div");
     card.className = "forecast-card";
 
-    const dateEl = `<div class="forecast-date">${date.toLocaleDateString()}</div>`;
+    //const dateEl = `<div class="forecast-date">${date.toLocaleDateString()}</div>`;
+    const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
+    const dateEl = `<div class="forecast-date">${weekday}, ${date.toLocaleDateString()}</div>`;
     const locEl = `<div class="forecast-location">${matched ? matched.location : "—"}</div>`;
     let forecastHTML = `<div>N/A</div>`;
 
