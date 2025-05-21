@@ -7,8 +7,8 @@ function updateWeatherBox(lat, lng, place) {
   fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
     .then(res => res.json())
     .then(weather => {
-      console.log("weather string:", weather);
-      console.log("temp: ", weather.current.weather);
+      //console.log("weather string:", weather);
+      //console.log("temp: ", weather.current.weather);
       const weatherStr = `${Math.round(weather.current.temp)}°F, ${weather.current.weather[0].description}`;
       box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
     })
