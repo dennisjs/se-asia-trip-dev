@@ -1,32 +1,30 @@
 
-<style>
-  .lucide-icon {
-    width: 28px;
-    height: 28px;
-    stroke-width: 2.2;
-  }
+.lucide-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
+}
 
-  .icon-sun {
-    stroke: #f5b301;
-  }
+.icon-sun {
+  stroke: #f5b301;
+}
 
-  .icon-cloud {
-    stroke: #888;
-  }
+.icon-cloud {
+  stroke: #888;
+}
 
-  .icon-cloud-rain {
-    stroke: #3399ff;
-  }
+.icon-cloud-rain {
+  stroke: #3399ff;
+}
 
-  .icon-cloud-lightning {
-    stroke: #cc6600;
-  }
+.icon-cloud-lightning {
+  stroke: #cc6600;
+}
 
-  .icon-cloud-snow {
-    stroke: #a3d2f7;
-  }
+.icon-cloud-snow {
+  stroke: #a3d2f7;
+}
 
-  .icon-cloud-fog {
-    stroke: #cccccc;
-  }
-</style>
+.icon-cloud-fog {
+  stroke: #cccccc;
+}
