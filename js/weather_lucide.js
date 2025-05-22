@@ -17,18 +17,22 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
       return;
     }
 
-    const weatherBox = document.getElementById("weatherBox");
     const temp = Math.round(today.temp.day);
     const desc = today.weather[0].description;
     const iconCode = today.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
+    if (!weatherBox) {
+      console.warn("weatherBox is undefined");
+      return;
+    }
     weatherBox.innerHTML = `
       <strong>My Current Location:</strong><br>
       ${locationName}<br>
       ${temp}°F – ${desc}<br>
       <img src="${iconUrl}" alt="${desc}" style="width: 48px; height: 48px;">
     `;
+
   } catch (err) {
     console.error("Weather fetch failed:", err);
   }
