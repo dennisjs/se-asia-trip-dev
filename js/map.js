@@ -51,9 +51,10 @@ window.initMapWithPhotos = function () {
           "line-cap": "round"
         },
         paint: {
-          "line-color": "#555",
-          "line-width": 2,
-          "line-dasharray": [2, 4]
+          "line-color": "#66aadd",  // light blue matching section titles
+          "line-width": 2.5,
+          "line-opacity": 0.8,
+          "line-dasharray": [3, 5]
         }
       });
     });
