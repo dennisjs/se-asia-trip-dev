@@ -1,4 +1,3 @@
-
 .lucide-icon {
   width: 28px;
   height: 28px;
@@ -6,25 +5,25 @@
 }
 
 .icon-sun {
-  stroke: #f5b301;
+  color: #f5b301;
 }
 
 .icon-cloud {
-  stroke: #888;
+  color: #888888;
 }
 
 .icon-cloud-rain {
-  stroke: #3399ff;
+  color: #3399ff;
 }
 
 .icon-cloud-lightning {
-  stroke: #cc6600;
+  color: #cc6600;
 }
 
 .icon-cloud-snow {
-  stroke: #a3d2f7;
+  color: #a3d2f7;
 }
 
 .icon-cloud-fog {
-  stroke: #cccccc;
+  color: #cccccc;
 }
