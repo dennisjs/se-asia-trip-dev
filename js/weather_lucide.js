@@ -65,8 +65,15 @@ async function loadItineraryWeatherTable() {
     table.appendChild(row);
   }
 
-  lucide.createIcons(); // render icons
+  // ✅ Call lucide icons AFTER the full table is built
+  lucide.createIcons({
+    attrs: (iconNode) => {
+      const iconName = iconNode.getAttribute("data-lucide");
+      return { class: `lucide lucide-icon icon-${iconName}` };
+    }
+  });
 }
+
 
 async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
@@ -87,6 +94,12 @@ async function loadGroupedCalendarForecast() {
     msg.className = "location-name";
     msg.textContent = "Trip Over — No Forecast Available";
     gridContainer.appendChild(msg);
+    lucide.createIcons({
+      attrs: (iconNode) => {
+        const iconName = iconNode.getAttribute("data-lucide");
+        return { class: `lucide lucide-icon icon-${iconName}` };
+      }
+    });
     return;
   }
 
