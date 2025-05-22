@@ -1,4 +1,4 @@
-async function updateWeatherBox(lat, lon, locationName) {
+async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const apiKey = window.CONFIG?.OPENWEATHER_KEY;
   if (!apiKey) {
     console.error("Missing OpenWeatherMap API key in config.js");
