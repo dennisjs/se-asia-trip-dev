@@ -10,7 +10,7 @@ body {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
-  color: #000000;
+  color: #000000 !important;
   text-shadow: none;
 }
 
@@ -46,19 +46,21 @@ body {
   color: #cccccc !important;
 }
 
-/* Tighter spacing on grouped calendar boxes */
+/* Tighter layout for bottom forecast tables */
 .calendar-location-box {
-  padding: 1rem;
-  margin: 1rem auto;
+  padding: 0.8rem;
+  margin: 0.8rem auto;
+  max-width: 680px;
 }
 
 .calendar-location-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
 }
 
 .calendar-location-table th,
 .calendar-location-table td {
-  padding: 0.4rem;
-  font-size: 0.85rem;
+  padding: 0.35rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
 }
