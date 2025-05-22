@@ -27,7 +27,6 @@ function formatForecastCell(day) {
   const icon = getLucideIcon(desc);
   const temp = Math.round(day.temp.day);
   const hum = day.humidity;
-
   return `
     <i data-lucide="${icon}" class="icon-${icon}"></i><br>
     ${temp}°F, ${hum}%<br>
@@ -65,16 +64,14 @@ async function loadItineraryWeatherTable() {
     table.appendChild(row);
   }
 
+  // Minimal fix: apply icon color classes
   lucide.createIcons({
     attrs: (iconNode) => {
       const iconName = iconNode.getAttribute("data-lucide");
-      return {
-        class: `lucide lucide-icon icon-${iconName}`
-      };
+      return { class: `lucide lucide-icon icon-${iconName}` };
     }
   });
 }
-
 
 async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
@@ -163,5 +160,10 @@ async function loadGroupedCalendarForecast() {
     gridContainer.appendChild(box);
   }
 
-  lucide.createIcons(); // render icons
+  lucide.createIcons({
+    attrs: (iconNode) => {
+      const iconName = iconNode.getAttribute("data-lucide");
+      return { class: `lucide lucide-icon icon-${iconName}` };
+    }
+  });
 }
