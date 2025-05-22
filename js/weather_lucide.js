@@ -68,7 +68,9 @@ async function loadItineraryWeatherTable() {
   lucide.createIcons({
     attrs: (iconNode) => {
       const iconName = iconNode.getAttribute("data-lucide");
-      return { class: `lucide lucide-icon icon-${iconName}` };
+      return { class: `lucide lucide-icon icon-${iconName}`,
+               stroke: "none"
+      };
     }
   });
 }
@@ -95,7 +97,9 @@ async function loadGroupedCalendarForecast() {
     lucide.createIcons({
       attrs: (iconNode) => {
         const iconName = iconNode.getAttribute("data-lucide");
-        return { class: `lucide lucide-icon icon-${iconName}` };
+        return { class: `lucide lucide-icon icon-${iconName}`,
+                 stroke: "none"
+        };
       }
     });
     return;
