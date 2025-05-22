@@ -16,11 +16,11 @@ function formatForecastCell(day) {
   const desc = day.weather[0].description;
   const temp = Math.round(day.temp.day);
   const hum = day.humidity;
-  return \`
-    <img src="https://openweathermap.org/img/wn/\${icon}@2x.png" class="weather-icon" alt="\${desc}" /><br>
-    \${temp}°F, \${hum}%<br>
-    <span class="forecast-detail">\${desc}</span>
-  \`;
+  return `
+    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>
+    ${temp}°F, ${hum}%<br>
+    <span class="forecast-detail">${desc}</span>
+  `;
 }
 
 async function loadItineraryWeatherTable() {
