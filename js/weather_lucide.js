@@ -11,13 +11,24 @@ async function getForecast(lat, lon) {
   return data.daily.slice(0, 7);
 }
 
+function getLucideIcon(desc) {
+  const lower = desc.toLowerCase();
+  if (lower.includes("clear")) return "sun";
+  if (lower.includes("cloud")) return "cloud";
+  if (lower.includes("rain")) return "cloud-rain";
+  if (lower.includes("thunder")) return "cloud-lightning";
+  if (lower.includes("snow")) return "cloud-snow";
+  if (lower.includes("fog") || lower.includes("mist") || lower.includes("haze")) return "cloud-fog";
+  return "cloud";
+}
+
 function formatForecastCell(day) {
-  const icon = day.weather[0].icon;
   const desc = day.weather[0].description;
+  const icon = getLucideIcon(desc);
   const temp = Math.round(day.temp.day);
   const hum = day.humidity;
   return `
-    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>
+    <i data-lucide="${icon}" class="lucide-icon icon-${icon}"></i><br>
     ${temp}°F, ${hum}%<br>
     <span class="forecast-detail">${desc}</span>
   `;
@@ -28,10 +39,7 @@ async function loadItineraryWeatherTable() {
   const itinerary = await res.json();
   const today = new Date();
 
-  const upcoming = itinerary
-    .filter(loc => new Date(loc.arrival_date) >= today)
-    .slice(0, 4);
-
+  const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
 
@@ -50,15 +58,13 @@ async function loadItineraryWeatherTable() {
     row.innerHTML = "<td><strong>" + stop.location + "</strong></td>";
     for (let i = 0; i < 7; i++) {
       const cell = document.createElement("td");
-      if (forecast[i]) {
-        cell.innerHTML = formatForecastCell(forecast[i]);
-      } else {
-        cell.textContent = "N/A";
-      }
+      cell.innerHTML = forecast[i] ? formatForecastCell(forecast[i]) : "N/A";
       row.appendChild(cell);
     }
     table.appendChild(row);
   }
+
+  lucide.createIcons(); // render icons
 }
 
 async function loadGroupedCalendarForecast() {
@@ -141,4 +147,6 @@ async function loadGroupedCalendarForecast() {
     box.appendChild(table);
     gridContainer.appendChild(box);
   }
+
+  lucide.createIcons(); // render icons
 }
