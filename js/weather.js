@@ -1,20 +1,3 @@
-function updateWeatherBox(lat, lng, place) {
-  const box = document.getElementById("location-box");
-  if (!box) return;
-
-  box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Loading weather...`;
-
-  fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
-    .then(res => res.json())
-    .then(weather => {
-      const weatherStr = `${Math.round(weather.current.temp)}°F, ${weather.current.weather[0].description}`;
-      box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>⛅ ${weatherStr}`;
-    })
-    .catch(err => {
-      console.error("Weather info error:", err);
-      box.innerHTML = `<strong>My Current Location:</strong><br>${place}<br>Weather unavailable`;
-    });
-}
 
 async function getForecast(lat, lon) {
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
@@ -25,11 +8,22 @@ async function getForecast(lat, lon) {
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
-  //console.log("weather data:", data);
   return data.daily.slice(0, 7);
 }
 
-async function loadItineraryWeather() {
+function formatForecastCell(day) {
+  const icon = day.weather[0].icon;
+  const desc = day.weather[0].description;
+  const temp = Math.round(day.temp.day);
+  const hum = day.humidity;
+  return \`
+    <img src="https://openweathermap.org/img/wn/\${icon}@2x.png" class="weather-icon" alt="\${desc}" /><br>
+    \${temp}°F, \${hum}%<br>
+    <span class="forecast-detail">\${desc}</span>
+  \`;
+}
+
+async function loadItineraryWeatherTable() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
   const today = new Date();
@@ -38,40 +32,36 @@ async function loadItineraryWeather() {
     .filter(loc => new Date(loc.arrival_date) >= today)
     .slice(0, 4);
 
-  const grid = document.getElementById("weatherGrid");
-  grid.innerHTML = "";
+  const table = document.getElementById("weatherGridTable");
+  table.innerHTML = "";
 
-  grid.appendChild(createCell("Location / Date", "location-name"));
+  const headerRow = document.createElement("tr");
+  headerRow.innerHTML = "<th>Location</th>";
   for (let i = 0; i < 7; i++) {
-    const future = new Date(today);
+    const future = new Date();
     future.setDate(today.getDate() + i);
-    grid.appendChild(createCell(future.toLocaleDateString()));
+    headerRow.innerHTML += "<th>" + future.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + "</th>";
   }
+  table.appendChild(headerRow);
 
   for (const stop of upcoming) {
-    const rowLabel = createCell(stop.location, "location-name");
-    grid.appendChild(rowLabel);
-
     const forecast = await getForecast(stop.lat, stop.lng);
+    const row = document.createElement("tr");
+    row.innerHTML = "<td><strong>" + stop.location + "</strong></td>";
     for (let i = 0; i < 7; i++) {
-      const day = forecast[i];
-      if (!day) {
-        grid.appendChild(createCell("N/A"));
-        continue;
+      const cell = document.createElement("td");
+      if (forecast[i]) {
+        cell.innerHTML = formatForecastCell(forecast[i]);
+      } else {
+        cell.textContent = "N/A";
       }
-
-      const icon = day.weather[0].icon;
-      //const desc = day.weather[0].description;
-      const desc = day.summary;
-      const temp = Math.round(day.temp.day);
-      const hum = day.humidity;
-      const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F, ${hum}%<br><small>${desc}</small>`;
-      grid.appendChild(createCell(html));
+      row.appendChild(cell);
     }
+    table.appendChild(row);
   }
 }
 
-async function loadCalendarWeather() {
+async function loadCalendarWeatherTable() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
 
@@ -82,14 +72,17 @@ async function loadCalendarWeather() {
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
-  const calendarDiv = document.getElementById("calendarGrid");
-  calendarDiv.innerHTML = "";
+  const table = document.getElementById("calendarGridTable");
+  table.innerHTML = "";
+
+  const headerRow = document.createElement("tr");
+  headerRow.innerHTML = "<th>Date</th><th>Location</th><th>Forecast</th>";
+  table.appendChild(headerRow);
 
   if (today > itineraryEnd) {
-    const msg = document.createElement("div");
-    msg.className = "location-name";
-    msg.textContent = "Trip Over — No Forecast Available";
-    calendarDiv.appendChild(msg);
+    const row = document.createElement("tr");
+    row.innerHTML = '<td colspan="3"><strong>Trip Over — No Forecast Available</strong></td>';
+    table.appendChild(row);
     return;
   }
 
@@ -106,44 +99,22 @@ async function loadCalendarWeather() {
       return date >= arrival && date < departure;
     });
 
-    const card = document.createElement("div");
-    card.className = "forecast-card";
+    const row = document.createElement("tr");
+    if (date.toDateString() === today.toDateString()) row.classList.add("today-row");
 
-    //const dateEl = `<div class="forecast-date">${date.toLocaleDateString()}</div>`;
-    const weekday = date.toLocaleDateString('en-US', { weekday: 'short' });
-    const dateEl = `<div class="forecast-date">${weekday}, ${date.toLocaleDateString()}</div>`;
-    const locEl = `<div class="forecast-location">${matched ? matched.location : "—"}</div>`;
-    let forecastHTML = `<div>N/A</div>`;
+    const dateCell = "<td>" + date.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + "</td>";
+    const locCell = "<td>" + (matched ? matched.location : "—") + "</td>";
+    let forecastCell = "<td>N/A</td>";
 
     if (matched) {
       const forecast = await getForecast(matched.lat, matched.lng);
       const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
-
-      if (offset >= 0 && offset < forecast.length) {
-        const day = forecast[offset];
-        if (day) {
-          const icon = day.weather[0].icon;
-          const desc = day.weather[0].description;
-          const temp = Math.round(day.temp.day);
-          const hum = day.humidity;
-
-          forecastHTML = `
-            <img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" />
-            <div>${temp}°F, ${hum}%</div>
-            <small>${desc}</small>
-          `;
-        }
+      if (offset >= 0 && offset < forecast.length && forecast[offset]) {
+        forecastCell = "<td>" + formatForecastCell(forecast[offset]) + "</td>";
       }
     }
 
-    card.innerHTML = `${dateEl}${locEl}${forecastHTML}`;
-    calendarDiv.appendChild(card);
+    row.innerHTML = dateCell + locCell + forecastCell;
+    table.appendChild(row);
   }
-}
-
-function createCell(content, className = "") {
-  const div = document.createElement("div");
-  div.innerHTML = content;
-  if (className) div.className = className;
-  return div;
 }
