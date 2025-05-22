@@ -30,7 +30,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
       <strong>My Current Location:</strong><br>
       ${locationName}<br>
       ${temp}°F – ${desc}<br>
-      <img src="${iconUrl}" alt="${desc}" style="width: 48px; height: 48px;">
     `;
 
   } catch (err) {
