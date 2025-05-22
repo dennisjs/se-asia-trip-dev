@@ -65,11 +65,12 @@ async function loadItineraryWeatherTable() {
     table.appendChild(row);
   }
 
-  // ✅ Call lucide icons AFTER the full table is built
   lucide.createIcons({
     attrs: (iconNode) => {
       const iconName = iconNode.getAttribute("data-lucide");
-      return { class: `lucide lucide-icon icon-${iconName}` };
+      return {
+        class: `lucide lucide-icon icon-${iconName}`
+      };
     }
   });
 }
