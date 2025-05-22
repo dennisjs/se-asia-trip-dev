@@ -1,0 +1,37 @@
+
+body {
+  background: #ffffff;
+  color: #000000;
+}
+
+.lucide-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
+  fill: none;
+  color: inherit;
+}
+
+.icon-sun {
+  color: #f5b301 !important;
+}
+
+.icon-cloud {
+  color: #888 !important;
+}
+
+.icon-cloud-rain {
+  color: #3399ff !important;
+}
+
+.icon-cloud-lightning {
+  color: #cc6600 !important;
+}
+
+.icon-cloud-snow {
+  color: #a3d2f7 !important;
+}
+
+.icon-cloud-fog {
+  color: #cccccc !important;
+}
