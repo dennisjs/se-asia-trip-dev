@@ -27,8 +27,9 @@ function formatForecastCell(day) {
   const icon = getLucideIcon(desc);
   const temp = Math.round(day.temp.day);
   const hum = day.humidity;
+
   return `
-    <i data-lucide="${icon}" class="lucide-icon icon-${icon}"></i><br>
+    <i data-lucide="${icon}" class="icon-${icon}"></i><br>
     ${temp}°F, ${hum}%<br>
     <span class="forecast-detail">${desc}</span>
   `;
