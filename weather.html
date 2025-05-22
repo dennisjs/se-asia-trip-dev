@@ -4,16 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Weather Forecast</title>
-  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
+  <link rel="stylesheet" href="css/lucide_weather_styles.css" />
   <script src="js/config.js"></script>
-  <script src="js/weather.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="js/weather_lucide.js"></script>
+
 
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(to bottom, #eef6fc, #dbefff);
+      background: linear-gradient(135deg, #e8f4fb, #d6ecfa);
       margin: 0;
       padding: 1rem;
     }
@@ -24,6 +27,8 @@
       text-align: center;
       margin-top: 2rem;
       margin-bottom: 1.5rem;
+      color: #004c7a;
+      text-shadow: 1px 1px 0 white;
     }
 
     a.back-link {
@@ -32,14 +37,21 @@
       font-weight: bold;
       display: inline-block;
       margin-bottom: 1rem;
+      margin-left: 1rem;
     }
 
     .floating-box {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      margin-bottom: 2rem;
+      background: linear-gradient(145deg, #ffffff, #f3faff);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      padding: 1.5rem;
+      margin: 2rem auto;
+      max-width: 95%;
+      transition: transform 0.2s;
+    }
+
+    .floating-box:hover {
+      transform: translateY(-4px);
     }
 
     table {
@@ -51,15 +63,15 @@
     th, td {
       padding: 0.6rem;
       text-align: center;
-      border: 1px solid #cce0f5;
+      border: 1px solid #cde4f9;
     }
 
     thead {
-      background-color: #d0e9ff;
+      background-color: #cfe8ff;
     }
 
     tbody tr:nth-child(even) {
-      background-color: #f7fbff;
+      background-color: #f6fbff;
     }
 
     .weather-icon {
@@ -70,32 +82,32 @@
 
     .forecast-detail {
       font-size: 0.85rem;
-      color: #555;
+      color: #333;
     }
 
     .today-row {
-      background-color: #fffbe6 !important;
+      background-color: #fff9e6 !important;
     }
 
     .calendar-location-box {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      margin: 1rem auto;
-      padding: 1rem;
-      max-width: 800px;
+      background: linear-gradient(135deg, #ffffff, #f7fbfe);
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 720px;
     }
 
     .calendar-location-title {
       font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
       text-align: center;
-      color: #3366cc;
+      color: #0077aa;
     }
 
     .calendar-location-table th, .calendar-location-table td {
-      padding: 0.4rem;
+      padding: 0.5rem;
       font-size: 0.9rem;
     }
 
@@ -105,30 +117,39 @@
     }
 
     .calendar-location-table th {
-      background-color: #e7f2ff;
+      background-color: #e3f1fc;
     }
 
     .calendar-location-table td {
-      border: 1px solid #cce0f5;
-      background-color: #fdfefe;
+      border: 1px solid #d5e9f8;
+      background-color: #fcfeff;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
-  <div style="margin: 1rem;">
-    <a href="index.html" class="back-link">← Back to Main Page</a>
-  </div>
+  <a href="index.html" class="back-link">← Back to Main Page</a>
 
-  <h2 class="timeline-title">7-Day Forecast for Upcoming Locations</h2>
+  <h2 class="timeline-title">7-Day Current Forecast by Location</h2>
   <div class="floating-box">
     <table id="weatherGridTable">
       <!-- JS will inject header and rows -->
     </table>
   </div>
 
-  <h2 class="timeline-title">5-Day Calendar Forecast</h2>
+  <h2 class="timeline-title">5-Day Trip Calendar Forecast</h2>
   <div id="calendarGridGrouped">
     <!-- JS will inject grouped calendar tables by location -->
+  </div>
+
+  <div class="footer-note">
+    Weather data provided by OpenWeatherMap ✨
   </div>
 
   <script>
