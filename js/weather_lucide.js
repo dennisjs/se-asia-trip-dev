@@ -20,7 +20,7 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
     const temp = Math.round(today.temp.day);
     const desc = today.weather[0].description;
     const iconCode = today.weather[0].icon;
-    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+    //const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     if (!weatherBox) {
       console.warn("weatherBox is undefined");
