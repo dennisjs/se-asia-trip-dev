@@ -63,6 +63,7 @@ window.initMapWithPhotos = function () {
 
     // Floating weather box
     const infoBox = document.createElement('div');
+    infoBox.id = 'location-box';
     infoBox.className = 'location-info-box';
     infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>Loading weather...";
     document.body.appendChild(infoBox);
@@ -76,14 +77,7 @@ window.initMapWithPhotos = function () {
     map.on('move', positionBox);
     positionBox();
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`)
-      .then(res => res.json())
-      .then(weather => {
-        const weatherStr = Math.round(weather.main.temp) + "°F, " + weather.weather[0].description;
-        window.latestWeather = "⛅ " + weatherStr;
-        infoBox.innerHTML = "<strong>My Current Location:</strong><br>" + place + "<br>" + window.latestWeather;
-      })
-
+    updateWeatherBox(lat, lng, place);
 
     // Prior grey pins
     const previousLocations = locations.slice(0, -1);

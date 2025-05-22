@@ -1,4 +1,3 @@
-
 function updateWeatherBox(lat, lng, place) {
   const box = document.getElementById("location-box");
   if (!box) return;
@@ -26,6 +25,7 @@ async function getForecast(lat, lon) {
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
   const response = await fetch(url);
   const data = await response.json();
+  //console.log("weather data:", data);
   return data.daily.slice(0, 7);
 }
 
@@ -61,7 +61,8 @@ async function loadItineraryWeather() {
       }
 
       const icon = day.weather[0].icon;
-      const desc = day.weather[0].description;
+      //const desc = day.weather[0].description;
+      const desc = day.summary;
       const temp = Math.round(day.temp.day);
       const hum = day.humidity;
       const html = `<img src="https://openweathermap.org/img/wn/${icon}@2x.png" class="weather-icon" alt="${desc}" /><br>${temp}°F, ${hum}%<br><small>${desc}</small>`;
@@ -69,7 +70,6 @@ async function loadItineraryWeather() {
     }
   }
 }
-
 
 async function loadCalendarWeather() {
   const res = await fetch("itinerary.json");
@@ -85,11 +85,9 @@ async function loadCalendarWeather() {
   const calendarDiv = document.getElementById("calendarGrid");
   calendarDiv.innerHTML = "";
 
-  // Handle trip-over case
   if (today > itineraryEnd) {
     const msg = document.createElement("div");
     msg.className = "location-name";
-    msg.style.gridColumn = "1 / -1";
     msg.textContent = "Trip Over — No Forecast Available";
     calendarDiv.appendChild(msg);
     return;
@@ -142,7 +140,6 @@ async function loadCalendarWeather() {
     calendarDiv.appendChild(card);
   }
 }
-
 
 function createCell(content, className = "") {
   const div = document.createElement("div");
