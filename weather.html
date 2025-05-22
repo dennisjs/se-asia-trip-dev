@@ -34,15 +34,22 @@
       margin-bottom: 1rem;
     }
 
+    .floating-box {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-bottom: 3rem;
       font-size: 0.95rem;
     }
 
     th, td {
-      padding: 0.75rem;
+      padding: 0.6rem;
       text-align: center;
       border: 1px solid #cce0f5;
     }
@@ -69,6 +76,42 @@
     .today-row {
       background-color: #fffbe6 !important;
     }
+
+    .calendar-location-box {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 800px;
+    }
+
+    .calendar-location-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: #3366cc;
+    }
+
+    .calendar-location-table th, .calendar-location-table td {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .calendar-location-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar-location-table th {
+      background-color: #e7f2ff;
+    }
+
+    .calendar-location-table td {
+      border: 1px solid #cce0f5;
+      background-color: #fdfefe;
+    }
   </style>
 </head>
 <body>
@@ -77,18 +120,20 @@
   </div>
 
   <h2 class="timeline-title">7-Day Forecast by Location</h2>
-  <table id="weatherGridTable">
-    <!-- JS will inject header and rows -->
-  </table>
+  <div class="floating-box">
+    <table id="weatherGridTable">
+      <!-- JS will inject header and rows -->
+    </table>
+  </div>
 
   <h2 class="timeline-title">5-Day Calendar Forecast</h2>
-  <table id="calendarGridTable">
-    <!-- JS will inject calendar forecast -->
-  </table>
+  <div id="calendarGridGrouped">
+    <!-- JS will inject grouped calendar tables by location -->
+  </div>
 
   <script>
     loadItineraryWeatherTable();
-    loadCalendarWeatherTable();
+    loadGroupedCalendarForecast();
   </script>
 </body>
 </html>
