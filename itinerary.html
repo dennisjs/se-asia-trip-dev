@@ -27,6 +27,9 @@
       margin-bottom: 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+    .day.past {
+      opacity: 0.55;
+    }
     .day h3 {
       color: #33adff;
       margin: 0 0 0.5rem 0;
@@ -75,7 +78,10 @@
           const range = `${start.toLocaleDateString('en-US', options)} – ${end.toLocaleDateString('en-US', options)}`;
 
           const div = document.createElement('div');
-          div.className = 'day';
+          const now = new Date();
+          const isPast = end < now;
+          div.className = 'day' + (isPast ? ' past' : '');
+
 
           div.innerHTML = `
             <h3>${range}: ${entry.location}, ${entry.country}</h3>

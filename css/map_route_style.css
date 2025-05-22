@@ -1,0 +1,7 @@
+
+.route-line {
+  color: #66aadd;
+  weight: 3;
+  opacity: 0.7;
+  dashArray: '5, 10';
+}

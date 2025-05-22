@@ -1,3 +1,42 @@
+async function updateWeatherBox(lat, lon, locationName, weatherBox) {
+  const apiKey = window.CONFIG?.OPENWEATHER_KEY;
+  if (!apiKey) {
+    console.error("Missing OpenWeatherMap API key in config.js");
+    return;
+  }
+
+  const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${window.CONFIG.OPENWEATHER_KEY}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    const today = data.daily[0];
+
+    if (!today) {
+      console.warn("No daily forecast returned");
+      return;
+    }
+
+    const temp = Math.round(today.temp.day);
+    const desc = today.weather[0].description;
+    const iconCode = today.weather[0].icon;
+    const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+
+    if (!weatherBox) {
+      console.warn("weatherBox is undefined");
+      return;
+    }
+    weatherBox.innerHTML = `
+      <strong>My Current Location:</strong><br>
+      ${locationName}<br>
+      ${temp}°F – ${desc}<br>
+    `;
+
+  } catch (err) {
+    console.error("Weather fetch failed:", err);
+  }
+}
+
 
 async function getForecast(lat, lon) {
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;

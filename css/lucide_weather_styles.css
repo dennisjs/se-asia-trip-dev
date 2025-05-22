@@ -1,32 +1,66 @@
 
-<style>
-  .lucide-icon {
-    width: 28px;
-    height: 28px;
-    stroke-width: 2.2;
-  }
+body {
+  background: #ffffff;
+  color: #000000;
+}
 
-  .icon-sun {
-    stroke: #f5b301;
-  }
+.timeline-title {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #000000 !important;
+  text-shadow: none;
+}
 
-  .icon-cloud {
-    stroke: #888;
-  }
+.lucide-icon {
+  width: 28px;
+  height: 28px;
+  stroke-width: 2.2;
+  fill: none;
+  color: inherit;
+}
 
-  .icon-cloud-rain {
-    stroke: #3399ff;
-  }
+.icon-sun {
+  color: #f5b301 !important;
+}
 
-  .icon-cloud-lightning {
-    stroke: #cc6600;
-  }
+.icon-cloud {
+  color: #888 !important;
+}
 
-  .icon-cloud-snow {
-    stroke: #a3d2f7;
-  }
+.icon-cloud-rain {
+  color: #3399ff !important;
+}
 
-  .icon-cloud-fog {
-    stroke: #cccccc;
-  }
-</style>
+.icon-cloud-lightning {
+  color: #cc6600 !important;
+}
+
+.icon-cloud-snow {
+  color: #a3d2f7 !important;
+}
+
+.icon-cloud-fog {
+  color: #cccccc !important;
+}
+
+/* Tighter layout for bottom forecast tables */
+.calendar-location-box {
+  padding: 0.8rem;
+  margin: 0.8rem auto;
+  max-width: 680px;
+}
+
+.calendar-location-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.calendar-location-table th,
+.calendar-location-table td {
+  padding: 0.35rem;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
