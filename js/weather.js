@@ -61,7 +61,7 @@ async function loadItineraryWeatherTable() {
   }
 }
 
-async function loadCalendarWeatherTable() {
+async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
 
@@ -72,21 +72,19 @@ async function loadCalendarWeatherTable() {
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
-  const table = document.getElementById("calendarGridTable");
-  table.innerHTML = "";
-
-  const headerRow = document.createElement("tr");
-  headerRow.innerHTML = "<th>Date</th><th>Location</th><th>Forecast</th>";
-  table.appendChild(headerRow);
+  const gridContainer = document.getElementById("calendarGridGrouped");
+  gridContainer.innerHTML = "";
 
   if (today > itineraryEnd) {
-    const row = document.createElement("tr");
-    row.innerHTML = '<td colspan="3"><strong>Trip Over — No Forecast Available</strong></td>';
-    table.appendChild(row);
+    const msg = document.createElement("div");
+    msg.className = "location-name";
+    msg.textContent = "Trip Over — No Forecast Available";
+    gridContainer.appendChild(msg);
     return;
   }
 
   const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
+  const groupedForecasts = {};
 
   for (let i = 0; i < forecastDays; i++) {
     const date = new Date(forecastBaseDate);
@@ -99,22 +97,48 @@ async function loadCalendarWeatherTable() {
       return date >= arrival && date < departure;
     });
 
-    const row = document.createElement("tr");
-    if (date.toDateString() === today.toDateString()) row.classList.add("today-row");
+    if (!matched) continue;
 
-    const dateCell = "<td>" + date.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + "</td>";
-    const locCell = "<td>" + (matched ? matched.location : "—") + "</td>";
-    let forecastCell = "<td>N/A</td>";
+    const loc = matched.location;
+    if (!groupedForecasts[loc]) groupedForecasts[loc] = [];
 
-    if (matched) {
-      const forecast = await getForecast(matched.lat, matched.lng);
-      const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
-      if (offset >= 0 && offset < forecast.length && forecast[offset]) {
-        forecastCell = "<td>" + formatForecastCell(forecast[offset]) + "</td>";
-      }
+    const forecast = await getForecast(matched.lat, matched.lng);
+    const offset = Math.floor((date - forecastBaseDate) / (1000 * 60 * 60 * 24));
+    let weatherHTML = "N/A";
+
+    if (offset >= 0 && offset < forecast.length && forecast[offset]) {
+      weatherHTML = formatForecastCell(forecast[offset]);
     }
 
-    row.innerHTML = dateCell + locCell + forecastCell;
-    table.appendChild(row);
+    groupedForecasts[loc].push({
+      date: date.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }),
+      weather: weatherHTML
+    });
+  }
+
+  for (const [location, entries] of Object.entries(groupedForecasts)) {
+    const box = document.createElement("div");
+    box.className = "calendar-location-box";
+
+    const title = document.createElement("div");
+    title.className = "calendar-location-title";
+    title.textContent = location;
+    box.appendChild(title);
+
+    const table = document.createElement("table");
+    table.className = "calendar-location-table";
+
+    const header = document.createElement("tr");
+    header.innerHTML = "<th>Date</th><th>Forecast</th>";
+    table.appendChild(header);
+
+    entries.forEach(entry => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${entry.date}</td><td>${entry.weather}</td>`;
+      table.appendChild(row);
+    });
+
+    box.appendChild(table);
+    gridContainer.appendChild(box);
   }
 }
