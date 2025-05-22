@@ -45,3 +45,20 @@ body {
 .icon-cloud-fog {
   color: #cccccc !important;
 }
+
+/* Tighter spacing on grouped calendar boxes */
+.calendar-location-box {
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.calendar-location-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-location-table th,
+.calendar-location-table td {
+  padding: 0.4rem;
+  font-size: 0.85rem;
+}
