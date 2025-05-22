@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,111 +13,82 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      //background: #f5f8fc;
       background: linear-gradient(to bottom, #eef6fc, #dbefff);
       margin: 0;
       padding: 1rem;
     }
 
-    h2 {
+    .timeline-title {
       font-family: 'Shadows Into Light', cursive;
       font-size: 2.5rem;
-      color: #000;
       text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .weather-grid {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 10px;
       margin-top: 2rem;
+      margin-bottom: 1.5rem;
     }
 
-    .weather-grid div {
-      padding: 0.5rem;
-      background: white;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .location-name {
+    a.back-link {
+      color: #3366cc;
+      text-decoration: none;
       font-weight: bold;
-      background: #e6f0ff;
+      display: inline-block;
+      margin-bottom: 1rem;
     }
 
-    .weather-icon {
-      width: 40px;
-      height: 40px;
-    }
-
-    .calendar-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 2rem;
-    }
-
-    .calendar-forecast-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-      justify-content: center;
-    }
-
-    .forecast-card {
-      background: #ffffff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 1rem;
-      width: 240px;
-      text-align: center;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 3rem;
       font-size: 0.95rem;
     }
 
-    .forecast-card .weather-icon {
-      width: 60px;
-      height: 60px;
+    th, td {
+      padding: 0.75rem;
+      text-align: center;
+      border: 1px solid #cce0f5;
     }
 
-    .forecast-card .forecast-date {
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-      color: #3366cc;
+    thead {
+      background-color: #d0e9ff;
     }
 
-    .forecast-card .forecast-location {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
+    tbody tr:nth-child(even) {
+      background-color: #f7fbff;
     }
 
-    .forecast-card small {
+    .weather-icon {
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
+    }
+
+    .forecast-detail {
+      font-size: 0.85rem;
       color: #555;
+    }
+
+    .today-row {
+      background-color: #fffbe6 !important;
     }
   </style>
 </head>
 <body>
   <div style="margin: 1rem;">
-    <a href="index.html" style="color: #3366cc; text-decoration: none; font-weight: bold;">← Back to Main Page</a>
+    <a href="index.html" class="back-link">← Back to Main Page</a>
   </div>
 
-  <h2 class="timeline-title">7-Day Forecast</h2>
-  <div class="weather-grid" id="weatherGrid">
-    <!-- Weather data will be injected here -->
-  </div>
+  <h2 class="timeline-title">7-Day Forecast by Location</h2>
+  <table id="weatherGridTable">
+    <!-- JS will inject header and rows -->
+  </table>
 
-  <h2 class="timeline-title">5-Day Itinerary Forecast</h2>
-  <div class="calendar-forecast-container" id="calendarGrid">
-    <!-- Calendar forecast will go here -->
-  </div>
+  <h2 class="timeline-title">5-Day Calendar Forecast</h2>
+  <table id="calendarGridTable">
+    <!-- JS will inject calendar forecast -->
+  </table>
 
   <script>
-    loadItineraryWeather();
-    loadCalendarWeather();
+    loadItineraryWeatherTable();
+    loadCalendarWeatherTable();
   </script>
 </body>
 </html>
