@@ -77,7 +77,7 @@ window.initMapWithPhotos = function () {
     map.on('move', positionBox);
     positionBox();
 
-    updateWeatherBox(lat, lng, place);
+    updateWeatherBox(lat, lng, place, infoBox);
 
     // Prior grey pins
     const previousLocations = locations.slice(0, -1);
