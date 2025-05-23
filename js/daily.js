@@ -1,4 +1,4 @@
-
+console.log("✅ daily.js loaded");
 async function loadDailyThing() {
   const container = document.getElementById("dailyContainer");
 
