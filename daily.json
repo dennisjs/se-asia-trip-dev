@@ -1,5 +1,12 @@
 {
-  "type": "audio",
-  "src": "media/The_Sun.mp3",
-  "caption": "A track I wrote"
+  "2025-05-22": {
+    "type": "audio",
+    "src": "media/temple.mp3",
+    "caption": "Temple vibes"
+  },
+  "2025-05-23": {
+    "type": "image",
+    "src": "media/The_Sun.mp3",
+    "caption": "The Sun"
+  }
 }
