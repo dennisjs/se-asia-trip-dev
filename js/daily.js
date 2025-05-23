@@ -23,30 +23,30 @@ async function loadDailyThing() {
     if (type === "image") {
       container.innerHTML = `
         <div class="daily-box">
-          <img src="\${src}" alt="\${caption || ''}" class="daily-media" />
-          \${caption ? `<div class="caption">\${caption}</div>` : ""}
+          <img src="${src}" alt="${caption || ''}" class="daily-media" />
+          ${caption ? `<div class="caption">${caption}</div>` : ""}
         </div>
-      \`;
+      `;
     } else if (type === "video") {
-      container.innerHTML = \`
+      container.innerHTML = `
         <div class="daily-box">
           <video controls class="daily-media">
-            <source src="\${src}" type="video/mp4">
+            <source src="${src}" type="video/mp4">
             Your browser does not support the video tag.
           </video>
-          \${caption ? `<div class="caption">\${caption}</div>` : ""}
+          ${caption ? `<div class="caption">${caption}</div>` : ""}
         </div>
-      \`;
+      `;
     } else if (type === "audio") {
-      container.innerHTML = \`
+      container.innerHTML = `
         <div class="daily-box">
           <audio controls class="daily-media">
-            <source src="\${src}" type="audio/mpeg">
+            <source src="${src}" type="audio/mpeg">
             Your browser does not support the audio element.
           </audio>
-          \${caption ? `<div class="caption">\${caption}</div>` : ""}
+          ${caption ? `<div class="caption">${caption}</div>` : ""}
         </div>
-      \`;
+      `;
     } else {
       container.innerHTML = "<p>Unsupported media type.</p>";
     }
