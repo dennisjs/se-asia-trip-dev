@@ -21,7 +21,7 @@ async function loadDailyThing() {
     const { type, src, caption } = entry;
 
     if (type === "image") {
-      container.innerHTML = \`
+      container.innerHTML = `
         <div class="daily-box">
           <img src="\${src}" alt="\${caption || ''}" class="daily-media" />
           \${caption ? `<div class="caption">\${caption}</div>` : ""}
