@@ -10,6 +10,8 @@ async function loadDailyThing() {
 
     const today = new Date().toISOString().split("T")[0];
     const entry = data[today] || getMostRecentEntry(data, today);
+    console.log("📅 entry for today:", entry);
+
 
     if (!entry) {
       container.innerHTML = "<p>No daily content available yet.</p>";
@@ -24,6 +26,8 @@ async function loadDailyThing() {
     } else if (type === "video") {
       mediaHtml = `<video controls class="daily-media"><source src="${src}" type="video/mp4">Your browser does not support the video tag.</video>`;
     } else if (type === "audio") {
+      console.log("audio file:", type);
+
       mediaHtml = `<audio controls class="daily-media"><source src="${src}" type="audio/mpeg">Your browser does not support the audio element.</audio>`;
     } else {
       mediaHtml = "<p>Unsupported media type.</p>";
