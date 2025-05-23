@@ -31,12 +31,13 @@ async function loadDailyThing() {
     } else {
       mediaHtml = "<p>Unsupported media type.</p>";
     }
+
     container.innerHTML = `
-      ${mediaHtml}
-      ${caption ? `<div class="caption">${caption}</div>` : ""}
+      <div class="daily-box">
+        ${mediaHtml}
+        ${caption ? `<div class="caption">${caption}</div>` : ""}
+      </div>
     `;
-
-
 
   } catch (err) {
     console.error("Failed to load daily thing:", err);
