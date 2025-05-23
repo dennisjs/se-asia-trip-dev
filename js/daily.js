@@ -33,6 +33,7 @@ async function loadDailyThing() {
           Your browser does not support the audio element.
         </audio>
       `;
+
     } else {
       mediaHtml = "<p>Unsupported media type.</p>";
     }
