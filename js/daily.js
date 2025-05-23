@@ -39,9 +39,15 @@ async function loadDailyThing() {
     }
 
     container.innerHTML = `
-      ${mediaHtml}
-      ${caption ? `<div class="caption">${caption}</div>` : ""}
+      <div class="daily-box">
+        <audio controls class="daily-media">
+          <source src="${src}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <div class="caption">${caption || ""}</div>
+      </div>
     `;
+
 
   } catch (err) {
     console.error("Failed to load daily thing:", err);
