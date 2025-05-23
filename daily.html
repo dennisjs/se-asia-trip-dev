@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Daily Thing</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: #222;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .daily-container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fafafa;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .daily-media {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    video, audio {
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .caption {
+      font-style: italic;
+      color: #666;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      text-decoration: none;
+      color: #3366cc;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Daily Thing</h1>
+  <div class="daily-container" id="dailyContainer">
+    Loading...
+  </div>
+  <a href="index.html" class="back-link">← Back to Main Page</a>
+
+  <script src="daily.js"></script>
+</body>
+</html>
