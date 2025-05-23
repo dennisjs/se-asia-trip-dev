@@ -28,7 +28,7 @@ async function loadDailyThing() {
         </div>
       \`;
     } else if (type === "video") {
-      container.innerHTML = \`
+      container.innerHTML = `
         <div class="daily-box">
           <video controls class="daily-media">
             <source src="\${src}" type="video/mp4">
