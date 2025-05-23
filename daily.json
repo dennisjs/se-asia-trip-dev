@@ -1,7 +1,5 @@
 {
-  "2025-05-22": {
-    "type": "audio",
-    "src": "media/The_Sun.mp3",
-    "caption": "A track I wrote"
-  }
+  "type": "audio",
+  "src": "media/The_Sun.mp3",
+  "caption": "A track I wrote"
 }
