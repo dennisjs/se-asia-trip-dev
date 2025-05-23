@@ -5,6 +5,8 @@ async function loadDailyThing() {
   try {
     const res = await fetch("daily.json");
     const data = await res.json();
+    console.log("✅ daily.json loaded2:", data);
+
 
     const today = new Date().toISOString().split("T")[0];
     const entry = data[today] || getMostRecentEntry(data, today);
