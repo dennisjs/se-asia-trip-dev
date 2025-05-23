@@ -10,7 +10,7 @@ async function loadDailyThing() {
     const entry = data[today] || getMostRecentEntry(data, today);
 
     if (!entry) {
-      container.innerHTML = "<p>No daily content available.</p>";
+      container.innerHTML = "";
       return;
     }
 
