@@ -322,17 +322,18 @@ nav a {
 
   #map-info-box {
   display: none;
-  position: absolute;
-  top: 120px;
+  position: fixed;
+  top: 100px; /* pushed lower to clear header */
   right: 20px;
-  max-width: 250px;
+  max-width: 280px;
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   padding: 1rem;
   font-size: 0.9rem;
-  z-index: 2100;
+  z-index: 2500; /* must be above map, overlays, location box */
 }
+
 
   #map-info-box.active {
   display: block;
