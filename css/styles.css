@@ -198,6 +198,8 @@ nav a {
 .thumb-toggle-btn {
   background-color: #33adff;
   border: none;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
   border-radius: 8px;
   color: white;
   padding: 0.4rem 1rem;
@@ -216,6 +218,7 @@ nav a {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  margin-left: 1rem; /* slight offset from nav */
 }
 
 .more-count {
