@@ -138,18 +138,21 @@ window.initMapWithPhotos = function () {
           });
         });
 
-        // Toggle button
-        const toggleBtn = document.getElementById("toggle-thumbs");
-        if (toggleBtn) {
-          toggleBtn.addEventListener("click", () => {
-            photoMarkers.forEach(marker => {
-              const el = marker.getElement();
-              el.style.display = el.style.display === "none" ? "block" : "none";
-            });
           });
         }
       });
   });
+
+  // Toggle button logic placed outside fetch
+  const toggleBtn = document.getElementById("toggle-thumbs");
+  if (toggleBtn) {
+    toggleBtn.addEventListener("click", () => {
+      photoMarkers.forEach(marker => {
+        const el = marker.getElement();
+        el.style.display = el.style.display === "none" ? "block" : "none";
+      });
+    });
+  }
 };
 
 if (document.getElementById("map")?.offsetParent !== null) {
