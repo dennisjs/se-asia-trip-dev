@@ -81,6 +81,7 @@ nav a {
   text-align: center;
   z-index: 1500;
   display: none;
+  transition: top 0.3s ease;
 }
 .overlay img {
   max-width: 100%;
