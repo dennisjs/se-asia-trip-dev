@@ -95,42 +95,5 @@
   </div>
 
   <script src="js/daily.js"></script>
-  <script>
-    async function showLastEntryDate() {
-      try {
-        const res = await fetch("daily.json");
-        const data = await res.json();
-        const today = new Date().toISOString().split("T")[0];
-        console.log("Fetched daily.json:", data);
-        console.log("Today is:", new Date().toISOString().split("T")[0]);
-
-        const availableDates = Object.keys(data)
-          .sort()
-          .reverse();
-
-        if (!availableDates.length) return;
-
-        const latestDate = availableDates[0];
-        console.log("Available dates:", availableDates);
-        console.log("Latest date selected:", latestDate);
-        console.log("Entry for latest date:", data[latestDate]);
-
-        const entry = data[latestDate];
-
-        // update description bubble
-        const desc = entry.description || "No description provided.";
-        document.getElementById("descriptionContainer").textContent = desc;
-
-        // update last entry date
-        const formatted = new Date(latestDate).toLocaleDateString(undefined, {
-          year: "numeric", month: "long", day: "numeric"
-        });
-        document.getElementById("entryDate").textContent = "Last entry: " + formatted;
-      } catch (err) {
-        console.error("Failed to load entry date or description:", err);
-      }
-    }
-    showLastEntryDate();
-  </script>
 </body>
 </html>
