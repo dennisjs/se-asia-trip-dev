@@ -1,3 +1,56 @@
+async function debugCheckItinerary() {
+  const debugBox = document.getElementById("weather-debug");
+
+  try {
+    const res = await fetch("itinerary.json");
+    const data = await res.json();
+    debugBox.textContent += ` | 🧭 itinerary.json: ${data.length} stops`;
+  } catch (err) {
+    debugBox.textContent += ` | ❌ itinerary.json error: ${err.message}`;
+  }
+}
+
+
+async function debugFetchWeather() {
+  const debugBox = document.getElementById("weather-debug");
+  debugBox.textContent = "🔍 Started debugFetchWeather";
+
+  const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
+  if (!API_KEY) {
+    debugBox.textContent = "❌ Missing API key.";
+    return;
+  }
+
+  debugBox.textContent += " | API key loaded.";
+
+  const lat = 13.7563;
+  const lon = 100.5018;
+
+  try {
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
+    debugBox.textContent += " | Fetching...";
+
+    const response = await fetch(url);
+    debugBox.textContent += ` | Status: ${response.status}`;
+
+    const data = await response.json();
+    debugBox.textContent += ` | Fetched`;
+
+    const today = data.daily?.[0];
+    if (!today) {
+      debugBox.textContent += " | ❌ No daily data.";
+      return;
+    }
+
+    const temp = Math.round(today.temp.day);
+    const desc = today.weather[0].description;
+    debugBox.textContent += ` | ✅ ${temp}°F – ${desc}`;
+  } catch (err) {
+    debugBox.textContent += ` | ❌ Fetch error: ${err.message}`;
+  }
+}
+
+
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const apiKey = window.CONFIG?.OPENWEATHER_KEY;
   if (!apiKey) {
@@ -39,15 +92,31 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
 
 
 async function getForecast(lat, lon) {
+  const debugBox = document.getElementById("weather-debug");
+  debugBox.textContent += ` | 🌍 Fetching forecast for (${lat}, ${lon})`;
+
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
   if (!API_KEY) {
-    console.error("Missing OpenWeatherMap API key in config.js");
+    debugBox.textContent += " | ❌ Missing API key in getForecast";
     return [];
   }
+
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
-  const response = await fetch(url);
-  const data = await response.json();
-  return data.daily.slice(0, 7);
+
+  try {
+    const response = await fetch(url);
+    debugBox.textContent += ` | ↩️ ${response.status}`;
+    const data = await response.json();
+    if (!data.daily || !Array.isArray(data.daily)) {
+      debugBox.textContent += " | ❌ Malformed daily data";
+      return [];
+    }
+    debugBox.textContent += ` | ✅ ${data.daily.length} days`;
+    return data.daily.slice(0, 7);
+  } catch (err) {
+    debugBox.textContent += ` | ❌ getForecast error: ${err.message}`;
+    return [];
+  }
 }
 
 function getLucideIcon(desc) {
@@ -74,31 +143,55 @@ function formatForecastCell(day) {
 }
 
 async function loadItineraryWeatherTable() {
-  const res = await fetch("itinerary.json");
-  const itinerary = await res.json();
-  const today = new Date();
+  const debugBox = document.getElementById("weather-debug");
+  if (debugBox) debugBox.textContent += " | 🔄 Table start";
+
+  let itinerary;
+  try {
+    const res = await fetch("itinerary.json");
+    itinerary = await res.json();
+    debugBox.textContent += ` | 📅 ${itinerary.length} loaded`;
+  } catch (e) {
+    debugBox.textContent += ` | ❌ itinerary fetch failed: ${e.message}`;
+    return;
+  }
+
+  const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const today = toUTCDateOnly(new Date());
+  if (debugBox) debugBox.textContent += ` | Today: ${today.toISOString().slice(0, 10)}`;
 
   const upcoming = itinerary.filter(loc => {
     const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
     const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-    return arrival >= today;
+    const isUpcoming = arrival >= today;
+    if (debugBox) debugBox.textContent += ` | ${loc.location}: arrival=${arrival.toISOString().slice(0,10)} → ${isUpcoming ? "✅" : "❌"}`;
+    return isUpcoming;
   }).slice(0, 4);
-  const table = document.getElementById("weatherGridTable");
-  table.innerHTML = "";
+  debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
 
+  const table = document.getElementById("weatherGridTable");
+  if (!table) {
+    debugBox.textContent += " | ❌ No table element";
+    return;
+  }
+
+  table.innerHTML = "";
   const headerRow = document.createElement("tr");
   headerRow.innerHTML = "<th>Location</th>";
   for (let i = 0; i < 7; i++) {
     const future = new Date();
     future.setDate(today.getDate() + i);
-    headerRow.innerHTML += "<th>" + future.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + "</th>";
+    headerRow.innerHTML += `<th>${future.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}</th>`;
   }
   table.appendChild(headerRow);
+  debugBox.textContent += " | 🧱 Header built";
 
   for (const stop of upcoming) {
+    debugBox.textContent += ` | ☁️ Fetching for ${stop.location}`;
     const forecast = await getForecast(stop.lat, stop.lng);
     const row = document.createElement("tr");
-    row.innerHTML = "<td><strong>" + stop.location + "</strong></td>";
+    row.innerHTML = `<td><strong>${stop.location}</strong></td>`;
+
     for (let i = 0; i < 7; i++) {
       const cell = document.createElement("td");
       cell.innerHTML = forecast[i] ? formatForecastCell(forecast[i]) : "N/A";
@@ -107,28 +200,22 @@ async function loadItineraryWeatherTable() {
     table.appendChild(row);
   }
 
-  // Minimal fix: apply icon color classes
-  lucide.createIcons({
-    attrs: (iconNode) => {
-      const iconName = iconNode.getAttribute("data-lucide");
-      return { class: `lucide lucide-icon icon-${iconName}`,
-               stroke: "currentColor"
-      };
-    }
-  });
+  debugBox.textContent += " | ✅ Table complete";
 }
+
 
 async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
 
-  const today = new Date();
+  const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
+  const today = toUTCDateOnly(new Date());
   const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
   const itineraryStart = new Date(Date.UTC(yyyy0, mm0 - 1, dd0));
   const lastStop = itinerary[itinerary.length - 1];
   const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
   const itineraryEnd = new Date(Date.UTC(yyyyEnd, mmEnd - 1, ddEnd));
-  itineraryEnd.setUTCDate(itineraryEnd.getUTCDate() + lastStop.nights);
+  itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
   const gridContainer = document.getElementById("calendarGridGrouped");
@@ -217,3 +304,18 @@ async function loadGroupedCalendarForecast() {
     }
   });
 }
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const debugBox = document.getElementById("weather-debug");
+  if (debugBox) debugBox.textContent += " | 🧩 DOM ready";
+
+  try {
+    await debugFetchWeather();                  // optional
+    await debugCheckItinerary();                // confirms itinerary loads
+    await loadItineraryWeatherTable();          // 7-day table
+    await loadGroupedCalendarForecast();        // 5-day calendar
+  } catch (err) {
+    if (debugBox) debugBox.textContent += ` | ❌ JS error: ${err.message}`;
+  }
+});
+
