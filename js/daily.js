@@ -1,21 +1,39 @@
 
+
 async function loadDailyThing() {
   const container = document.getElementById("dailyContainer");
+  const descContainer = document.getElementById("descriptionContainer");
+  const dateContainer = document.getElementById("entryDate");
 
   try {
     const res = await fetch("daily.json");
     const data = await res.json();
 
-    const today = new Date().toISOString().split("T")[0];
-    const entry = data[today] || getMostRecentEntry(data, today);
+    const availableDates = Object.keys(data).sort().reverse();
+    const latestDate = availableDates[0];
+    const entry = data[latestDate];
 
     if (!entry) {
       container.innerHTML = "";
+      descContainer.innerHTML = "";
+      dateContainer.innerHTML = "";
       return;
     }
 
-    let html = "";
+    // Set description text
+    descContainer.textContent = entry.description || "No description provided.";
 
+    // Set formatted date
+    const parts = latestDate.split("-");
+    const localDate = new Date(parts[0], parts[1] - 1, parts[2]);
+    const formatted = localDate.toLocaleDateString(undefined, {
+      year: "numeric", month: "long", day: "numeric"
+    });
+
+    dateContainer.textContent = "Last entry: " + formatted;
+
+    // Set media content
+    let html = "";
     if (entry.type === "audio") {
       html = `
         <audio controls>
@@ -43,16 +61,9 @@ async function loadDailyThing() {
   } catch (err) {
     console.error("Failed to load daily.json:", err);
     container.innerHTML = "<p>Error loading content.</p>";
+    descContainer.innerHTML = "";
+    dateContainer.innerHTML = "";
   }
-}
-
-function getMostRecentEntry(data, today) {
-  const availableDates = Object.keys(data)
-    .filter(date => date <= today)
-    .sort()
-    .reverse();
-
-  return availableDates.length ? data[availableDates[0]] : null;
 }
 
 window.addEventListener("DOMContentLoaded", loadDailyThing);
