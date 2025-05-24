@@ -150,28 +150,14 @@ window.initMapWithPhotos = function () {
         }
       });
   });
-    // Map Info toggle
-    const infoBtn = document.getElementById("map-info-btn");
-    const infoBox = document.getElementById("map-info-box");
-
-    if (infoBtn && infoBox) {
-      infoBtn.addEventListener("click", () => {
-        infoBox.classList.toggle("active");
-      });
+    );
 
       document.addEventListener("click", (e) => {
         if (!infoBox.contains(e.target) && e.target !== infoBtn) {
           infoBox.classList.remove("active");
         }
       
-        // Map Info toggle
-        const infoBtn = document.getElementById("map-info-btn");
-        const infoBox = document.getElementById("map-info-box");
-
-        if (infoBtn && infoBox) {
-          infoBtn.addEventListener("click", () => {
-            infoBox.classList.toggle("active");
-          });
+        );
 
           document.addEventListener("click", (e) => {
             if (!infoBox.contains(e.target) && e.target !== infoBtn) {
@@ -202,6 +188,44 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (e) => {
       if (!infoBox.contains(e.target) && e.target !== infoBtn) {
         infoBox.classList.remove("active");
+      }
+    });
+  }
+});
+
+}; // End of initMapWithPhotos
+
+// ✅ Only one init call
+if (document.getElementById("map")?.offsetParent !== null) {
+  window.initMapWithPhotos();
+}
+
+// ✅ Clean and debugged Map Info toggle
+document.addEventListener("DOMContentLoaded", () => {
+  const infoBtn = document.getElementById("map-info-btn");
+  const infoBox = document.getElementById("map-info-box");
+
+  console.log("✅ DOM loaded. Looking for map-info-btn...");
+
+  if (!infoBtn) {
+    console.warn("⚠️ map-info-btn not found!");
+  }
+  if (!infoBox) {
+    console.warn("⚠️ map-info-box not found!");
+  }
+
+  if (infoBtn && infoBox) {
+    console.log("✅ Found both button and box. Wiring up toggle.");
+
+    infoBtn.addEventListener("click", () => {
+      console.log("🟦 Toggle button clicked");
+      infoBox.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
+        infoBox.classList.remove("active");
+        console.log("🟥 Clicked outside — hiding box");
       }
     });
   }
