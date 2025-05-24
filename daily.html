@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
   <title>The Daily Thing</title>
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
   <style>
     html, body {
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       height: 100%;
       font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom right, #f7f9fb, #f0f2f5);
@@ -21,7 +20,7 @@
       font-family: 'Shadows Into Light', cursive;
       font-size: 2.5rem;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 0;
       margin-bottom: 0.5rem;
     }
 
@@ -65,11 +64,14 @@
 
     .back-link {
       display: block;
-      margin: 2rem auto;
-      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #33adff;
+      font-weight: bold;
       text-decoration: none;
-      color: #1976d2;
-      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
     }
 
     audio, video {
@@ -78,6 +80,7 @@
   </style>
 </head>
 <body>
+  <a href="index.html" class="back-link">← Back to Main Page</a>
   <h2 class="timeline-title">The Daily Thing</h2>
   <div class="last-entry-date" id="entryDate"></div>
 
@@ -89,8 +92,6 @@
       Loading...
     </div>
   </div>
-
-  <a href="index.html" class="back-link">← Back to Main Page</a>
 
   <script src="js/daily.js"></script>
   <script>
