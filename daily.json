@@ -1,12 +1,8 @@
 {
-  "2025-05-22": {
-    "type": "image",
-    "src": "media/temple.mp3",
-    "caption": "Temple vibes"
-  },
   "2025-05-23": {
     "type": "audio",
     "src": "media/The_Sun.mp3",
-    "caption": "The Sun"
+    "caption": "The Sun",
+    "description":  "A track I wrote.  Actually the best one I ever wrote in my opinion."
   }
 }
