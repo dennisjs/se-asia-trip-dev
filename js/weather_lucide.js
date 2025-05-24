@@ -127,11 +127,16 @@ function formatForecastCell(day) {
 }
 
 async function loadItineraryWeatherTable() {
+  const debugBox = document.getElementById("weather-debug");
+  debugBox.textContent += " | Loading itinerary table...";
+
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
   const today = new Date();
 
   const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
+  debugBox.textContent += ` | ${upcoming.length} upcoming stops`;
+
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
 
@@ -146,6 +151,7 @@ async function loadItineraryWeatherTable() {
 
   for (const stop of upcoming) {
     const forecast = await getForecast(stop.lat, stop.lng);
+    debugBox.textContent += ` | Fetched forecast for ${stop.location}`;
     const row = document.createElement("tr");
     row.innerHTML = "<td><strong>" + stop.location + "</strong></td>";
     for (let i = 0; i < 7; i++) {
@@ -156,16 +162,9 @@ async function loadItineraryWeatherTable() {
     table.appendChild(row);
   }
 
-  // Minimal fix: apply icon color classes
-  lucide.createIcons({
-    attrs: (iconNode) => {
-      const iconName = iconNode.getAttribute("data-lucide");
-      return { class: `lucide lucide-icon icon-${iconName}`,
-               stroke: "currentColor"
-      };
-    }
-  });
+  debugBox.textContent += " | Finished table";
 }
+
 
 async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
