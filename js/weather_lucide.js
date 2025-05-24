@@ -1,3 +1,35 @@
+async function debugFetchWeather() {
+  const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
+  const debugBox = document.getElementById("weather-debug");
+
+  if (!API_KEY) {
+    debugBox.textContent = "Missing API key.";
+    return;
+  }
+
+  const lat = 13.7563;  // Bangkok (test coords)
+  const lon = 100.5018;
+
+  try {
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    const today = data.daily[0];
+
+    if (!today) {
+      debugBox.textContent = "Weather fetch succeeded, but no daily data returned.";
+      return;
+    }
+
+    const temp = Math.round(today.temp.day);
+    const desc = today.weather[0].description;
+    debugBox.textContent = `Bangkok Forecast: ${temp}°F – ${desc}`;
+  } catch (err) {
+    debugBox.textContent = "Error fetching weather: " + err.message;
+  }
+}
+
+
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const apiKey = window.CONFIG?.OPENWEATHER_KEY;
   if (!apiKey) {
