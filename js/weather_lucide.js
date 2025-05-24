@@ -92,15 +92,31 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
 
 
 async function getForecast(lat, lon) {
+  const debugBox = document.getElementById("weather-debug");
+  debugBox.textContent += ` | 🌍 Fetching forecast for (${lat}, ${lon})`;
+
   const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
   if (!API_KEY) {
-    console.error("Missing OpenWeatherMap API key in config.js");
+    debugBox.textContent += " | ❌ Missing API key in getForecast";
     return [];
   }
+
   const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
-  const response = await fetch(url);
-  const data = await response.json();
-  return data.daily.slice(0, 7);
+
+  try {
+    const response = await fetch(url);
+    debugBox.textContent += ` | ↩️ ${response.status}`;
+    const data = await response.json();
+    if (!data.daily || !Array.isArray(data.daily)) {
+      debugBox.textContent += " | ❌ Malformed daily data";
+      return [];
+    }
+    debugBox.textContent += ` | ✅ ${data.daily.length} days`;
+    return data.daily.slice(0, 7);
+  } catch (err) {
+    debugBox.textContent += ` | ❌ getForecast error: ${err.message}`;
+    return [];
+  }
 }
 
 function getLucideIcon(desc) {
