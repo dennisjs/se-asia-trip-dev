@@ -81,40 +81,67 @@
   <div class="last-entry-date" id="entryDate"></div>
 
   <div class="daily-layout">
-    <div class="daily-description">
-      Today’s post might feature a track I wrote, a travel video, or something simple that caught my eye.
+    <div class="daily-description" id="descriptionContainer">
+      Loading description...
     </div>
     <div class="daily-box" id="dailyContainer">
-      Loading...
+      Loading media...
     </div>
   </div>
 
   <a href="index.html" class="back-link">← Back to Main Page</a>
 
-  <script src="js/daily.js"></script>
   <script>
-    async function showLastEntryDate() {
+    async function loadDailyThing() {
       try {
         const res = await fetch("daily.json");
         const data = await res.json();
         const today = new Date().toISOString().split("T")[0];
-        const availableDates = Object.keys(data)
-          .filter(date => date <= today)
-          .sort()
-          .reverse();
-        if (availableDates.length) {
-          const formatted = new Date(availableDates[0]).toLocaleDateString(undefined, {
-            year: "numeric",
-            month: "long",
-            day: "numeric"
-          });
-          document.getElementById("entryDate").textContent = "Last entry: " + formatted;
+        const dates = Object.keys(data).sort().reverse();
+        const entry = data[today] || data[dates[0]];
+        if (!entry) {
+          document.getElementById("dailyContainer").innerHTML = "<p>No entry found.</p>";
+          return;
         }
+
+        const { type, src, caption, description } = entry;
+        const mediaContainer = document.getElementById("dailyContainer");
+        const descContainer = document.getElementById("descriptionContainer");
+        descContainer.textContent = description || "No description provided.";
+
+        let mediaHtml = "";
+        if (type === "audio") {
+          mediaHtml = `
+            <audio controls class="daily-media">
+              <source src="${src}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <div class="caption">${caption || ""}</div>`;
+        } else if (type === "image") {
+          mediaHtml = \`<img src="\${src}" alt="\${caption || ''}" class="daily-media" />\` +
+                      \`<div class="caption">\${caption || ''}</div>\`;
+        } else if (type === "video") {
+          mediaHtml = \`<video controls class="daily-media"><source src="\${src}">\` +
+                      \`Your browser does not support the video element.</video>\` +
+                      \`<div class="caption">\${caption || ''}</div>\`;
+        } else {
+          mediaHtml = "<p>Unsupported media type.</p>";
+        }
+
+        mediaContainer.innerHTML = mediaHtml;
+
+        // Format and show entry date
+        const formatted = new Date(Object.keys(data).includes(today) ? today : dates[0])
+          .toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
+        document.getElementById("entryDate").textContent = "Last entry: " + formatted;
+
       } catch (err) {
-        console.error("Failed to load entry date:", err);
+        console.error("Error loading daily thing:", err);
+        document.getElementById("dailyContainer").innerHTML = "<p>Error loading entry.</p>";
       }
     }
-    showLastEntryDate();
+
+    loadDailyThing();
   </script>
 </body>
 </html>
