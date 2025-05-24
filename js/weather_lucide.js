@@ -254,9 +254,6 @@ async function loadGroupedCalendarForecast() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const debugBox = document.getElementById("weather-debug");
-  if (debugBox) debugBox.textContent += " | 🧩 DOM ready";
-
   try {
     await loadItineraryWeatherTable();          // 7-day table
     await loadGroupedCalendarForecast();        // 5-day calendar
