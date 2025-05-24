@@ -146,6 +146,22 @@ window.initMapWithPhotos = function () {
               const el = marker.getElement();
               el.style.display = el.style.display === "none" ? "block" : "none";
             });
+        // Map Info toggle
+        const infoBtn = document.getElementById("map-info-btn");
+        const infoBox = document.getElementById("map-info-box");
+
+        if (infoBtn && infoBox) {
+          infoBtn.addEventListener("click", () => {
+            infoBox.classList.toggle("active");
+          });
+
+          document.addEventListener("click", (e) => {
+            if (!infoBox.contains(e.target) && e.target !== infoBtn) {
+              infoBox.classList.remove("active");
+            }
+          });
+        }
+
           });
         }
       });
