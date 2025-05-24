@@ -108,7 +108,7 @@
         if (!availableDates.length) return;
 
         const latestDate = availableDates[0];
-        const entry = data[today] || data[latestDate];
+        const entry = data[latestDate];
 
         // update description bubble
         const desc = entry.description || "No description provided.";
