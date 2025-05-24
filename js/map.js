@@ -150,23 +150,6 @@ window.initMapWithPhotos = function () {
         }
       });
   });
-
-  // Map Info button logic
-  const infoBtn = document.getElementById("map-info-btn");
-  const infoBox = document.getElementById("map-info-box");
-
-  if (infoBtn && infoBox) {
-    infoBtn.addEventListener("click", () => {
-      infoBox.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
-        infoBox.classList.remove("active");
-      }
-    });
-  }
-
 };
 
 if (document.getElementById("map")?.offsetParent !== null) {
