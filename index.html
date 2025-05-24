@@ -29,25 +29,13 @@
       <a href="weather.html">Weather</a>
       <a href="daily.html">The Daily Thing?</a>
     </nav>
-    <div class="map-controls">
-      <button id="toggle-thumbnails" class="thumb-toggle-btn">Toggle Thumbnails</button>
-      <button id="map-info-btn" class="thumb-toggle-btn">Map Info</button>
-    </div>
-
-
+    <button id="toggle-thumbs" class="thumb-toggle-btn">Toggle Thumbnails</button>
+    <button id="map-info-btn" class="thumb-toggle-btn">Map Info</button>
   </div>
 </header>
 
 <div id="map-section" class="section active">
   <div id="map"></div>
-</div>
-
-<div id="map-info-box">
-  <strong>How to Use the Map:</strong><br><br>
-  - Tap markers to see photos<br>
-  - Pinch to zoom<br>
-  - Drag to move<br>
-  - Toggle thumbnails to show or hide photos on the map
 </div>
 
 <div id="visited" class="section">
@@ -76,5 +64,14 @@
     loadTimeline();
   });
 </script> 
+
+<div id="map-info-box">
+  <strong>How to Use the Map:</strong><br><br>
+  – Tap markers to view photos<br>
+  – Pinch or scroll to zoom<br>
+  – Drag to pan<br>
+  – Toggle thumbnails to show/hide photos
+</div>
+
 </body>
 </html>
