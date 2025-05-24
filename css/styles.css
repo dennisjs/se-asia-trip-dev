@@ -44,6 +44,15 @@ nav a {
   font-weight: 400;
   margin-left: 1rem; /* add this if it's missing */
 }
+
+.nav-and-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap; /* prevent wrap */
+}
+
 .section {
   display: none;
   padding-top: 60px;
