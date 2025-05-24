@@ -139,7 +139,7 @@ window.initMapWithPhotos = function () {
         });
 
         // Toggle button
-        const toggleBtn = document.getElementById("toggle-thumbs");
+        const toggleBtn = document.getElementById("toggle-thumbnails");
         if (toggleBtn) {
           toggleBtn.addEventListener("click", () => {
             photoMarkers.forEach(marker => {
