@@ -310,8 +310,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (debugBox) debugBox.textContent += " | 🧩 DOM ready";
 
   try {
-    //await debugFetchWeather();                  // optional
-    //await debugCheckItinerary();                // confirms itinerary loads
+    await debugFetchWeather();                  // optional
+    await debugCheckItinerary();                // confirms itinerary loads
     await loadItineraryWeatherTable();          // 7-day table
     await loadGroupedCalendarForecast();        // 5-day calendar
   } catch (err) {
