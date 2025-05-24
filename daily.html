@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
+  <title>The Daily Thing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, #f7f9fb, #f0f2f5);
+      color: #222;
+    }
+
+    .timeline-title {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 2.5rem;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .last-entry-date {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .daily-layout {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      margin: 2rem auto;
+      max-width: 1000px;
+      padding: 0 1rem;
+      flex-wrap: wrap;
+    }
+
+    .daily-description {
+      background: #e3f2fd;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      max-width: 300px;
+      flex: 1;
+      text-align: center;
+    }
+
+    .daily-box {
+      background: #fafafa;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      flex: 2;
+      text-align: center;
+    }
+
+    .back-link {
+      display: block;
+      margin: 2rem auto;
+      text-align: center;
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: 500;
+    }
+
+    audio, video {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="timeline-title">The Daily Thing</h2>
+  <div class="last-entry-date" id="entryDate"></div>
+
+  <div class="daily-layout">
+    <div class="daily-description" id="descriptionContainer">
+      Loading description...
+    </div>
+    <div class="daily-box" id="dailyContainer">
+      Loading...
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Main Page</a>
+
+  <script src="js/daily.js"></script>
+  <script>
+    async function showLastEntryDate() {
+      try {
+        const res = await fetch("daily.json");
+        const data = await res.json();
+        const today = new Date().toISOString().split("T")[0];
+        const availableDates = Object.keys(data)
+          .filter(date => date <= today)
+          .sort()
+          .reverse();
+        if (!availableDates.length) return;
+
+        const latestDate = availableDates[0];
+        const entry = data[today] || data[latestDate];
+
+        // update description bubble
+        const desc = entry.description || "No description provided.";
+        document.getElementById("descriptionContainer").textContent = desc;
+
+        // update last entry date
+        const formatted = new Date(latestDate).toLocaleDateString(undefined, {
+          year: "numeric", month: "long", day: "numeric"
+        });
+        document.getElementById("entryDate").textContent = "Last entry: " + formatted;
+      } catch (err) {
+        console.error("Failed to load entry date or description:", err);
+      }
+    }
+    showLastEntryDate();
+  </script>
+</body>
+</html>
