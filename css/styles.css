@@ -334,9 +334,16 @@ nav a {
   z-index: 1000;
 }
 
-#map-info-box.active {
+  #map-info-box.active {
   display: block;
 }
+  .map-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+}
+
 
 }
 
