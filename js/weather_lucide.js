@@ -1,33 +1,40 @@
 async function debugFetchWeather() {
-  const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
   const debugBox = document.getElementById("weather-debug");
+  debugBox.textContent = "🔍 Started debugFetchWeather";
 
+  const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
   if (!API_KEY) {
-    debugBox.textContent = "Missing API key.";
+    debugBox.textContent = "❌ Missing API key.";
     return;
   }
 
-  const lat = 13.7563;  // Bangkok (test coords)
+  debugBox.textContent += " | API key loaded.";
+
+  const lat = 13.7563;
   const lon = 100.5018;
 
   try {
     const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    const today = data.daily[0];
+    debugBox.textContent += " | Fetching...";
 
+    const response = await fetch(url);
+    debugBox.textContent += ` | Status: ${response.status}`;
+
+    const data = await response.json();
+    debugBox.textContent += ` | Fetched`;
+
+    const today = data.daily?.[0];
     if (!today) {
-      debugBox.textContent = "Weather fetch succeeded, but no daily data returned.";
+      debugBox.textContent += " | ❌ No daily data.";
       return;
     }
 
     const temp = Math.round(today.temp.day);
     const desc = today.weather[0].description;
-    debugBox.textContent = `Bangkok Forecast: ${temp}°F – ${desc}`;
+    debugBox.textContent += ` | ✅ ${temp}°F – ${desc}`;
   } catch (err) {
-    debugBox.textContent = "Error fetching weather: " + err.message;
-  }
-}
+    debugBox.textContent += ` | ❌ Fetch error: ${err.m
+
 
 
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
