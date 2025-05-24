@@ -312,6 +312,13 @@ nav a {
   .overlay {
   top: 90px; /* increase offset for mobile header */
 }
+  .drag-handle {
+  width: 40px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  margin: 10px auto;
+}
 
 }
 
