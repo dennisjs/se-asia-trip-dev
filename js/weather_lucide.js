@@ -142,8 +142,41 @@ async function loadItineraryWeatherTable() {
 
   const today = new Date();
   const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
-  debugBox.textContent += ` | 📆 ${upcoming.l
+  debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
 
+  const table = document.getElementById("weatherGridTable");
+  if (!table) {
+    debugBox.textContent += " | ❌ No table element";
+    return;
+  }
+
+  table.innerHTML = "";
+  const headerRow = document.createElement("tr");
+  headerRow.innerHTML = "<th>Location</th>";
+  for (let i = 0; i < 7; i++) {
+    const future = new Date();
+    future.setDate(today.getDate() + i);
+    headerRow.innerHTML += `<th>${future.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' })}</th>`;
+  }
+  table.appendChild(headerRow);
+  debugBox.textContent += " | 🧱 Header built";
+
+  for (const stop of upcoming) {
+    debugBox.textContent += ` | ☁️ Fetching for ${stop.location}`;
+    const forecast = await getForecast(stop.lat, stop.lng);
+    const row = document.createElement("tr");
+    row.innerHTML = `<td><strong>${stop.location}</strong></td>`;
+
+    for (let i = 0; i < 7; i++) {
+      const cell = document.createElement("td");
+      cell.innerHTML = forecast[i] ? formatForecastCell(forecast[i]) : "N/A";
+      row.appendChild(cell);
+    }
+    table.appendChild(row);
+  }
+
+  debugBox.textContent += " | ✅ Table complete";
+}
 
 
 async function loadGroupedCalendarForecast() {
