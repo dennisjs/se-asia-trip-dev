@@ -1,3 +1,16 @@
+async function debugCheckItinerary() {
+  const debugBox = document.getElementById("weather-debug");
+
+  try {
+    const res = await fetch("itinerary.json");
+    const data = await res.json();
+    debugBox.textContent += ` | 🧭 itinerary.json: ${data.length} stops`;
+  } catch (err) {
+    debugBox.textContent += ` | ❌ itinerary.json error: ${err.message}`;
+  }
+}
+
+
 async function debugFetchWeather() {
   const debugBox = document.getElementById("weather-debug");
   debugBox.textContent = "🔍 Started debugFetchWeather";
