@@ -159,7 +159,8 @@ async function loadItineraryWeatherTable() {
   const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
   const today = toUTCDateOnly(new Date());
   const upcoming = itinerary.filter(loc => {
-    const arrival = toUTCDateOnly(new Date(loc.arrival_date));
+    const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
+    const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
     return arrival >= today;
   }).slice(0, 4);
   debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
@@ -205,7 +206,8 @@ async function loadGroupedCalendarForecast() {
 
   const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
   const today = toUTCDateOnly(new Date());
-  const itineraryStart = toUTCDateOnly(new Date(itinerary[0].arrival_date));
+  const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
+  const itineraryStart = new Date(Date.UTC(yyyy0, mm0 - 1, dd0));
   const lastStop = itinerary[itinerary.length - 1];
   const itineraryEnd = new Date(lastStop.arrival_date);
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
