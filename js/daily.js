@@ -10,12 +10,7 @@ async function loadDailyThing() {
     const data = await res.json();
 
     const availableDates = Object.keys(data).sort().reverse();
-    console.log("availableDates reverse sorted from daily.json:", availableDates);
     const latestDate = availableDates[0];
-    console.log("availableDates[0]", availableDates[0]);
-    console.log("availableDates[1]", availableDates[1]);
-    console.log("🕓 latestDate raw:", latestDate);
-    console.log("latestDate:", new Date(latestDate).toLocaleDateString());
     const entry = data[latestDate];
 
     if (!entry) {
@@ -29,9 +24,12 @@ async function loadDailyThing() {
     descContainer.textContent = entry.description || "No description provided.";
 
     // Set formatted date
-    const formatted = new Date(latestDate).toLocaleDateString(undefined, {
+    const parts = latestDate.split("-");
+    const localDate = new Date(parts[0], parts[1] - 1, parts[2]);
+    const formatted = localDate.toLocaleDateString(undefined, {
       year: "numeric", month: "long", day: "numeric"
     });
+
     dateContainer.textContent = "Last entry: " + formatted;
 
     // Set media content
