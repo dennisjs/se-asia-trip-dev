@@ -158,12 +158,13 @@ async function loadItineraryWeatherTable() {
 
   const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
   const today = toUTCDateOnly(new Date());
-    debugBox.textContent += ` | Today: ${today.toISOString().slice(0, 10)}`;
+  if (debugBox) debugBox.textContent += ` | Today: ${today.toISOString().slice(0, 10)}`;
+
   const upcoming = itinerary.filter(loc => {
     const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
     const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
     const isUpcoming = arrival >= today;
-    debugBox.textContent += ` | ${loc.location}: arrival=${arrival.toISOString().slice(0,10)} → ${isUpcoming ? "✅" : "❌"}`;
+    if (debugBox) debugBox.textContent += ` | ${loc.location}: arrival=${arrival.toISOString().slice(0,10)} → ${isUpcoming ? "✅" : "❌"}`;
     return isUpcoming;
   }).slice(0, 4);
   debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
@@ -212,7 +213,8 @@ async function loadGroupedCalendarForecast() {
   const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
   const itineraryStart = new Date(Date.UTC(yyyy0, mm0 - 1, dd0));
   const lastStop = itinerary[itinerary.length - 1];
-  const itineraryEnd = new Date(lastStop.arrival_date);
+  const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
+  const itineraryEnd = new Date(Date.UTC(yyyyEnd, mmEnd - 1, ddEnd));
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
