@@ -242,4 +242,10 @@ async function loadGroupedCalendarForecast() {
     }
   });
 }
-debugFetchWeather();
+
+document.addEventListener("DOMContentLoaded", () => {
+  debugFetchWeather();
+  loadItineraryWeatherTable();
+  loadGroupedCalendarForecast();
+});
+
