@@ -156,6 +156,7 @@ if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
 
+// ✅ Map Info Toggle Logic with Debug
 document.addEventListener("DOMContentLoaded", () => {
   const infoBtn = document.getElementById("map-info-btn");
   const infoBox = document.getElementById("map-info-box");
@@ -185,5 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
 
