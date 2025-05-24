@@ -225,7 +225,7 @@ nav a {
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  margin-left: 1rem; /* slight offset from nav */
+  margin-left: 2rem; /* slight offset from nav */
 }
 
 .more-count {
