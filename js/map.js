@@ -121,6 +121,21 @@ window.initMapWithPhotos = function () {
           (day.photos || []).forEach(photo => {
             if (!photo.lat || !photo.lng) return;
 
+            const el = document.createElement("div");
+            el.className = "map-thumb";
+            el.style.width = "32px";
+            el.style.height = "32px";
+            el.style.borderRadius = "4px";
+            el.style.backgroundSize = "cover";
+            el.style.backgroundPosition = "center";
+            el.style.boxShadow = "0 0 4px rgba(0,0,0,0.5)";
+            el.style.backgroundImage = "url(images/" + photo.id + ".jpg)";
+            el.style.cursor = "pointer";
+            el.onclick = () => showOverlay("images/" + photo.id + ".jpg", photo.caption);
+
+            const marker = new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
+            photoMarkers.push(marker);
+          });
         });
 
         // Toggle button
@@ -136,119 +151,8 @@ window.initMapWithPhotos = function () {
       });
   });
 };
-
-        });
-
-        // Toggle button
-        const toggleBtn = document.getElementById("toggle-thumbs");
-        if (toggleBtn) {
-          toggleBtn.addEventListener("click", () => {
-            photoMarkers.forEach(marker => {
-              const el = marker.getElement();
-              el.style.display = el.style.display === "none" ? "block" : "none";
-            });
-          });
-        }
-      });
-  });
-};
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const infoBtn = document.getElementById("map-info-btn");
-  const infoBox = document.getElementById("map-info-box");
-
-  console.log("✅ DOM loaded");
-
-  if (!infoBtn) {
-    console.warn("❌ map-info-btn not found");
-  }
-  if (!infoBox) {
-    console.warn("❌ map-info-box not found");
-  }
-
-  if (infoBtn && infoBox) {
-    console.log("✅ Map Info elements found — wiring up toggle");
-
-    infoBtn.addEventListener("click", () => {
-      console.log("🟦 Map Info button clicked");
-      infoBox.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
-        infoBox.classList.remove("active");
-        console.log("🟥 Outside click — hiding Map Info box");
-      }
-    });
-  }
-});
-
 
 if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const infoBtn = document.getElementById("map-info-btn");
-  const infoBox = document.getElementById("map-info-box");
-
-  console.log("✅ DOM loaded");
-
-  if (!infoBtn) {
-    console.warn("❌ map-info-btn not found");
-  }
-  if (!infoBox) {
-    console.warn("❌ map-info-box not found");
-  }
-
-  if (infoBtn && infoBox) {
-    console.log("✅ Map Info elements found — wiring up toggle");
-
-    infoBtn.addEventListener("click", () => {
-      console.log("🟦 Map Info button clicked");
-      infoBox.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
-        infoBox.classList.remove("active");
-        console.log("🟥 Outside click — hiding Map Info box");
-      }
-    });
-  }
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const infoBtn = document.getElementById("map-info-btn");
-  const infoBox = document.getElementById("map-info-box");
-
-  console.log("✅ DOM loaded");
-
-  if (!infoBtn) {
-    console.warn("❌ map-info-btn not found");
-  }
-  if (!infoBox) {
-    console.warn("❌ map-info-box not found");
-  }
-
-  if (infoBtn && infoBox) {
-    console.log("✅ Map Info elements found — wiring up toggle");
-
-    infoBtn.addEventListener("click", () => {
-      console.log("🟦 Map Info button clicked");
-      infoBox.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
-        infoBox.classList.remove("active");
-        console.log("🟥 Outside click — hiding Map Info box");
-      }
-    });
-  }
-});
 
