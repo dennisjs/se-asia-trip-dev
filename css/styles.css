@@ -261,13 +261,9 @@ nav a {
   font-size: 1.3rem; /* or 1.25rem, tweak as needed */
 }
 
-
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
+#map-info-box.active {
+  display: block;
+}
 
   nav a {
     margin-left: 0; /* prevent horizontal overflow on mobile */
