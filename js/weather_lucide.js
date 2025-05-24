@@ -140,8 +140,12 @@ async function loadItineraryWeatherTable() {
     return;
   }
 
-  const today = new Date();
-  const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
+  const stripTime = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const today = stripTime(new Date());
+  const upcoming = itinerary.filter(loc => {
+    const arrival = stripTime(new Date(loc.arrival_date));
+    return arrival >= today;
+  }).slice(0, 4);
   debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
 
   const table = document.getElementById("weatherGridTable");
@@ -183,8 +187,9 @@ async function loadGroupedCalendarForecast() {
   const res = await fetch("itinerary.json");
   const itinerary = await res.json();
 
-  const today = new Date();
-  const itineraryStart = new Date(itinerary[0].arrival_date);
+  const stripTime = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const today = stripTime(new Date());
+  const itineraryStart = stripTime(new Date(itinerary[0].arrival_date));
   const lastStop = itinerary[itinerary.length - 1];
   const itineraryEnd = new Date(lastStop.arrival_date);
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
