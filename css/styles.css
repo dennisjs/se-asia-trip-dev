@@ -226,6 +226,7 @@ nav a {
   gap: 0.75rem;
   align-items: center;
   margin-left: 2rem; /* slight offset from nav */
+  padding-top: 0.15rem;
 }
 
 .more-count {
