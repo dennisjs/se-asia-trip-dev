@@ -299,5 +299,9 @@ nav a {
     max-width: 100%;
     height: auto;
   }
+
+  .photo-column {
+    margin-top: 4.5rem; /* ensures thumbs are pushed below header */
+  }
 }
 
