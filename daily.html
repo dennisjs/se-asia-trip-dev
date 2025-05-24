@@ -95,7 +95,7 @@
   <script>
     async function loadDailyThing() {
       try {
-        const res = await fetch("daily.json");
+        const res = await fetch("js/daily.json");
         const data = await res.json();
         const today = new Date().toISOString().split("T")[0];
         const dates = Object.keys(data).sort().reverse();
