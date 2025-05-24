@@ -102,9 +102,9 @@
         const data = await res.json();
         const today = new Date().toISOString().split("T")[0];
         const availableDates = Object.keys(data)
-          .filter(date => date <= today)
           .sort()
           .reverse();
+
         if (!availableDates.length) return;
 
         const latestDate = availableDates[0];
