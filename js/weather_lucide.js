@@ -263,10 +263,17 @@ async function loadGroupedCalendarForecast() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  debugFetchWeather();
-  debugCheckItinerary();
-  loadItineraryWeatherTable();
-  loadGroupedCalendarForecast();
+document.addEventListener("DOMContentLoaded", async () => {
+  const debugBox = document.getElementById("weather-debug");
+  if (debugBox) debugBox.textContent += " | 🧩 DOM ready";
+
+  try {
+    await debugFetchWeather();                  // optional
+    await debugCheckItinerary();                // confirms itinerary loads
+    await loadItineraryWeatherTable();          // 7-day table
+    await loadGroupedCalendarForecast();        // 5-day calendar
+  } catch (err) {
+    if (debugBox) debugBox.textContent += ` | ❌ JS error: ${err.message}`;
+  }
 });
 
