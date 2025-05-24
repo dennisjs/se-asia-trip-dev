@@ -148,7 +148,12 @@
     <!-- JS will inject grouped calendar tables by location -->
   </div>
 
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    loadItineraryWeatherTable();
+    loadGroupedCalendarForecast();
+  });
+</script>
 
 </body>
 </html>
