@@ -158,10 +158,13 @@ async function loadItineraryWeatherTable() {
 
   const toUTCDateOnly = d => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate()));
   const today = toUTCDateOnly(new Date());
+    debugBox.textContent += ` | Today: ${today.toISOString().slice(0, 10)}`;
   const upcoming = itinerary.filter(loc => {
     const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
     const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-    return arrival >= today;
+    const isUpcoming = arrival >= today;
+    debugBox.textContent += ` | ${loc.location}: arrival=${arrival.toISOString().slice(0,10)} → ${isUpcoming ? "✅" : "❌"}`;
+    return isUpcoming;
   }).slice(0, 4);
   debugBox.textContent += ` | 📆 ${upcoming.length} upcoming`;
 
