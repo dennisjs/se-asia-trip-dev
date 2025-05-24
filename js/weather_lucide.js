@@ -266,6 +266,7 @@ async function loadGroupedCalendarForecast() {
 
 document.addEventListener("DOMContentLoaded", () => {
   debugFetchWeather();
+  debugCheckItinerary();
   loadItineraryWeatherTable();
   loadGroupedCalendarForecast();
 });
