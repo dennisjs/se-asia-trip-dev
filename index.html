@@ -29,7 +29,10 @@
       <a href="weather.html">Weather</a>
       <a href="daily.html">The Daily Thing?</a>
     </nav>
-    <button id="toggle-thumbs" class="thumb-toggle-btn">📷 Toggle Thumbnails</button>
+    <div class="button-row">
+      <button id="toggle-thumbnails" class="thumb-toggle-btn">Toggle Thumbnails</button>
+      <button id="map-info-btn" class="thumb-toggle-btn">Map Info</button>
+    </div>
   </div>
 </header>
 
@@ -63,5 +66,14 @@
     loadTimeline();
   });
 </script> 
+
+<div id="map-info-box">
+  <strong>How to Use the Map:</strong><br><br>
+  – Middle mouse button & drag for perspective view<br>
+  – Pinch or scroll to zoom<br>
+  – Drag to pan<br>
+  – Toggle thumbnails to show/hide photos
+</div>
+
 </body>
 </html>

@@ -212,11 +212,17 @@ nav a {
   background-color: #1a90e0;
 }
 
+.nav-and-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .button-row {
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  margin-left: 1rem; /* slight offset from nav */
+  margin-top: 0;  /* remove vertical offset */
 }
 
 .more-count {
@@ -344,13 +350,5 @@ nav a {
   margin-top: 0.5rem;
   margin-left: 4rem;
 }
-
-.button-row {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: flex-end;
-  margin: 0.5rem 2rem 0 0; /* top, right, bottom, left */
-}
-
 }
 

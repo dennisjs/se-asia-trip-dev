@@ -139,7 +139,7 @@ window.initMapWithPhotos = function () {
         });
 
         // Toggle button
-        const toggleBtn = document.getElementById("toggle-thumbs");
+        const toggleBtn = document.getElementById("toggle-thumbnails");
         if (toggleBtn) {
           toggleBtn.addEventListener("click", () => {
             photoMarkers.forEach(marker => {
@@ -155,4 +155,22 @@ window.initMapWithPhotos = function () {
 if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
+
+// ✅ Map Info Toggle Logic with Debug
+document.addEventListener("DOMContentLoaded", () => {
+  const infoBtn = document.getElementById("map-info-btn");
+  const infoBox = document.getElementById("map-info-box");if (!infoBtn) {}
+  if (!infoBox) {}
+
+  if (infoBtn && infoBox) {infoBtn.addEventListener("click", () => {infoBox.classList.toggle("active");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
+        infoBox.classList.remove("active");}
+    });
+  }
+});
+
+
 
