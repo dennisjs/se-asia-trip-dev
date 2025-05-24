@@ -1,0 +1,354 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fa;
+}
+header {
+  background: white;
+  padding: 0.1rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+header h1 {
+  margin: 0; /* remove extra vertical space */
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center; /* keeps nav + button centered */
+  flex-wrap: wrap; /* allows button to move below on small screens */
+}
+
+.nav-wrapper h1 {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2.5rem;
+  color: #33adff; /* updated blue */;
+  font-weight: 500; /* normal (not bold) */
+}
+nav {
+  display: flex;
+  gap: 2.5rem;
+}
+nav a {
+  color: #33adff; /* updated blue */;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 1rem; /* add this if it's missing */
+}
+.section {
+  display: none;
+  padding-top: 60px;
+}
+.active {
+  display: block;
+}
+#map {
+  width: 100vw;
+  height: calc(100vh - 60px);
+}
+#visited {
+  padding: 4.5rem 2rem 2rem; /* more top padding */
+  max-width: 900px;
+  margin: auto;
+}
+.photos img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.overlay {
+  position: fixed;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.97);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  max-width: 90%;
+  text-align: center;
+  z-index: 1500;
+  display: none;
+  transition: top 0.3s ease;
+}
+.overlay img {
+  max-width: 100%;
+  max-height: 70vh;
+  border-radius: 8px;
+}
+.close-btn {
+  margin-top: 0.5rem;
+  display: inline-block;
+  background: #ccc;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.location-box {
+  position: absolute;
+  z-index: 1500;
+  top: 100px;
+  right: 10px;
+  background: white;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  max-width: 280px;
+  z-index: 1800;
+  line-height: 1.4;
+}
+.location-box strong {
+  display: block;
+  color: #004080;
+  margin-bottom: 0.25rem;
+}
+.location-label {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  pointer-events: none;
+  white-space: nowrap;
+}
+.weather-info {
+  font-family: "Inter", "Segoe UI Emoji", sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+.location-info-box {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-size: 0.9rem;
+  color: #004080;
+  pointer-events: none;
+  z-index: 1800;
+}
+
+.timeline-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-entry::before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #ccc;
+}
+
+.timeline-title {
+  font-family: 'Shadows Into Light', cursive; 
+  font-size: 2.5rem;
+  color: #1e1e1e;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #888; /* lighter gray */
+  margin: 0.5rem 0 1.5rem;
+}
+
+.photo-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  margin-right: 1.5rem;
+  position: relative;
+}
+
+.thumb {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.thumb-toggle-btn {
+  background-color: #33adff;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
+
+.thumb-toggle-btn:hover {
+  background-color: #1a90e0;
+}
+
+.nav-and-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 0;  /* remove vertical offset */
+}
+
+.more-count {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.3rem;
+}
+
+.content-box {
+  background: white;
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 600px;
+  flex: 1;
+}
+
+.content-box h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.date {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0.3rem 0;
+}
+
+.description {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.weather {
+  font-size: 0.9rem;
+  color: #3366cc;
+  font-weight: 500;
+}
+
+.itinerary-day {
+  color: #33adff;
+}
+
+.messages h2 {
+  font-size: 1.3rem; /* or 1.25rem, tweak as needed */
+}
+
+#map-info-box.active {
+  display: block;
+}
+
+  nav a {
+    margin-left: 0; /* prevent horizontal overflow on mobile */
+    margin-bottom: 0.5rem; /* space between wrapped links */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .location-info {
+    position: static;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .photo-grid,
+  .map-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content, .container {
+    padding: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  #map {
+    padding-top: 4.5rem; /* roughly the height of the fixed header */
+  }
+
+  .photo-column {
+    margin-top: 4.5rem; /* ensures thumbs are pushed below header */
+  }
+
+  .overlay {
+  top: 90px; /* increase offset for mobile header */
+}
+  .drag-handle {
+  width: 40px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+
+  #map-info-box {
+  display: none;
+  position: fixed;
+  top: 100px; /* pushed lower to clear header */
+  right: 20px;
+  max-width: 280px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  padding: 1rem;
+  font-size: 0.9rem;
+  z-index: 2500; /* must be above map, overlays, location box */
+}
+
+  #map-info-box.active {
+  display: block;
+}
+  .map-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin-left: 4rem;
+}
+}
+
