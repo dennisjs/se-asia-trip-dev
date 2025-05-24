@@ -155,3 +155,34 @@ window.initMapWithPhotos = function () {
 if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
+
+function makeOverlayDraggable(overlaySelector) {
+  const overlay = document.querySelector(overlaySelector);
+  if (!overlay) return;
+
+  let offsetY = 0;
+  let isDragging = false;
+
+  overlay.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    offsetY = e.touches[0].clientY - overlay.getBoundingClientRect().top;
+  });
+
+  overlay.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const y = e.touches[0].clientY - offsetY;
+    overlay.style.top = `${y}px`;
+  });
+
+  overlay.addEventListener('touchend', () => {
+    isDragging = false;
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth <= 768) {
+    makeOverlayDraggable(".overlay");
+  }
+});
+
