@@ -33,8 +33,9 @@ async function debugFetchWeather() {
     const desc = today.weather[0].description;
     debugBox.textContent += ` | ✅ ${temp}°F – ${desc}`;
   } catch (err) {
-    debugBox.textContent += ` | ❌ Fetch error: ${err.m
-
+    debugBox.textContent += ` | ❌ Fetch error: ${err.message}`;
+  }
+}
 
 
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
