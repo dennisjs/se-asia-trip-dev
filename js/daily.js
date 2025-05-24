@@ -11,6 +11,7 @@ async function loadDailyThing() {
     const availableDates = Object.keys(data).sort().reverse();
     console.log("availableDates reverse sorted from daily.json:", availableDates);
     const latestDate = availableDates[0];
+    console.log("latestDate:", new Date(latestDate).toLocaleDateString());
     const entry = data[latestDate];
 
     if (!entry) {
