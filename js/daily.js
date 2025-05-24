@@ -6,8 +6,9 @@ async function loadDailyThing() {
     const res = await fetch("daily.json");
     const data = await res.json();
 
-    const today = new Date().toISOString().split("T")[0];
-    const entry = data[today] || getMostRecentEntry(data, today);
+    const availableDates = Object.keys(data).sort().reverse();
+    const latestDate = availableDates[0];
+    const entry = data[latestDate];
 
     if (!entry) {
       container.innerHTML = "";
