@@ -359,7 +359,8 @@ nav a {
   display: flex;
   gap: 0.75rem;
   justify-content: flex-end;
-  margin: 0.5rem 2rem 0 0; /* top, right, bottom, left */
+  margin: 0.5rem 2rem 0 100; /* top, right, bottom, left */
+  transform: translateY(-10px);
 }
 
 }
