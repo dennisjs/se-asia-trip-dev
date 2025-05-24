@@ -4,5 +4,11 @@
     "src": "media/The_Sun.mp3",
     "caption": "The Sun",
     "description":  "A track I wrote."
+  },
+  "2025-05-23": {
+    "type": "image",
+    "src": "media/coming_soon.png",
+    "caption": "",
+    "description":  "Trip hasn't started yet!  June 2!"
   }
 }
