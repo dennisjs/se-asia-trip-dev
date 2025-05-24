@@ -101,6 +101,9 @@
         const res = await fetch("daily.json");
         const data = await res.json();
         const today = new Date().toISOString().split("T")[0];
+        console.log("Fetched daily.json:", data);
+        console.log("Today is:", new Date().toISOString().split("T")[0]);
+
         const availableDates = Object.keys(data)
           .sort()
           .reverse();
@@ -108,6 +111,10 @@
         if (!availableDates.length) return;
 
         const latestDate = availableDates[0];
+        console.log("Available dates:", availableDates);
+        console.log("Latest date selected:", latestDate);
+        console.log("Entry for latest date:", data[latestDate]);
+
         const entry = data[latestDate];
 
         // update description bubble
