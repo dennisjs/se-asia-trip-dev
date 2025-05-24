@@ -128,42 +128,22 @@ function formatForecastCell(day) {
 
 async function loadItineraryWeatherTable() {
   const debugBox = document.getElementById("weather-debug");
-  debugBox.textContent += " | Loading itinerary table...";
+  if (debugBox) debugBox.textContent += " | 🔄 Table start";
 
-  const res = await fetch("itinerary.json");
-  const itinerary = await res.json();
+  let itinerary;
+  try {
+    const res = await fetch("itinerary.json");
+    itinerary = await res.json();
+    debugBox.textContent += ` | 📅 ${itinerary.length} loaded`;
+  } catch (e) {
+    debugBox.textContent += ` | ❌ itinerary fetch failed: ${e.message}`;
+    return;
+  }
+
   const today = new Date();
-
   const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
-  debugBox.textContent += ` | ${upcoming.length} upcoming stops`;
+  debugBox.textContent += ` | 📆 ${upcoming.l
 
-  const table = document.getElementById("weatherGridTable");
-  table.innerHTML = "";
-
-  const headerRow = document.createElement("tr");
-  headerRow.innerHTML = "<th>Location</th>";
-  for (let i = 0; i < 7; i++) {
-    const future = new Date();
-    future.setDate(today.getDate() + i);
-    headerRow.innerHTML += "<th>" + future.toLocaleDateString(undefined, { weekday: 'short', month: 'short', day: 'numeric' }) + "</th>";
-  }
-  table.appendChild(headerRow);
-
-  for (const stop of upcoming) {
-    const forecast = await getForecast(stop.lat, stop.lng);
-    debugBox.textContent += ` | Fetched forecast for ${stop.location}`;
-    const row = document.createElement("tr");
-    row.innerHTML = "<td><strong>" + stop.location + "</strong></td>";
-    for (let i = 0; i < 7; i++) {
-      const cell = document.createElement("td");
-      cell.innerHTML = forecast[i] ? formatForecastCell(forecast[i]) : "N/A";
-      row.appendChild(cell);
-    }
-    table.appendChild(row);
-  }
-
-  debugBox.textContent += " | Finished table";
-}
 
 
 async function loadGroupedCalendarForecast() {
