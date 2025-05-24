@@ -1,55 +1,3 @@
-async function debugCheckItinerary() {
-  const debugBox = document.getElementById("weather-debug");
-
-  try {
-    const res = await fetch("itinerary.json");
-    const data = await res.json();
-    debugBox.textContent += ` | 🧭 itinerary.json: ${data.length} stops`;
-  } catch (err) {
-    debugBox.textContent += ` | ❌ itinerary.json error: ${err.message}`;
-  }
-}
-
-
-async function debugFetchWeather() {
-  const debugBox = document.getElementById("weather-debug");
-  debugBox.textContent = "🔍 Started debugFetchWeather";
-
-  const API_KEY = window.CONFIG?.OPENWEATHER_KEY;
-  if (!API_KEY) {
-    debugBox.textContent = "❌ Missing API key.";
-    return;
-  }
-
-  debugBox.textContent += " | API key loaded.";
-
-  const lat = 13.7563;
-  const lon = 100.5018;
-
-  try {
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&units=imperial&appid=${API_KEY}`;
-    debugBox.textContent += " | Fetching...";
-
-    const response = await fetch(url);
-    debugBox.textContent += ` | Status: ${response.status}`;
-
-    const data = await response.json();
-    debugBox.textContent += ` | Fetched`;
-
-    const today = data.daily?.[0];
-    if (!today) {
-      debugBox.textContent += " | ❌ No daily data.";
-      return;
-    }
-
-    const temp = Math.round(today.temp.day);
-    const desc = today.weather[0].description;
-    debugBox.textContent += ` | ✅ ${temp}°F – ${desc}`;
-  } catch (err) {
-    debugBox.textContent += ` | ❌ Fetch error: ${err.message}`;
-  }
-}
-
 
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const apiKey = window.CONFIG?.OPENWEATHER_KEY;
@@ -310,12 +258,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (debugBox) debugBox.textContent += " | 🧩 DOM ready";
 
   try {
-    await debugFetchWeather();                  // optional
-    await debugCheckItinerary();                // confirms itinerary loads
     await loadItineraryWeatherTable();          // 7-day table
     await loadGroupedCalendarForecast();        // 5-day calendar
-  } catch (err) {
-    if (debugBox) debugBox.textContent += ` | ❌ JS error: ${err.message}`;
-  }
+  } 
 });
 
