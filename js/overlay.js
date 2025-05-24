@@ -6,7 +6,12 @@ function showOverlay(src, caption) {
   img.src = src;
   cap.textContent = caption || "";
   overlay.style.display = "block";
+
+  if (window.innerWidth <= 768) {
+    makePhotoOverlayDraggable();
+  }
 }
+
 
 function hideOverlay() {
   document.getElementById("photo-overlay").style.display = "none";
