@@ -152,5 +152,18 @@
     loadItineraryWeatherTable();
     loadGroupedCalendarForecast();
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const testBox = document.createElement("div");
+    testBox.style.position = "fixed";
+    testBox.style.bottom = "10px";
+    testBox.style.left = "10px";
+    testBox.style.background = "#ffc";
+    testBox.style.padding = "0.5rem";
+    testBox.textContent = "API Key: " + (window.CONFIG?.OPENWEATHER_KEY || "undefined");
+    document.body.appendChild(testBox);
+  });
+</script>
+
 </body>
 </html>
