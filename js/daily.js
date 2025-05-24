@@ -48,7 +48,6 @@ async function loadDailyThing() {
 
 function getMostRecentEntry(data, today) {
   const availableDates = Object.keys(data)
-    .filter(date => date <= today)
     .sort()
     .reverse();
 
