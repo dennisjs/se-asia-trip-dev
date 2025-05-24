@@ -78,7 +78,11 @@ async function loadItineraryWeatherTable() {
   const itinerary = await res.json();
   const today = new Date();
 
-  const upcoming = itinerary.filter(loc => new Date(loc.arrival_date) >= today).slice(0, 4);
+  const upcoming = itinerary.filter(loc => {
+    const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
+    const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
+    return arrival >= today;
+  }).slice(0, 4);
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
 
@@ -119,10 +123,12 @@ async function loadGroupedCalendarForecast() {
   const itinerary = await res.json();
 
   const today = new Date();
-  const itineraryStart = new Date(itinerary[0].arrival_date);
+  const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
+  const itineraryStart = new Date(Date.UTC(yyyy0, mm0 - 1, dd0));
   const lastStop = itinerary[itinerary.length - 1];
-  const itineraryEnd = new Date(lastStop.arrival_date);
-  itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
+  const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
+  const itineraryEnd = new Date(Date.UTC(yyyyEnd, mmEnd - 1, ddEnd));
+  itineraryEnd.setUTCDate(itineraryEnd.getUTCDate() + lastStop.nights);
 
   const forecastDays = 5;
   const gridContainer = document.getElementById("calendarGridGrouped");
@@ -152,9 +158,10 @@ async function loadGroupedCalendarForecast() {
     date.setDate(forecastBaseDate.getDate() + i);
 
     const matched = itinerary.find(loc => {
-      const arrival = new Date(loc.arrival_date);
-      const departure = new Date(arrival);
-      departure.setDate(arrival.getDate() + loc.nights);
+      const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
+      const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
+      const departure = new Date(Date.UTC(yyyy, mm - 1, dd));
+      departure.setUTCDate(departure.getUTCDate() + loc.nights);
       return date >= arrival && date < departure;
     });
 

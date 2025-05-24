@@ -155,3 +155,4 @@ window.initMapWithPhotos = function () {
 if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
+
