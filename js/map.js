@@ -156,36 +156,3 @@ if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
 
-// ✅ Map Info Toggle Logic with Debug
-document.addEventListener("DOMContentLoaded", () => {
-  const infoBtn = document.getElementById("map-info-btn");
-  const infoBox = document.getElementById("map-info-box");
-
-  console.log("✅ DOM loaded");
-
-  if (!infoBtn) {
-    console.warn("❌ map-info-btn not found");
-  }
-  if (!infoBox) {
-    console.warn("❌ map-info-box not found");
-  }
-
-  if (infoBtn && infoBox) {
-    console.log("✅ Map Info elements found — wiring up toggle");
-
-    infoBtn.addEventListener("click", () => {
-      console.log("🟦 Map Info button clicked");
-      infoBox.classList.toggle("active");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!infoBox.contains(e.target) && e.target !== infoBtn) {
-        infoBox.classList.remove("active");
-        console.log("🟥 Outside click — hiding Map Info box");
-      }
-    });
-  }
-});
-
-
-
