@@ -307,5 +307,10 @@ nav a {
   .photo-column {
     margin-top: 4.5rem; /* ensures thumbs are pushed below header */
   }
+
+  .overlay {
+  top: 90px; /* increase offset for mobile header */
+}
+
 }
 
