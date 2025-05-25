@@ -58,10 +58,8 @@ function buildMap(locations) {
       }
     });
 
-    // Current location red pin
     new mapboxgl.Marker({ color: "red" }).setLngLat([lng, lat]).addTo(map);
 
-    // Weather box
     infoBox = document.createElement('div');
     infoBox.id = 'location-box';
     infoBox.className = 'location-info-box';
@@ -77,7 +75,6 @@ function buildMap(locations) {
     positionBox();
     updateWeatherBox(lat, lng, place, infoBox);
 
-    // Previous locations
     locations.slice(0, -1).forEach(loc => {
       if (!loc.lat || !loc.lng) return;
       new mapboxgl.Marker({ color: "gray" }).setLngLat([loc.lng, loc.lat]).addTo(map);
@@ -100,7 +97,6 @@ function buildMap(locations) {
       positionGrayBox();
     });
 
-    // Thumbnails
     photoMarkers = [];
     fetch("timeline.json")
       .then(r => r.json())
@@ -124,7 +120,6 @@ function buildMap(locations) {
           });
         });
 
-        // Toggle thumbnails
         const toggleBtn = document.getElementById("toggle-thumbnails");
         if (toggleBtn) {
           toggleBtn.addEventListener("click", () => {
@@ -147,15 +142,16 @@ if (document.getElementById("map")?.offsetParent !== null) {
   window.initMapWithPhotos();
 }
 
-// Satellite toggle
 document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.getElementById("toggle-satellite");
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
-      currentMapStyle = currentMapStyle === 'mapbox://styles/mapbox/streets-v12'
-        ? 'mapbox://styles/mapbox/satellite-streets-v12'
-        : 'mapbox://styles/mapbox/streets-v12';
-      window.initMapWithPhotos();  // Reload map with new style
+      const isSatellite = currentMapStyle === 'mapbox://styles/mapbox/satellite-v9';
+      currentMapStyle = isSatellite
+        ? 'mapbox://styles/mapbox/streets-v12'
+        : 'mapbox://styles/mapbox/satellite-v9';
+      toggleBtn.textContent = isSatellite ? 'Satellite View' : 'Map View';
+      window.initMapWithPhotos();
     });
   }
 
