@@ -1,6 +1,6 @@
 
 window.CONFIG = {
-  MAPBOX_TOKEN: "pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21hbzF2bHN4MDJkeDJpcHdrdGw1ZmVhNyJ9.T4AQXpyEQ9Bmsmz31jVJMw",
+  MAPBOX_TOKEN: "sk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21iM3BuMGZhMGQ3aDJqb2VlNndjeHRnOSJ9.VqBGrqCAuJ0IwaP3lmkIkA",
   OPENWEATHER_KEY: "0f8e3622808ddddedef556c32d470ffa"
 };
 
