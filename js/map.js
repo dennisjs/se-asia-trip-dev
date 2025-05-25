@@ -153,8 +153,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ? 'mapbox://styles/mapbox/streets-v12'
         : 'mapbox://styles/mapbox/satellite-v9';
       toggleBtn.textContent = isSatellite ? 'Satellite View' : 'Map View';
-      window.initMapWithPhotos();
+    
+      // Save current view before destroying map
+      const center = map.getCenter();
+      const zoom = map.getZoom();
+    
+      // Load new map style and preserve view
+      window.initMapWithPhotos(center, zoom);
     });
+
   }
 
   const infoBtn = document.getElementById("map-info-btn");
