@@ -138,7 +138,7 @@ function buildMap(locations, preserveCenter, preserveZoom) {
 
 window.initMapWithPhotos = function (preserveCenter = null, preserveZoom = null) {
   document.querySelectorAll(".location-info-box").forEach(el => el.remove());
-  fetchLatestLocation().then(locations => buildMap(locations, preserveCenter, preserveZoom);
+  fetchLatestLocation().then(locations => buildMap(locations, preserveCenter, preserveZoom));
 };
 
 if (document.getElementById("map")?.offsetParent !== null) {
