@@ -15,7 +15,7 @@ async function fetchLatestLocation() {
 let currentMapStyle = 'mapbox://styles/mapbox/streets-v12';
 let map, photoMarkers = [], infoBox;
 
-function buildMap(locations) {
+function buildMap(locations, preserveCenter, preserveZoom) {
   if (!locations.length) return;
 
   const current = locations[locations.length - 1];
@@ -24,8 +24,9 @@ function buildMap(locations) {
   map = new mapboxgl.Map({
     container: 'map',
     style: currentMapStyle,
-    center: [lng, lat],
-    zoom: 12
+    center: preserveCenter ? [preserveCenter.lng, preserveCenter.lat] : [lng, lat],
+    zoom: preserveZoom || 12
+
   });
 
   map.on("load", () => {
@@ -135,9 +136,9 @@ function buildMap(locations) {
   });
 }
 
-window.initMapWithPhotos = function () {
+window.initMapWithPhotos = function (preserveCenter = null, preserveZoom = null) {
   document.querySelectorAll(".location-info-box").forEach(el => el.remove());
-  fetchLatestLocation().then(locations => buildMap(locations));
+  fetchLatestLocation().then(locations => buildMap(locations, preserveCenter, preserveZoom));
 };
 
 if (document.getElementById("map")?.offsetParent !== null) {
@@ -153,8 +154,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ? 'mapbox://styles/mapbox/streets-v12'
         : 'mapbox://styles/mapbox/satellite-v9';
       toggleBtn.textContent = isSatellite ? 'Satellite View' : 'Map View';
-      window.initMapWithPhotos();
+    
+      // Save current view before destroying map
+      const center = map.getCenter();
+      const zoom = map.getZoom();
+    
+      // Load new map style and preserve view
+      window.initMapWithPhotos(center, zoom);
     });
+
   }
 
   const infoBtn = document.getElementById("map-info-btn");
