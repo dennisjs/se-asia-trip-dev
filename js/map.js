@@ -122,13 +122,15 @@ function buildMap(locations) {
 
         const toggleBtn = document.getElementById("toggle-thumbnails");
         if (toggleBtn) {
-          toggleBtn.addEventListener("click", () => {
+          toggleBtn.onclick = null; // Clear any previous listener
+          toggleBtn.onclick = () => {
             photoMarkers.forEach(marker => {
               const el = marker.getElement();
               el.style.display = el.style.display === "none" ? "block" : "none";
             });
-          });
+          };
         }
+
       });
   });
 }
