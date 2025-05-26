@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta charset="UTF-8" />
-  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Southeast Asia Itinerary</title>
+  <script src="js/config.js?v=2"></script>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 2rem;
+      font-family: 'Inter', sans-serif;
       background: linear-gradient(to bottom, #fdfcfb, #e2e2e2);
     }
+
     h2.timeline-title {
       font-family: 'Shadows Into Light', cursive;
       font-size: 2.5rem;
       color: #000;
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 1rem 0;
     }
+
+    #split-container {
+      display: flex;
+      height: calc(100vh - 80px);
+    }
+
+    #itinerary-left {
+      width: 50%;
+      overflow-y: auto;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+    }
+
+    #map-container {
+      width: 50%;
+      height: 100%;
+    }
+
     .day {
       background: white;
       border-radius: 8px;
       padding: 1rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
     }
+
+    .day:hover {
+      transform: scale(1.01);
+    }
+
+    .day.active {
+      border-left: 6px solid #ff4d4d;
+      background-color: #fdf0f0;
+    }
+
     .day.past {
-      opacity: 0.55;
+      opacity: 0.6;
     }
+
     .day h3 {
+      margin-top: 0;
       color: #33adff;
-      margin: 0 0 0.5rem 0;
     }
-    .day p {
-      margin: 0.5rem 0;
-    }
-    ul.activities {
+
+    .activities {
       margin: 0.5rem 0 0 1.2rem;
       padding-left: 1rem;
     }
-    ul.activities li {
-      margin-bottom: 0.3rem;
-    }
+
     .back-link {
       display: block;
-      margin-bottom: 1.5rem;
+      padding: 1rem 2rem;
       color: #33adff;
       font-weight: bold;
       text-decoration: none;
     }
+
     .back-link:hover {
       text-decoration: underline;
     }
@@ -59,43 +91,68 @@
 <body>
   <a href="index.html" class="back-link">← Back to Main Page</a>
   <h2 class="timeline-title">Itinerary Outline</h2>
-  <div id="itinerary-container">Loading itinerary...</div>
+  <div id="split-container">
+    <div id="itinerary-left">Loading itinerary...</div>
+    <div id="map-container"></div>
+  </div>
 
-  <script>
+  <script type="module">
+
+    mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
+
+    const map = new mapboxgl.Map({
+      container: 'map-container',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [100.5018, 13.7563], // Default to Bangkok
+      zoom: 5,
+      pitch: 0,
+      bearing: 0
+    });
+
+    const marker = new mapboxgl.Marker({ color: 'red' }).setLngLat([100.5018, 13.7563]).addTo(map);
+
     async function loadItinerary() {
-      try {
-        const response = await fetch('itinerary.json');
-        const data = await response.json();
-        const container = document.getElementById('itinerary-container');
-        container.innerHTML = '';
+      const response = await fetch('itinerary.json');
+      const data = await response.json();
+      const container = document.getElementById('itinerary-left');
+      container.innerHTML = '';
 
-        data.forEach(entry => {
-          const start = new Date(entry.arrival_date);
-          const end = new Date(start);
-          end.setDate(end.getDate() + entry.nights);
+      const now = new Date();
+      let activeSegment = null;
 
-          const options = { month: 'short', day: 'numeric' };
-          const range = `${start.toLocaleDateString('en-US', options)} – ${end.toLocaleDateString('en-US', options)}`;
+      data.forEach((entry, index) => {
+        const start = new Date(entry.arrival_date);
+        const end = new Date(start);
+        end.setDate(end.getDate() + entry.nights);
 
-          const div = document.createElement('div');
-          const now = new Date();
-          const isPast = end < now;
-          div.className = 'day' + (isPast ? ' past' : '');
+        const options = { month: 'short', day: 'numeric' };
+        const range = `${start.toLocaleDateString('en-US', options)} – ${end.toLocaleDateString('en-US', options)}`;
 
+        const div = document.createElement('div');
+        div.className = 'day';
+        if (end < now) div.classList.add('past');
 
-          div.innerHTML = `
-            <h3>${range}: ${entry.location}, ${entry.country}</h3>
-            ${entry.arrival_method ? `<p><strong>Arrival:</strong> ${entry.arrival_method} (${entry.journey_time})</p>` : ''}
-            <ul class="activities">
-              ${entry.activities.map(item => `<li>${item}</li>`).join('')}
-            </ul>
-          `;
-          container.appendChild(div);
+        div.innerHTML = `
+          <h3>${range}: ${entry.location}, ${entry.country}</h3>
+          ${entry.arrival_method ? `<p><strong>Arrival:</strong> ${entry.arrival_method} (${entry.journey_time})</p>` : ''}
+          <ul class="activities">
+            ${entry.activities.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        `;
+
+        div.addEventListener('click', () => {
+          // Highlight selected
+          if (activeSegment) activeSegment.classList.remove('active');
+          div.classList.add('active');
+          activeSegment = div;
+
+          // Move map and marker
+          map.flyTo({ center: [entry.lng, entry.lat], zoom: 10 });
+          marker.setLngLat([entry.lng, entry.lat]);
         });
-      } catch (err) {
-        document.getElementById('itinerary-container').innerHTML = '<p>Failed to load itinerary data.</p>';
-        console.error('Error loading itinerary:', err);
-      }
+
+        container.appendChild(div);
+      });
     }
 
     loadItinerary();
