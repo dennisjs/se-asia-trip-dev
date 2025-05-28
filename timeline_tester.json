@@ -1,0 +1,54 @@
+[
+  {
+    "day": "Day 2",
+    "date": "05-13-25",
+    "description": "Wow - this was a great one!  Had a blast seeing some temples and eating some amazing food.  Didn't even get the runs tonight!  Now that's a win!  It's hot as balls today but is that a surprise?  No, it isn't.",
+    "weather": "85\u00b0F, Broken clouds, 83% humidity",
+    "photos": [
+      {
+        "id": "IMG_0597",
+        "caption": "Temple status Bangkok",
+        "lat": 13.75136111111111,
+        "lng": 100.49226388888889
+      },
+      {
+        "id": "IMG_0624",
+        "caption": "Scooter travel!  Bangkok",
+        "lat": 13.724213888888888,
+        "lng": 100.57948333333333
+      },
+      {
+        "id": "IMG_0625",
+        "caption": "Rooftop bar in Bangkok",
+        "lat": 13.723730555555555,
+        "lng": 100.58050555555555
+      },
+      {
+        "id": "IMG_0614",
+        "caption": "Another temple in Bangkok",
+        "lat": 13.743963888888889,
+        "lng": 100.48869444444445
+      },
+      {
+        "id": "IMG_0615",
+        "caption": "Chinatown in Bangkok",
+        "lat": 13.741433333333333,
+        "lng": 100.50634722222222
+      }
+    ]
+  },
+  {
+    "day": "Day 4",
+    "date": "05-15-25",
+    "description": "Wasn't feeling well today",
+    "weather": "83\u00b0F, Light rain, 84% humidity",
+    "photos": [
+      {
+        "id": "IMG_1079",
+        "caption": "Sunset Koh Lipe",
+        "lat": 6.486461111111111,
+        "lng": 99.3038111111111
+      }
+    ]
+  }
+]

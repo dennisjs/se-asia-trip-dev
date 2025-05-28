@@ -1,0 +1,22 @@
+[
+  {
+    "place": "Bangkok",
+    "lat": 13.7417,
+    "lng": 100.5602,
+    "arrival_date": "05-12-25",
+    "departure_date": "05-14-25"
+  },
+  {
+    "place": "Chiang Mai",
+    "lat": 18.78818,
+    "lng": 98.9879,
+    "arrival_date": "05-14-25",
+    "departure_date": "05-18-25"
+  },
+  {
+    "place": "Pai",
+    "lat": 19.36007,
+    "lng": 98.44153,
+    "arrival_date": "05-18-25"
+  }
+]
