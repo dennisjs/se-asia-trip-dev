@@ -2,12 +2,12 @@
   {
     "day": "Day 1",
     "date": "06-02-25",
-    "description": "This is how my brain felt after 24 hours of continuous travel",
+    "description": "What a long day of travel!  Must sleep",
     "weather": "95\u00b0F, Overcast clouds, 52% humidity",
     "photos": [
       {
         "id": "IMG_2549",
-        "caption": "",
+        "caption": "This is what my brain looks like after 24 hours of continuous travel",
         "lat": 13.742672222222222,
         "lng": 100.55118611111111
       }
