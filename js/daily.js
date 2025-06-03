@@ -27,7 +27,7 @@ async function loadDailyThing() {
     const formatted = localDate.toLocaleDateString(undefined, {
       year: "numeric", month: "long", day: "numeric"
     });
-    dateContainer.textContent = "Last entry: " + formatted;
+    dateContainer.textContent = "📅 " + formatted;
 
     // Set media
     let html = "";
