@@ -96,6 +96,7 @@ nav a {
   max-width: 100%;
   max-height: 70vh;
   border-radius: 8px;
+  z-index: 1500;
 }
 .close-btn {
   margin-top: 0.5rem;
@@ -254,7 +255,7 @@ nav a {
   font-size: 1.1rem;
   font-weight: bold;
   color: #33adff;
-  text-align: center;
+  text-align: left;
   margin-bottom: 1rem;
 }
 
@@ -371,5 +372,37 @@ nav a {
   transform: translateY(-6px);
 }
 
+.arrow-nav {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 1000;
 }
+
+/* Shared base arrow styling */
+.nav-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #33adff;
+  z-index: 9999;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: all;
+}
+
+/* Specific positions */
+#leftArrow {
+  left: 10px;
+}
+
+#rightArrow {
+  right: 10px;
+}
+
+
 
