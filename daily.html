@@ -1,4 +1,5 @@
 
+<!-- Inserting into daily.html based on original structure, with navigation arrows -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +8,8 @@
   <title>The Daily Thing</title>
   <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
   <style>
     html, body {
       margin: 0;
@@ -26,8 +29,9 @@
     }
 
     .last-entry-date {
-      font-size: 1rem;
-      color: #555;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #33adff;
       text-align: center;
       margin-bottom: 1rem;
     }
@@ -48,9 +52,9 @@
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
-      max-width: 800px;
+      max-width: 300px;
       flex: 1;
-      text-align: left;
+      text-align: center;
     }
 
     .daily-box {
@@ -83,7 +87,13 @@
 <body>
   <a href="index.html" class="back-link">← Back to Main Page</a>
   <h2 class="timeline-title">The Daily Thing (mostly daily)</h2>
-  <div class="last-entry-date" id="entryDate"></div>
+  
+<div class="last-entry-date" id="entryDate"></div>
+<div class="arrow-nav">
+  <span id="leftArrow" class="nav-arrow">←</span>
+  <span id="rightArrow" class="nav-arrow">→</span>
+</div>
+
 
   <div class="daily-layout">
     <div class="daily-description" id="descriptionContainer">
@@ -101,7 +111,7 @@
       <h4>Comments (for this Daily Thing only)</h4>
       <div id="dailyCommentsContainer" style="margin-top: 1rem; text-align: left;"></div>
     </div>
-  
+
     <div class="daily-description" style="flex: 1; max-width: 300px;">
       <h3>Leave a Comment</h3>
       <form id="daily-comment-form">
@@ -112,11 +122,30 @@
     </div>
   </div>
 
-
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script src="js/config.js"></script>
 
-
 </body>
 </html>
+
+
+<style>
+.arrow-nav {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.nav-arrow {
+  font-size: 2rem;
+  color: #33adff;
+  margin: 0 1rem;
+  cursor: pointer;
+  pointer-events: all;
+  user-select: none;
+}
+</style>
