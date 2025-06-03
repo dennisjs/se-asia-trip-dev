@@ -251,6 +251,18 @@ nav a {
   color: #222;
 }
 
+.media-block {
+  margin: 20px 0;
+}
+
+.media-block img,
+.media-block video,
+.media-block iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .last-entry-date {
   font-size: 1.1rem;
   font-weight: bold;
