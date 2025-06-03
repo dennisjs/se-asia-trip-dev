@@ -21,7 +21,7 @@ async function loadDailyThing() {
     }
 
     // Set description text
-    descContainer.textContent = entry.description || "No description provided.";
+    descContainer.innerHTML = (entry.description || "No description provided.").replace(/\\n/g, "<br>");
 
     // Set formatted date
     const parts = latestDate.split("-");
