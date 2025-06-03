@@ -19,7 +19,7 @@ async function loadDailyThing() {
     if (!entry) return;
 
     // Set description with line breaks
-    descContainer.innerHTML = (entry.description || "No description provided.").replace(/\\n/g, "<br>");
+    descContainer.innerHTML = (entry.description || "No description provided.").replace(/\n/g, "<br>");
 
     // Set formatted date
     const parts = latestDate.split("-");
@@ -27,8 +27,7 @@ async function loadDailyThing() {
     const formatted = localDate.toLocaleDateString(undefined, {
       year: "numeric", month: "long", day: "numeric"
     });
-    dateContainer.textContent = "📅 " + formatted;
-
+    
     // Set media
     let html = "";
     if (entry.type === "audio") {
@@ -37,6 +36,8 @@ async function loadDailyThing() {
       html = `<img src="${entry.src}" style="max-width: 100%; height: auto;" />`;
     } else if (entry.type === "video") {
       html = `<video controls style="max-width: 100%;"><source src="${entry.src}" type="video/mp4"></video>`;
+    } else if (entry.type === "map") {
+      html = `<iframe src="${entry.mapSrc}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>`;
     } else if (entry.type === "map") {
       html = `<iframe src="${entry.mapSrc}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>`;
     } else {
@@ -97,3 +98,76 @@ function initFirebaseComments() {
     loadComments(window.latestDailyKey);
   }
 }
+
+
+let availableDates = [];
+let currentIndex = 0;
+
+function loadDailyThingByDate(date) {
+  fetch("daily.json")
+    .then((res) => res.json())
+    .then((json) => {
+      if (!availableDates.length) {
+        availableDates = Object.keys(json).sort((a, b) => new Date(b) - new Date(a));
+      }
+
+      const entry = json[date];
+      if (!entry) return;
+
+      currentIndex = availableDates.indexOf(date);
+
+      const dailyContainer = document.getElementById("dailyContainer");
+      const descriptionContainer = document.getElementById("descriptionContainer");
+      const dateContainer = document.getElementById("entryDate");
+
+      const formatted = new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+      
+      let html = "";
+
+      if (entry.type === "image") {
+        html = '<img src="' + entry.src + '" style="max-width: 100%; height: auto;" />';
+      } else if (entry.type === "video") {
+        html = '<video controls src="' + entry.src + '"></video>';
+      } else if (entry.type === "audio") {
+        html = '<audio controls src="' + entry.src + '"></audio>';
+      } else if (entry.type === "map") {
+        html = '<iframe src="' + entry.mapSrc + '" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>';
+      } else {
+        html = '<div>Unsupported type</div>';
+      }
+
+      dailyContainer.innerHTML = html;
+      descriptionContainer.innerHTML = '<div class="last-entry-date" id="entryDate">📅 ' + formatted + '</div>' +
+        (entry.caption ? "<h3>" + entry.caption + "</h3>" : "") +
+        "<p>" + (entry.description || "") + "</p>";
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("daily.json")
+    .then((res) => res.json())
+    .then((json) => {
+      availableDates = Object.keys(json).sort((a, b) => new Date(b) - new Date(a)).slice(0, 3);
+      if (availableDates.length) {
+        loadDailyThingByDate(availableDates[0]);
+      }
+    });
+
+  document.getElementById('leftArrow').onclick = () => {
+    if (currentIndex < availableDates.length - 1) {
+      currentIndex++;
+      loadDailyThingByDate(availableDates[currentIndex]);
+    }
+  };
+
+  document.getElementById('rightArrow').onclick = () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      loadDailyThingByDate(availableDates[currentIndex]);
+    }
+  };
+});
