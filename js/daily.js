@@ -30,24 +30,33 @@ async function loadDailyThing() {
     
     // Set media
     let html = "";
-    if (entry.type === "audio") {
-      html = `<audio controls><source src="${entry.src}" type="audio/mpeg"></audio>`;
-    } else if (entry.type === "image") {
-      html = `<img src="${entry.src}" style="max-width: 100%; height: auto;" />`;
-    } else if (entry.type === "video") {
-      html = `<video controls style="max-width: 100%;"><source src="${entry.src}" type="video/mp4"></video>`;
-    } else if (entry.type === "map") {
-      html = `<iframe src="${entry.mapSrc}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>`;
-    } else if (entry.type === "map") {
-      html = `<iframe src="${entry.mapSrc}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>`;
+    
+    if (entry.items && Array.isArray(entry.items)) {
+      entry.items.forEach(item => {
+        if (item.type === "image") {
+          html += `<div class="media-block"><img src="${item.src}" style="max-width: 100%; height: auto;"><p>${item.caption || ""}</p></div>`;
+        } else if (item.type === "video") {
+          html += `<div class="media-block"><video controls src="${item.src}" style="max-width: 100%;"></video><p>${item.caption || ""}</p></div>`;
+        } else if (item.type === "audio") {
+          html += `<div class="media-block"><audio controls src="${item.src}"></audio><p>${item.caption || ""}</p></div>`;
+        } else if (item.type === "map") {
+          html += `<div class="media-block"><iframe src="${item.src}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe><p>${item.caption || ""}</p></div>`;
+        } else {
+          html += `<div>Unsupported media type: ${item.type}</div>`;
+        }
+      });
     } else {
-      html = "<p>Unsupported media type.</p>";
+      html = "<p>No media items found.</p>";
     }
 
     container.innerHTML = html + (entry.caption ? `<p>${entry.caption}</p>` : "");
 
     // store for comment system
     window.latestDailyKey = latestDate;
+
+    if (typeof loadComments === "function") {
+      loadComments(latestDate);
+    }
 
   } catch (err) {
     console.error("Failed to load daily.json:", err);
@@ -65,23 +74,6 @@ function initFirebaseComments() {
 
   const refForDate = (key) => db.ref("daily-comments/" + key);
 
-  // load comments
-  function loadComments(dateKey) {
-    container.innerHTML = "";
-    refForDate(dateKey).off(); // clear previous listener
-    refForDate(dateKey).on("value", snap => {
-      container.innerHTML = "";
-      const data = snap.val();
-      if (!data) return;
-      Object.values(data).forEach(entry => {
-        const div = document.createElement("div");
-        div.style.marginBottom = "1rem";
-        div.innerHTML = `<strong>${entry.name}</strong><br>${entry.text}`;
-        container.appendChild(div);
-      });
-    });
-  }
-
   // submit comment
   form.addEventListener("submit", e => {
     e.preventDefault();
@@ -92,12 +84,27 @@ function initFirebaseComments() {
     refForDate(dateKey).push({ name, text });
     form.reset();
   });
-
-  // load existing comments
-  if (window.latestDailyKey) {
-    loadComments(window.latestDailyKey);
-  }
 }
+
+window.loadComments = function(dateKey) {
+  const container = document.getElementById("dailyCommentsContainer");
+  const db = firebase.database();
+  const ref = db.ref("daily-comments/" + dateKey);
+
+  container.innerHTML = "";
+  ref.off();
+  ref.on("value", snap => {
+    container.innerHTML = "";
+    const data = snap.val();
+    if (!data) return;
+    Object.values(data).forEach(entry => {
+      const div = document.createElement("div");
+      div.style.marginBottom = "1rem";
+      div.innerHTML = `<strong>${entry.name}</strong><br>${entry.text}`;
+      container.appendChild(div);
+    });
+  });
+};
 
 
 let availableDates = [];
@@ -128,22 +135,32 @@ function loadDailyThingByDate(date) {
       
       let html = "";
 
-      if (entry.type === "image") {
-        html = '<img src="' + entry.src + '" style="max-width: 100%; height: auto;" />';
-      } else if (entry.type === "video") {
-        html = '<video controls src="' + entry.src + '"></video>';
-      } else if (entry.type === "audio") {
-        html = '<audio controls src="' + entry.src + '"></audio>';
-      } else if (entry.type === "map") {
-        html = '<iframe src="' + entry.mapSrc + '" style="width:100%; height:500px; border:none;" allowfullscreen></iframe>';
+      if (entry.items && Array.isArray(entry.items)) {
+        entry.items.forEach(item => {
+          if (item.type === "image") {
+            html += `<div class="media-block"><img src="${item.src}" style="max-width: 100%; height: auto;"><p>${item.caption || ""}</p></div>`;
+          } else if (item.type === "video") {
+            html += `<div class="media-block"><video controls src="${item.src}" style="max-width: 100%;"></video><p>${item.caption || ""}</p></div>`;
+          } else if (item.type === "audio") {
+            html += `<div class="media-block"><audio controls src="${item.src}"></audio><p>${item.caption || ""}</p></div>`;
+          } else if (item.type === "map") {
+            html += `<div class="media-block"><iframe src="${item.src}" style="width:100%; height:500px; border:none;" allowfullscreen></iframe><p>${item.caption || ""}</p></div>`;
+          } else {
+            html += `<div>Unsupported media type: ${item.type}</div>`;
+          }
+        });
       } else {
-        html = '<div>Unsupported type</div>';
+        html = "<p>No media items found.</p>";
       }
-
+    
       dailyContainer.innerHTML = html;
       descriptionContainer.innerHTML = '<div class="last-entry-date" id="entryDate">📅 ' + formatted + '</div>' +
-        (entry.caption ? "<h3>" + entry.caption + "</h3>" : "") +
-        "<p>" + (entry.description || "").replace(/\\n/g, "<br>") + "</p>"
+        "<p>" + (entry.description || "").replace(/\\n/g, "<br>") + "</p>";
+
+      window.latestDailyKey = date;
+      if (typeof loadComments === "function") {
+        loadComments(date);
+      }
 
       // Show/hide arrows based on position
       document.getElementById("leftArrow").style.display = (currentIndex < availableDates.length - 1) ? "inline" : "none";
