@@ -6,7 +6,6 @@
   <title>Messages</title>
   <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
   <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <script src="js/config.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -122,20 +121,14 @@
     </div>
   </div>
 
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="js/config.js"></script>
+  
   <script>
-    
-  const firebaseConfig = {
-    apiKey: window.CONFIG.FIREBASE_API_KEY,
-    authDomain: "se-asia-msg-board.firebaseapp.com",
-    databaseURL: "https://se-asia-msg-board-default-rtdb.firebaseio.com",
-    projectId: "se-asia-msg-board",
-    storageBucket: "se-asia-msg-board.firebasestorage.app",
-    messagingSenderId: "732937261766",
-    appId: "1:732937261766:web:9068f12e8cd58ca7997dc7"
-  };
-
+    firebase.initializeApp(window.CONFIG.FIREBASE_CONFIG);
+    const db = firebase.database();
+  </script>
 
     firebase.initializeApp(firebaseConfig);
     const db = firebase.database();
