@@ -19,7 +19,7 @@ async function loadDailyThing() {
     if (!entry) return;
 
     // Set description with line breaks
-    descContainer.innerHTML = (entry.description || "No description provided.").replace(/\n/g, "<br>");
+    descContainer.innerHTML = (entry.description || "No description provided.").replace(/\\n/g, "<br>");
 
     // Set formatted date
     const parts = latestDate.split("-");
