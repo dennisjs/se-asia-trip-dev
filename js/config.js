@@ -1,6 +1,6 @@
 
 window.CONFIG = {
-  MAPBOX_TOKEN: "pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21iM3RsbDBkMHlkeTJpcTNqdXgzbmJ6dSJ9.Wm3ylbaIO2j5TUorrNTdmg",
+  MAPBOX_TOKEN: "pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21iM3FoMmdoMHk5MjJtb2ltZjFwbnpoaiJ9.emvdyGR-WKAwS3pPbCXbBQ",
   OPENWEATHER_KEY: "https://silent-snow-b58a.dennisj.workers.dev",
   FIREBASE_CONFIG: {
     apiKey: "AIzaSyAmUOeLu5cvXiNz3yT2c24kh4Z07T_tTtk",
