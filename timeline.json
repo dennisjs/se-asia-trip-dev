@@ -1,5 +1,25 @@
 [
   {
+    "day": "Day 2",
+    "date": "06-03-25",
+    "description": "Just really wanted a slow kickback day and not much honestly planned for BK.  So just tooled around the local streets.",
+    "weather": "86\u00b0F, Overcast clouds, 57% humidity",
+    "photos": [
+      {
+        "id": "IMG_2553",
+        "caption": "More like Vomitism amiright?",
+        "lat": 13.737697222222222,
+        "lng": 100.56016666666666
+      },
+      {
+        "id": "IMG_2550",
+        "caption": "A much needed slow day.  So yeah, you get a black building.",
+        "lat": 13.736244444444443,
+        "lng": 100.5615
+      }
+    ]
+  },
+  {
     "day": "Day 1",
     "date": "06-02-25",
     "description": "What a long day of travel!  Must sleep",
