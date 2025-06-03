@@ -1,3 +1,6 @@
+const app = firebase.initializeApp(window.CONFIG.FIREBASE_CONFIG);
+const db = firebase.database(app);
+
 window.addEventListener("DOMContentLoaded", async () => {
   await loadDailyThing(); // wait for daily content to load
   initFirebaseComments(); // then load comments system
@@ -64,8 +67,6 @@ async function loadDailyThing() {
 }
 
 function initFirebaseComments() {
-  const app = firebase.initializeApp(window.CONFIG.FIREBASE_CONFIG);
-  const db = firebase.database(app);
 
   const form = document.getElementById("daily-comment-form");
   const nameInput = document.getElementById("commentName");
