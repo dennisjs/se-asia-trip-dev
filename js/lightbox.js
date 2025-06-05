@@ -29,7 +29,7 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   function updateViewer(index) {
     const photo = photoList[index];
     currentIndex = index;
-    mainImg.src = "images/" + photo.id + ".jpg";
+    mainImg.src = "images/" + photo.id;
     caption.textContent = photo.caption || "";
     thumbContainer.querySelectorAll("img").forEach((img, i) => {
       img.classList.toggle("active-thumb", i === index);
@@ -62,7 +62,7 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
 
   photoList.forEach((photo, i) => {
     const thumb = document.createElement("img");
-    thumb.src = "images/" + photo.id + ".jpg";
+    thumb.src = "images/" + photo.id;
     thumb.alt = photo.caption || "";
     thumb.onclick = () => updateViewer(i);
     thumbContainer.appendChild(thumb);
