@@ -1,5 +1,5 @@
 async function loadTimeline() {
-  const res = await fetch("timeline.json");
+  const res = await fetch(`timeline.json?v=${Date.now()}`);
   const timeline = await res.json();
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
