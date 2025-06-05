@@ -1,6 +1,7 @@
 async function loadTimeline() {
-  const res = await fetch("timeline.json");
+  const res = await fetch(`timeline.json?v=${Date.now()}`);
   const timeline = await res.json();
+  timeline.sort((a, b) => new Date(b.date) - new Date(a.date));
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
 
@@ -17,7 +18,7 @@ async function loadTimeline() {
     photos.slice(0, maxThumbs).forEach((photo, index) => {
       const img = document.createElement("img");
       img.className = "thumb";
-      img.src = `images/${photo.id}.jpg`;
+      img.src = `images/${photo.id}`;
       img.alt = photo.caption;
       img.onclick = () => initLightbox(photos, index);
       photoCol.appendChild(img);

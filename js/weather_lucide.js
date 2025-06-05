@@ -55,21 +55,24 @@ function formatForecastCell(day) {
   const hum = day.humidity;
   return `
     <i data-lucide="${icon}" class="icon-${icon}"></i><br>
-    ${temp}°F, ${hum}%<br>
+    ${temp}°F, ${hum}%RH<br>
     <span class="forecast-detail">${desc}</span>
   `;
 }
 
 async function loadItineraryWeatherTable() {
-  const res = await fetch("itinerary.json");
+  const res = await fetch(`itinerary.json?v=${Date.now()}`);
   const itinerary = await res.json();
   const today = new Date();
 
   const upcoming = itinerary.filter(loc => {
     const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
     const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-    return arrival >= today;
+    const departure = new Date(arrival);
+    departure.setUTCDate(departure.getUTCDate() + loc.nights);
+    return today >= arrival && today < departure || arrival >= today;
   }).slice(0, 4);
+
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
 

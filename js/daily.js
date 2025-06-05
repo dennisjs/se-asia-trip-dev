@@ -12,7 +12,7 @@ async function loadDailyThing() {
   const dateContainer = document.getElementById("entryDate");
 
   try {
-    const res = await fetch("daily.json");
+    const res = await fetch(`daily.json?v=${Date.now()}`);
     const data = await res.json();
 
     const availableDates = Object.keys(data).sort().reverse();
@@ -112,7 +112,7 @@ let availableDates = [];
 let currentIndex = 0;
 
 function loadDailyThingByDate(date) {
-  fetch("daily.json")
+  fetch(`daily.json?v=${Date.now()}`)
     .then((res) => res.json())
     .then((json) => {
       if (!availableDates.length) {
@@ -171,7 +171,7 @@ function loadDailyThingByDate(date) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("daily.json")
+  fetch(`daily.json?v=${Date.now()}`)
     .then((res) => res.json())
     .then((json) => {
       availableDates = Object.keys(json).sort((a, b) => new Date(b) - new Date(a));
