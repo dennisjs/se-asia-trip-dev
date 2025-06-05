@@ -6,7 +6,12 @@ async function fetchLatestLocation() {
     const res = await fetch("location.json");
     const locations = await res.json();
     if (!Array.isArray(locations)) return [locations];
-    return locations;
+    locations.sort((a, b) => {
+      const da = new Date(a.arrival_date), db = new Date(b.arrival_date);
+      return da - db;
+});
+return locations;
+
   } catch (e) {
     console.error("Location fetch error:", e);
     return [];

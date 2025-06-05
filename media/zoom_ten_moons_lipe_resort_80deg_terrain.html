@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Zoom to Ten Moons Lipe Resort - 80° with Terrain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body, html { margin: 0; padding: 0; height: 100%; }
+    #map { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+  mapboxgl.accessToken = 'pk.eyJ1IjoiZGVubmlzanMiLCJhIjoiY21iM3ByaW04MGVpODJscTJndmhtdzJpMiJ9.nKVReVc3h7T5JQbhFXF5fw';
+
+  const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/satellite-streets-v12',
+    center: [101.5, 10.5],
+    zoom: 3,
+    pitch: 0,
+    bearing: 0,
+    antialias: true
+  });
+
+  map.on('load', () => {
+    // Add terrain data source and enable 3D terrain
+    map.addSource('mapbox-dem', {
+      type: 'raster-dem',
+      url: 'mapbox://mapbox.terrain-rgb',
+      tileSize: 512,
+      maxzoom: 14
+    });
+    map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.0 });
+
+    // Optional: Add hillshade layer for visual depth
+    map.addLayer({
+      id: 'hillshade',
+      type: 'hillshade',
+      source: 'mapbox-dem',
+      layout: {},
+      paint: {}
+    });
+
+    // Zoom and rotate to Ten Moons Lipe Resort with pitch and terrain
+    setTimeout(() => {
+      map.flyTo({
+        center: [99.3038111111111, 6.486461111111111],
+        zoom: 16,
+        pitch: 60,
+        bearing: 80,
+        speed: 0.35,
+        curve: 1.42,
+        easing: t => t,
+        essential: true
+      });
+    }, 1500);
+  });
+</script>
+</body>
+</html>
