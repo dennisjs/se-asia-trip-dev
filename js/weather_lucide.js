@@ -61,7 +61,7 @@ function formatForecastCell(day) {
 }
 
 async function loadItineraryWeatherTable() {
-  const res = await fetch("itinerary.json");
+  const res = await fetch(`itinerary.json?v=${Date.now()}`);
   const itinerary = await res.json();
   const today = new Date();
 
