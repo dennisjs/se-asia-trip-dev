@@ -71,10 +71,10 @@ if (rememberViewToggle) {
               width: 32px; height: 32px; border-radius: 4px;
               background-size: cover; background-position: center;
               box-shadow: 0 0 4px rgba(0,0,0,0.5);
-              background-image: url(images/${photo.id}.jpg);
+              background-image: url(images/${photo.id});
               cursor: pointer;
             `;
-            el.onclick = () => showOverlay("images/" + photo.id + ".jpg", photo.caption);
+            el.onclick = () => showOverlay("images/" + photo.id, photo.caption);
             const marker = new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
             photoMarkers.push(marker);
           });
