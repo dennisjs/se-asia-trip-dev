@@ -3,7 +3,8 @@
     "place": "Chiang Mai",
     "lat": 18.787,
     "lng": 98.982,
-    "arrival_date": "06-05-25"
+    "arrival_date": "06-05-25",
+    "departure_date": ""
   },
   {
     "place": "Bangkok",
