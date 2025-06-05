@@ -23,5 +23,19 @@
       }
     ],
     "description": "This is one of my favorite photos from my prior trip to the south of Thailand, taken on the island of Koh Lipe.  These women were doing the standard SE Asia thing of taking photos with with exotic, Insta-poses.  I have a collection of several of these haha.  I ran into these ladies a few days later as we were waiting for a boat to the mainland, and gave them a copy of the pic.  This turned out to be quite the journey as our crew decided to journey in the middle of a squall, upon which both of our motors promptly died in the middle of these massive waves.  They managed to get one of them barely going and we found moderate shelter in the shadow of an island nearby.  People getting sick everywhere as we waited 2 hours for rescue.  Unexpected adventures is part of the reason for travel!\\n\\n Where is Koh Lipe you ask?  Here's a fun map to show you.  I stayed at the Ten Moons Lipe Resort (upper right of map - final frame) - it was amazing and the pic was taken a very short distance outside my door."
-  }
+  },
+  "2025-06-05": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IMG_2595_full.png",
+        "caption": "Full version"
+      },
+      {
+        "type": "image",
+        "src": "media/IMG_2595.png",
+        "caption": "Cropped, keyframed"
+      }
+    ],
+    "description": "This was a very lucky photo.  Was just shooting the door and as I took the pic, I didn't even notice the little boy appearing.  Thought it would make a better image with a crop and keyframe adjustment (thank you iPhone Live photo!)"
 }
