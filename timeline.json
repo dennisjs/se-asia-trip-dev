@@ -1,5 +1,39 @@
 [
   {
+    "day": "Day 1",
+    "date": "06-02-25",
+    "description": "What a long day of travel!  Must sleep",
+    "weather": "95\u00b0F, Overcast clouds, 52% humidity",
+    "photos": [
+      {
+        "id": "IMG_2549",
+        "caption": "This is what my brain looks like after 24 hours of continuous travel",
+        "lat": 13.742672222222222,
+        "lng": 100.55118611111111
+      }
+    ]
+  },
+  {
+    "day": "Day 2",
+    "date": "06-03-25",
+    "description": "Just really wanted a slow kickback day and not much honestly planned for BK.  So just tooled around the local streets.",
+    "weather": "86\u00b0F, Overcast clouds, 57% humidity",
+    "photos": [
+      {
+        "id": "IMG_2553",
+        "caption": "More like Vomitism amiright?",
+        "lat": 13.737697222222222,
+        "lng": 100.56016666666666
+      },
+      {
+        "id": "IMG_2550",
+        "caption": "A much needed slow day.  So yeah, you get a black building.",
+        "lat": 13.736244444444443,
+        "lng": 100.5615
+      }
+    ]
+  },
+  {
     "day": "Day 3",
     "date": "06-04-25",
     "description": "The focus of this day was FOOD TOUR!  5 people on the tour + 2 guides.  15 dishes.  Walked around Chinatown sampling a nice array of Thai specialties (primarily street food).  All of it was excellent.  Some of it surprising and a few really incredible dishes.",
@@ -104,36 +138,64 @@
     ]
   },
   {
-    "day": "Day 2",
-    "date": "06-03-25",
-    "description": "Just really wanted a slow kickback day and not much honestly planned for BK.  So just tooled around the local streets.",
-    "weather": "86\u00b0F, Overcast clouds, 57% humidity",
+    "day": "Day 4",
+    "date": "06-05-25",
+    "description": "Escaped the creepy weirdness of Bangkok for a calmer place here in Chiang Mai, in northern Thailand.  Got in pretty early but the heat wasn't motivating for touring around.  I went out at 7pm and it had cooled off by at least 10 degrees and few people were around.  This might be the plan (+ early mornings).  Then take refuge during the heat of day.  Had my first Khao Soi from its birth-region and it didn't disappoint.  I might write more about this dish later.  Not sure how long I'll be in CM - winging it at this point.",
+    "weather": "91\u00b0F, Few clouds, 55% humidity",
     "photos": [
       {
-        "id": "IMG_2553",
-        "caption": "More like Vomitism amiright?",
-        "lat": 13.737697222222222,
-        "lng": 100.56016666666666
+        "id": "IMG_2649",
+        "caption": "Khao Soi with chicken - wow",
+        "lat": 18.785736111111113,
+        "lng": 98.98278888888889
       },
       {
-        "id": "IMG_2550",
-        "caption": "A much needed slow day.  So yeah, you get a black building.",
-        "lat": 13.736244444444443,
-        "lng": 100.5615
-      }
-    ]
-  },
-  {
-    "day": "Day 1",
-    "date": "06-02-25",
-    "description": "What a long day of travel!  Must sleep",
-    "weather": "95\u00b0F, Overcast clouds, 52% humidity",
-    "photos": [
+        "id": "IMG_2650",
+        "caption": "Silly dog at Wat Phra Singh",
+        "lat": 18.78855,
+        "lng": 98.9823
+      },
       {
-        "id": "IMG_2549",
-        "caption": "This is what my brain looks like after 24 hours of continuous travel",
-        "lat": 13.742672222222222,
-        "lng": 100.55118611111111
+        "id": "IMG_2670",
+        "caption": "Wat Phra Singh - night time is best time",
+        "lat": 18.78871388888889,
+        "lng": 98.98113333333333
+      },
+      {
+        "id": "IMG_2676",
+        "caption": "Wat Phra Singh - 10 deg cooler and very few people around",
+        "lat": 18.788369444444445,
+        "lng": 98.98145277777778
+      },
+      {
+        "id": "IMG_2656",
+        "caption": "Wat Phra Singh",
+        "lat": 18.78841666666667,
+        "lng": 98.98216111111111
+      },
+      {
+        "id": "IMG_2683",
+        "caption": "Mango Sticky Rice - a favorite",
+        "lat": 18.785405555555556,
+        "lng": 98.98203333333333
+      },
+      {
+        "id": "IMG_2657",
+        "caption": "Wat Phra Singh with monk walking by - many of them doing monk things whatever monk things are",
+        "lat": 18.788358333333335,
+        "lng": 98.98168055555556
+      },
+      {
+        "id": "IMG_2677",
+        "caption": "Wat Phra Singh",
+        "lat": 18.788522222222223,
+        "lng": 98.98161944444445
+      },
+      {
+        "id": "IMG_2680",
+        "caption": "Small street in Chiang Mai",
+        "lat": 18.788408333333336,
+        "lng": 98.98406111111112
       }
     ]
   }
