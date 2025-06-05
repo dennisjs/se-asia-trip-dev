@@ -68,8 +68,11 @@ async function loadItineraryWeatherTable() {
   const upcoming = itinerary.filter(loc => {
     const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
     const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-    return arrival >= today;
+    const departure = new Date(arrival);
+    departure.setUTCDate(departure.getUTCDate() + loc.nights);
+    return today >= arrival && today < departure || arrival >= today;
   }).slice(0, 4);
+
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
 
