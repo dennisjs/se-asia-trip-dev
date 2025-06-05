@@ -3,7 +3,7 @@ mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
 async function fetchLatestLocation() {
   try {
-    const res = await fetch("location.json");
+    const res = await fetch(`location.json?v=${Date.now()}`);
     const locations = await res.json();
     if (!Array.isArray(locations)) return [locations];
     locations.sort((a, b) => {
@@ -58,7 +58,7 @@ if (rememberViewToggle) {
       }
     }
     photoMarkers = [];
-    fetch("timeline.json")
+    fetch(`timeline.json?v=${Date.now()}`)
       .then(r => r.json())
       .then(timeline => {
         timeline.forEach(day => {
