@@ -55,7 +55,7 @@ function formatForecastCell(day) {
   const hum = day.humidity;
   return `
     <i data-lucide="${icon}" class="icon-${icon}"></i><br>
-    ${temp}°F, ${hum}%<br>
+    ${temp}°F, ${hum}%RH<br>
     <span class="forecast-detail">${desc}</span>
   `;
 }
