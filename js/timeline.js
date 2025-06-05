@@ -17,7 +17,7 @@ async function loadTimeline() {
     photos.slice(0, maxThumbs).forEach((photo, index) => {
       const img = document.createElement("img");
       img.className = "thumb";
-      img.src = `images/${photo.id}.jpg`;
+      img.src = `images/${photo.id}`;
       img.alt = photo.caption;
       img.onclick = () => initLightbox(photos, index);
       photoCol.appendChild(img);
