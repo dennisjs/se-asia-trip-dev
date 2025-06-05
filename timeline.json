@@ -6,7 +6,7 @@
     "weather": "95\u00b0F, Overcast clouds, 52% humidity",
     "photos": [
       {
-        "id": "IMG_2549",
+        "id": "IMG_2549.jpg",
         "caption": "This is what my brain looks like after 24 hours of continuous travel",
         "lat": 13.742672222222222,
         "lng": 100.55118611111111
@@ -20,13 +20,13 @@
     "weather": "86\u00b0F, Overcast clouds, 57% humidity",
     "photos": [
       {
-        "id": "IMG_2553",
+        "id": "IMG_2553.jpg",
         "caption": "More like Vomitism amiright?",
         "lat": 13.737697222222222,
         "lng": 100.56016666666666
       },
       {
-        "id": "IMG_2550",
+        "id": "IMG_2550.jpg",
         "caption": "A much needed slow day.  So yeah, you get a black building.",
         "lat": 13.736244444444443,
         "lng": 100.5615
@@ -40,97 +40,97 @@
     "weather": "94\u00b0F, Overcast clouds, 44% humidity",
     "photos": [
       {
-        "id": "IMG_2630",
+        "id": "IMG_2630.jpg",
         "caption": "Food tour - making Thai donuts",
         "lat": 13.739230555555555,
         "lng": 100.51144444444445
       },
       {
-        "id": "IMG_2574",
+        "id": "IMG_2574.jpg",
         "caption": "Food tour - kitty not on the menu",
         "lat": 13.739249999999998,
         "lng": 100.50991944444445
       },
       {
-        "id": "IMG_2562",
+        "id": "IMG_2562.jpg",
         "caption": "Mall tour - a massive mall",
         "lat": 13.737297222222221,
         "lng": 100.56035555555555
       },
       {
-        "id": "IMG_2578",
+        "id": "IMG_2578.jpg",
         "caption": "Saw all these vines above this alley  - waitaminute, those aren't vines",
         "lat": 13.738788888888887,
         "lng": 100.50916944444444
       },
       {
-        "id": "IMG_2581",
+        "id": "IMG_2581.jpg",
         "caption": "Food tour:  Thai pork leg stew",
         "lat": 13.740369444444443,
         "lng": 100.510825
       },
       {
-        "id": "IMG_2617",
+        "id": "IMG_2617.jpg",
         "caption": "I was pressured to try the Thai durian and to be fair it was the best durian I've ever had",
         "lat": 13.740575,
         "lng": 100.5093611111111
       },
       {
-        "id": "IMG_2616",
+        "id": "IMG_2616.jpg",
         "caption": "Hot (white) pepper stew with crunchy pork - amazing",
         "lat": 13.740777777777778,
         "lng": 100.50933888888889
       },
       {
-        "id": "IMG_2587",
+        "id": "IMG_2587.jpg",
         "caption": "Thai sukiyaki - very good",
         "lat": 13.741547222222222,
         "lng": 100.5111
       },
       {
-        "id": "IMG_2564",
+        "id": "IMG_2564.jpg",
         "caption": "Bangkok sidewalks are loads of fun",
         "lat": 13.7435,
         "lng": 100.55783888888888
       },
       {
-        "id": "IMG_2592",
+        "id": "IMG_2592.jpg",
         "caption": "On the food tour in Chinatown",
         "lat": 13.742822222222221,
         "lng": 100.50975
       },
       {
-        "id": "IMG_2584",
+        "id": "IMG_2584.jpg",
         "caption": "Making chive dumplings along the food tour",
         "lat": 13.740719444444444,
         "lng": 100.51187222222222
       },
       {
-        "id": "IMG_2585",
+        "id": "IMG_2585.jpg",
         "caption": "The bbq'd chive dumplings - very unique and very good",
         "lat": 13.741480555555555,
         "lng": 100.51106388888888
       },
       {
-        "id": "IMG_2638",
+        "id": "IMG_2638.jpg",
         "caption": "Alley in Chinatown lit at night",
         "lat": 13.739672222222222,
         "lng": 100.51116111111111
       },
       {
-        "id": "IMG_2599",
+        "id": "IMG_2599.jpg",
         "caption": "My favorite dish of the food tour:  green curry. Very subtle, incredible flavors wth just the right spice",
         "lat": 13.743733333333333,
         "lng": 100.50907777777778
       },
       {
-        "id": "IMG_2645",
+        "id": "IMG_2645.jpg",
         "caption": "Street food in Chinatown Mon-Sat - huge crowds and this is the offseason",
         "lat": 13.74058611111111,
         "lng": 100.50940833333334
       },
       {
-        "id": "IMG_2595",
+        "id": "IMG_2595.jpg",
         "caption": "Was taking this picture of this door and as I shot it this little boy came out from behind it",
         "lat": 13.743691666666665,
         "lng": 100.50923055555556
@@ -144,55 +144,55 @@
     "weather": "91\u00b0F, Few clouds, 55% humidity",
     "photos": [
       {
-        "id": "IMG_2649",
+        "id": "IMG_2649.png",
         "caption": "Khao Soi with chicken - wow",
         "lat": 18.785736111111113,
         "lng": 98.98278888888889
       },
       {
-        "id": "IMG_2650",
+        "id": "IMG_2650.png",
         "caption": "Silly dog at Wat Phra Singh",
         "lat": 18.78855,
         "lng": 98.9823
       },
       {
-        "id": "IMG_2670",
+        "id": "IMG_2670.png",
         "caption": "Wat Phra Singh - night time is best time",
         "lat": 18.78871388888889,
         "lng": 98.98113333333333
       },
       {
-        "id": "IMG_2676",
+        "id": "IMG_2676.png",
         "caption": "Wat Phra Singh - 10 deg cooler and very few people around",
         "lat": 18.788369444444445,
         "lng": 98.98145277777778
       },
       {
-        "id": "IMG_2656",
+        "id": "IMG_2656.png",
         "caption": "Wat Phra Singh",
         "lat": 18.78841666666667,
         "lng": 98.98216111111111
       },
       {
-        "id": "IMG_2683",
+        "id": "IMG_2683.png",
         "caption": "Mango Sticky Rice - a favorite",
         "lat": 18.785405555555556,
         "lng": 98.98203333333333
       },
       {
-        "id": "IMG_2657",
+        "id": "IMG_2657.png",
         "caption": "Wat Phra Singh with monk walking by - many of them doing monk things whatever monk things are",
         "lat": 18.788358333333335,
         "lng": 98.98168055555556
       },
       {
-        "id": "IMG_2677",
+        "id": "IMG_2677.png",
         "caption": "Wat Phra Singh",
         "lat": 18.788522222222223,
         "lng": 98.98161944444445
       },
       {
-        "id": "IMG_2680",
+        "id": "IMG_2680.png",
         "caption": "Small street in Chiang Mai",
         "lat": 18.788408333333336,
         "lng": 98.98406111111112
