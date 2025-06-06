@@ -198,5 +198,73 @@
         "lng": 98.98406111111112
       }
     ]
+  },
+  {
+    "day": "Day 5",
+    "date": "06-06-25",
+    "description": "",
+    "weather": "90\u00b0F, Scattered clouds, 57% humidity",
+    "photos": [
+      {
+        "id": "IMG_2739.png",
+        "caption": "Back to Wat Phra Singh but inside this time.  They like they're big Buddha's here but this is an especially big one.",
+        "lat": 18.788530555555557,
+        "lng": 98.98179722222223
+      },
+      {
+        "id": "IMG_2689.png",
+        "caption": "Wat Chedi Luang - one of many temples at this site",
+        "lat": 18.78680277777778,
+        "lng": 98.98793055555555
+      },
+      {
+        "id": "IMG_2718.png",
+        "caption": "I sorely wanted to Bang This Gong",
+        "lat": 18.786630555555558,
+        "lng": 98.98669444444444
+      },
+      {
+        "id": "IMG_2738.png",
+        "caption": "Good boy as I peeked thru a gate in Chiang Mai and one thing I need to fix is the random order of these photos",
+        "lat": 18.788180555555556,
+        "lng": 98.98899722222222
+      },
+      {
+        "id": "IMG_2733.png",
+        "caption": "Eddit Van Thailand wails during the solo",
+        "lat": 18.79062777777778,
+        "lng": 98.98855555555555
+      },
+      {
+        "id": "IMG_2713.png",
+        "caption": "Wat Chedi Luang - a 15th century temple - incredible",
+        "lat": 18.786633333333334,
+        "lng": 98.98643611111112
+      },
+      {
+        "id": "IMG_2695.png",
+        "caption": "Wat Chedi Luang - interior of a more modern temple ",
+        "lat": 18.787022222222223,
+        "lng": 98.98730555555555
+      },
+      {
+        "id": "IMG_2707.png",
+        "caption": "Wat Chedi Luang",
+        "lat": 18.78669166666667,
+        "lng": 98.98613055555556
+      },
+      {
+        "id": "IMG_2687.png",
+        "caption": "Tree at Wat Chedi Luang.  It's so weird - there aren't a lot of tree in Chiang Mai then you see this massive unit of a tree",
+        "lat": 18.786705555555557,
+        "lng": 98.98800555555556
+      },
+      {
+        "id": "IMG_2716.png",
+        "caption": "Elephants on the old Wat Chedi Luang temple",
+        "lat": 18.786647222222225,
+        "lng": 98.98657222222222
+      }
+    ]
   }
 ]
