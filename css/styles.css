@@ -337,10 +337,6 @@ nav a {
     padding-top: 4.5rem; /* roughly the height of the fixed header */
   }
 
-  .photo-column {
-    margin-top: 4.5rem; /* ensures thumbs are pushed below header */
-  }
-
   .overlay {
   top: 90px; /* increase offset for mobile header */
 }
