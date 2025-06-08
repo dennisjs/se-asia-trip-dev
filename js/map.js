@@ -1,6 +1,8 @@
 // map.js
 mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
 
+let useThumbnails = false;  // Default to camera icon mode
+
 async function fetchLatestLocation() {
   try {
     const res = await fetch(`location.json?v=${Date.now()}`);
@@ -71,15 +73,45 @@ if (rememberViewToggle) {
               width: 32px; height: 32px; border-radius: 4px;
               background-size: cover; background-position: center;
               box-shadow: 0 0 4px rgba(0,0,0,0.5);
-              background-image: url(images/${photo.id});
               cursor: pointer;
             `;
-            el.onclick = () => showOverlay("images/" + photo.id, photo.caption);
+            
+            if (useThumbnails) {
+              console.log("🖼️ Attempting to use image:", photo.id);
+              console.log("📍 Location:", photo.lat, photo.lng);
+              console.log("🔗 Full image path: images/" + photo.id);
+
+              el.style.backgroundImage = `url(images/${photo.id})`;
+              el.onload = () => console.log("✅ Loaded:", photo.id);
+              el.onerror = () => console.warn("❌ Failed to load:", photo.id);
+
+
+            } else {
+              el.style.backgroundImage = `url(https://img.icons8.com/ios-filled/50/000000/camera.png)`;
+              el.style.backgroundSize = "60%";
+              el.style.backgroundRepeat = "no-repeat";
+              el.style.backgroundPosition = "center";
+              el.style.backgroundColor = "#fff";
+            }
+            
+            el.onclick = () => showOverlay(`images/${photo.id}`, photo.caption);
             const marker = new mapboxgl.Marker(el).setLngLat([photo.lng, photo.lat]).addTo(map);
             photoMarkers.push(marker);
+
           });
         });
-
+        const styleToggleBtn = document.getElementById("toggle-style");
+        if (styleToggleBtn) {
+          styleToggleBtn.onclick = () => {
+            useThumbnails = !useThumbnails;
+            styleToggleBtn.textContent = useThumbnails ? "Camera Icons" : "Image Icons";
+        
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            window.initMapWithPhotos(center, zoom);  // Rebuild the map with new style
+          };
+        }
+    
         const toggleBtn = document.getElementById("toggle-thumbnails");
         if (toggleBtn) {
           toggleBtn.onclick = null; // Clear any previous listener
