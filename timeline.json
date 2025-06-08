@@ -20,16 +20,16 @@
     "weather": "86\u00b0F, Overcast clouds, 57% humidity",
     "photos": [
       {
-        "id": "IMG_2553.jpg",
-        "caption": "More like Vomitism amiright?",
-        "lat": 13.737697222222222,
-        "lng": 100.56016666666666
-      },
-      {
         "id": "IMG_2550.jpg",
         "caption": "A much needed slow day.  So yeah, you get a black building.",
         "lat": 13.736244444444443,
         "lng": 100.5615
+      },
+      {
+        "id": "IMG_2553.jpg",
+        "caption": "More like Vomitism amiright?",
+        "lat": 13.737697222222222,
+        "lng": 100.56016666666666
       }
     ]
   },
@@ -40,22 +40,22 @@
     "weather": "94\u00b0F, Overcast clouds, 44% humidity",
     "photos": [
       {
-        "id": "IMG_2630.jpg",
-        "caption": "Food tour - making Thai donuts",
-        "lat": 13.739230555555555,
-        "lng": 100.51144444444445
+        "id": "IMG_2562.jpg",
+        "caption": "Mall tour - a massive mall",
+        "lat": 13.737297222222221,
+        "lng": 100.56035555555555
+      },
+      {
+        "id": "IMG_2564.jpg",
+        "caption": "Bangkok sidewalks are loads of fun",
+        "lat": 13.7435,
+        "lng": 100.55783888888888
       },
       {
         "id": "IMG_2574.jpg",
         "caption": "Food tour - kitty not on the menu",
         "lat": 13.739249999999998,
         "lng": 100.50991944444445
-      },
-      {
-        "id": "IMG_2562.jpg",
-        "caption": "Mall tour - a massive mall",
-        "lat": 13.737297222222221,
-        "lng": 100.56035555555555
       },
       {
         "id": "IMG_2578.jpg",
@@ -70,36 +70,6 @@
         "lng": 100.510825
       },
       {
-        "id": "IMG_2617.jpg",
-        "caption": "I was pressured to try the Thai durian and to be fair it was the best durian I've ever had",
-        "lat": 13.740575,
-        "lng": 100.5093611111111
-      },
-      {
-        "id": "IMG_2616.jpg",
-        "caption": "Hot (white) pepper stew with crunchy pork - amazing",
-        "lat": 13.740777777777778,
-        "lng": 100.50933888888889
-      },
-      {
-        "id": "IMG_2587.jpg",
-        "caption": "Thai sukiyaki - very good",
-        "lat": 13.741547222222222,
-        "lng": 100.5111
-      },
-      {
-        "id": "IMG_2564.jpg",
-        "caption": "Bangkok sidewalks are loads of fun",
-        "lat": 13.7435,
-        "lng": 100.55783888888888
-      },
-      {
-        "id": "IMG_2592.jpg",
-        "caption": "On the food tour in Chinatown",
-        "lat": 13.742822222222221,
-        "lng": 100.50975
-      },
-      {
         "id": "IMG_2584.jpg",
         "caption": "Making chive dumplings along the food tour",
         "lat": 13.740719444444444,
@@ -112,10 +82,22 @@
         "lng": 100.51106388888888
       },
       {
-        "id": "IMG_2638.jpg",
-        "caption": "Alley in Chinatown lit at night",
-        "lat": 13.739672222222222,
-        "lng": 100.51116111111111
+        "id": "IMG_2587.jpg",
+        "caption": "Thai sukiyaki - very good",
+        "lat": 13.741547222222222,
+        "lng": 100.5111
+      },
+      {
+        "id": "IMG_2592.jpg",
+        "caption": "On the food tour in Chinatown",
+        "lat": 13.742822222222221,
+        "lng": 100.50975
+      },
+      {
+        "id": "IMG_2595.jpg",
+        "caption": "Was taking this picture of this door and as I shot it this little boy came out from behind it",
+        "lat": 13.743691666666665,
+        "lng": 100.50923055555556
       },
       {
         "id": "IMG_2599.jpg",
@@ -124,16 +106,34 @@
         "lng": 100.50907777777778
       },
       {
+        "id": "IMG_2616.jpg",
+        "caption": "Hot (white) pepper stew with crunchy pork - amazing",
+        "lat": 13.740777777777778,
+        "lng": 100.50933888888889
+      },
+      {
+        "id": "IMG_2617.jpg",
+        "caption": "I was pressured to try the Thai durian and to be fair it was the best durian I've ever had",
+        "lat": 13.740575,
+        "lng": 100.5093611111111
+      },
+      {
+        "id": "IMG_2630.jpg",
+        "caption": "Food tour - making Thai donuts",
+        "lat": 13.739230555555555,
+        "lng": 100.51144444444445
+      },
+      {
+        "id": "IMG_2638.jpg",
+        "caption": "Alley in Chinatown lit at night",
+        "lat": 13.739672222222222,
+        "lng": 100.51116111111111
+      },
+      {
         "id": "IMG_2645.jpg",
         "caption": "Street food in Chinatown Mon-Sat - huge crowds and this is the offseason",
         "lat": 13.74058611111111,
         "lng": 100.50940833333334
-      },
-      {
-        "id": "IMG_2595.jpg",
-        "caption": "Was taking this picture of this door and as I shot it this little boy came out from behind it",
-        "lat": 13.743691666666665,
-        "lng": 100.50923055555556
       }
     ]
   },
@@ -156,6 +156,18 @@
         "lng": 98.9823
       },
       {
+        "id": "IMG_2656.png",
+        "caption": "Wat Phra Singh",
+        "lat": 18.78841666666667,
+        "lng": 98.98216111111111
+      },
+      {
+        "id": "IMG_2657.png",
+        "caption": "Wat Phra Singh with monk walking by - many of them doing monk things whatever monk things are",
+        "lat": 18.788358333333335,
+        "lng": 98.98168055555556
+      },
+      {
         "id": "IMG_2670.png",
         "caption": "Wat Phra Singh - night time is best time",
         "lat": 18.78871388888889,
@@ -168,24 +180,6 @@
         "lng": 98.98145277777778
       },
       {
-        "id": "IMG_2656.png",
-        "caption": "Wat Phra Singh",
-        "lat": 18.78841666666667,
-        "lng": 98.98216111111111
-      },
-      {
-        "id": "IMG_2683.png",
-        "caption": "Mango Sticky Rice - a favorite",
-        "lat": 18.785405555555556,
-        "lng": 98.98203333333333
-      },
-      {
-        "id": "IMG_2657.png",
-        "caption": "Wat Phra Singh with monk walking by - many of them doing monk things whatever monk things are",
-        "lat": 18.788358333333335,
-        "lng": 98.98168055555556
-      },
-      {
         "id": "IMG_2677.png",
         "caption": "Wat Phra Singh",
         "lat": 18.788522222222223,
@@ -196,6 +190,12 @@
         "caption": "Small street in Chiang Mai",
         "lat": 18.788408333333336,
         "lng": 98.98406111111112
+      },
+      {
+        "id": "IMG_2683.png",
+        "caption": "Mango Sticky Rice - a favorite",
+        "lat": 18.785405555555556,
+        "lng": 98.98203333333333
       }
     ]
   },
@@ -206,40 +206,16 @@
     "weather": "90\u00b0F, Scattered clouds, 57% humidity",
     "photos": [
       {
-        "id": "IMG_2739.png",
-        "caption": "Back to Wat Phra Singh but inside this time.  They like their big Buddha's here but this is an especially big one.",
-        "lat": 18.788530555555557,
-        "lng": 98.98179722222223
+        "id": "IMG_2687.png",
+        "caption": "Tree at Wat Chedi Luang.  It's so weird - there aren't a lot of trees in Chiang Mai, then you see this massive unit of a tree",
+        "lat": 18.786705555555557,
+        "lng": 98.98800555555556
       },
       {
         "id": "IMG_2689.png",
         "caption": "Wat Chedi Luang - one of many temples at this site",
         "lat": 18.78680277777778,
         "lng": 98.98793055555555
-      },
-      {
-        "id": "IMG_2718.png",
-        "caption": "I sorely wanted to Bang This Gong",
-        "lat": 18.786630555555558,
-        "lng": 98.98669444444444
-      },
-      {
-        "id": "IMG_2738.png",
-        "caption": "Saw a good boy as I peeked thru a gate in Chiang Mai",
-        "lat": 18.788180555555556,
-        "lng": 98.98899722222222
-      },
-      {
-        "id": "IMG_2733.png",
-        "caption": "Eddie Van Thailand wails during the solo",
-        "lat": 18.79062777777778,
-        "lng": 98.98855555555555
-      },
-      {
-        "id": "IMG_2713.png",
-        "caption": "Wat Chedi Luang - a 15th century temple - incredible",
-        "lat": 18.786633333333334,
-        "lng": 98.98643611111112
       },
       {
         "id": "IMG_2695.png",
@@ -254,16 +230,206 @@
         "lng": 98.98613055555556
       },
       {
-        "id": "IMG_2687.png",
-        "caption": "Tree at Wat Chedi Luang.  It's so weird - there aren't a lot of trees in Chiang Mai, then you see this massive unit of a tree",
-        "lat": 18.786705555555557,
-        "lng": 98.98800555555556
+        "id": "IMG_2713.png",
+        "caption": "Wat Chedi Luang - a 15th century temple - incredible",
+        "lat": 18.786633333333334,
+        "lng": 98.98643611111112
       },
       {
         "id": "IMG_2716.png",
         "caption": "Elephants on the Wat Chedi Luang temple",
         "lat": 18.786647222222225,
         "lng": 98.98657222222222
+      },
+      {
+        "id": "IMG_2718.png",
+        "caption": "I sorely wanted to Bang This Gong",
+        "lat": 18.786630555555558,
+        "lng": 98.98669444444444
+      },
+      {
+        "id": "IMG_2733.png",
+        "caption": "Eddie Van Thailand wails during the solo",
+        "lat": 18.79062777777778,
+        "lng": 98.98855555555555
+      },
+      {
+        "id": "IMG_2738.png",
+        "caption": "Saw a good boy as I peeked thru a gate in Chiang Mai",
+        "lat": 18.788180555555556,
+        "lng": 98.98899722222222
+      },
+      {
+        "id": "IMG_2739.png",
+        "caption": "Back to Wat Phra Singh but inside this time.  They like their big Buddha's here but this is an especially big one.",
+        "lat": 18.788530555555557,
+        "lng": 98.98179722222223
+      }
+    ]
+  },
+  {
+    "day": "Day 6",
+    "date": "06-07-25",
+    "description": "What a spectacular and challenging day.  I took a guided overnight tour that consisted of 3 parts.  A hike to the Karen tribal village in the mountains outside of Chiang Mai, an overnight stay and a return hike, then a visit to an elephant refuge and finally a float down this beautiful river on a bamboo raft.  That last one was super fun but no pics as I was worried about the phone.  This day was very challenging due to the combination of very significant heat and very steep climbs.  But we were rewarded with beautiful jungle scenery and rice paddies, an amazing waterfall, and finally the tribal village of the Karen people.  THey were very friendly and while very, very rustic the stay was a nice one.",
+    "weather": "89\u00b0F, Broken clouds, 54% humidity",
+    "photos": [
+      {
+        "id": "IMG_2767.png",
+        "caption": "Beautiful rice paddies",
+        "lat": 18.63373888888889,
+        "lng": 98.66275
+      },
+      {
+        "id": "IMG_2769.png",
+        "caption": "Make our way towards the tribal village.  It was insanely hot in the sun and the amount of fluids that poured out of my skin was unbelievable",
+        "lat": 18.632944444444444,
+        "lng": 98.66245277777779
+      },
+      {
+        "id": "IMG_2773.png",
+        "caption": "This saved the day as we cooled off here.  It was an amazing waterfall with a large cave behind it.  We had lunch at this beautiful spot",
+        "lat": 18.632125000000002,
+        "lng": 98.66221666666667
+      },
+      {
+        "id": "IMG_2778.png",
+        "caption": "Sad, little pupper at the lunch stop",
+        "lat": 18.632191666666667,
+        "lng": 98.66231666666667
+      },
+      {
+        "id": "IMG_2788.png",
+        "caption": "Behind the waterfall - generally I turn my nose up at waterfalls these days but this one was exceptional and there were few people around",
+        "lat": 18.63209722222222,
+        "lng": 98.66200277777779
+      },
+      {
+        "id": "IMG_2791.png",
+        "caption": "A rare sighting of me - at the waterfall",
+        "lat": 18.632069444444443,
+        "lng": 98.66198055555556
+      },
+      {
+        "id": "IMG_2798.png",
+        "caption": "Our tour guide Moon as we had lunch.  BTW, those little bananas were insanely good.  Like bananas on steroids.  They were as sweet as a Honeycrisp apple and packed with intense banana flavor.  Incredible.",
+        "lat": 18.63222777777778,
+        "lng": 98.66221666666667
+      },
+      {
+        "id": "IMG_2805.png",
+        "caption": "This local guy was staggering around and finally fully passed out - he was totally stoned",
+        "lat": 18.63225277777778,
+        "lng": 98.66228611111111
+      },
+      {
+        "id": "IMG_2807.png",
+        "caption": "Two nice puppers at the waterfall stop",
+        "lat": 18.631594444444445,
+        "lng": 98.66221666666667
+      },
+      {
+        "id": "IMG_2810.png",
+        "caption": "Continuing our trek to the tribal village.  The heat I tell you, THE HEAT...",
+        "lat": 18.631358333333335,
+        "lng": 98.6626888888889
+      },
+      {
+        "id": "IMG_2846.png",
+        "caption": "Water buffalo being tended by their caretaker.  These animals were suprisingly cute.  I'm mean like way cuter than a cow.",
+        "lat": 18.620944444444444,
+        "lng": 98.65592222222223
+      },
+      {
+        "id": "IMG_2853.png",
+        "caption": "Heading towards the active rice fields of the Karen tribal village",
+        "lat": 18.62076111111111,
+        "lng": 98.65555555555557
+      },
+      {
+        "id": "IMG_2854.png",
+        "caption": "The route was flooded so off with the shoes",
+        "lat": 18.619822222222222,
+        "lng": 98.65521111111111
+      },
+      {
+        "id": "IMG_2856.png",
+        "caption": "Local farmers preparing the rice paddies",
+        "lat": 18.619369444444445,
+        "lng": 98.65494444444445
+      },
+      {
+        "id": "IMG_2889.png",
+        "caption": "Our guide acting as chef for the evening cooking over an open fire",
+        "lat": 18.624100000000002,
+        "lng": 98.65573055555556
+      },
+      {
+        "id": "IMG_2895.png",
+        "caption": "Dinner at our \"hotel\"",
+        "lat": 18.623952777777777,
+        "lng": 98.65560833333333
+      }
+    ]
+  },
+  {
+    "day": "Day 7",
+    "date": "06-08-25",
+    "description": "We were awakened at 5am by the roosters, dogs, chickens, pigs, and all sorts of activities.  Had a simple breakfast then it was 2 hours of hiking to another waterfall and our final destination.  It was another very hot day with extrememly steep climbs and descents.  The mosquitos were there but not too hectic.  Incredible scenery all around us.  We visited an elephant 'sanctuary' which really is just a money generating business where the elephants are paraded in front of you in close proximity.  Not my favorite sort of enterprise but it was a treat to see an Asian elephant up so close.  Then we went on a river float on bamboo rafts.  Very peaceful with some gentle rapids and a very nice finish to another arduous day.",
+    "weather": "85\u00b0F, Broken clouds, 65% humidity",
+    "photos": [
+      {
+        "id": "IMG_2897.png",
+        "caption": "Hiking crew at the start of the 2nd day",
+        "lat": 18.624005555555556,
+        "lng": 98.65560277777779
+      },
+      {
+        "id": "IMG_2910.png",
+        "caption": "Rice paddies along the beautiful trail",
+        "lat": 18.62787777777778,
+        "lng": 98.65359444444445
+      },
+      {
+        "id": "IMG_2912.png",
+        "caption": "It was breathtaking out there",
+        "lat": 18.62787777777778,
+        "lng": 98.65271666666668
+      },
+      {
+        "id": "IMG_2917.png",
+        "caption": "More rice paddies along the way",
+        "lat": 18.62906388888889,
+        "lng": 98.65213055555556
+      },
+      {
+        "id": "IMG_2919.png",
+        "caption": "These were flooded so we had to balance carefully",
+        "lat": 18.629572222222222,
+        "lng": 98.65202222222223
+      },
+      {
+        "id": "IMG_2926.png",
+        "caption": "Behind this view is a beautiful waterfall but who wants to see more waterfall pics?",
+        "lat": 18.630541666666666,
+        "lng": 98.652
+      },
+      {
+        "id": "IMG_2935.png",
+        "caption": "Our tour guide disappeared for about 20 min as we swam in the pool of the waterfall",
+        "lat": 18.63046388888889,
+        "lng": 98.65218333333334
+      },
+      {
+        "id": "IMG_2936.png",
+        "caption": "Such beautiful a beautiful countryside",
+        "lat": 18.630366666666667,
+        "lng": 98.65213055555556
+      },
+      {
+        "id": "IMG_2950.png",
+        "caption": "There was an elephant \"sanctuary\" tagged to the end of the trip.  I mean it is was it is but it was still nice to see an elephant up so close",
+        "lat": 18.662847222222222,
+        "lng": 98.65640277777779
       }
     ]
   }
