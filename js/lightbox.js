@@ -34,29 +34,31 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
     thumbContainer.querySelectorAll("img").forEach((img, i) => {
       img.classList.toggle("active-thumb", i === index);
     });
-
-  function handleKeydown(e) {
-  if (!document.body.contains(overlay)) return;
-  switch (e.key) {
-    case "ArrowLeft":
-      if (currentIndex > 0) updateViewer(currentIndex - 1);
-      break;
-    case "ArrowRight":
-      if (currentIndex < photoList.length - 1) updateViewer(currentIndex + 1);
-      break;
-    case "Escape":
-      overlay.remove();
-      break;
-    }
   }
 
+  function handleKeydown(e) {
+    if (!document.body.contains(overlay)) return;
+    switch (e.key) {
+      case "ArrowLeft":
+        if (currentIndex > 0) updateViewer(currentIndex - 1);
+        break;
+      case "ArrowRight":
+        if (currentIndex < photoList.length - 1) updateViewer(currentIndex + 1);
+        break;
+      case "Escape":
+        overlay.remove();
+        break;
+    }
+  }
+  
   document.addEventListener("keydown", handleKeydown);
-
-  // Clean up when lightbox closes
+  
+  // ✂️ Clean-up when closed
   overlay.querySelector(".lightbox-close").onclick = () => {
     overlay.remove();
     document.removeEventListener("keydown", handleKeydown);
   };
+
 
   }
 
