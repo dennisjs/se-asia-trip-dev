@@ -374,7 +374,7 @@
   {
     "day": "Day 7",
     "date": "06-08-25",
-    "description": "We were awakened at 5am by the roosters, dogs, chickens, pigs, and all sorts of activities.  Had a simple breakfast then it was 2 hours of hiking to another waterfall and our final destination.  It was another very hot day with extrememly steep climbs and descents.  The mosquitos were there but not too hectic.  Incredible scenery all around us.  We visited an elephant 'sanctuary' which really is just a money generating business where the elephants are paraded in front of you in close proximity.  Not my favorite sort of enterprise but it was a treat to see an Asian elephant up so close.  Then we went on a river float on bamboo rafts.  Very peaceful with some gentle rapids and a very nice finish to another arduous day.  Look for photo icons to the SW of Chiang Mai if you're interested in seeing where this trek was.  Finished up the day at the famous Sunday Night Market which was the biggest street market I've ever seen.  It had to be miles in length.  An amazing selection of all types of food and very cool crafts as well.",
+    "description": "We were awakened at 5am by the roosters, dogs, chickens, pigs, and all sorts of activities.  Had a simple breakfast then it was 2 hours of hiking to another waterfall and our final destination.  It was another very hot day with extrememly steep climbs and descents.  The mosquitos were there but not too hectic.  Incredible scenery all around us.  We visited an elephant 'sanctuary' which really is just a money generating business where the elephants are paraded in front of you in close proximity.  Not my favorite sort of enterprise but it was a treat to see an Asian elephant up so close.  Then we went on a river float on bamboo rafts.  Very peaceful with some gentle rapids and a very nice finish to another arduous day.  Look for photo icons to the SW of Chiang Mai if you're interested in seeing where this trek was.",
     "weather": "85\u00b0F, Broken clouds, 65% humidity",
     "photos": [
       {
@@ -436,6 +436,44 @@
         "caption": "WTF - at the Chiang Mai Sunday Night Market - a MASSIVE street market, miles long",
         "lat": 18.78851388888889,
         "lng": 98.98466388888889
+      }
+    ]
+  },
+  {
+    "day": "Day 8",
+    "date": "06-09-25",
+    "description": "Not too many photos since this was a travel day.  About 4 hours in an utterly packed van filled with young folk and luggage.  It's a fairly dangerous 2-lane road to Pai, filled with huge trucks and blind turns and it rained during the 2nd half so it was a little but of a knuckle-biter.  Pai, as I'm discovering is very, very much a young person town.  And when people say it's a hippie place they really just mean it's a place for getting high.  O guess I should have realized but I just assumed that was like a part of it while I think it's really the main part of it.  So...  I still need to see what kinds of activities more my speed are available - that's my job tomorrow.  I may only be here 3 nights or so - we'll see.",
+    "weather": "89\u00b0F, Few clouds, 40% humidity",
+    "photos": [
+      {
+        "id": "IMG_2981.png",
+        "caption": "More Khao Soi - more good taste",
+        "lat": 18.795275,
+        "lng": 98.98331388888889
+      },
+      {
+        "id": "IMG_2982.png",
+        "caption": "On the drive from Chiang Mai to Pai",
+        "lat": 19.227166666666665,
+        "lng": 98.67016666666667
+      },
+      {
+        "id": "IMG_2987.png",
+        "caption": "Pai at night",
+        "lat": 19.35896388888889,
+        "lng": 98.44344444444445
+      },
+      {
+        "id": "IMG_2988.png",
+        "caption": "Across the street from my hotel:  3 weed stores side-by-side",
+        "lat": 19.358575000000002,
+        "lng": 98.44478611111111
+      },
+      {
+        "id": "IMG_2989.png",
+        "caption": "My bungalow - it's quite nice",
+        "lat": 19.358155555555555,
+        "lng": 98.44573333333334
       }
     ]
   }
