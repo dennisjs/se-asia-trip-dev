@@ -3,14 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Itinerary</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>My Southeast Asia Itinerary</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/config.js?v=2"></script>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=AojTOk8jMESD&format=png&color=000000" />
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom, #fdfcfb, #e2e2e2);
+    }
+
+    h2.timeline-title {
+      font-family: 'Shadows Into Light', cursive;
+      font-size: 2.5rem;
+      color: #000;
+      text-align: center;
+      margin: 1rem 0;
+    }
+
+    #split-container {
+      display: flex;
+      height: calc(100vh - 80px);
+    }
+
+    #itinerary-left-wrapper {
+      width: 50%;
+      overflow-y: auto;
+      padding: 1rem 2rem;
+      box-sizing: border-box;
+    }
+
+    #itinerary-left {
+      width: 100%;
+    }
+
+    #map-container {
+      width: 50%;
+      height: 100%;
+    }
+
+    .day {
+      background: white;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    .day:hover {
+      transform: scale(1.01);
+    }
+
+    .day.active {
+      border-left: 6px solid #ff4d4d;
+      background-color: #fdf0f0;
+    }
+
+    .day.past {
+      opacity: 0.6;
+    }
+
+    .day h3 {
+      margin-top: 0;
+      color: #33adff;
+    }
+
+    .activities {
+      margin: 0.5rem 0 0 1.2rem;
+      padding-left: 1rem;
+    }
+
+    .back-link {
+      display: block;
+      padding: 1rem 2rem;
+      color: #33adff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <a href="index.html" class="back-link">← Back to Main Page</a>
   <h2 class="timeline-title">Itinerary Outline</h2>
-
-  <!-- ✅ Wrapper for placeholder + itinerary list -->
   <div id="split-container">
     <div id="itinerary-left-wrapper">
       <div class="placeholder-box">
@@ -23,12 +108,62 @@
     <div id="map-container"></div>
   </div>
 
-  <script src="config.js"></script>
-  <script src="itinerary.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      loadItinerary();
+  <script type="module">
+    mapboxgl.accessToken = window.CONFIG.MAPBOX_TOKEN;
+
+    const map = new mapboxgl.Map({
+      container: 'map-container',
+      style: 'mapbox://styles/mapbox/streets-v12',
+      center: [100.5018, 13.7563], // Default to Bangkok
+      zoom: 5,
+      pitch: 0,
+      bearing: 0
     });
+
+    const marker = new mapboxgl.Marker({ color: 'red' }).setLngLat([100.5018, 13.7563]).addTo(map);
+
+    async function loadItinerary() {
+      const response = await fetch('itinerary.json');
+      const data = await response.json();
+      const container = document.getElementById('itinerary-left');
+      container.innerHTML = '';
+
+      const now = new Date();
+      let activeSegment = null;
+
+      data.forEach((entry, index) => {
+        const start = new Date(entry.arrival_date);
+        const end = new Date(start);
+        end.setDate(end.getDate() + entry.nights);
+
+        const options = { month: 'short', day: 'numeric' };
+        const range = `${start.toLocaleDateString('en-US', options)} – ${end.toLocaleDateString('en-US', options)}`;
+
+        const div = document.createElement('div');
+        div.className = 'day';
+        if (end < now) div.classList.add('past');
+
+        div.innerHTML = `
+          <h3>${range}: ${entry.location}, ${entry.country}</h3>
+          ${entry.arrival_method ? `<p><strong>Arrival:</strong> ${entry.arrival_method} (${entry.journey_time})</p>` : ''}
+          <ul class="activities">
+            ${entry.activities.map(item => `<li>${item}</li>`).join('')}
+          </ul>
+        `;
+
+        div.addEventListener('click', () => {
+          if (activeSegment) activeSegment.classList.remove('active');
+          div.classList.add('active');
+          activeSegment = div;
+          map.flyTo({ center: [entry.lng, entry.lat], zoom: 10 });
+          marker.setLngLat([entry.lng, entry.lat]);
+        });
+
+        container.appendChild(div);
+      });
+    }
+
+    loadItinerary();
   </script>
 </body>
 </html>
