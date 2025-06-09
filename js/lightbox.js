@@ -52,7 +52,6 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
 
   document.addEventListener("keydown", handleKeydown);
 
-  // Clean up when lightbox closes
   overlay.querySelector(".lightbox-close").onclick = () => {
     overlay.remove();
     document.removeEventListener("keydown", handleKeydown);
@@ -69,12 +68,11 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   overlay.querySelector("#lightbox-prev").onclick = () => {
     if (currentIndex > 0) updateViewer(currentIndex - 1);
   };
+
   overlay.querySelector("#lightbox-next").onclick = () => {
     if (currentIndex < photoList.length - 1) updateViewer(currentIndex + 1);
   };
-  overlay.querySelector(".lightbox-close").onclick = () => {
-    overlay.remove();
-  };
+
   overlay.onclick = e => {
     if (e.target === overlay) overlay.remove();
   };
