@@ -1,4 +1,3 @@
-
 window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";
@@ -52,15 +51,11 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   }
   
   document.addEventListener("keydown", handleKeydown);
-  
-  // ✂️ Clean-up when closed
+
   overlay.querySelector(".lightbox-close").onclick = () => {
     overlay.remove();
     document.removeEventListener("keydown", handleKeydown);
   };
-
-
-  }
 
   photoList.forEach((photo, i) => {
     const thumb = document.createElement("img");
