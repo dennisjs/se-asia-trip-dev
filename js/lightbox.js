@@ -1,4 +1,3 @@
-
 window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
   const overlay = document.createElement("div");
   overlay.className = "lightbox-overlay";
@@ -34,19 +33,20 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
     thumbContainer.querySelectorAll("img").forEach((img, i) => {
       img.classList.toggle("active-thumb", i === index);
     });
+  }
 
   function handleKeydown(e) {
-  if (!document.body.contains(overlay)) return;
-  switch (e.key) {
-    case "ArrowLeft":
-      if (currentIndex > 0) updateViewer(currentIndex - 1);
-      break;
-    case "ArrowRight":
-      if (currentIndex < photoList.length - 1) updateViewer(currentIndex + 1);
-      break;
-    case "Escape":
-      overlay.remove();
-      break;
+    if (!document.body.contains(overlay)) return;
+    switch (e.key) {
+      case "ArrowLeft":
+        if (currentIndex > 0) updateViewer(currentIndex - 1);
+        break;
+      case "ArrowRight":
+        if (currentIndex < photoList.length - 1) updateViewer(currentIndex + 1);
+        break;
+      case "Escape":
+        overlay.remove();
+        break;
     }
   }
 
@@ -57,8 +57,6 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
     overlay.remove();
     document.removeEventListener("keydown", handleKeydown);
   };
-
-  }
 
   photoList.forEach((photo, i) => {
     const thumb = document.createElement("img");
