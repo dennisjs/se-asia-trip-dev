@@ -149,5 +149,20 @@
       }
     ],
     "description": "This is bonus footage from my fellow trekkies of our overnight trip to the Karen Hill tribal village"
+  },
+  "2025-06-10": {
+    "items": [
+      {
+        "type": "audio",
+        "src": "media/witching well.m4a",
+        "caption": "As recorded"
+      },
+      {
+        "type": "audio",
+        "src": "media/witching well.m4a",
+        "caption": "Slowed down by about 8x"
+      }
+    ],
+    "description": "Heard some odd creatures in the garden area at my hotel.  Decided to record them and mess around with it."
   }
 }
