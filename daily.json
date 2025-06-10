@@ -161,6 +161,11 @@
         "type": "audio",
         "src": "media/slowed_down.wav",
         "caption": "Slowed down by about 8x"
+      },
+      {
+        "type": "audio",
+        "src": "media/slowed_down_FX.wav",
+        "caption": "Slowed down by about 8x, with FX"
       }
     ],
     "description": "Heard some odd creatures in the garden area at my hotel.  Decided to record them and mess around with it."
