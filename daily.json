@@ -159,12 +159,12 @@
       },
       {
         "type": "audio",
-        "src": "media/slowed_down.wav",
+        "src": "media/slowed_down.mp3",
         "caption": "Slowed down by about 8x - that's some David Lynch shit right there"
       },
       {
         "type": "audio",
-        "src": "media/slowed_down_FX.wav",
+        "src": "media/slowed_down_FX2.mp3",
         "caption": "Slowed down by about 8x, with FX"
       }
     ],
