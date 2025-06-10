@@ -442,7 +442,7 @@
   {
     "day": "Day 8",
     "date": "06-09-25",
-    "description": "Not too many photos since this was a travel day.  About 4 hours in an utterly packed van filled with young folk and luggage.  It's a fairly dangerous 2-lane road to Pai, filled with huge trucks and blind turns and it rained during the 2nd half so it was a little bit of a knuckle-biter.  Pai, as I'm discovering, is very, very much a young person town.  And when people say it's a hippie place they really just mean it's a place for getting high.  I guess I should have realized but I just assumed that was like a part of it while I think it's really the main part of it.  So...  I still need to see what kinds of activities more my speed are available - that's my job tomorrow.  I may only be here 3 nights or so - we'll see.",
+    "description": "Not too many photos since this was a travel day.  About 4 hours in an utterly packed van filled with young folk and luggage.  It's a fairly dangerous 2-lane road to Pai, filled with huge trucks and blind turns and it rained during the 2nd half so it was a little but of a knuckle-biter.  Pai, as I'm discovering is very, very much a young person town.  And when people say it's a hippie place they really just mean it's a place for getting high.  O guess I should have realized but I just assumed that was like a part of it while I think it's really the main part of it.  So...  I still need to see what kinds of activities more my speed are available - that's my job tomorrow.  I may only be here 3 nights or so - we'll see.",
     "weather": "89\u00b0F, Few clouds, 40% humidity",
     "photos": [
       {
@@ -474,6 +474,32 @@
         "caption": "My bungalow - it's quite nice",
         "lat": 19.358155555555555,
         "lng": 98.44573333333334
+      }
+    ]
+  },
+  {
+    "day": "Day 9",
+    "date": "06-10-25",
+    "description": "It was a slow day today as I really just wanted to relax.  So it's another slow photo day.  Did a little research for tomorrow and for the next transport.  Planning some tours tomorrow.",
+    "weather": "88\u00b0F, Overcast clouds, 62% humidity",
+    "photos": [
+      {
+        "id": "IMG_2991.png",
+        "caption": "Place I'm staying at is probably the nicest one so far",
+        "lat": 19.358380555555556,
+        "lng": 98.445075
+      },
+      {
+        "id": "IMG_2992.png",
+        "caption": "Koi pond at my hotel",
+        "lat": 19.358363888888892,
+        "lng": 98.445075
+      },
+      {
+        "id": "IMG_3006.png",
+        "caption": "Another street shot in Pai",
+        "lat": 19.358936111111113,
+        "lng": 98.44359722222222
       }
     ]
   }
