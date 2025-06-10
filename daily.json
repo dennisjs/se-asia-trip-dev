@@ -153,6 +153,11 @@
   "2025-06-10": {
     "items": [
       {
+        "type": "image",
+        "src": "media/IMG_3007.png",
+        "caption": "Funny thing is, my iPhone geolocated this as 'The Witching Well'"
+      },
+      {
         "type": "audio",
         "src": "media/witching well.m4a",
         "caption": "As recorded"
