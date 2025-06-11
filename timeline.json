@@ -502,5 +502,91 @@
         "lng": 98.44359722222222
       }
     ]
+  },
+  {
+    "day": "Day 10",
+    "date": "06-11-25",
+    "description": "Did the standard 1/2-day tour in these parts.  A few lame stops but it ended with a few great ones.  There are some really beautiful areas around here and the intermittent rains added to the mood of the place.",
+    "weather": "74\u00b0F, Overcast clouds, 95% humidity",
+    "photos": [
+      {
+        "id": "IMG_3015.png",
+        "caption": "Guard dog to the giant buddha.  He's got a little bumhole.",
+        "lat": 19.34997222222222,
+        "lng": 98.45504722222222
+      },
+      {
+        "id": "IMG_3030.png",
+        "caption": "One of the overlooks near Pai",
+        "lat": 19.369055555555555,
+        "lng": 98.39551666666668
+      },
+      {
+        "id": "IMG_3058.png",
+        "caption": "Heading to the requisite waterfall stop",
+        "lat": 19.320780555555555,
+        "lng": 98.40434166666667
+      },
+      {
+        "id": "IMG_3065.png",
+        "caption": "2 minutes after I paid to get in and got to the waterfall, the head honcho came up, waving crazily at these 2 guys on the opposite bank.  It had been raining hard and the water was very rapidly rising.  We all had to get out of there which was a little spooky.",
+        "lat": 19.32067222222222,
+        "lng": 98.40445833333334
+      },
+      {
+        "id": "IMG_3078.png",
+        "caption": "Puppers at the coffee shop stop",
+        "lat": 19.319544444444443,
+        "lng": 98.39951388888889
+      },
+      {
+        "id": "IMG_3081.png",
+        "caption": "Another puppers at the coffee shop stop.  Puppers and coffee - what else can you ask for?",
+        "lat": 19.319647222222223,
+        "lng": 98.39971111111112
+      },
+      {
+        "id": "IMG_3083.png",
+        "caption": "The dogs here are fearless and commonly lay in the road",
+        "lat": 19.31965,
+        "lng": 98.39953611111112
+      },
+      {
+        "id": "IMG_3086.png",
+        "caption": "This place was known as \"Bamboo Bridge\".  It was a series of well, bamboo bridges, with fantastic views all around",
+        "lat": 19.3227,
+        "lng": 98.39428611111111
+      },
+      {
+        "id": "IMG_3093.png",
+        "caption": "A hut sort of thing at the bamboo bridges",
+        "lat": 19.322575,
+        "lng": 98.39368333333334
+      },
+      {
+        "id": "IMG_3118.png",
+        "caption": "Rice paddies, etc. at the bamboo bridges",
+        "lat": 19.321930555555554,
+        "lng": 98.39175277777778
+      },
+      {
+        "id": "IMG_3124.png",
+        "caption": "Temple at the bamboo bridges",
+        "lat": 19.322430555555556,
+        "lng": 98.38807777777778
+      },
+      {
+        "id": "IMG_3141.png",
+        "caption": "Pai Canyon, where we were to watch the sunset.  There was to be no sunset, in large part because our tour made us leave before the sunset and also due to the rainy skies",
+        "lat": 19.30213611111111,
+        "lng": 98.45465
+      },
+      {
+        "id": "IMG_3147.png",
+        "caption": "Pai Canyon",
+        "lat": 19.303508333333333,
+        "lng": 98.45311666666667
+      }
+    ]
   }
 ]
