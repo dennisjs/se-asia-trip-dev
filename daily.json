@@ -174,5 +174,25 @@
       }
     ],
     "description": "Heard some odd creatures in the garden area at my hotel.  Decided to record them and mess around with it."
+  },
+  "2025-06-11": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3037.mp4",
+        "caption": "On the tour, to the next stop"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3068.mp4",
+        "caption": "Raging waterfall and the boss in yellow saying to get the hell out of there"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3151.mp4",
+        "caption": "Walk from the hotel lobby to my room, past the scary noises"
+      }
+    ],
+    "description": "Some vids from today"
   }
 }
