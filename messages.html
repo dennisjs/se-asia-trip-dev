@@ -130,18 +130,28 @@
     const db = firebase.database();
     const form = document.getElementById('message-form');
     const container = document.getElementById('messages-container');
-
+  
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       const name = form.name.value.trim();
       const location = form.location.value.trim();
       const message = form.message.value.trim();
       const timestamp = new Date().toISOString();
-
-      db.ref('messages').push({ name, location, message, timestamp });
-      form.reset();
+  
+      const payload = { name, location, message, timestamp };
+      console.log("📤 Attempting to submit message:", payload);
+  
+      db.ref('messages').push(payload)
+        .then(() => {
+          console.log("✅ Message successfully written to Firebase.");
+          form.reset();
+        })
+        .catch(error => {
+          console.error("❌ Error writing to Firebase:", error);
+          alert("Error submitting message. Check console for details.");
+        });
     });
-
+  
     db.ref('messages').limitToLast(20).on('child_added', function(snapshot) {
       const msg = snapshot.val();
       const div = document.createElement('div');
@@ -155,5 +165,6 @@
       container.prepend(div);
     });
   </script>
+
 </body>
 </html>
