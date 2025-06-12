@@ -132,7 +132,7 @@ async function loadGroupedCalendarForecast() {
   const lastStop = itinerary[itinerary.length - 1];
   const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
   const itineraryEnd = new Date(yyyyEnd, mmEnd - 1, ddEnd);
-  itineraryEnd.setUTCDate(itineraryEnd.getUTCDate() + lastStop.nights);
+  itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
   const gridContainer = document.getElementById("calendarGridGrouped");
