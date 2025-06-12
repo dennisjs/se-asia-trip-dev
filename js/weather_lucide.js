@@ -158,15 +158,17 @@ async function loadGroupedCalendarForecast() {
   const groupedForecasts = {};
 
   for (let i = 0; i < forecastDays; i++) {
+    
+    console.log(`🔍 Checking forecast for: ${date.toDateString()}`);
+
     const date = new Date(forecastBaseDate);
     date.setDate(forecastBaseDate.getDate() + i);
 
     const matched = itinerary.find(loc => {
-      const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
-      const arrival = new Date(yyyy, mm - 1, dd);
-
-      const departure = new Date(yyyy, mm - 1, dd);
+      const arrival = new Date(loc.arrival_date); // override Date.UTC version
+      const departure = new Date(arrival);
       departure.setDate(departure.getDate() + loc.nights);
+      console.log(`📅 Matching against: ${loc.location} | ${arrival.toDateString()} to ${departure.toDateString()}`);
       return date >= arrival && date < departure;
     });
 
