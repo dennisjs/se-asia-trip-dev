@@ -142,7 +142,7 @@
       form.reset();
     });
 
-    db.ref('messages').limitToLast(20).on('child_added', function(snapshot) {
+    db.ref('messages').limitToLast(100).on('child_added', function(snapshot) {
       const msg = snapshot.val();
       const div = document.createElement('div');
       div.className = 'message';
