@@ -163,9 +163,10 @@ async function loadGroupedCalendarForecast() {
 
     const matched = itinerary.find(loc => {
       const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
-      const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-      const departure = new Date(Date.UTC(yyyy, mm - 1, dd));
-      departure.setUTCDate(departure.getUTCDate() + loc.nights);
+      const arrival = new Date(yyyy, mm - 1, dd);
+
+      const departure = new Date(yyyy, mm - 1, dd);
+      departure.setDate(departure.getDate() + loc.nights);
       return date >= arrival && date < departure;
     });
 
