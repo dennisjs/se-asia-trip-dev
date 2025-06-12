@@ -2,8 +2,8 @@ const today = new Date();
 console.log("✅ Today is:", today.toDateString());
 
 
-function parseMMDDYYYY(dateStr) {
-  const [mm, dd, yyyy] = dateStr.split("-").map(Number);
+function parseYYYYMMDD(dateStr) {
+  const [yyyy, mm, dd] = dateStr.split("-").map(Number);
   return new Date(yyyy, mm - 1, dd); // months are 0-indexed
 }
 
@@ -74,7 +74,8 @@ async function loadItineraryWeatherTable() {
   const itinerary = await res.json();
   const today = new Date();
   const upcoming = itinerary.filter(loc => {
-  const arrival = parseMMDDYYYY(loc.arrival_date);
+  const arrival = parseYYYYMMDD(loc.arrival_date);
+
   const departure = new Date(arrival);
   departure.setDate(departure.getDate() + loc.nights);
 
