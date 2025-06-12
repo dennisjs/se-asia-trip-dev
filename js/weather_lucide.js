@@ -1,5 +1,4 @@
 const today = new Date();
-console.log("✅ Today is:", today.toDateString());
 
 
 function parseYYYYMMDD(dateStr) {
@@ -16,7 +15,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
     const today = data.daily?.[0];
 
     if (!today) {
-      console.warn("No daily forecast returned");
       return;
     }
 
@@ -26,7 +24,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     if (!weatherBox) {
-      console.warn("weatherBox is undefined");
       return;
     }
     weatherBox.innerHTML = `
@@ -35,7 +32,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
       ${temp}°F – ${desc}<br>
     `;
   } catch (err) {
-    console.error("Weather fetch failed:", err);
   }
 }
 
@@ -79,12 +75,10 @@ async function loadItineraryWeatherTable() {
   const departure = new Date(arrival);
   departure.setDate(departure.getDate() + loc.nights);
 
-  console.log(`🗓 ${loc.arrival_date} → arrival: ${arrival.toDateString()}, departure: ${departure.toDateString()}`);
     
   return today >= arrival && today < departure || arrival >= today;
 }).slice(0, 4);
 
-  console.log("📌 Upcoming locations shown in weather grid:", upcoming.map(loc => loc.arrival_date));
 
 
   const table = document.getElementById("weatherGridTable");
@@ -157,19 +151,16 @@ async function loadGroupedCalendarForecast() {
   const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
   const groupedForecasts = {};
 
-  console.log("🧭 forecastBaseDate:", forecastBaseDate.toString());
 
   for (let i = 0; i < forecastDays; i++) {
     const date = new Date(forecastBaseDate);
     date.setDate(forecastBaseDate.getDate() + i);
 
-    console.log(`🔍 Checking forecast for: ${date.toDateString()}`);
 
     const matched = itinerary.find(loc => {
       const arrival = parseYYYYMMDD(loc.arrival_date);
       const departure = new Date(arrival);
       departure.setDate(departure.getDate() + loc.nights);
-      console.log(`📅 Matching against: ${loc.location} | ${arrival.toDateString()} to ${departure.toDateString()}`);
       return date >= arrival && date < departure;
     });
 
