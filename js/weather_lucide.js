@@ -1,12 +1,3 @@
-const today = new Date();
-console.log("✅ Today is:", today.toDateString());
-
-
-function parseMMDDYYYY(dateStr) {
-  const [mm, dd, yyyy] = dateStr.split("-").map(Number);
-  return new Date(yyyy, mm - 1, dd); // months are 0-indexed
-}
-
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const url = `${window.CONFIG?.OPENWEATHER_KEY}?lat=${lat}&lon=${lon}`;
 
@@ -73,18 +64,14 @@ async function loadItineraryWeatherTable() {
   const res = await fetch(`itinerary.json?v=${Date.now()}`);
   const itinerary = await res.json();
   const today = new Date();
+
   const upcoming = itinerary.filter(loc => {
-  const arrival = parseMMDDYYYY(loc.arrival_date);
-  const departure = new Date(arrival);
-  departure.setDate(departure.getDate() + loc.nights);
-
-  console.log(`🗓 ${loc.arrival_date} → arrival: ${arrival.toDateString()}, departure: ${departure.toDateString()}`);
-    
-  return today >= arrival && today < departure || arrival >= today;
-}).slice(0, 4);
-
-  console.log("📌 Upcoming locations shown in weather grid:", upcoming.map(loc => loc.arrival_date));
-
+    const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
+    const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
+    const departure = new Date(arrival);
+    departure.setUTCDate(departure.getUTCDate() + loc.nights);
+    return today >= arrival && today < departure || arrival >= today;
+  }).slice(0, 4);
 
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
