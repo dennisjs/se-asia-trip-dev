@@ -49,7 +49,7 @@ window.initLightbox = function(photoList, startIndex = 0, dayLabel = "") {
         break;
     }
   }
-
+  
   document.addEventListener("keydown", handleKeydown);
 
   overlay.querySelector(".lightbox-close").onclick = () => {

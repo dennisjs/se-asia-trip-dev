@@ -412,5 +412,20 @@ nav a {
   right: 10px;
 }
 
+.placeholder-box {
+  background: #e3f2fd;
+  padding: 1.25rem 1.5rem;
+  margin: 0 2rem 1.5rem 2rem;  /* match itinerary item spacing */
+  max-width: none;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+
+
 
 

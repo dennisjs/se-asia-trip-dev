@@ -270,7 +270,7 @@
   {
     "day": "Day 6",
     "date": "06-07-25",
-    "description": "What a spectacular and challenging day.  I took a guided overnight tour that consisted of 3 parts.  A hike to the Karen tribal village in the mountains outside of Chiang Mai, an overnight stay and a return hike, then a visit to an elephant refuge and finally a float down this beautiful river on a bamboo raft.  That last one was super fun but no pics as I was worried about the phone.  This day was very challenging due to the combination of very significant heat and very steep climbs.  But we were rewarded with beautiful jungle scenery and rice paddies, an amazing waterfall, and finally the tribal village of the Karen people.  THey were very friendly and while very, very rustic the stay was a nice one.",
+    "description": "What a spectacular and challenging day.  I took a guided overnight tour that consisted of 3 parts.  A hike to a Karen Hill Tribe village in the mountains outside of Chiang Mai, an overnight stay and a return hike, then a visit to an elephant refuge and finally a float down this beautiful river on a bamboo raft.  That last one was super fun but no pics as I was worried about the phone.  This day was very challenging due to the combination of very significant heat and very steep climbs.  But we were rewarded with beautiful jungle scenery and rice paddies, an amazing waterfall, and finally the tribal village of the Karen people.  THey were very friendly and while very, very rustic the stay was a nice one.",
     "weather": "89\u00b0F, Broken clouds, 54% humidity",
     "photos": [
       {
@@ -430,6 +430,174 @@
         "caption": "There was an elephant \"sanctuary\" tagged to the end of the trip.  I mean it is was it is but it was still nice to see an elephant up so close",
         "lat": 18.662847222222222,
         "lng": 98.65640277777779
+      },
+      {
+        "id": "IMG_2955.png",
+        "caption": "WTF - at the Chiang Mai Sunday Night Market - a MASSIVE street market, miles long",
+        "lat": 18.78851388888889,
+        "lng": 98.98466388888889
+      }
+    ]
+  },
+  {
+    "day": "Day 8",
+    "date": "06-09-25",
+    "description": "Not too many photos since this was a travel day.  About 4 hours in an utterly packed van filled with young folk and luggage.  It's a fairly dangerous 2-lane road to Pai, filled with huge trucks and blind turns and it rained during the 2nd half so it was a little but of a knuckle-biter.  Pai, as I'm discovering is very, very much a young person town.  And when people say it's a hippie place they really just mean it's a place for getting high.  O guess I should have realized but I just assumed that was like a part of it while I think it's really the main part of it.  So...  I still need to see what kinds of activities more my speed are available - that's my job tomorrow.  I may only be here 3 nights or so - we'll see.",
+    "weather": "89\u00b0F, Few clouds, 40% humidity",
+    "photos": [
+      {
+        "id": "IMG_2981.png",
+        "caption": "More Khao Soi - more good taste",
+        "lat": 18.795275,
+        "lng": 98.98331388888889
+      },
+      {
+        "id": "IMG_2982.png",
+        "caption": "On the drive from Chiang Mai to Pai",
+        "lat": 19.227166666666665,
+        "lng": 98.67016666666667
+      },
+      {
+        "id": "IMG_2987.png",
+        "caption": "Pai at night",
+        "lat": 19.35896388888889,
+        "lng": 98.44344444444445
+      },
+      {
+        "id": "IMG_2988.png",
+        "caption": "Across the street from my hotel:  3 weed stores side-by-side",
+        "lat": 19.358575000000002,
+        "lng": 98.44478611111111
+      },
+      {
+        "id": "IMG_2989.png",
+        "caption": "My bungalow - it's quite nice",
+        "lat": 19.358155555555555,
+        "lng": 98.44573333333334
+      }
+    ]
+  },
+  {
+    "day": "Day 9",
+    "date": "06-10-25",
+    "description": "It was a slow day today as I really just wanted to relax.  So it's another slow photo day.  Did a little research for tomorrow and for the next transport.  Planning some tours tomorrow.",
+    "weather": "88\u00b0F, Overcast clouds, 62% humidity",
+    "photos": [
+      {
+        "id": "IMG_2991.png",
+        "caption": "Place I'm staying at is probably the nicest one so far",
+        "lat": 19.358380555555556,
+        "lng": 98.445075
+      },
+      {
+        "id": "IMG_2992.png",
+        "caption": "Koi pond at my hotel",
+        "lat": 19.358363888888892,
+        "lng": 98.445075
+      },
+      {
+        "id": "IMG_3006.png",
+        "caption": "Another street shot in Pai",
+        "lat": 19.358936111111113,
+        "lng": 98.44359722222222
+      }
+    ]
+  },
+  {
+    "day": "Day 10",
+    "date": "06-11-25",
+    "description": "Did the standard 1/2-day tour in these parts.  A few lame stops but it ended with a few great ones.  There are some really beautiful areas around here and the intermittent rains added to the mood of the place.",
+    "weather": "74\u00b0F, Overcast clouds, 95% humidity",
+    "photos": [
+      {
+        "id": "IMG_3015.png",
+        "caption": "Guard dog to the giant buddha.  He's got a little bumhole.",
+        "lat": 19.34997222222222,
+        "lng": 98.45504722222222
+      },
+      {
+        "id": "IMG_3030.png",
+        "caption": "One of the overlooks near Pai",
+        "lat": 19.369055555555555,
+        "lng": 98.39551666666668
+      },
+      {
+        "id": "IMG_3058.png",
+        "caption": "Heading to the requisite waterfall stop",
+        "lat": 19.320780555555555,
+        "lng": 98.40434166666667
+      },
+      {
+        "id": "IMG_3065.png",
+        "caption": "2 minutes after I paid to get in and got to the waterfall, the head honcho came up, waving crazily at these 2 guys on the opposite bank.  It had been raining hard and the water was very rapidly rising.  We all had to get out of there which was a little spooky.",
+        "lat": 19.32067222222222,
+        "lng": 98.40445833333334
+      },
+      {
+        "id": "IMG_3078.png",
+        "caption": "Puppers at the coffee shop stop",
+        "lat": 19.319544444444443,
+        "lng": 98.39951388888889
+      },
+      {
+        "id": "IMG_3081.png",
+        "caption": "Another puppers at the coffee shop stop.  Puppers and coffee - what else can you ask for?",
+        "lat": 19.319647222222223,
+        "lng": 98.39971111111112
+      },
+      {
+        "id": "IMG_3083.png",
+        "caption": "The dogs here are fearless and commonly lay in the road",
+        "lat": 19.31965,
+        "lng": 98.39953611111112
+      },
+      {
+        "id": "IMG_3086.png",
+        "caption": "This place was known as \"Bamboo Bridge\".  It was a series of well, bamboo bridges, with fantastic views all around",
+        "lat": 19.3227,
+        "lng": 98.39428611111111
+      },
+      {
+        "id": "IMG_3093.png",
+        "caption": "A hut sort of thing at the bamboo bridges",
+        "lat": 19.322575,
+        "lng": 98.39368333333334
+      },
+      {
+        "id": "IMG_3100.png",
+        "caption": "Rice paddies at Bamboo Bridge",
+        "lat": 19.322644444444443,
+        "lng": 98.39323333333334
+      },
+      {
+        "id": "IMG_3108.png",
+        "caption": "More rice paddies at Bamboo Bridge",
+        "lat": 19.32243888888889,
+        "lng": 98.39305
+      },
+      {
+        "id": "IMG_3118.png",
+        "caption": "Rice paddies, etc. at the bamboo bridges",
+        "lat": 19.321930555555554,
+        "lng": 98.39175277777778
+      },
+      {
+        "id": "IMG_3124.png",
+        "caption": "Temple at the bamboo bridges",
+        "lat": 19.322430555555556,
+        "lng": 98.38807777777778
+      },
+      {
+        "id": "IMG_3141.png",
+        "caption": "Pai Canyon, where we were to watch the sunset.  There was to be no sunset, in large part because our tour made us leave before the sunset and also due to the rainy skies",
+        "lat": 19.30213611111111,
+        "lng": 98.45465
+      },
+      {
+        "id": "IMG_3147.png",
+        "caption": "Pai Canyon",
+        "lat": 19.303508333333333,
+        "lng": 98.45311666666667
       }
     ]
   }

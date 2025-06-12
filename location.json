@@ -1,15 +1,30 @@
 [
   {
+    "place": "Chiang Rai",
+    "lat": 19.91,
+    "lng": 99.84,
+    "arrival_date": "06-12-25",
+    "departure_date": ""
+  },
+  {
+    "place": "Pai",
+    "lat": 19.36,
+    "lng": 98.45,
+    "arrival_date": "06-09-25",
+    "departure_date": "06-12-25"
+  },
+  {
     "place": "Chiang Mai",
     "lat": 18.787,
     "lng": 98.982,
-    "arrival_date": "06-05-25"
+    "arrival_date": "06-05-25",
+    "departure_date": "06-09-25"
   },
   {
     "place": "Bangkok",
     "lat": 13.7417,
     "lng": 100.5602,
     "arrival_date": "06-02-25",
-    "departure_date": "06-05-25"
+    "departure_date": "06-12-25"
   }
 ]
