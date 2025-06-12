@@ -1,5 +1,12 @@
 [
   {
+    "place": "Chiang Rai",
+    "lat": 19.91,
+    "lng": 99.84,
+    "arrival_date": "06-12-25",
+    "departure_date": ""
+  },
+  {
     "place": "Pai",
     "lat": 19.36,
     "lng": 98.45,
@@ -18,6 +25,6 @@
     "lat": 13.7417,
     "lng": 100.5602,
     "arrival_date": "06-02-25",
-    "departure_date": "06-09-25"
+    "departure_date": "06-12-25"
   }
 ]
