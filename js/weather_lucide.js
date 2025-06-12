@@ -166,7 +166,7 @@ async function loadGroupedCalendarForecast() {
     console.log(`🔍 Checking forecast for: ${date.toDateString()}`);
 
     const matched = itinerary.find(loc => {
-      const arrival = new Date(loc.arrival_date); // override Date.UTC version
+      const arrival = parseYYYYMMDD(loc.arrival_date);
       const departure = new Date(arrival);
       departure.setDate(departure.getDate() + loc.nights);
       console.log(`📅 Matching against: ${loc.location} | ${arrival.toDateString()} to ${departure.toDateString()}`);
