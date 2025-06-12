@@ -158,11 +158,10 @@ async function loadGroupedCalendarForecast() {
   const groupedForecasts = {};
 
   for (let i = 0; i < forecastDays; i++) {
-    
-    console.log(`🔍 Checking forecast for: ${date.toDateString()}`);
-
     const date = new Date(forecastBaseDate);
     date.setDate(forecastBaseDate.getDate() + i);
+
+    console.log(`🔍 Checking forecast for: ${date.toDateString()}`);
 
     const matched = itinerary.find(loc => {
       const arrival = new Date(loc.arrival_date); // override Date.UTC version
