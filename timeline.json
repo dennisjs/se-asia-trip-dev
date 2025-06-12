@@ -600,5 +600,61 @@
         "lng": 98.45311666666667
       }
     ]
+  },
+  {
+    "day": "Day 11",
+    "date": "06-12-25",
+    "description": "Another travel day via minivan.  Had to backtrack to Chiang Mai then it was on to Chiang Rai.  Oddly enough, the prior city I was in was Pai and not Chiang Pai.  Why?  Maybe Chiang just wasn't in the picture for the founding.  Or maybe... we just shouldn't ask such questions.",
+    "weather": "86\u00b0F, Scattered clouds, 80% humidity",
+    "photos": [
+      {
+        "id": "IMG_3160.png",
+        "caption": "The heavy rains yesterday took their toll on the ride out of Pai.  Mountainsides lost their grip and tumbled onto the 2-lane mountain road",
+        "lat": 19.26861111111111,
+        "lng": 98.63020277777777
+      },
+      {
+        "id": "IMG_3163.png",
+        "caption": "Boulder + mud = boulder on road",
+        "lat": 19.2493,
+        "lng": 98.64266944444445
+      },
+      {
+        "id": "IMG_3169.png",
+        "caption": "A very new buddhist temple in Chiang Rai - super awesome looking",
+        "lat": 19.824244444444446,
+        "lng": 99.76364166666667
+      },
+      {
+        "id": "IMG_3172.png",
+        "caption": "Temple detail",
+        "lat": 19.82422777777778,
+        "lng": 99.76332777777777
+      },
+      {
+        "id": "IMG_3180.png",
+        "caption": "Temple",
+        "lat": 19.824094444444444,
+        "lng": 99.763175
+      },
+      {
+        "id": "IMG_3182.png",
+        "caption": "More temple detail",
+        "lat": 19.823819444444442,
+        "lng": 99.76312222222222
+      },
+      {
+        "id": "IMG_3187.png",
+        "caption": "Detail of a gold temple on the same property",
+        "lat": 19.823230555555554,
+        "lng": 99.76269444444445
+      },
+      {
+        "id": "IMG_3191.png",
+        "caption": "Super cool statue representing who knows what.  Notice the claw coming out at the edge of the water channel.",
+        "lat": 19.824255555555556,
+        "lng": 99.763925
+      }
+    ]
   }
 ]
