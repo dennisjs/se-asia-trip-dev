@@ -127,10 +127,10 @@ async function loadGroupedCalendarForecast() {
   const itinerary = await res.json();
 
   const today = new Date();
-  const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
+  const [yyyy0, mm0, dd0] = itinerary[0].arrival_date.split("-").map(Number);
   const itineraryStart = new Date(yyyy0, mm0 - 1, dd0);  // local time
   const lastStop = itinerary[itinerary.length - 1];
-  const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
+  const [yyyyEnd, mmEnd, ddEnd] = lastStop.arrival_date.split("-").map(Number);
   const itineraryEnd = new Date(yyyyEnd, mmEnd - 1, ddEnd);
   itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
