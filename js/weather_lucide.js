@@ -157,6 +157,8 @@ async function loadGroupedCalendarForecast() {
   const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
   const groupedForecasts = {};
 
+  console.log("🧭 forecastBaseDate:", forecastBaseDate.toString());
+
   for (let i = 0; i < forecastDays; i++) {
     const date = new Date(forecastBaseDate);
     date.setDate(forecastBaseDate.getDate() + i);
