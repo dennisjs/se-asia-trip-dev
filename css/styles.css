@@ -492,6 +492,10 @@ nav a {
     height: auto;
   }
 
+  #map-container {
+    display: none; /* ← ADD THIS LINE */
+  }
+
   .placeholder-box {
     display: block;
     margin: 1rem auto;
@@ -506,6 +510,7 @@ nav a {
     box-sizing: border-box;
   }
 }
+
 
 
 
