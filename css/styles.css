@@ -432,26 +432,35 @@ nav a {
 
   .nav-wrapper {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+    gap: 0.25rem;
+    padding: 0.3rem 0;
   }
 
   .nav-wrapper h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin: 0;
     line-height: 1.2;
   }
 
   .nav-and-buttons {
     flex-direction: column;
-    gap: 0.4rem;
     width: 100%;
     align-items: center;
+    gap: 0.4rem;
   }
 
   nav {
-    flex-direction: column;
-    gap: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem; /* row gap, column gap */
+    max-width: 90%;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.95rem;
   }
 
   .button-row {
@@ -467,6 +476,7 @@ nav a {
     font-size: 0.85rem;
   }
 }
+
 
 
 
