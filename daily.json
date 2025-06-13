@@ -209,5 +209,15 @@
       }
     ],
     "description": "No vids or anything else really, so thought I'd just post a short conceptual track I wrote 3 years ago.  I very much like it."
+  },
+  "2025-06-13": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/mobile_site.jpeg",
+        "caption": "Better!"
+      }
+    ],
+    "description": "The mobile version of this website is better now.  Not perfect and I'm still working on a few things but the main page and photos at least should be fairly workable."
   }
 }
