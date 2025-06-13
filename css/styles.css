@@ -412,115 +412,19 @@ nav a {
   right: 10px;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 0.3rem 1rem;
-  }
-
-  .nav-wrapper {
-    flex-direction: column;
-    gap: 0.25rem;
-    padding: 0.3rem 0;
-  }
-
-  .nav-wrapper h1 {
-    font-size: 1.5rem;
-    margin: 0;
-    line-height: 1.2;
-  }
-
-  .nav-and-buttons {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem 2rem; /* row gap, column gap */
-    max-width: 90%;
-  }
-
-  nav a {
-    margin: 0;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.95rem;
-  }
-
-  .button-row {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.5rem;
-    margin: 0;
-    padding: 0.25rem 0;
-  }
-
-  .thumb-toggle-btn {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.85rem;
-  }
-
-  .overlay {
-    top: 120px; /* adjust to clear the taller mobile header */
-  }
-
-  #itinerary-left-wrapper {
-    width: 100%;
-    padding: 0 1rem;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .itinerary-scroll {
-    width: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  .timeline-entry {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .placeholder-box {
-    margin: 1rem auto;
-    max-width: 100%;
-  }
+.placeholder-box {
+  background: #e3f2fd;
+  padding: 1.25rem 1.5rem;
+  margin: 0 2rem 1.5rem 2rem;  /* match itinerary item spacing */
+  max-width: none;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.6;
+  word-wrap: break-word;
 }
 
-@media (max-width: 768px) {
-  #split-container {
-    display: block; /* override desktop flex */
-    height: auto;
-  }
-
-  #itinerary-left-wrapper,
-  #map-container {
-    width: 100%;
-    height: auto;
-  }
-
-  #map-container {
-    display: none; /* hide map on mobile */
-  }
-
-  #itinerary-left-wrapper .placeholder-box {
-    margin: 1rem auto;
-    max-width: 90%;
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: left;
-  }
-}
 
 
 
