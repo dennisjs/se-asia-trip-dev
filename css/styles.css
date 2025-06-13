@@ -501,6 +501,11 @@ nav a {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  .placeholder-box {
+    margin: 1rem auto;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 768px) {
