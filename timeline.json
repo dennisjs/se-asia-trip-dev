@@ -654,6 +654,50 @@
         "caption": "Super cool statue representing who knows what.  Notice the claw coming out at the edge of the water channel.",
         "lat": 19.824255555555556,
         "lng": 99.763925
+      },
+      {
+        "id": "IMG_3194.png",
+        "caption": "The apparently famous clock tour in Chiang Rai.  This thing has an evening light show every hour.  I hate to spoil the city pride about this thing but it's a pretty lame-ass light show.",
+        "lat": 19.907180555555556,
+        "lng": 99.83114722222221
+      },
+      {
+        "id": "IMG_3195.png",
+        "caption": "I give you the band \"Ebola\" - that's a pretty baller name.",
+        "lat": 19.90712222222222,
+        "lng": 99.83084166666666
+      },
+      {
+        "id": "IMG_3202.png",
+        "caption": "It wasn't crazy hot but with the very high humidity it doesn't take much to get dehydrated.  This is me re-hydrating right before the heavens opened up.",
+        "lat": 19.910238888888887,
+        "lng": 99.8355111111111
+      }
+    ]
+  },
+  {
+    "day": "Day 12",
+    "date": "06-13-25",
+    "description": "Mostly a chill and organizing day.  Got my passport photos for my upcoming Laos border crossing.  Booked the standard Chiang Rai all-day tour for tomorrow.  And booked my pickup / border crossing / slow-boat ride to my first destination in Laos on Sunday.  It's a 2 day boat ride (I mean, they call it the slow boat) down the Mekong River with an overnight stay along the way.",
+    "weather": "88\u00b0F, Few clouds, 74% humidity",
+    "photos": [
+      {
+        "id": "IMG_3206.png",
+        "caption": "The Pink Milk Cheese sounds amazing!",
+        "lat": 19.900752777777775,
+        "lng": 99.83261944444445
+      },
+      {
+        "id": "IMG_3224.png",
+        "caption": "Roti Bom - something I've dreamed about for years since having in Malaysia many, many years ago.  Finally!  It's a dessert thing with sweetened condensed milk added and in this case fresh banana.",
+        "lat": 19.90694722222222,
+        "lng": 99.83010833333333
+      },
+      {
+        "id": "IMG_3225.png",
+        "caption": "Roti Bom with banana (they don't use the \"Bom\" here - but that's how I've always known it from Malaysia)",
+        "lat": 19.906980555555553,
+        "lng": 99.83028333333333
       }
     ]
   }
