@@ -194,5 +194,20 @@
       }
     ],
     "description": "Some vids from today"
+  },
+  "2025-06-12": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IntimusDeo.jpg",
+        "caption": ""
+      },
+      {
+        "type": "audio",
+        "src": "media/IntimusDeo.mp3",
+        "caption": "Intiumus Deo"
+      }
+    ],
+    "description": "No vids or anything else really, so thought I'd just post a short conceptual track I wrote 3 years ago.  I very much like it."
   }
 }

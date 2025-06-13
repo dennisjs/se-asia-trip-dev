@@ -1,3 +1,10 @@
+const today = new Date();
+
+function parseYYYYMMDD(dateStr) {
+  const [yyyy, mm, dd] = dateStr.split("-").map(Number);
+  return new Date(yyyy, mm - 1, dd); // months are 0-indexed
+}
+
 async function updateWeatherBox(lat, lon, locationName, weatherBox) {
   const url = `${window.CONFIG?.OPENWEATHER_KEY}?lat=${lat}&lon=${lon}`;
 
@@ -7,7 +14,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
     const today = data.daily?.[0];
 
     if (!today) {
-      console.warn("No daily forecast returned");
       return;
     }
 
@@ -17,7 +23,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     if (!weatherBox) {
-      console.warn("weatherBox is undefined");
       return;
     }
     weatherBox.innerHTML = `
@@ -26,7 +31,6 @@ async function updateWeatherBox(lat, lon, locationName, weatherBox) {
       ${temp}°F – ${desc}<br>
     `;
   } catch (err) {
-    console.error("Weather fetch failed:", err);
   }
 }
 
@@ -66,12 +70,14 @@ async function loadItineraryWeatherTable() {
   const today = new Date();
 
   const upcoming = itinerary.filter(loc => {
-    const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
-    const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-    const departure = new Date(arrival);
-    departure.setUTCDate(departure.getUTCDate() + loc.nights);
-    return today >= arrival && today < departure || arrival >= today;
-  }).slice(0, 4);
+  const arrival = parseYYYYMMDD(loc.arrival_date);
+
+  const departure = new Date(arrival);
+  departure.setDate(departure.getDate() + loc.nights);
+
+    
+  return today >= arrival && today < departure || arrival >= today;
+}).slice(0, 4);
 
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
@@ -113,12 +119,12 @@ async function loadGroupedCalendarForecast() {
   const itinerary = await res.json();
 
   const today = new Date();
-  const [mm0, dd0, yyyy0] = itinerary[0].arrival_date.split("-").map(Number);
-  const itineraryStart = new Date(Date.UTC(yyyy0, mm0 - 1, dd0));
+  const [yyyy0, mm0, dd0] = itinerary[0].arrival_date.split("-").map(Number);
+  const itineraryStart = new Date(yyyy0, mm0 - 1, dd0);  // local time
   const lastStop = itinerary[itinerary.length - 1];
-  const [mmEnd, ddEnd, yyyyEnd] = lastStop.arrival_date.split("-").map(Number);
-  const itineraryEnd = new Date(Date.UTC(yyyyEnd, mmEnd - 1, ddEnd));
-  itineraryEnd.setUTCDate(itineraryEnd.getUTCDate() + lastStop.nights);
+  const [yyyyEnd, mmEnd, ddEnd] = lastStop.arrival_date.split("-").map(Number);
+  const itineraryEnd = new Date(yyyyEnd, mmEnd - 1, ddEnd);
+  itineraryEnd.setDate(itineraryEnd.getDate() + lastStop.nights);
 
   const forecastDays = 5;
   const gridContainer = document.getElementById("calendarGridGrouped");
@@ -143,15 +149,16 @@ async function loadGroupedCalendarForecast() {
   const forecastBaseDate = today < itineraryStart ? itineraryStart : today;
   const groupedForecasts = {};
 
+
   for (let i = 0; i < forecastDays; i++) {
     const date = new Date(forecastBaseDate);
     date.setDate(forecastBaseDate.getDate() + i);
 
+
     const matched = itinerary.find(loc => {
-      const [mm, dd, yyyy] = loc.arrival_date.split("-").map(Number);
-      const arrival = new Date(Date.UTC(yyyy, mm - 1, dd));
-      const departure = new Date(Date.UTC(yyyy, mm - 1, dd));
-      departure.setUTCDate(departure.getUTCDate() + loc.nights);
+      const arrival = parseYYYYMMDD(loc.arrival_date);
+      const departure = new Date(arrival);
+      departure.setDate(departure.getDate() + loc.nights);
       return date >= arrival && date < departure;
     });
 
