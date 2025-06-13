@@ -1,6 +1,5 @@
 const today = new Date();
 
-
 function parseYYYYMMDD(dateStr) {
   const [yyyy, mm, dd] = dateStr.split("-").map(Number);
   return new Date(yyyy, mm - 1, dd); // months are 0-indexed
@@ -69,6 +68,7 @@ async function loadItineraryWeatherTable() {
   const res = await fetch(`itinerary.json?v=${Date.now()}`);
   const itinerary = await res.json();
   const today = new Date();
+
   const upcoming = itinerary.filter(loc => {
   const arrival = parseYYYYMMDD(loc.arrival_date);
 
@@ -78,8 +78,6 @@ async function loadItineraryWeatherTable() {
     
   return today >= arrival && today < departure || arrival >= today;
 }).slice(0, 4);
-
-
 
   const table = document.getElementById("weatherGridTable");
   table.innerHTML = "";
