@@ -1,96 +1,138 @@
 
+/* Base layout styles */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fa;
+  overflow-x: hidden;
 }
 
 header {
-  background-color: white;
-  padding: 0.5rem 1rem;
-  position: sticky;
+  background: white;
+  padding: 0.2rem 1rem;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-h1 {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 2.5rem;
-  text-align: center;
+header h1 {
+  margin: 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.placeholder-box {
   margin: 1rem auto;
+  max-width: 750px;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: left;
 }
 
+/* Itinerary split view */
 #split-container {
   display: flex;
-  justify-content: center;
+  margin-top: 5rem;
   padding: 1rem;
-  max-width: 1200px;
-  margin: auto;
+  gap: 1rem;
 }
 
 #itinerary-left-wrapper {
   flex: 1;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-.placeholder-box {
-  background: #e6f2ff;
-  padding: 1rem;
-  border-radius: 12px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 100%;
-}
-
-.timeline-entry {
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-.timeline-entry h3 {
-  color: #33adff;
-  margin-top: 0;
-}
-
-.timeline-entry ul {
-  padding-left: 1.5rem;
 }
 
 #map-container {
   flex: 1;
-  min-width: 300px;
-  height: 500px;
-  margin-left: 1rem;
+  height: 600px;
 }
 
+/* Responsive styling for mobile */
 @media (max-width: 768px) {
   #split-container {
     display: block;
-    padding: 1rem;
+    height: auto;
+  }
+
+  #itinerary-left-wrapper, #map-container {
+    width: 100%;
+    height: auto;
   }
 
   #map-container {
     display: none;
   }
 
-  #itinerary-left-wrapper {
-    width: 100%;
-    padding: 0;
-    align-items: center;
-  }
-
-  .placeholder-box, .timeline-entry {
+  .placeholder-box {
     margin: 1rem auto;
-    max-width: 95%;
-    width: auto;
+    max-width: 90%;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 1rem;
+    border-radius: 12px;
     text-align: left;
     box-sizing: border-box;
+    width: auto;
+  }
+
+  .nav-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .button-row {
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0.5rem;
+    transform: none;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
   }
 }
