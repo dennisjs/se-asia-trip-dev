@@ -510,33 +510,31 @@ nav a {
 
 @media (max-width: 768px) {
   #split-container {
-    flex-direction: column;
+    display: block; /* override desktop flex */
     height: auto;
   }
 
-  #itinerary-left-wrapper, #map-container {
+  #itinerary-left-wrapper,
+  #map-container {
     width: 100%;
     height: auto;
   }
 
   #map-container {
-    display: none; /* ← ADD THIS LINE */
+    display: none; /* hide map on mobile */
   }
 
-  .placeholder-box {
-    display: block;
+  #itinerary-left-wrapper .placeholder-box {
     margin: 1rem auto;
-    padding: 1rem;
     max-width: 90%;
-    width: auto;
     font-size: 1rem;
     line-height: 1.6;
+    padding: 1rem;
+    border-radius: 12px;
     text-align: left;
-    white-space: normal;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
   }
 }
+
 
 
 
