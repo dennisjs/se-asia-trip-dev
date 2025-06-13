@@ -493,9 +493,13 @@ nav a {
   }
 
   .placeholder-box {
-    margin: 1rem;
+    margin: 1rem auto;
     font-size: 0.95rem;
     line-height: 1.5;
+    max-width: 90%;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
   }
 }
 
