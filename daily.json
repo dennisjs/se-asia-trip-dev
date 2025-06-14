@@ -219,5 +219,15 @@
       }
     ],
     "description": "The mobile version of this website is better now.  Not perfect and I'm still working on a few things but the main page and photos at least should be fairly workable."
+  },
+  "2025-06-14": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IMG_3270.png",
+        "caption": "Art Cave"
+      }
+    ],
+    "description": "I need to postpone a proper update as I had a very long day and just ran out of time.  It's a 4:50am wake-up tomorrow so must get to bed!"
   }
 }
