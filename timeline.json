@@ -654,6 +654,366 @@
         "caption": "Super cool statue representing who knows what.  Notice the claw coming out at the edge of the water channel.",
         "lat": 19.824255555555556,
         "lng": 99.763925
+      },
+      {
+        "id": "IMG_3194.png",
+        "caption": "The apparently famous clock tour in Chiang Rai.  This thing has an evening light show every hour.  I hate to spoil the city pride about this thing but it's a pretty lame-ass light show.",
+        "lat": 19.907180555555556,
+        "lng": 99.83114722222221
+      },
+      {
+        "id": "IMG_3195.png",
+        "caption": "I give you the band \"Ebola\" - that's a pretty baller name.",
+        "lat": 19.90712222222222,
+        "lng": 99.83084166666666
+      },
+      {
+        "id": "IMG_3202.png",
+        "caption": "It wasn't crazy hot but with the very high humidity it doesn't take much to get dehydrated.  This is me re-hydrating right before the heavens opened up.",
+        "lat": 19.910238888888887,
+        "lng": 99.8355111111111
+      }
+    ]
+  },
+  {
+    "day": "Day 12",
+    "date": "06-13-25",
+    "description": "Mostly a chill and organizing day.  Got my passport photos for my upcoming Laos border crossing.  Booked the standard Chiang Rai all-day tour for tomorrow.  And booked my pickup / border crossing / slow-boat ride to my first destination in Laos on Sunday.  It's a 2 day boat ride (I mean, they call it the slow boat) down the Mekong River with an overnight stay along the way.",
+    "weather": "88\u00b0F, Few clouds, 74% humidity",
+    "photos": [
+      {
+        "id": "IMG_3206.png",
+        "caption": "The Pink Milk Cheese sounds amazing!",
+        "lat": 19.900752777777775,
+        "lng": 99.83261944444445
+      },
+      {
+        "id": "IMG_3224.png",
+        "caption": "Roti Bom - something I've dreamed about for years since having in Malaysia many, many years ago.  Finally!  It's a dessert thing with sweetened condensed milk added and in this case fresh banana.",
+        "lat": 19.90694722222222,
+        "lng": 99.83010833333333
+      },
+      {
+        "id": "IMG_3225.png",
+        "caption": "Roti Bom with banana (they don't use the \"Bom\" here - but that's how I've always known it from Malaysia)",
+        "lat": 19.906980555555553,
+        "lng": 99.83028333333333
+      }
+    ]
+  },
+  {
+    "day": "Day 13",
+    "date": "06-14-25",
+    "description": "It was a very long tour day with some really great stops.  Re-visited the White Temple which still just blows me away.  The artist who made this is just a genius.  There was a gallery of his stuff that was also incredible.  And the big bonus was a section I missed the first time called The Art Cave (or Art Garden - I think Cave...).  Just phenomenal.  This cave had so much detail with cool lighting, sculptures, music.  I found it hard to leave.  Then we hit the Blue Temple - another very cool, very modern temple not too dissimilar from the White Temple style.  Then the Black House or something like that which was an artist's (since passed) installation on this large property.  A lot of dark themes and unusual furniture and sculptures.  Another great installation.  Then to the tea farm which was pretty neato - Oolong tea tasting on a beautiful property.  Then the Tall Neck Village - which honestly was a little uncomfortable - but these people rely on this income as they are refugees from Myanmar.  You've surely seen at some point a documentary where the women of this tribe wear brass rings stacked on their necks that elongates them.  The older women still had these as did a few of the younger ones.  Felt weird taking pics so I didn't.  It was nice as there wasn't really a crowd and children were around playing their normal children games so the vibe was mostly fine.  Then the Golden Triangle which is the intersection of Thailand, Myanmar, and Laos.  Oh, and the Opium Museum which was sorta interesting - especially in that the area we spent most of the day in used to be predominantly occupied by opium fields.  Finally a quick stop at the Saturday Night Market in Chiang Rai, which I can still hear as I type this right before bed.  I have a very early morning tomorrow as I start my journey to Laos.  Should be an interesting one and it just might not be all that enjoyable.  Let's see how it goes!",
+    "weather": "89\u00b0F, Scattered clouds, 69% humidity",
+    "photos": [
+      {
+        "id": "IMG_3234.png",
+        "caption": "We are back at the White Temple today!  But no more white temple photos.  There were some amazing other things there I missed the 1st time!",
+        "lat": 19.823775,
+        "lng": 99.76235277777778
+      },
+      {
+        "id": "IMG_3237.png",
+        "caption": "The Art Garden (exterior).  I was blown away by this entire installation",
+        "lat": 19.823847222222224,
+        "lng": 99.76212222222222
+      },
+      {
+        "id": "IMG_3239.png",
+        "caption": "TMNT in the Art Garden (exterior)",
+        "lat": 19.823841666666667,
+        "lng": 99.76210833333333
+      },
+      {
+        "id": "IMG_3247.png",
+        "caption": "Aliens! Art Garden (exterior)",
+        "lat": 19.82387222222222,
+        "lng": 99.76211666666667
+      },
+      {
+        "id": "IMG_3250.png",
+        "caption": "This is the Art Cave which is one of the cooler things I've seen in awhile",
+        "lat": 19.823769444444444,
+        "lng": 99.76214722222223
+      },
+      {
+        "id": "IMG_3256.png",
+        "caption": "More Art Cave",
+        "lat": 19.823441666666668,
+        "lng": 99.762275
+      },
+      {
+        "id": "IMG_3257.png",
+        "caption": "More AC",
+        "lat": 19.823441666666668,
+        "lng": 99.762275
+      },
+      {
+        "id": "IMG_3258.png",
+        "caption": "MOAR AC",
+        "lat": 19.823441666666668,
+        "lng": 99.762275
+      },
+      {
+        "id": "IMG_3260.png",
+        "caption": "No, really, we need some AC in here it's pretty dang hot",
+        "lat": 19.823455555555554,
+        "lng": 99.76228333333333
+      },
+      {
+        "id": "IMG_3264.png",
+        "caption": "AC",
+        "lat": 19.82341111111111,
+        "lng": 99.76223055555556
+      },
+      {
+        "id": "IMG_3265.png",
+        "caption": "Not sure if supposed to be Chucky?",
+        "lat": 19.82341111111111,
+        "lng": 99.76223055555556
+      },
+      {
+        "id": "IMG_3266.png",
+        "caption": "Shark!",
+        "lat": 19.823366666666665,
+        "lng": 99.76217777777778
+      },
+      {
+        "id": "IMG_3267.png",
+        "caption": "Rad AC hallway.  And there was cool music throughout - check the vids!",
+        "lat": 19.823366666666665,
+        "lng": 99.76217777777778
+      },
+      {
+        "id": "IMG_3273.png",
+        "caption": "AC",
+        "lat": 19.823697222222222,
+        "lng": 99.7639
+      },
+      {
+        "id": "IMG_3279.png",
+        "caption": "I seriously thought this was anothe Art Cave thing when outside but then it just every so slightly moved its head",
+        "lat": 19.82347222222222,
+        "lng": 99.76225277777777
+      },
+      {
+        "id": "IMG_3283.png",
+        "caption": "The Blue Temple - also very modern and very cool",
+        "lat": 19.923472222222223,
+        "lng": 99.84200277777778
+      },
+      {
+        "id": "IMG_3287.png",
+        "caption": "Blue Temple sculpture",
+        "lat": 19.923275,
+        "lng": 99.84174999999999
+      },
+      {
+        "id": "IMG_3291.png",
+        "caption": "Blue Temple",
+        "lat": 19.923397222222224,
+        "lng": 99.84129999999999
+      },
+      {
+        "id": "IMG_3292.png",
+        "caption": "Rad Blue Temple sculpture",
+        "lat": 19.923294444444444,
+        "lng": 99.84120277777777
+      },
+      {
+        "id": "IMG_3294.png",
+        "caption": "BT!",
+        "lat": 19.923297222222224,
+        "lng": 99.84124722222222
+      },
+      {
+        "id": "IMG_3299.png",
+        "caption": "BbbbbTttttt",
+        "lat": 19.923172222222224,
+        "lng": 99.84105
+      },
+      {
+        "id": "IMG_3300.png",
+        "caption": "bt",
+        "lat": 19.92336388888889,
+        "lng": 99.84147777777777
+      },
+      {
+        "id": "IMG_3301.png",
+        "caption": "I forgot the name of this place - something like Black House.  It's an art installation across a property from a single artist.  Very dark and very cool",
+        "lat": 19.992075,
+        "lng": 99.86038888888888
+      },
+      {
+        "id": "IMG_3302.png",
+        "caption": "Dark house with very awesome natural rock sculptures",
+        "lat": 19.99202777777778,
+        "lng": 99.86052777777778
+      },
+      {
+        "id": "IMG_3303.png",
+        "caption": "Inside one of the strange buildings on the site",
+        "lat": 19.99107777777778,
+        "lng": 99.8608861111111
+      },
+      {
+        "id": "IMG_3316.png",
+        "caption": "This is a very cute cat pic.",
+        "lat": 19.99207777777778,
+        "lng": 99.86147222222222
+      },
+      {
+        "id": "IMG_3317.png",
+        "caption": "Dark house",
+        "lat": 19.99214166666667,
+        "lng": 99.86111388888888
+      },
+      {
+        "id": "IMG_3319.png",
+        "caption": "MOAR Dark House",
+        "lat": 19.99208888888889,
+        "lng": 99.86090833333333
+      },
+      {
+        "id": "IMG_3322.png",
+        "caption": "So many awesome carvings on the doors to this building",
+        "lat": 19.992061111111113,
+        "lng": 99.86045833333333
+      },
+      {
+        "id": "IMG_3325.png",
+        "caption": "Carving detail",
+        "lat": 19.992166666666666,
+        "lng": 99.86035277777778
+      },
+      {
+        "id": "IMG_3328.png",
+        "caption": "Dark house",
+        "lat": 19.992058333333333,
+        "lng": 99.86031388888888
+      },
+      {
+        "id": "IMG_3329.png",
+        "caption": "Dark house with more detail of the awesome rocks I was in love with",
+        "lat": 19.991930555555555,
+        "lng": 99.86074166666666
+      },
+      {
+        "id": "IMG_3330.png",
+        "caption": "Ok - this was a weird stop.  \"Tall neck tribe village\".  These are the tribal people known for the women with neck rings that elongate their necks.  I didn't take pics of them because I felt weird about it.  They are refugees from Myanmar and make their living from visits like ours.",
+        "lat": 20.080225,
+        "lng": 99.86032222222222
+      },
+      {
+        "id": "IMG_3335.png",
+        "caption": "Obligatory pupper from Long Neck Village.  This one's name was Sticky Rice.",
+        "lat": 20.082725,
+        "lng": 99.85372222222222
+      },
+      {
+        "id": "IMG_3339.png",
+        "caption": "We went to a team farm and did a tasting - this was Oolong tea,.",
+        "lat": 20.200052777777778,
+        "lng": 99.81697777777778
+      },
+      {
+        "id": "IMG_3344.png",
+        "caption": "Tea farm",
+        "lat": 20.20033611111111,
+        "lng": 99.81707777777777
+      },
+      {
+        "id": "IMG_3351.png",
+        "caption": "Final stop, the Golden Triangle.  That triangular jutting of the land is the intersection of Thailand, Myanmar, and Laos.  A cool stop.",
+        "lat": 20.353619444444448,
+        "lng": 100.08133055555555
+      },
+      {
+        "id": "IMG_3358.png",
+        "caption": "We also visited this museum - no tastings at this one wtf?",
+        "lat": 20.35147777777778,
+        "lng": 100.081825
+      },
+      {
+        "id": "IMG_3362.png",
+        "caption": "Yet another night market - this one in Chiang Rai - super popular and packed.",
+        "lat": 19.908488888888886,
+        "lng": 99.8352361111111
+      }
+    ]
+  },
+  {
+    "day": "Day 14",
+    "date": "06-15-25",
+    "description": "A big travel day.  Went through Laos immigration and I have one weird story.  They want US$40 for the Visa.  I was warned they are very particular about the state of the bills themselves.  It turns out they are VERY, VERY particular.  Like no spots, crease marks, or defects of literally ANY kind.  I had 5 20's turned down and they finally took my 2nd $100 bill.  What a dump thing - they have some sort of money fetish here.  Also, $1 USD is equal to 21,340 Laotian \"Kip\".  Yeah.  I was told they take Thai Baht so I loaded up on that but I think that was a mistake because now I'm having to do 2 conversions just to know how much something is.  And they give you Kip for change anyhow so there's no avoiding it.  Sort of a mess but I'm sure I'll get around it.  Had a minor bad experience at the town we stopped - it's fully a we-got-you tourist trap and I some old guy hijacked my bag and insisted on payment for carrying it to shore afterwards.  Sux.  I suspect it's just this crappy town.  Hotel pretty rustic but at $13 per night what do you want?  So it's another long boat day tomorrow then hopefully things will be much better in Luang Prabang and I forked over for a pretty nice hotel there (like $35/night!!).",
+    "weather": "89\u00b0F, Broken clouds, 68% humidity",
+    "photos": [
+      {
+        "id": "IMG_3370.png",
+        "caption": "All aboard the slow boat!",
+        "lat": 20.28497777777778,
+        "lng": 100.40665555555556
+      },
+      {
+        "id": "IMG_3371.png",
+        "caption": "Cool bug on slow boat",
+        "lat": 20.28503611111111,
+        "lng": 100.40645555555557
+      },
+      {
+        "id": "IMG_3372.png",
+        "caption": "My view from my seat",
+        "lat": 20.284497222222225,
+        "lng": 100.40667777777779
+      },
+      {
+        "id": "IMG_3394.png",
+        "caption": "Down the Mekong River",
+        "lat": 19.97,
+        "lng": 100.57816388888888
+      },
+      {
+        "id": "IMG_3411.png",
+        "caption": "Some nice views along the river",
+        "lat": 19.836094444444445,
+        "lng": 100.70922222222222
+      },
+      {
+        "id": "IMG_3413.png",
+        "caption": "The boat ride itself was ~6 hours.  But that's just the 1st day haha",
+        "lat": 19.839463888888886,
+        "lng": 100.71528611111111
+      },
+      {
+        "id": "IMG_3421.png",
+        "caption": "Our boat captains",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_3425.png",
+        "caption": "Views of Laos",
+        "lat": 19.8854,
+        "lng": 100.84178055555554
+      },
+      {
+        "id": "IMG_3441.png",
+        "caption": "More Laos as we get close to our 1st stop",
+        "lat": 19.885091666666668,
+        "lng": 100.8973388888889
+      },
+      {
+        "id": "IMG_3448.png",
+        "caption": "This is Pakbeng - spending the night here then more slow boat tomorrow",
+        "lat": 19.891316666666665,
+        "lng": 101.12925833333333
+      },
+      {
+        "id": "IMG_3450.png",
+        "caption": "Nice view of the Mekong from my pretty spartan hotel room",
+        "lat": 19.892619444444446,
+        "lng": 101.13339166666667
       }
     ]
   }
