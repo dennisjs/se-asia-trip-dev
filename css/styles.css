@@ -432,26 +432,35 @@ nav a {
 
   .nav-wrapper {
     flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem 0;
+    gap: 0.25rem;
+    padding: 0.3rem 0;
   }
 
   .nav-wrapper h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin: 0;
     line-height: 1.2;
   }
 
   .nav-and-buttons {
     flex-direction: column;
-    gap: 0.4rem;
     width: 100%;
     align-items: center;
+    gap: 0.4rem;
   }
 
   nav {
-    flex-direction: column;
-    gap: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 2rem; /* row gap, column gap */
+    max-width: 90%;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.95rem;
   }
 
   .button-row {
@@ -466,9 +475,40 @@ nav a {
     padding: 0.3rem 0.8rem;
     font-size: 0.85rem;
   }
+
+  .overlay {
+    top: 120px; /* adjust to clear the taller mobile header */
+  }
+
+  #itinerary-left-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .itinerary-scroll {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .timeline-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .placeholder-box {
+    margin: 1rem auto;
+    max-width: 100%;
+  }
 }
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   #split-container {
     display: block; /* override desktop flex */
     height: auto;
@@ -494,9 +534,6 @@ nav a {
     text-align: left;
   }
 }
-}
-
-
 
 
 
