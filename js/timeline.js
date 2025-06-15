@@ -60,3 +60,18 @@ async function loadTimeline() {
   });
 }
 
+function isMobile() {
+  return window.innerWidth <= 768; // or use a stricter user-agent check if needed
+}
+
+if (isMobile()) {
+  setTimeout(() => {
+    const el = document.getElementById(currentDayId);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 500); // delay allows DOM to settle
+} else {
+  const el = document.getElementById(currentDayId);
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+
