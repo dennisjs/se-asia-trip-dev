@@ -508,32 +508,7 @@ nav a {
   }
 }
 
-@media (max-width: 768px) {
-  #split-container {
-    display: block; /* override desktop flex */
-    height: auto;
-  }
 
-  #itinerary-left-wrapper,
-  #map-container {
-    width: 100%;
-    height: auto;
-  }
-
-  #map-container {
-    display: none; /* hide map on mobile */
-  }
-
-  #itinerary-left-wrapper .placeholder-box {
-    margin: 1rem auto;
-    max-width: 90%;
-    font-size: 1rem;
-    line-height: 1.6;
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: left;
-  }
-}
 
 
 
