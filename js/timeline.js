@@ -5,6 +5,13 @@ async function loadTimeline() {
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
 
+  // After sorting the timeline
+  const latestDay = timeline[0];
+  console.log("🧭 Latest day:", latestDay.day, latestDay.date);
+  
+  // Set currentDayId for scrolling
+  const currentDayId = `day-${latestDay.day}`; // This assumes you use IDs like "day-13"
+  
   timeline.forEach(day => {
     const entry = document.createElement("div");
     entry.className = "timeline-entry";
