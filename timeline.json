@@ -793,7 +793,7 @@
       },
       {
         "id": "IMG_3279.png",
-        "caption": "I seriously thought this was another Art Cave thing when outside but then it just every so slightly moved its head",
+        "caption": "I seriously thought this was anothe Art Cave thing when outside but then it just every so slightly moved its head",
         "lat": 19.82347222222222,
         "lng": 99.76225277777777
       },
@@ -913,7 +913,7 @@
       },
       {
         "id": "IMG_3339.png",
-        "caption": "We went to a tea farm and did a tasting - this was Oolong tea,.",
+        "caption": "We went to a team farm and did a tasting - this was Oolong tea,.",
         "lat": 20.200052777777778,
         "lng": 99.81697777777778
       },
@@ -940,6 +940,80 @@
         "caption": "Yet another night market - this one in Chiang Rai - super popular and packed.",
         "lat": 19.908488888888886,
         "lng": 99.8352361111111
+      }
+    ]
+  },
+  {
+    "day": "Day 14",
+    "date": "06-15-25",
+    "description": "A big travel day.  Went through Laos immigration and I have one weird story.  They want US$40 for the Visa.  I was warned they are very particular about the state of the bills themselves.  It turns out they are VERY, VERY particular.  Like no spots, crease marks, or defects of literally ANY kind.  I had 5 20's turned down and they finally took my 2nd $100 bill.  What a dump thing - they have some sort of money fetish here.  Also, $1 USD is equal to 21,340 Laotian \"Kip\".  Yeah.  I was told they take Thai Baht so I loaded up on that but I think that was a mistake because now I'm having to do 2 conversions just to know how much something is.  And they give you Kip for change anyhow so there's no avoiding it.  Sort of a mess but I'm sure I'll get around it.  Had a minor bad experience at the town we stopped - it's fully a we-got-you tourist trap and I some old guy hijacked my bag and insisted on payment for carrying it to shore afterwards.  Sux.  I suspect it's just this crappy town.  Hotel pretty rustic but at $13 per night what do you want?  So it's another long boat day tomorrow then hopefully things will be much better in Luang Prabang and I forked over for a pretty nice hotel there (like $35/night!!).",
+    "weather": "89\u00b0F, Broken clouds, 68% humidity",
+    "photos": [
+      {
+        "id": "IMG_3370.png",
+        "caption": "All aboard the slow boat!",
+        "lat": 20.28497777777778,
+        "lng": 100.40665555555556
+      },
+      {
+        "id": "IMG_3371.png",
+        "caption": "Cool bug on slow boat",
+        "lat": 20.28503611111111,
+        "lng": 100.40645555555557
+      },
+      {
+        "id": "IMG_3372.png",
+        "caption": "My view from my seat",
+        "lat": 20.284497222222225,
+        "lng": 100.40667777777779
+      },
+      {
+        "id": "IMG_3394.png",
+        "caption": "Down the Mekong River",
+        "lat": 19.97,
+        "lng": 100.57816388888888
+      },
+      {
+        "id": "IMG_3411.png",
+        "caption": "Some nice views along the river",
+        "lat": 19.836094444444445,
+        "lng": 100.70922222222222
+      },
+      {
+        "id": "IMG_3413.png",
+        "caption": "The boat ride itself was ~6 hours.  But that's just the 1st day haha",
+        "lat": 19.839463888888886,
+        "lng": 100.71528611111111
+      },
+      {
+        "id": "IMG_3421.png",
+        "caption": "Our boat captains",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_3425.png",
+        "caption": "Views of Laos",
+        "lat": 19.8854,
+        "lng": 100.84178055555554
+      },
+      {
+        "id": "IMG_3441.png",
+        "caption": "More Laos as we get close to our 1st stop",
+        "lat": 19.885091666666668,
+        "lng": 100.8973388888889
+      },
+      {
+        "id": "IMG_3448.png",
+        "caption": "This is Pakbeng - spending the night here then more slow boat tomorrow",
+        "lat": 19.891316666666665,
+        "lng": 101.12925833333333
+      },
+      {
+        "id": "IMG_3450.png",
+        "caption": "Nice view of the Mekong from my pretty spartan hotel room",
+        "lat": 19.892619444444446,
+        "lng": 101.13339166666667
       }
     ]
   }
