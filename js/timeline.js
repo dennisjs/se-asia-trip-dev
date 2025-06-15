@@ -13,7 +13,9 @@ async function loadTimeline() {
   container.innerHTML = "";
 
   // After sorting the timeline
-  const latestDay = timeline[0];
+  //const latestDay = timeline[0];
+  const latestDay = timeline[timeline.length - 1];
+
   console.log("🧭 Latest day:", latestDay.day, latestDay.date);
   
   // Set currentDayId for scrolling
