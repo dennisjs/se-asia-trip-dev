@@ -1,7 +1,14 @@
+function normalizeDateString(dateStr) {
+  const [mm, dd, yy] = dateStr.split('-');
+  const yyyy = parseInt(yy, 10) < 50 ? `20${yy}` : `19${yy}`; // crude century handling
+  return `${yyyy}-${mm}-${dd}`;
+}
+
 async function loadTimeline() {
   const res = await fetch(`timeline.json?v=${Date.now()}`);
   const timeline = await res.json();
-  timeline.sort((a, b) => new Date(b.date) - new Date(a.date));
+  //timeline.sort((a, b) => new Date(b.date) - new Date(a.date));
+  timeline.sort((a, b) => new Date(normalizeDateString(a.date)) - new Date(normalizeDateString(b.date)));
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
 
