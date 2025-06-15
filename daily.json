@@ -229,5 +229,45 @@
       }
     ],
     "description": "I need to postpone a proper update as I had a very long day and just ran out of time.  It's a 4:50am wake-up tomorrow so must get to bed!"
+  },
+  "2025-06-15": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3254.mp4",
+        "caption": "Art Cave"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3259.mp4",
+        "caption": "Art Cave"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3269.mp4",
+        "caption": "Art Cave"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3392.mp4",
+        "caption": "Mekong River"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3396.mp4",
+        "caption": "Mekong River"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3410.mp4",
+        "caption": "Mekong River"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3417.mp4",
+        "caption": "Mekong River"
+      }
+    ],
+    "description": "Some vids from the day before's Art Cave and some vids from today's slow boat ride"
   }
 }
