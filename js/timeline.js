@@ -8,13 +8,13 @@ async function loadTimeline() {
   const res = await fetch(`timeline.json?v=${Date.now()}`);
   const timeline = await res.json();
   //timeline.sort((a, b) => new Date(b.date) - new Date(a.date));
-  timeline.sort((a, b) => new Date(normalizeDateString(a.date)) - new Date(normalizeDateString(b.date)));
+  timeline.sort((a, b) => new Date(b.date) - new Date(a.date));  // reverse sort so newest day comes first
+
   const container = document.getElementById("timeline-content");
   container.innerHTML = "";
 
   // After sorting the timeline
-  //const latestDay = timeline[0];
-  const latestDay = timeline[timeline.length - 1];
+  const latestDay = timeline[0];
 
   console.log("🧭 Latest day:", latestDay.day, latestDay.date);
   
