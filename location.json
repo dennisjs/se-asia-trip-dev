@@ -1,5 +1,12 @@
 [
   {
+    "place": "Luang Prabang",
+    "lat": 19.89,
+    "lng": 102.13,
+    "arrival_date": "06-16-25",
+    "departure_date": ""
+  },
+  {
     "place": "Pakbeng, Laos",
     "lat": 19.89,
     "lng": 101.13,
@@ -11,7 +18,7 @@
     "lat": 19.91,
     "lng": 99.84,
     "arrival_date": "06-12-25",
-    "departure_date": "06-15-25"
+    "departure_date": "06-16-25"
   },
   {
     "place": "Pai",
