@@ -946,7 +946,7 @@
   {
     "day": "Day 14",
     "date": "06-15-25",
-    "description": "A big travel day.  Went through Laos immigration and I have one weird story.  They want US$40 for the Visa.  I was warned they are very particular about the state of the bills themselves.  It turns out they are VERY, VERY particular.  Like no spots, crease marks, or defects of literally ANY kind.  I had 5 20's turned down and they finally took my 2nd $100 bill.  What a weird thing - they have some sort of money fetish here.  Also, $1 USD is equal to 21,340 Laotian \"Kip\".  Yeah.  I was told they take Thai Baht so I loaded up on that but I think that was a mistake because now I'm having to do 2 conversions just to know how much something is.  And they give you Kip for change anyhow so there's no avoiding it.  Sort of a mess but I'm sure I'll get around it.  Had a minor bad experience at the town we stopped - it's fully a we-got-you tourist trap and some old guy hijacked my bag and insisted on payment for carrying it to shore afterwards.  Sux.  I suspect it's just this crappy town.  Hotel pretty rustic but at $13 per night what do you want?  So it's another long boat day tomorrow then hopefully things will be much better in Luang Prabang and I forked over for a pretty nice hotel there (like $35/night!!).",
+    "description": "A big travel day.  Went through Laos immigration and I have one weird story.  They want US$40 for the Visa.  I was warned they are very particular about the state of the bills themselves.  It turns out they are VERY, VERY particular.  Like no spots, crease marks, or defects of literally ANY kind.  I had 5 20's turned down and they finally took my 2nd $100 bill.  What a dump thing - they have some sort of money fetish here.  Also, $1 USD is equal to 21,340 Laotian \"Kip\".  Yeah.  I was told they take Thai Baht so I loaded up on that but I think that was a mistake because now I'm having to do 2 conversions just to know how much something is.  And they give you Kip for change anyhow so there's no avoiding it.  Sort of a mess but I'm sure I'll get around it.  Had a minor bad experience at the town we stopped - it's fully a we-got-you tourist trap and I some old guy hijacked my bag and insisted on payment for carrying it to shore afterwards.  Sux.  I suspect it's just this crappy town.  Hotel pretty rustic but at $13 per night what do you want?  So it's another long boat day tomorrow then hopefully things will be much better in Luang Prabang and I forked over for a pretty nice hotel there (like $35/night!!).",
     "weather": "89\u00b0F, Broken clouds, 68% humidity",
     "photos": [
       {
@@ -1014,6 +1014,62 @@
         "caption": "Nice view of the Mekong from my pretty spartan hotel room",
         "lat": 19.892619444444446,
         "lng": 101.13339166666667
+      }
+    ]
+  },
+  {
+    "day": "Day 15",
+    "date": "06-16-25",
+    "description": "Another Slow Boat Day and after another 6+ hours, I'm quite over Slow Boat for now.  I expect to be relaxing tomorrow, maybe checking out some local food.  Maybe a tour the following day.  Here for at least 4 nights - maybe more.",
+    "weather": "89\u00b0F, Overcast clouds, 76% humidity",
+    "photos": [
+      {
+        "id": "IMG_3464.png",
+        "caption": "A view of where I stayed the previous night as we roll on out for Slow Boat 2:  The Boatening",
+        "lat": 19.891613888888887,
+        "lng": 101.13278888888888
+      },
+      {
+        "id": "IMG_3466.png",
+        "caption": "Very much the same scenery today which isn't a bad thing",
+        "lat": 19.98565,
+        "lng": 101.91242222222223
+      },
+      {
+        "id": "IMG_3467.png",
+        "caption": "We probably made 8 stops at local villages, picking up and dropping off locals.  This family was one of them.",
+        "lat": 20.046883333333334,
+        "lng": 101.97641666666667
+      },
+      {
+        "id": "IMG_3469.png",
+        "caption": "Local little girl checking out the local scenery",
+        "lat": 20.05358888888889,
+        "lng": 102.01889166666666
+      },
+      {
+        "id": "IMG_3475.png",
+        "caption": "This must have a name but I don't know it yet.  It's not far from my day's destination: Luang Prabang",
+        "lat": 20.054180555555558,
+        "lng": 102.207825
+      },
+      {
+        "id": "IMG_3477.png",
+        "caption": "Part of the prior pics formation.  There's a naturally hollowed out portion which appears to house a temple.  No doubt this will be on one of the standard tours so I expect to be back.",
+        "lat": 20.05043888888889,
+        "lng": 102.21106666666667
+      },
+      {
+        "id": "IMG_3478.png",
+        "caption": "Close-up of the interior temple",
+        "lat": 20.04967777777778,
+        "lng": 102.21139444444445
+      },
+      {
+        "id": "IMG_3486.png",
+        "caption": "In Luang Prabang on the Tuk Tuk to my hotel",
+        "lat": 19.915252777777777,
+        "lng": 102.17047222222223
       }
     ]
   }
