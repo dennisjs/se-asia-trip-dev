@@ -269,5 +269,35 @@
       }
     ],
     "description": "Some vids from the day before's Art Cave and some vids from today's slow boat ride"
+  },
+    "2025-06-17": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IMG_3232.png",
+        "caption": "Believe it or not, this is restroom building"
+      },
+      {
+        "type": "image",
+        "src": "media/IMG_3233.png",
+        "caption": "Close-up of a bell"
+      },
+      {
+        "type": "image",
+        "src": "media/IMG_3235.png",
+        "caption": "Monkey at the Art Cave"
+      },
+      {
+        "type": "image",
+        "src": "media/IMG_3236.png",
+        "caption": "Water sculpture outside the Art Cave"
+      },
+      {
+        "type": "image",
+        "src": "media/IMG_3232.png",
+        "caption": "More water sculpture outside the Art Cave"
+      }
+    ],
+    "description": "My daily's have been lagging a bit - mainly due to slower travel and chill days.  Tomorrow's will be better if I can get enough time to get stuff online.  Also, WiFi is quite terrible at this location (not sure if hotel or area) so it makes uploads challenging.  Everywhere else, I've had fantastic internet speed.  Here is some bonus footage from the White Temple again as I have nothing else."
   }
 }
