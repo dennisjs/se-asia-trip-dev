@@ -299,5 +299,25 @@
       }
     ],
     "description": "My daily's have been lagging a bit - mainly due to slower travel and chill days.  Tomorrow's will be better if I can get enough time to get stuff online.  Also, WiFi is quite terrible at this location (not sure if hotel or area) so it makes uploads challenging.  Everywhere else, I've had fantastic internet speed.  Here is some bonus footage from the White Temple again as I have nothing else."
+  },
+    "2025-06-18": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3559.mp4",
+        "caption": "Kuang Si waterfall"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3580.mp4",
+        "caption": "More Kuang Si waterfall"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3566.MOV",
+        "caption": "Even more Kuang Si waterfall"
+      }
+    ],
+    "description": "Some vids from today's tour day - all of these at the Kuang Si waterfalls - spectacular"
   }
 }
