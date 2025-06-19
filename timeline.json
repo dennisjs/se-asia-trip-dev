@@ -1221,7 +1221,7 @@
       },
       {
         "id": "IMG_3626.png",
-        "caption": "Group tour photo op.  The guy in the front right had Meta glasses on and he would say over and over in a light German accent:  \"Meta, please take a picture\"",
+        "caption": "Group tour photo op.  The guy in the front right had Meta glasses on and he would save over and over in a light German accent:  \"Meta, please take a picture\"",
         "lat": 20.0598,
         "lng": 102.21614722222222
       },
@@ -1290,6 +1290,62 @@
         "caption": "Our tour guide at the front of the boat - a great tour!  Oh - I didn't get pics of the Whiskey Village stop where we had many tastings of whiskey, followed up by beer on the boat ride home so we were in pretty high spirits (...get it?) by the time we arrived home",
         "lat": 19.899797222222222,
         "lng": 102.1437138888889
+      }
+    ]
+  },
+  {
+    "day": "Day 18",
+    "date": "06-19-25",
+    "description": "Today was a chill day.  I mainly just caught some breakfast, did a short hike up to the city-center temple, and did some planning and other things back at my hotel.  I have my transport for tomorrow to  Nong Khiaw as well as my accomodations which will be much more rustic compared to where I am now.  Nong Khiaw is supposed to be a scenic village up north and is about a 3.5 hour drive from here.  Currently planning 3 nights there.  Sadly I have to double-back to Luang Prabang when I leave but then there's just a relatively short 50 minute train to my following destination of Vang Vieng - which used to be a 5 hour car ride.",
+    "weather": "88\u00b0F, Broken clouds, 66% humidity",
+    "photos": [
+      {
+        "id": "IMG_3692.png",
+        "caption": "The long set of stairs to Wat Chom Si, near the city center",
+        "lat": 19.89112777777778,
+        "lng": 102.1365138888889
+      },
+      {
+        "id": "IMG_3694.png",
+        "caption": "View from Wat Chom Si to the city center",
+        "lat": 19.890291666666666,
+        "lng": 102.137
+      },
+      {
+        "id": "IMG_3703.png",
+        "caption": "Even monks like to sight-see",
+        "lat": 19.890202777777777,
+        "lng": 102.13698611111111
+      },
+      {
+        "id": "IMG_3705.png",
+        "caption": "View towards the Mekong showing riverside Luang Prabang",
+        "lat": 19.890202777777777,
+        "lng": 102.13683333333334
+      },
+      {
+        "id": "IMG_3706.png",
+        "caption": "View towards the East side of Luang Prabang",
+        "lat": 19.89015277777778,
+        "lng": 102.13693888888889
+      },
+      {
+        "id": "IMG_3707.png",
+        "caption": "View of Wat Chom Si at the top",
+        "lat": 19.890219444444444,
+        "lng": 102.13693333333335
+      },
+      {
+        "id": "IMG_3710.png",
+        "caption": "NE view of Luang Prabang from the top.  It's a nice, not-too-industrial city.",
+        "lat": 19.890291666666666,
+        "lng": 102.13715277777779
+      },
+      {
+        "id": "IMG_3715.png",
+        "caption": "This is me less than an hour after having a normal shower, followed by a sweat shower from climbing those stairs.  Still air is the enemy here and it's suprising how much still air there is.  It seems like San Diego always has at least a small breeze.  Not so here.",
+        "lat": 19.890277777777776,
+        "lng": 102.13716111111111
       }
     ]
   }
