@@ -69,19 +69,19 @@
     "lng": 99.8406
   },
   {
-    "location": "Huay Xai",
+    "location": "Pakbeng",
     "country": "Laos",
     "arrival_date": "2025-06-15",
     "nights": 1,
     "departure_date": "2025-06-16",
-    "arrival_method": "Bus from Chiang Rai",
-    "journey_time": "2.5-3 hrs",
+    "arrival_method": "Van + Slow Boat",
+    "journey_time": "8 hours",
     "activities": [
       "Cross the border at Chiang Khong",
       "Begin 2-day Mekong slow boat to Luang Prabang"
     ],
-    "lat": 20.2763,
-    "lng": 100.413
+    "lat": 19.89,
+    "lng": 101.13
   },
   {
     "location": "Luang Prabang",
@@ -90,7 +90,7 @@
     "nights": 4,
     "departure_date": "2025-06-20",
     "arrival_method": "Slow boat",
-    "journey_time": "",
+    "journey_time": "6 hours",
     "activities": [
       "Kuang Si Waterfalls, Mount Phousi sunset hike",
       "Alms-giving ceremony with monks at dawn",
