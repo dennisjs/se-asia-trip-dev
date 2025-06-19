@@ -319,5 +319,15 @@
       }
     ],
     "description": "Some vids from today's tour day - all of these at the Kuang Si waterfalls - spectacular"
+  },
+    "2025-06-19": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3565.mp4",
+        "caption": "Kuang Si waterfall"
+      }
+    ],
+    "description": "A bonus vid from the Kuang Si waterfall (sent a wrong vid to yesterday's selection)"
   }
 }
