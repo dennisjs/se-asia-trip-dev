@@ -329,5 +329,25 @@
       }
     ],
     "description": "A bonus vid from the Kuang Si waterfall (sent a wrong vid to yesterday's selection)"
+  },
+    "2025-06-20": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3515.mp4",
+        "caption": "From several nights ago in Luang Prabang - local music"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3738.mp4",
+        "caption": "The roads - my god the roads..."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3769.mp4",
+        "caption": "Relaxing on my balcony today"
+      }
+    ],
+    "description": "Just some recent vids"
   }
 }
