@@ -1,5 +1,12 @@
 [
   {
+    "place": "Nong Khiaw",
+    "lat": 20.57,
+    "lng": 102.61,
+    "arrival_date": "06-20-25",
+    "departure_date": ""
+  },
+  {
     "place": "Luang Prabang",
     "lat": 19.89,
     "lng": 102.13,
@@ -11,7 +18,7 @@
     "lat": 19.89,
     "lng": 101.13,
     "arrival_date": "06-15-25",
-    "departure_date": "06-16-25"
+    "departure_date": "06-20-25"
   },
   {
     "place": "Chiang Rai",

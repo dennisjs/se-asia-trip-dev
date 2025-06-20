@@ -1346,6 +1346,116 @@
         "caption": "This is me less than an hour after having a normal shower, followed by a sweat shower from climbing those stairs.  Still air is the enemy here and it's suprising how much still air there is.  It seems like San Diego always has at least a small breeze.  Not so here.",
         "lat": 19.890277777777776,
         "lng": 102.13716111111111
+      },
+      {
+        "id": "IMG_3717.png",
+        "caption": "Dinner place from the previous night in Luang Prabang",
+        "lat": 19.892416666666666,
+        "lng": 102.13777222222222
+      },
+      {
+        "id": "IMG_3720.png",
+        "caption": "This dinner place had an interesting ceiling where these plants had these trailing - I dunno - root systems hanging down",
+        "lat": 19.892469444444444,
+        "lng": 102.13774166666667
+      },
+      {
+        "id": "IMG_3721.png",
+        "caption": "A FANTASTIC chicken porridge I had in Luang Prabang.  I've had similar dishes in Wuxi, China.  You don't see porridge too much in the USA.  I loved this dish so much.",
+        "lat": 19.892416666666666,
+        "lng": 102.13770277777779
+      }
+    ]
+  },
+  {
+    "day": "Day 19",
+    "date": "06-20-25",
+    "description": "It was about a 4 hour ride by mini-van to Nong Khiaw, a fairly small village alongside the Nam Ou river in Laos.  The journey was harrowing, with a small roaded loaded with massive trucks and craters that you almost couldn't see out of.  The abuse wrought by this road on the vehicles here is just wild.  But once I made it to Nong Khiaw, I had arrived at a truly beautiful place.  My room on the river is far, far nicer than I expected and the view is just incredible.  And for the cost of about $18/night.  It started raining just as I arrived and I walked through the actually very pleasant rain to a lunch spot where the extended family was taking shelter.  Had some nice grub then took a nap back at my room.  I don't have any specific plans for this place but I might very well extend my stay for a day or two, it's so nice here.  I hear rumors of hiking and boating options so might explore those.  No temples on the menu which is a nice change of pace.",
+    "weather": "84\u00b0F, Overcast clouds, 74% humidity",
+    "photos": [
+      {
+        "id": "IMG_3722.png",
+        "caption": "My transport to Nong Khiaw - waiting for more passengers at the Luang Prabang bus terminal",
+        "lat": 19.867486111111113,
+        "lng": 102.13264444444444
+      },
+      {
+        "id": "IMG_3724.png",
+        "caption": "On the road to Nong Khiaw - about a 4 hour journey",
+        "lat": 20.202705555555553,
+        "lng": 102.32955277777778
+      },
+      {
+        "id": "IMG_3745.png",
+        "caption": "View along the way to Nong Khiaw",
+        "lat": 20.3593,
+        "lng": 102.39508055555557
+      },
+      {
+        "id": "IMG_3750.png",
+        "caption": "This is a very typical example of large segments of the road.  Almost as bad as the Sorrento Valley roads I'd take to work each day.",
+        "lat": 20.485472222222224,
+        "lng": 102.34704722222222
+      },
+      {
+        "id": "IMG_3765.png",
+        "caption": "View from my balcony in Nong Khiaw.  This place is mind-bendingly beautiful.  And I'm paying about $18/night at this place.  I might need some more nights here.",
+        "lat": 20.57183611111111,
+        "lng": 102.60613888888888
+      },
+      {
+        "id": "IMG_3783.png",
+        "caption": "Walking through the rain because I was hungry.  Part of Nong Khiaw.",
+        "lat": 20.569752777777776,
+        "lng": 102.60909166666666
+      },
+      {
+        "id": "IMG_3789.png",
+        "caption": "Nong Khiaw main street",
+        "lat": 20.56968611111111,
+        "lng": 102.60930555555555
+      },
+      {
+        "id": "IMG_3792.png",
+        "caption": "From my room - the rains came in and really cooled the place off.  It's so nice right now.",
+        "lat": 20.571741666666668,
+        "lng": 102.60616944444443
+      },
+      {
+        "id": "IMG_3801.png",
+        "caption": "Nong Khiaw kitten",
+        "lat": 20.570833333333333,
+        "lng": 102.6074361111111
+      },
+      {
+        "id": "IMG_3803.png",
+        "caption": "Sunset Nong Khiaw street",
+        "lat": 20.569547222222223,
+        "lng": 102.61119722222222
+      },
+      {
+        "id": "IMG_3806.png",
+        "caption": "I realized later in the evening after my walk that Nong Khiaw is a much bigger town that I realized.  I'm on the giant bridge spanning both sides.  A lot more action down in these parts but I'm happy to be down in the area of relative inaction.",
+        "lat": 20.57143888888889,
+        "lng": 102.61550833333332
+      },
+      {
+        "id": "IMG_3810.png",
+        "caption": "The other direction from the bridge - sunset",
+        "lat": 20.571219444444445,
+        "lng": 102.61563055555555
+      },
+      {
+        "id": "IMG_3822.png",
+        "caption": "Another bridge pic facing the area I'm staying in (way off to the left)",
+        "lat": 20.57021111111111,
+        "lng": 102.61667499999999
+      },
+      {
+        "id": "IMG_3828.png",
+        "caption": "You know, I've had like 1 hard poop this entire trip.  TMI.  It probably doens't help to be having things like this banana smoothie with the mystery ice from this food stand.",
+        "lat": 20.567877777777777,
+        "lng": 102.61739444444444
       }
     ]
   }
