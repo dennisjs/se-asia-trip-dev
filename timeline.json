@@ -1370,7 +1370,7 @@
   {
     "day": "Day 19",
     "date": "06-20-25",
-    "description": "It was about a 4 hour ride by mini-van to Nong Khiaw, a fairly small village alongside the Nam Ou river in Laos.  The journey was harrowing, with a small road loaded with massive trucks and craters that you almost couldn't see out of.  The abuse wrought by this road on the vehicles here is just wild.  But once I made it to Nong Khiaw, I had arrived at a truly beautiful place.  My room on the river is far, far nicer than I expected and the view is just incredible.  And for the cost of about $18/night.  It started raining just as I arrived and I walked through the actually very pleasant rain to a lunch spot where the extended family was taking shelter.  Had some nice grub then took a nap back at my room.  I don't have any specific plans for this place but I might very well extend my stay for a day or two, it's so nice here.  I hear rumors of hiking and boating options so might explore those.  No temples on the menu which is a nice change of pace.",
+    "description": "It was about a 4 hour ride by mini-van to Nong Khiaw, a fairly small village alongside the Nam Ou river in Laos.  The journey was harrowing, with a small roaded loaded with massive trucks and craters that you almost couldn't see out of.  The abuse wrought by this road on the vehicles here is just wild.  But once I made it to Nong Khiaw, I had arrived at a truly beautiful place.  My room on the river is far, far nicer than I expected and the view is just incredible.  And for the cost of about $18/night.  It started raining just as I arrived and I walked through the actually very pleasant rain to a lunch spot where the extended family was taking shelter.  Had some nice grub then took a nap back at my room.  I don't have any specific plans for this place but I might very well extend my stay for a day or two, it's so nice here.  I hear rumors of hiking and boating options so might explore those.  No temples on the menu which is a nice change of pace.",
     "weather": "84\u00b0F, Overcast clouds, 74% humidity",
     "photos": [
       {
@@ -1435,7 +1435,7 @@
       },
       {
         "id": "IMG_3806.png",
-        "caption": "I realized later in the evening after my walk that Nong Khiaw is a much bigger town than I realized.  I'm on the giant bridge spanning both sides.  A lot more action down in these parts but I'm happy to be down in the area of relative inaction.",
+        "caption": "I realized later in the evening after my walk that Nong Khiaw is a much bigger town that I realized.  I'm on the giant bridge spanning both sides.  A lot more action down in these parts but I'm happy to be down in the area of relative inaction.",
         "lat": 20.57143888888889,
         "lng": 102.61550833333332
       },
@@ -1453,9 +1453,59 @@
       },
       {
         "id": "IMG_3828.png",
-        "caption": "You know, I've had like 1 hard poop this entire trip.  TMI.  It probably doesn't help to be having things like this banana smoothie with the mystery ice from this food stand.",
+        "caption": "You know, I've had like 1 hard poop this entire trip.  TMI.  It probably doens't help to be having things like this banana smoothie with the mystery ice from this food stand.",
         "lat": 20.567877777777777,
         "lng": 102.61739444444444
+      }
+    ]
+  },
+  {
+    "day": "Day 20",
+    "date": "06-21-25",
+    "description": "A nice slow day in Nong Khiaw.  Really enjoyed the very cool morning and light rain.  It was maybe 68F out at most - the nicest morning of the trip so far.  Warmed up a bit in the afternoon but still pleasant.  Got an all-day tour set up for tomorrow and also got my multi-mode transport and itinerary settled for the next leg in a few days.  All of the places I'm visiting are very tourist-oriented (it's a lot of income for them - their main income in places like Nong Khiaw), so it's quite easy to book things and arrange transport.  I was thinking the transport out of NK might be double since \"they got you\".  You're in this relatively remote area so good luck getting out.  But turns out it was half the price of getting here.  No way to figure this stuff out.  Pricing is kind of all over the place.  LP's purely tourist stuff was the most expensive of all the cities I've been to so far - for no particular reason that I can figure out.  That said, the most I paid for an all-day tour out of LP was $94, which isn't all that bad.  The all-day NK tour was $34, so again, no idea how these number settle out.  These all-days include lunch, water, etc. and you're grouped so it's a good time to get some social interaction in.",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_3835.png",
+        "caption": "Nong Khiaw morning street",
+        "lat": 20.571975,
+        "lng": 102.6065
+      },
+      {
+        "id": "IMG_3836.png",
+        "caption": "Nong Khiaw cement bucket brigade",
+        "lat": 20.570863888888887,
+        "lng": 102.60741388888889
+      },
+      {
+        "id": "IMG_3838.png",
+        "caption": "An absolute unit of a tree in Nong Khiaw",
+        "lat": 20.569555555555556,
+        "lng": 102.60955833333333
+      },
+      {
+        "id": "IMG_3839.png",
+        "caption": "Morning clouds in Nong Khiaw",
+        "lat": 20.569619444444445,
+        "lng": 102.61128333333333
+      },
+      {
+        "id": "IMG_3843.png",
+        "caption": "Morning from the bridge, westward in Nong Khiaw",
+        "lat": 20.57143333333333,
+        "lng": 102.61555555555555
+      },
+      {
+        "id": "IMG_3848.png",
+        "caption": "Morning from the bridge, eastward in Nong Khiaw",
+        "lat": 20.571025,
+        "lng": 102.61591388888888
+      },
+      {
+        "id": "IMG_3859.png",
+        "caption": "Nong Khiaw near my hotel",
+        "lat": 20.57105,
+        "lng": 102.6065
       }
     ]
   }
