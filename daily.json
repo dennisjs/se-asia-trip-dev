@@ -349,5 +349,15 @@
       }
     ],
     "description": "Just some recent vids"
+  },
+    "2025-06-21": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3862.mp4",
+        "caption": "Just a vid from my balcony at dusk"
+      }
+    ],
+    "description": "Just one video"
   }
 }
