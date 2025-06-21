@@ -104,8 +104,8 @@
     "location": "Nong Khiaw",
     "country": "Laos",
     "arrival_date": "2025-06-20",
-    "nights": 3,
-    "departure_date": "2025-06-23",
+    "nights": 4,
+    "departure_date": "2025-06-24",
     "arrival_method": "Minivan from Luang Prabang",
     "journey_time": "3.5-4 hrs",
     "activities": [
@@ -119,9 +119,9 @@
   {
     "location": "Vang Vieng",
     "country": "Laos",
-    "arrival_date": "2025-06-23",
+    "arrival_date": "2025-06-24",
     "nights": 4,
-    "departure_date": "2025-06-27",
+    "departure_date": "2025-06-28",
     "arrival_method": "Van from Nong Khiaw",
     "journey_time": "7-8 hrs",
     "activities": [
@@ -136,8 +136,8 @@
   {
     "location": "Vientiane",
     "country": "Laos",
-    "arrival_date": "2025-06-27",
-    "nights": 3,
+    "arrival_date": "2025-06-28",
+    "nights": 2,
     "departure_date": "2025-06-30",
     "arrival_method": "Bus or van from Vang Vieng",
     "journey_time": "4 hrs",
