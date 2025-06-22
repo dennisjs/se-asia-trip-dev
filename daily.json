@@ -359,5 +359,20 @@
       }
     ],
     "description": "Just one video"
+  },
+    "2025-06-22": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IMG_3904.jpg",
+        "caption": "At the cave today:  Bigfoot?  I think conclusive evidence"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_3967.mp4",
+        "caption": "This area is dreamy beautiful"
+      }
+    ],
+    "description": "A couple of extras from today"
   }
 }
