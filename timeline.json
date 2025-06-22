@@ -1508,5 +1508,133 @@
         "lng": 102.6065
       }
     ]
+  },
+  {
+    "day": "Day 21",
+    "date": "06-22-25",
+    "description": "Tour day.  We got in a mini-slow boat and travelled up river for maybe 45-60 minutes and then hiked up a very rough & steep trail to a viewpoint.  Then back down to a cave used as a shelter during the US bombing of Laos - some brutal history there.  Then to a village where we hiked to a waterfall.  I told this joke in the photo caption but it's just a good joke I'll tell it again:  I was considering another tour called the 100 waterfall tour (a long hike).  I think that's about 99 waterfalls too many so opted out of that one.  Haha.  Anyhow... we then boated downriver a bit and stopped and again had to shelter from a short rain storm.  Then we jumped into some kayaks (no pics for that one so as not to risk my phone) and paddled back go our starting point under the big bridge - fun!  Stubbed my little toe at the waterfall and it's black & blue but I should be alright.  Tomorrow will be another slow day then it's off to Vang Vieng the following day.",
+    "weather": "82\u00b0F, Overcast clouds, 85% humidity",
+    "photos": [
+      {
+        "id": "IMG_3879.png",
+        "caption": "Viewpoint on our tour today.  Village we visited below",
+        "lat": 20.714747222222222,
+        "lng": 102.67588055555557
+      },
+      {
+        "id": "IMG_3880.png",
+        "caption": "Viewpoint from the other direction",
+        "lat": 20.71478611111111,
+        "lng": 102.67588888888889
+      },
+      {
+        "id": "IMG_3886.png",
+        "caption": "Outside of cave we visited.  We were told that villagers sheltered here during the US bombing of Laos in the 60's and 70's",
+        "lat": 20.705802777777777,
+        "lng": 102.67479722222222
+      },
+      {
+        "id": "IMG_3888.png",
+        "caption": "Our tour guide inside the cave.  This cave was partially lit up.",
+        "lat": 20.716147222222222,
+        "lng": 102.6746138888889
+      },
+      {
+        "id": "IMG_3891.png",
+        "caption": "Cave dog with tour guide.  She was the friendliest dog and accompanied us up and down the long hike to the viewpoint and to the cave as well",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_3903.png",
+        "caption": "View near the entrance/exit",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_3913.png",
+        "caption": "A squall hit us as we were on the river so we took shelter on the shore, waited it out and had some lunch on the boat",
+        "lat": 20.692333333333334,
+        "lng": 102.66442777777779
+      },
+      {
+        "id": "IMG_3917.png",
+        "caption": "Me waiting out the storm",
+        "lat": 20.692952777777776,
+        "lng": 102.66464166666667
+      },
+      {
+        "id": "IMG_3919.png",
+        "caption": "",
+        "lat": 20.678427777777777,
+        "lng": 102.6621638888889
+      },
+      {
+        "id": "IMG_3921.png",
+        "caption": "Post-rain trail was quite muddy",
+        "lat": 20.652977777777778,
+        "lng": 102.66178055555557
+      },
+      {
+        "id": "IMG_3929.png",
+        "caption": "This area was actively being cultivated for rice",
+        "lat": 20.652830555555553,
+        "lng": 102.66362777777778
+      },
+      {
+        "id": "IMG_3931.png",
+        "caption": "More workers in the rice paddy.  ",
+        "lat": 20.652602777777776,
+        "lng": 102.66439166666667
+      },
+      {
+        "id": "IMG_3938.png",
+        "caption": "Every trail that I've done in SE Asia has had a trail dog.  This was no exception",
+        "lat": 20.651633333333333,
+        "lng": 102.66535833333334
+      },
+      {
+        "id": "IMG_3942.png",
+        "caption": "Very scenic area on the way to - you guessed it - the waterfall",
+        "lat": 20.650191666666665,
+        "lng": 102.66686111111112
+      },
+      {
+        "id": "IMG_3943.png",
+        "caption": "Fellow hikers and trail dog",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_3947.png",
+        "caption": "Trail cat with kittens",
+        "lat": 20.649416666666667,
+        "lng": 102.66886944444445
+      },
+      {
+        "id": "IMG_3949.png",
+        "caption": "Just beautiful",
+        "lat": 20.64911111111111,
+        "lng": 102.66896944444444
+      },
+      {
+        "id": "IMG_3954.png",
+        "caption": "Guide leading us to the waterfall.  I almost took a different tour that was called the 100 waterfall hike.  I think that's about 99 too many waterfalls so I noped out of that one.",
+        "lat": 20.642599999999998,
+        "lng": 102.67285833333334
+      },
+      {
+        "id": "IMG_3965.png",
+        "caption": "The waterfall.  We swam in the pool and you could go behind the water stream.  It was so nice and cool after a very sweaty, muddy hike.",
+        "lat": 20.64158888888889,
+        "lng": 102.6744
+      },
+      {
+        "id": "IMG_3968.png",
+        "caption": "Rice paddy on the way out",
+        "lat": 20.64821111111111,
+        "lng": 102.6696388888889
+      }
+    ]
   }
 ]
