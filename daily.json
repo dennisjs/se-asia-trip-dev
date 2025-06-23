@@ -374,5 +374,20 @@
       }
     ],
     "description": "A couple of extras from today"
+  },
+    "2025-06-23": {
+    "items": [
+      {
+        "type": "image",
+        "src": "media/IMG_3977.png",
+        "caption": "The view from my balcony - you've already seen this.  But curse that red roof in front of me!"
+      },
+      {
+        "type": "image",
+        "src": "media/river_chatgpt.PNG",
+        "caption": "So I asked ChatGPT to remove it..."
+      }
+    ],
+    "description": "It was a slow day - I rather enjoyed it"
   }
 }
