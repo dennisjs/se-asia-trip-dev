@@ -1512,7 +1512,7 @@
   {
     "day": "Day 21",
     "date": "06-22-25",
-    "description": "Tour day.  We got in a mini-slow boat and travelled up river for maybe 45-60 minutes and then hiked up a very rough & steep trail to a viewpoint.  Then back down to a cave used as a shelter during the US bombing of Laos - the US seems to have a fetish with bombing other countries.  Then to a village where we hiked to a waterfall.  I told this joke in the photo caption but it's such a good joke I'll tell it again:  I was considering another tour called the 100 waterfall tour (a long hike).  I think that's about 99 waterfalls too many so opted out of that one.  Haha. Ha.  Anyhow... we then boated downriver a bit and stopped and again had to shelter from a short rain storm.  Then we jumped into some kayaks (no pics for that one so as not to risk my phone) and paddled back go our starting point under the big bridge - fun!  Stubbed my little toe at the waterfall and it's black & blue but I should be alright.  Tomorrow will be another slow day then it's off to Vang Vieng the following day.",
+    "description": "Tour day.  We got in a mini-slow boat and travelled up river for maybe 45-60 minutes and then hiked up a very rough & steep trail to a viewpoint.  Then back down to a cave used as a shelter during the US bombing of Laos - some brutal history there.  Then to a village where we hiked to a waterfall.  I told this joke in the photo caption but it's just a good joke I'll tell it again:  I was considering another tour called the 100 waterfall tour (a long hike).  I think that's about 99 waterfalls too many so opted out of that one.  Haha.  Anyhow... we then boated downriver a bit and stopped and again had to shelter from a short rain storm.  Then we jumped into some kayaks (no pics for that one so as not to risk my phone) and paddled back go our starting point under the big bridge - fun!  Stubbed my little toe at the waterfall and it's black & blue but I should be alright.  Tomorrow will be another slow day then it's off to Vang Vieng the following day.",
     "weather": "82\u00b0F, Overcast clouds, 85% humidity",
     "photos": [
       {
@@ -1529,7 +1529,7 @@
       },
       {
         "id": "IMG_3886.png",
-        "caption": "Outside of cave we visited.  We were told that villagers sheltered here during the US bombing of Laos in the 60's and 70's. Fun.",
+        "caption": "Outside of cave we visited.  We were told that villagers sheltered here during the US bombing of Laos in the 60's and 70's",
         "lat": 20.705802777777777,
         "lng": 102.67479722222222
       },
@@ -1542,14 +1542,14 @@
       {
         "id": "IMG_3891.png",
         "caption": "Cave dog with tour guide.  She was the friendliest dog and accompanied us up and down the long hike to the viewpoint and to the cave as well",
-        "lat": 20.716,
-        "lng": 102.675
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_3903.png",
         "caption": "View near the entrance/exit",
-        "lat": 20.72,
-        "lng": 102.67
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_3913.png",
@@ -1565,7 +1565,7 @@
       },
       {
         "id": "IMG_3919.png",
-        "caption": "Lunch with disposable plate",
+        "caption": "Lunch on the boat with a disposable plate",
         "lat": 20.678427777777777,
         "lng": 102.6621638888889
       },
@@ -1602,8 +1602,8 @@
       {
         "id": "IMG_3943.png",
         "caption": "Fellow hikers and trail dog",
-        "lat": 20.65,
-        "lng": 102.67
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_3947.png",
@@ -1634,6 +1634,38 @@
         "caption": "Rice paddy on the way out",
         "lat": 20.64821111111111,
         "lng": 102.6696388888889
+      }
+    ]
+  },
+  {
+    "day": "Day 22",
+    "date": "06-23-25",
+    "description": "Not much to show for today.  It was a markedly much hotter day in Nong Khiaw.  Prior days have been relatively pleasant while today was downright hot.  Got a coffee/banana shake mid-day to fight the heat - yeah, that's a thing here.  Really good.  Let me describe my breakfast for you:  First of all, Asian Breakfast is not something I can abide.  Hot soup and noodle for breakie not good for me.  Bigger cities accomodate Westerners well.  These smaller towns do make an attempt but...  They offer these amazing sounding banana pancakes with those really sweet and crazy good local bananas.  But there is no such thing as maple syrup in SE Asia - certainly not in the smaller towns.  They offer honey but no can do - it doesn't work.  So I skipped that and got a breakfast sandwich.  See my comments on that pic for that part of the story.  The struggle is real.",
+    "weather": "87\u00b0F, Overcast clouds, 70% humidity",
+    "photos": [
+      {
+        "id": "IMG_3970.jpg",
+        "caption": "As I was trying to figure out the pancake situation, I was trying to ask if they have bacon.  She had no idea and thought I was saying baguette.  I later looked up how to say bacon in Lao and wasn't too surprised by the result.  This was my predicament.  Gave up on the pancakes",
+        "lat": 20.58,
+        "lng": 102.6135
+      },
+      {
+        "id": "IMG_3971.png",
+        "caption": "This was my breakfast egg sandwich",
+        "lat": 20.570816666666666,
+        "lng": 102.61351111111111
+      },
+      {
+        "id": "IMG_3975.png",
+        "caption": "Funny bug on the patio today",
+        "lat": 20.571830555555554,
+        "lng": 102.6061861111111
+      },
+      {
+        "id": "IMG_3981.png",
+        "caption": "The storm came in a little before 6pm.  Some very close lighting strikes!",
+        "lat": 20.571866666666665,
+        "lng": 102.60616944444443
       }
     ]
   }
