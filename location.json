@@ -1,17 +1,24 @@
 [
   {
+    "place": "Vang Vieng",
+    "lat": 18.92,
+    "lng": 102.44,
+    "arrival_date": "06-24-25",
+    "departure_date": ""
+  },
+  {
     "place": "Nong Khiaw",
     "lat": 20.57,
     "lng": 102.61,
     "arrival_date": "06-20-25",
-    "departure_date": ""
+    "departure_date": "06-24-25"
   },
   {
     "place": "Luang Prabang",
     "lat": 19.89,
     "lng": 102.13,
     "arrival_date": "06-16-25",
-    "departure_date": "06-20-25"
+    "departure_date": "06-24-25"
   },
   {
     "place": "Pakbeng, Laos",
