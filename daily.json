@@ -389,5 +389,20 @@
       }
     ],
     "description": "It was a slow day - I rather enjoyed it"
+  },
+    "2025-06-24": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_3980.mp4",
+        "caption": "OK, I'm a nerd.  My commentary is... something...  I was just excited because the prior day when we were about to go kayaking, the locals could distinctly see that it was going to rain in just a few minutes - like you could see the rain approaching.  The exact thing happened on my balcony last night and that tickled me somehow.  I could hear it approaching my hotel from the river.  If you can tolerate the length there's a cool lightning stike in it!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_4002.mp4",
+        "caption": "You might want to mute the sound - it's just obnoxious train passenger noise.  But it was nice to see the beautiful Laotian countryside go by in the few moments we weren't in a mountain tunnel."
+      }
+    ],
+    "description": "A couple of vids.  One from last night and one from today's train ride"
   }
 }
