@@ -1668,5 +1668,61 @@
         "lng": 102.60616944444443
       }
     ]
+  },
+  {
+    "day": "Day 23",
+    "date": "06-24-25",
+    "description": "",
+    "weather": "87\u00b0F, Broken clouds, 70% humidity",
+    "photos": [
+      {
+        "id": "IMG_3985.png",
+        "caption": "Last morning Nong Khiaw",
+        "lat": 20.571541666666665,
+        "lng": 102.61543333333333
+      },
+      {
+        "id": "IMG_3987.png",
+        "caption": "I'm going to miss this place - the most beautiful and my favorite of the trip so far",
+        "lat": 20.57143888888889,
+        "lng": 102.61541666666666
+      },
+      {
+        "id": "IMG_3989.png",
+        "caption": "Hrmmm... the roads are no better going back to Luang Prabang",
+        "lat": 20.604141666666667,
+        "lng": 102.45007222222222
+      },
+      {
+        "id": "IMG_3995.png",
+        "caption": "Nori Seaweed chips for the bumpy ride back to LP",
+        "lat": 20.321202777777778,
+        "lng": 102.42676666666667
+      },
+      {
+        "id": "IMG_3996.png",
+        "caption": "The high speed train station in Luang Prabang.  I'm squinting because it was intensely bright at this moment",
+        "lat": 19.867622222222224,
+        "lng": 102.21491944444445
+      },
+      {
+        "id": "IMG_3997.png",
+        "caption": "The single worst chili dog I've had in my life.  From the DQ at the train station.  I didn't have high hopes and boy did they deliver.",
+        "lat": 19.86761388888889,
+        "lng": 102.21430277777777
+      },
+      {
+        "id": "IMG_3998.png",
+        "caption": "Inside the Luang Prabang high speed rail station, waiting for the train to Vang Vieng",
+        "lat": 19.86760277777778,
+        "lng": 102.21431666666668
+      },
+      {
+        "id": "IMG_4001.png",
+        "caption": "Top speed is about 100 miles/hr.  It's a 50 minute ride.  The car ride would have been about 5-6 hours.  Probably half of the ride was in tunnels through the mountain area here.",
+        "lat": 19.867572222222222,
+        "lng": 102.2139138888889
+      }
+    ]
   }
 ]
