@@ -1776,7 +1776,7 @@
   {
     "day": "Day 24",
     "date": "06-25-25",
-    "description": "Sadly, today was a sick day.  Started coming down with a sore throat yesterday afternoon.  Fever today so I was indoors most of the day.  Stepped out for some laundry service and food.  No plans for tomorrow as I'm going to see how I feel.  One thing about this place, is it's very hard to maintain being hygeienic around food.  You're constantly handling filthy money as most places don't take cards and there's not much in the way of soap around outside your hotel room.  And you're in typically pretty high population densities so like my last Thailand trip, it seemed inevitable to get me at some point.  That said, I'm not doing all that bad and hope I'll be back in business in a day or two.  Wouldn't say VV is my favorite place but it would be nice to get at least 1 or 2 activities in before I move off to the capital city of Laos, Vientiane.",
+    "description": "Sadly, today was a sick day.  Started coming down with a sore throat yesterday afternoon.  Fever today so I was indoors most of the day.  Stepped out for some laundry service and food.  No plans for tomorrow as I'm going to see how I feel.  One thing about this place, is it's very hard to maintain being hygeienic around food.  You're constantly handling filthy money as most places don't take cards and there's not mucb in the way of soap around outside your hotel room.  And you'rr in typically pretty high population densities so like my last Thailand trip, it seemed inevitable to get me at some point.  That said, I'm not doing all that bad and hope I'll be back in business in a day or two.  Wouldn't say VV is my favorite place but it would be nice to get at least 1 or 2 activities in before I move off to the capital city of Laos, Vientiane.",
     "weather": "88\u00b0F, Overcast clouds, 69% humidity",
     "photos": [
       {
@@ -1796,6 +1796,26 @@
         "caption": "The final roti - not bad - kind of a crunchy dough with filling",
         "lat": 18.923275,
         "lng": 102.44625
+      }
+    ]
+  },
+  {
+    "day": "Day 25",
+    "date": "06-26-25",
+    "description": "Felt like crap for most of the day so was almost entirely in my room.  Popped Advil on a 4-hour schedule.  Got my train ticket for the 28th.  Did a lot of TouchDesigner tutorial work on my laptop - maybe someday I'll have something to show from it.  It's quite complex so that may be awhile.  Sure hoping tomorrow I feel better.  No worries - not feeling that bad - just fever impacts.  Hoping tomorrow is a better day.  No Daily Thing today, sorry.",
+    "weather": "91\u00b0F, Overcast clouds, 57% humidity",
+    "photos": [
+      {
+        "id": "IMG_4065.png",
+        "caption": "View from breakfast at my hotel this morning",
+        "lat": 18.920575,
+        "lng": 102.44478611111111
+      },
+      {
+        "id": "IMG_4066.png",
+        "caption": "Part of my breakfast - most of the nicer hotels here have a cook to make different egg dishes - I always go for the omette with everything",
+        "lat": 18.920561111111112,
+        "lng": 102.44496944444445
       }
     ]
   }
