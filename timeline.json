@@ -1818,5 +1818,43 @@
         "lng": 102.44496944444445
       }
     ]
+  },
+  {
+    "day": "Day 26",
+    "date": "06-27-25",
+    "description": "My bad - another sick day.  Last night wasn't fun with tons of dreams/hallucinations that were just insane.  Fever broke and my sheets felt like it had rained inside the room.  By the way, last night there was one of those lightning strikes outside my window where there was virtually no delay between light and the giant F'ing boom!  So mostly felt like crap today.  I think I'm doing a little better this evening so I have hope for tomorrow which is a short travel day to Vientiane.",
+    "weather": "76\u00b0F, Overcast clouds, 99% humidity",
+    "photos": [
+      {
+        "id": "IMG_4069.png",
+        "caption": "Looking down the street my hotel is on.  Sunset.",
+        "lat": 18.92008611111111,
+        "lng": 102.44590000000001
+      },
+      {
+        "id": "IMG_4070.png",
+        "caption": "Front of my hotel next to the really rickety bridge across the river",
+        "lat": 18.920133333333336,
+        "lng": 102.44535
+      },
+      {
+        "id": "IMG_4072.png",
+        "caption": "Sunset on the river",
+        "lat": 18.920222222222222,
+        "lng": 102.44473333333333
+      },
+      {
+        "id": "IMG_4074.png",
+        "caption": "Watch your step.  Also, there's a constant stream of scooters and motorcycles so watch them too.",
+        "lat": 18.920261111111113,
+        "lng": 102.44443611111112
+      },
+      {
+        "id": "IMG_4075.png",
+        "caption": "Final sunset pic",
+        "lat": 18.92024166666667,
+        "lng": 102.44470277777778
+      }
+    ]
   }
 ]
