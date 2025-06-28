@@ -1856,5 +1856,55 @@
         "lng": 102.44470277777778
       }
     ]
+  },
+  {
+    "day": "Day 27",
+    "date": "06-28-25",
+    "description": "Not a great night last night but generally feeling better throughout the day.  Train ride wasn't too bad.  Made it to Vientiane, the capitol city of Laos.  I was told by several people that it's a crap city not worth visiting and well... they were right.  I do have a full day tomorrow before my flight the next day - not sure what I'll do as my venture out tonight did not impress.  About that venture:  I had some really (relatively) expensive crap food at the rooftop restaurant.  Had a hankering for dessert but they no have dessert.  I figured, worst case I can find a market with a freezer and some ice cream.  It was dark by this point and I started down the busy, but small street of my hotel.   It was ultra sketch and just got sketchier the further I went.  Dark, quiet, industrial streets with me the only white guy in at least a few square miles.  But I was on a mission for some ice cream so I just put my head down and walked fast.  I found nothing on the roughly 2 mile walk I made.  But I did find success when I made it back to the hotel, looked across the street and spied a very tiny market that what-do-you-know had one of those ice cream freezers.  That Magnum bar was one of the better things I've had in awhile, let me tell you.  Food has not impressed lately though this is partly due to me illness and not wanting to venture very far.  Tomorrow's likely to me lame city but then I'm off to Vietname the next day where some real adventures should begin soon and I should be healthy to take them on again.",
+    "weather": "79\u00b0F, Drizzle, 73% humidity",
+    "photos": [
+      {
+        "id": "IMG_4078.png",
+        "caption": "So now I know why Laos has a high speed rail system and just broken, crap roads.  China paid for most of the new rail system and it extended up to the Chinese border. ",
+        "lat": 18.954047222222222,
+        "lng": 102.45564166666666
+      },
+      {
+        "id": "IMG_4080.png",
+        "caption": "This white guy with the coolie hat:  what a baller",
+        "lat": 18.953722222222222,
+        "lng": 102.45561111111111
+      },
+      {
+        "id": "IMG_4082.png",
+        "caption": "My view on my train ride to Vientiane.  I have a story about these 2 in front of me but it's too long for this caption (see Daily)",
+        "lat": 18.953127777777777,
+        "lng": 102.45566666666667
+      },
+      {
+        "id": "IMG_4083.png",
+        "caption": "View of the countryside outside of Vientiane, capitol city of Laos",
+        "lat": 18.931669444444445,
+        "lng": 102.458175
+      },
+      {
+        "id": "IMG_4085.png",
+        "caption": "Throngs of mostly Chinese exiting the train",
+        "lat": 18.047091666666667,
+        "lng": 102.68980277777779
+      },
+      {
+        "id": "IMG_4103.png",
+        "caption": "Dennis inception",
+        "lat": 17.971227777777777,
+        "lng": 102.58666111111111
+      },
+      {
+        "id": "IMG_4121.png",
+        "caption": "Rooftop bar of my $28/night hotel.  NIce.  The food was crap, though.",
+        "lat": 17.970602777777778,
+        "lng": 102.5859
+      }
+    ]
   }
 ]

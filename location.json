@@ -1,10 +1,17 @@
 [
   {
+    "place": "Vientiane",
+    "lat": 17.97,
+    "lng": 102.586,
+    "arrival_date": "06-28-25",
+    "departure_date": ""
+  },
+  {
     "place": "Vang Vieng",
     "lat": 18.9205,
     "lng": 102.4456,
     "arrival_date": "06-24-25",
-    "departure_date": ""
+    "departure_date": "06-28-25"
   },
   {
     "place": "Nong Khiaw",
