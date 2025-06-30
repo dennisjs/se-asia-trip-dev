@@ -1926,5 +1926,31 @@
         "lng": 102.60145555555555
       }
     ]
+  },
+  {
+    "day": "Day 29",
+    "date": "06-30-25",
+    "description": "Travel Day.  Nothing could be in such stark contrast a taking off from the Vientiane, Laos airport (it's the capitol city of Laos) and landing in Hanoi, Vietnam.  The airport of Hanoi looks similar to what you'd see in Seoul:  a very, very modern and large international airport.  The Vientiane airport was in rough, rough shape and had 5 very rough-looking gates.  I had not previously considered the third-worldness of Laos and the (seemingly) non-third-worldness of Vietnam.  Mind you, I've only really seen the airport and my view to my apartment was heavily clouded by very strong, windy rain.  But the city - what I've seen of it - is also in stark contrast with Vientiane.  I'm sure Hanoi was quite different only 20 years ago.  Anyhow, I've heard good things about Hanoi and am happy to be here.  It will be interesting to contrast Hanoi with some of the smaller villages I'm sure to visit over the course of this next 1-1.5 months.  I should add that I hate to say I still have lingering sick that is stuck on me.  Not bad - but still in a rather weakened condition that is going to make exploring & touring difficult until I can fully shake this thing.  I haven't been this taken down by sickness - well maybe ever.  I'll probably just start with some short, nearby explorations of the city.  Which sounds great to me.  Like some Vietnamese coffe shops, etc.  And really, I need to put my Vietnam plans into better shape, including Hanoi.  I think it would be interesting to see some \"war stuff\" but also I think this city has much more to offer as well.",
+    "weather": "90\u00b0F, Overcast clouds, 73% humidity",
+    "photos": [
+      {
+        "id": "IMG_4133.png",
+        "caption": "The heavens unleashed shortly after I landed in Hanoi",
+        "lat": 21.10541388888889,
+        "lng": 105.82627222222222
+      },
+      {
+        "id": "IMG_4141.png",
+        "caption": "This actually is a pic of a Pickleball shop for my brother Randy.  You'll just have to trust me on that one.",
+        "lat": 21.034897222222224,
+        "lng": 105.84499444444444
+      },
+      {
+        "id": "IMG_4143.png",
+        "caption": "The alley outside the door to my unit.  Staying at a 'homestay'.  It's basically just a collection of very small apartments.",
+        "lat": 21.033516666666667,
+        "lng": 105.84487777777777
+      }
+    ]
   }
 ]

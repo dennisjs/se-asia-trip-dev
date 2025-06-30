@@ -1,10 +1,17 @@
 [
   {
+    "place": "Hanoi",
+    "lat": 21.03,
+    "lng": 105.84,
+    "arrival_date": "06-30-25",
+    "departure_date": ""
+  },
+  {
     "place": "Vientiane",
     "lat": 17.97,
     "lng": 102.586,
     "arrival_date": "06-28-25",
-    "departure_date": ""
+    "departure_date": "06-30-25"
   },
   {
     "place": "Vang Vieng",
