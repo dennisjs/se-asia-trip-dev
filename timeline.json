@@ -1952,5 +1952,73 @@
         "lng": 105.84487777777777
       }
     ]
+  },
+  {
+    "day": "Day 30",
+    "date": "07-01-25",
+    "description": "Got out for about 2 miles or so but then my body wore out and called it a day - yes, it sux.  But anyhow, I did a few things.  First, had some Vietnamese salt coffee (which I think is also known as egg coffee).  Both sound gross but it was quite good (some guy I met weeks ago had mentioned it to me).  Sort of a blended sweet egg frothy thing with the coffee (chilled).  Just not enough liquid - finished in about 3 gulps.  Went to the Temple of Literature which I read is more literally the Temple of Confuscious (there's a buddha-like statue of him there - people were praying to him which I found interesting).  Originally built in 1020 but rebuilt several times afterwards.  I had plans to proceed to 3 or 4 more destinations but got a little side-tracked when I looked to my left as I crossed a street and saw what appeared to be this famous alley-sized 'street' with a railroad running down the middle.  It's a tourist trap but sorta cool.  You can sit there and when the train comes by and the staff will pull the tables and chairs up and you can go \"ooooh..., look at the train, it's so close\".  I didn't do that myself - turns out the next train was like 4 hours later haha.  A funny piece to this story is I had been hearing this heavy rumbling intermittantly from my apartment.  Took awhile to realize it was a train - I'm in a very dense commercial area and hadn't seen any tracks so that was confusing.  It's loud but there aren't many runs so it didn't really bother me.  ANYHOW... this is the same train.  It's like right next to me.  The train.  At that point I was very thirsty and starting to feel tired so I decided to head back to my place a get some water and rest.  I took a long nap but never really recovered the mojo to get out there again.  I will head out in a bit for some food.  When I have a bigger appetite I will be trying Bun Cha which sounds incredible - look it up.  Some day my body will recover.  I just hope it's sooner than later.",
+    "weather": "82\u00b0F, Overcast clouds, 67% humidity",
+    "photos": [
+      {
+        "id": "IMG_4144.png",
+        "caption": "View from my balcony, which happens to be in the stairway *outside* of my room",
+        "lat": 21.033516666666667,
+        "lng": 105.845
+      },
+      {
+        "id": "IMG_4147.png",
+        "caption": "Banh Mi from last night.  Excellent.  Their throughput was astonishing.  Tons of westerners popping by so apparently this is a semi-famous spot",
+        "lat": 21.036133333333336,
+        "lng": 105.84864722222221
+      },
+      {
+        "id": "IMG_4150.png",
+        "caption": "No idea what they're going for here.  Made where exactly?",
+        "lat": 21.030561111111112,
+        "lng": 105.84206388888889
+      },
+      {
+        "id": "IMG_4166.png",
+        "caption": "Temple of Literature - bonsai?",
+        "lat": 21.029105555555553,
+        "lng": 105.83618055555556
+      },
+      {
+        "id": "IMG_4167.png",
+        "caption": "Temple of Literature",
+        "lat": 21.029127777777777,
+        "lng": 105.83621944444444
+      },
+      {
+        "id": "IMG_4170.png",
+        "caption": "Temple of Literature sculpture",
+        "lat": 21.029030555555554,
+        "lng": 105.83605833333333
+      },
+      {
+        "id": "IMG_4173.png",
+        "caption": "Temple of Literature - massive unit of a tree",
+        "lat": 21.02932222222222,
+        "lng": 105.83645555555555
+      },
+      {
+        "id": "IMG_4176.png",
+        "caption": "Hanoi Train Street",
+        "lat": 21.028288888888888,
+        "lng": 105.84162222222221
+      },
+      {
+        "id": "IMG_4182.png",
+        "caption": "Hanoi Train Street - hours before the train came by",
+        "lat": 21.02964722222222,
+        "lng": 105.843375
+      },
+      {
+        "id": "IMG_4184.png",
+        "caption": "A majestic rooster",
+        "lat": 21.030277777777776,
+        "lng": 105.84428333333332
+      }
+    ]
   }
 ]
