@@ -2020,5 +2020,91 @@
         "lng": 105.84428333333332
       }
     ]
+  },
+  {
+    "day": "Day 31",
+    "date": "07-02-25",
+    "description": "Feeling quite a bit better today.  Still a ways to go but progress!  Got 2 weeks of touring all sorted out this morning.  Headed over to Hoa Lo Prison, which was known as the \"Hanoi Hilton\" during the Vietnam War.  Did you know they call it the American War here?  This is also the prison that held Senator John McCain for 5-1/2 years.  I'm of course, in Vietnam so the focus of the tour/exhibits was the time that the Vietnamese revolutionaries were held here by the French and the atrocities they suffered.  The American part of the story was here but it seemed to be sorta shuffled off the main path in an upstairs area.  And the treatment of prisoners was pretty whitewashed.  Let's get real:  America's record on the treatment of \"wartime\" prisoners isn't so hot lately.  It was interesting to see, though only about a fifth of it is intact.  I didn't realize that Senator McCain was shot down just a few blocks from where I'm staying.  Did you know he broke both his arms and a leg in the process and he nearly died?  Go look up where he tells the whole story - it's quite interesting.  I moved on from there and basically just did some city walking, grabbed some lunch and headed back to my crib.  Not trying to overdo it as I step out of this illness.  One more full day in Hanoi tomorrow then it's off to the Ha Long Bay area for a cruise!",
+    "weather": "84\u00b0F, Overcast clouds, 67% humidity",
+    "photos": [
+      {
+        "id": "IMG_4189.png",
+        "caption": "This place must be good",
+        "lat": 21.033930555555557,
+        "lng": 105.84583333333333
+      },
+      {
+        "id": "IMG_4191.png",
+        "caption": "Look what I saw staring at me through a shop window last night?",
+        "lat": 21.03278333333333,
+        "lng": 105.84629722222222
+      },
+      {
+        "id": "IMG_4193.png",
+        "caption": "Hanoi streets are quite chaotic.  The fact that there are few sidewalks means you impart a great deal of trust in all of the drivers and cyclists.",
+        "lat": 21.03245,
+        "lng": 105.84806944444443
+      },
+      {
+        "id": "IMG_4197.png",
+        "caption": "Last night's spring rolls dish.  I haven't tackled the Bun Cha yet because I haven't been hungry enough.",
+        "lat": 21.03379166666667,
+        "lng": 105.84735833333333
+      },
+      {
+        "id": "IMG_4203.png",
+        "caption": "Hoa Lo Prison AKA \"The Hanoi Hilton\".  Senator John McCain was held here. This ia a model of the prison - inside the prison",
+        "lat": 21.02558611111111,
+        "lng": 105.84656388888888
+      },
+      {
+        "id": "IMG_4225.jpg",
+        "caption": "This is the actual lake where John McCain was shot down in, while on a bombing mission over Hanoi.  Blue dot is where I'm staying",
+        "lat": 21.02558611111111,
+        "lng": 105.84656388888888
+      },
+      {
+        "id": "IMG_4204.png",
+        "caption": "Old-timey photo of Hoa Lo Prison",
+        "lat": 21.025552777777776,
+        "lng": 105.84658888888889
+      },
+      {
+        "id": "IMG_4205.png",
+        "caption": "The main gate of the Hoa Lo Prison",
+        "lat": 21.025594444444444,
+        "lng": 105.84656388888888
+      },
+      {
+        "id": "IMG_4212.png",
+        "caption": "Solitairy cells at the Hoa Lo Prison",
+        "lat": 21.02482222222222,
+        "lng": 105.84635833333333
+      },
+      {
+        "id": "IMG_4213.png",
+        "caption": "A lot of photos emphasizing the humane treatment of the prisoners.  Go and read John McCain's account and you'll find it wasn't all ping pong and volleyball. ",
+        "lat": 21.025177777777778,
+        "lng": 105.84635833333333
+      },
+      {
+        "id": "IMG_4214.png",
+        "caption": "Hoa Lo Prison AKA \"The Hanoi Hilton\".  Only about 1/5 of the old prison remains, so that this real hotel could be built.  It's an actual Hilton - yeah, they went all in on that.  OK, I kid.  It's a Howard Johnson.",
+        "lat": 21.024702777777776,
+        "lng": 105.84651944444444
+      },
+      {
+        "id": "IMG_4218.png",
+        "caption": "Hoan Kiem Lake in the middle of Hanoi",
+        "lat": 21.026875,
+        "lng": 105.8532861111111
+      },
+      {
+        "id": "IMG_4219.png",
+        "caption": "I love taking these pics of people you very often see in the region taking their own pics in absolutely ridiculous poses.  It's a pastime of mine.",
+        "lat": 21.028352777777776,
+        "lng": 105.85363888888888
+      }
+    ]
   }
 ]
