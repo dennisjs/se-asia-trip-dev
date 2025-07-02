@@ -454,5 +454,15 @@
       }
     ],
     "description": "Very squirrly ride from the airport to downtown with high winds, heavy rain, thunder & lightning.  And this truck that tipped over in the wind."
+  },
+    "2025-07-02": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_4192.mp4",
+        "caption": "Weird singing trash truck"
+      }
+    ],
+    "description": "Heard this odd singing a few nights back and wondered what it could be.  Passed this trash truck last night and it was the source.  I'm guessing it's a revolutionary song about industriousness."
   }
 }
