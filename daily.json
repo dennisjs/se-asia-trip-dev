@@ -464,5 +464,30 @@
       }
     ],
     "description": "Heard this odd singing a few nights back and wondered what it could be.  Passed this trash truck last night and it was the source.  I'm guessing it's a revolutionary song about industriousness."
+  },
+    "2025-07-03": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_4237.mp4",
+        "caption": "Thought it might be interesing to see route from my apartment to the main office where we have breakfast and out the door to another adventure"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_4245.mp4",
+        "caption": "The video you've all been waiting for!  TRAIN STREET!  I have to laugh, this guy honked his horn just as he was barreling towards me and I almost crapped my pants.  You can see the camera flinch with me hahahahaha"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_4265.mp4",
+        "caption": "Video starts right after I yelled at those soldiers: Ho Chi Minh?  More like Ho Chi Thin!  That guy was like skinny!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_4272.mp4",
+        "caption": "Yeah, I loves me some rain, thunder, and lightning"
+      }
+    ],
+    "description": ""
   }
 }
