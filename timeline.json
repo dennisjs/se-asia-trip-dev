@@ -2140,7 +2140,7 @@
   {
     "day": "Day 32",
     "date": "07-03-25",
-    "description": "First of all, last night ended with a nice dinner provided by the host of the place I'm staying at.  Joined with a group of maybe 8 other travelers.  It's always nice to hear/share stories with co-travelers along the way.  Today:  This morning I headed over to the train street as it was only about 10 minutes away and crowds were light.  Bought a coffee as my entry fee, got a great spot and got some pics/video.  It was brief but kinda thrilling.  Headed over to the Ho Chi Minh Mausoleum.  Normally his embalmed body is on public display but - and I don't know how accurate this is - the rumor has it that his body is on loan to Russia.  I dunno.  I missed seeing it - how many times do you get to see an embalmed body of a famous person?  Still, the grounds were pretty cool, very expansive, and very wet once the torrents unleashed.  Very heavy rain and lightning everywhere.  I enjoyed just hanging out and watching the lightning strikes all around me.  This site had the biggest crowds I've seen to date.  Had a very nice walk back and chilled for a bit.  Saved my appetite and made it out for Bun Cha - a very famous Hanoi dish!  Went to the Michelin Bib (?) place 0.3 miles from where I'm staying.  It was fantastic.  The smoky meats with the freshness and array of crazy flavors in those greens - chef's kiss.  The crunchy grilled spring rolls alone were worth the trip.",
+    "description": "First of all, last night ended with a nice dinner provided by the host of the place I'm staying at.  Joined with a group of maybe 8 other travelers.  It's always nice to hear/share stories with co-travelers along the way.  Today:  This morning I headed over to the train street as it was only about 10 minutes away and crowds were light.  Bought a coffee as my entry fee, got a great spot and got some pics/video.  It was brief but kinda thrilling.  Headed over to the Ho Chi Minh Mausoleum.  Normally his embalmed body is on public display but - and I don't know how accurate this is - the rumor has it that his body is on loan to Russia.  I dunno.  I missed seeing it - how many times do you get to see an embalmed body of a famous person?  Still, the grounds were pretty cool, very expansive, and very wet once the torrents unleashed.  Very heavy rain and lightning everywhere.  I enjoyed just hanging out and watching the lightning strikes all around me.  This site had the biggest crowds I've seen to date.  Had a very nice walk back and chilled for a bit.  Next mission: Bun Cha",
     "weather": "77\u00b0F, Moderate rain, 71% humidity",
     "photos": [
       {
@@ -2256,6 +2256,20 @@
         "caption": "Close-up of those spring rolls.  Never had anything like it.  The crunchy grilled exterior is awesome.",
         "lat": 21.032233333333334,
         "lng": 105.84812222222222
+      }
+    ]
+  },
+  {
+    "day": "Day 33",
+    "date": "07-04-25",
+    "description": "This trip has been a real struggle at times.  Last night I developed some severe diarrhea and upset stomach.  In the morning vomiting.  Clear signs of food poisoning.  I suspect the Bun Cha but who knows.  So it was a very unpleasant day.  Started feeling worse in the afternoon and decided it was time to seek a clinic.  I was feeling so bad I just directed ChatGPT to find me a well-rated English-speaking clinic in the area.  Got a taxi there and it was a really nice, professional, modern clinic.  They took blood & stool and put me on some major fluids with an iv and also gave me anti-nausea drugs.  Was taking fluids for several hours.  They confirmed an infection and likely food-borne.  So got some antibiotics he thought were more appropriate and some anti-nausea meds.  I\u2019ll be honest, once you have been so burned by your food it\u2019s hard to remain confident as the impact is so harsh - as you know, it\u2019s just such an intensely bad feeling when you get food poisoning.  So it\u2019s hard to feel good about the next 1.5 months food-wise.  I dunno\u2026.  Fairly demotivated at the moment.  Was reading up on Vietnam and Hanoi in particular and they have had some recent isses with an increase in food poisonings.  Doesn't give me confidence for the next 2 months.",
+    "weather": "90\u00b0F, Overcast clouds, 58% humidity",
+    "photos": [
+      {
+        "id": "IMG_4308.png",
+        "caption": "At the clinic getting fluids, anti-nausea, etc.",
+        "lat": 21.0311,
+        "lng": 105.81832777777777
       }
     ]
   }
