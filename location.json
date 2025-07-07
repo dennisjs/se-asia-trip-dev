@@ -1,10 +1,17 @@
 [
   {
+    "place": "Lan Ha Bay",
+    "lat": 20.777,
+    "lng": 107.08,
+    "arrival_date": "07-06-25",
+    "departure_date": ""
+  },
+  {
     "place": "Hanoi",
     "lat": 21.03,
     "lng": 105.84,
     "arrival_date": "06-30-25",
-    "departure_date": ""
+    "departure_date": "07-06-25"
   },
   {
     "place": "Vientiane",
