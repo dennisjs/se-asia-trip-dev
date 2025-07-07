@@ -1,24 +1,66 @@
 [
   {
+    "place": "Lan Ha Bay",
+    "lat": 20.777,
+    "lng": 107.08,
+    "arrival_date": "07-06-25",
+    "departure_date": ""
+  },
+  {
+    "place": "Hanoi",
+    "lat": 21.03,
+    "lng": 105.84,
+    "arrival_date": "06-30-25",
+    "departure_date": "07-06-25"
+  },
+  {
+    "place": "Vientiane",
+    "lat": 17.97,
+    "lng": 102.586,
+    "arrival_date": "06-28-25",
+    "departure_date": "06-30-25"
+  },
+  {
+    "place": "Vang Vieng",
+    "lat": 18.9205,
+    "lng": 102.4456,
+    "arrival_date": "06-24-25",
+    "departure_date": "06-28-25"
+  },
+  {
+    "place": "Nong Khiaw",
+    "lat": 20.57,
+    "lng": 102.61,
+    "arrival_date": "06-20-25",
+    "departure_date": "06-24-25"
+  },
+  {
+    "place": "Luang Prabang",
+    "lat": 19.89,
+    "lng": 102.13,
+    "arrival_date": "06-16-25",
+    "departure_date": "06-20-25"
+  },
+  {
     "place": "Pakbeng, Laos",
     "lat": 19.89,
     "lng": 101.13,
     "arrival_date": "06-15-25",
-    "departure_date": ""
+    "departure_date": "06-16-25"
   },
   {
     "place": "Chiang Rai",
     "lat": 19.91,
     "lng": 99.84,
     "arrival_date": "06-12-25",
-    "departure_date": ""
+    "departure_date": "06-15-25"
   },
   {
     "place": "Pai",
     "lat": 19.36,
     "lng": 98.45,
     "arrival_date": "06-09-25",
-    "departure_date": "06-15-25"
+    "departure_date": "06-12-25"
   },
   {
     "place": "Chiang Mai",
@@ -32,6 +74,6 @@
     "lat": 13.7417,
     "lng": 100.5602,
     "arrival_date": "06-02-25",
-    "departure_date": "06-12-25"
+    "departure_date": "06-05-25"
   }
 ]
