@@ -489,5 +489,20 @@
       }
     ],
     "description": ""
+  },
+    "2025-07-08": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_4411.mp4",
+        "caption": "Lightning in the center cloud at sunset"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_4468.mp4",
+        "caption": "Check out the monkey in the upper right.  This was a sheer cliff and we spied these guys while kayaking"
+      }
+    ],
+    "description": "Just a few videos from Lan Ha and Ha Long Bay"
   }
 }
