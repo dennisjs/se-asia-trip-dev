@@ -2286,5 +2286,133 @@
         "lng": 107.07956666666666
       }
     ]
+  },
+  {
+    "day": "Day 37",
+    "date": "07-08-25",
+    "description": "So I'm actually in Hanoi for a few hours as I await my overnight sleeper bus to the Ha Giang Loop area - not going to update my location until I get to Ha Giang.  After last night on the bay, we did a short bike ride and then caught our bus back to Hanoi.  Had a good time on Han La and Long Ha Bays.  Quite a few cruise ships about but met some nice people and we had fun.  I actually was with 2 groups due to most people doing the 1 night option while I did a 2 night stay.  Looking forward to the Ha Giang Loop which will be on the back of a motorcycle with a guide (in a group tour).  According to folks I've spoken with it should be one of the highlights of Vietnam.  Actually hoping for at least some rain as it's started to get quite hot lately with little breeze to cool things off.",
+    "weather": "89\u00b0F, Overcast clouds, 71% humidity",
+    "photos": [
+      {
+        "id": "IMG_4311.png",
+        "caption": "There is a tram option for getting to Cat Ba Island",
+        "lat": 20.813805555555557,
+        "lng": 106.89525555555556
+      },
+      {
+        "id": "IMG_4312.png",
+        "caption": "And then there is the boat option.  This was our boat.",
+        "lat": 20.73171111111111,
+        "lng": 107.05882222222222
+      },
+      {
+        "id": "IMG_4321.png",
+        "caption": "Me in Lan Ha Bay as we departed",
+        "lat": 20.734433333333335,
+        "lng": 107.06116388888888
+      },
+      {
+        "id": "IMG_4368.png",
+        "caption": "Sunset view of our sleeping spot on Lan Ha Bay",
+        "lat": 20.777941666666667,
+        "lng": 107.07951388888888
+      },
+      {
+        "id": "IMG_4370.png",
+        "caption": "View from the central bedroom corridor of our boat",
+        "lat": 20.77794722222222,
+        "lng": 107.079375
+      },
+      {
+        "id": "IMG_4380.png",
+        "caption": "Fisherman at sunset on Lan Ha Bay",
+        "lat": 20.77763611111111,
+        "lng": 107.07962777777777
+      },
+      {
+        "id": "IMG_4383.png",
+        "caption": "Another cruise ship on Lan Ha Bay as that central cloud had lightning flashes going off inside it",
+        "lat": 20.777583333333332,
+        "lng": 107.07962777777777
+      },
+      {
+        "id": "IMG_4389.png",
+        "caption": "Sunset at Lan Ha Bay",
+        "lat": 20.777566666666665,
+        "lng": 107.07962777777777
+      },
+      {
+        "id": "IMG_4400.png",
+        "caption": "Cruise ship @ sunset",
+        "lat": 20.777641666666664,
+        "lng": 107.07955277777778
+      },
+      {
+        "id": "IMG_4403.png",
+        "caption": "Another sunset pic - Lan Ha Bay",
+        "lat": 20.777691666666666,
+        "lng": 107.07955277777778
+      },
+      {
+        "id": "IMG_9622.png",
+        "caption": "My kayak buddy and I for the 1st day's kayak",
+        "lat": 20.7727,
+        "lng": 107.082275
+      },
+      {
+        "id": "IMG_9630.png",
+        "caption": "Kayaking on Lan Ha Bay",
+        "lat": 20.770605555555555,
+        "lng": 107.08211388888888
+      },
+      {
+        "id": "IMG_4419.png",
+        "caption": "Incredible sunrise a few mornings ago on Lan Ha Bay",
+        "lat": 20.777302777777777,
+        "lng": 107.07956666666666
+      },
+      {
+        "id": "IMG_4461.png",
+        "caption": "One of several \"finger\" rocks in the area",
+        "lat": 20.79222777777778,
+        "lng": 107.11025277777777
+      },
+      {
+        "id": "IMG_4463.png",
+        "caption": "Actually did quite a bit of kayaking as part of the tour.  Several short caves allowed us to transport ourselves into an isolated lagoon where we swam",
+        "lat": 20.8007,
+        "lng": 107.09939444444444
+      },
+      {
+        "id": "IMG_4467.png",
+        "caption": "Money on the nearly vertical cliffs above us while kayaking",
+        "lat": 20.799511111111112,
+        "lng": 107.09562777777778
+      },
+      {
+        "id": "IMG_4471.png",
+        "caption": "Swim stop yesterday on Ha Long Bay - much needed as the temperatures have been relatively high these past few days",
+        "lat": 20.793522222222222,
+        "lng": 107.10002222222222
+      },
+      {
+        "id": "IMG_4480.png",
+        "caption": "Moon and moonlight last night at our sleeping spot on Han La Bay",
+        "lat": 20.777775,
+        "lng": 107.07962777777777
+      },
+      {
+        "id": "IMG_4484.png",
+        "caption": "Biking on Cat Ba Island",
+        "lat": 20.796702777777778,
+        "lng": 107.04559444444445
+      },
+      {
+        "id": "IMG_4491.png",
+        "caption": "Sort of a boat village in Lan Ha Bay",
+        "lat": 20.737277777777777,
+        "lng": 107.06105
+      }
+    ]
   }
 ]
