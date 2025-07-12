@@ -7,11 +7,18 @@
     "departure_date": ""
   },
   {
+    "place": "Yen Minh, Ha Giang Loop",
+    "lat": 23.120,
+    "lng": 105.137,
+    "arrival_date": "07-08-25",
+    "departure_date": "07-12-25"
+  },
+  {
     "place": "Lan Ha Bay",
     "lat": 20.777,
     "lng": 107.08,
     "arrival_date": "07-06-25",
-    "departure_date": "07-12-25"
+    "departure_date": "07-08-25"
   },
   {
     "place": "Hanoi",
