@@ -2354,18 +2354,6 @@
         "lng": 107.07955277777778
       },
       {
-        "id": "IMG_9622.png",
-        "caption": "My kayak buddy and I for the 1st day's kayak",
-        "lat": 20.7727,
-        "lng": 107.082275
-      },
-      {
-        "id": "IMG_9630.png",
-        "caption": "Kayaking on Lan Ha Bay",
-        "lat": 20.770605555555555,
-        "lng": 107.08211388888888
-      },
-      {
         "id": "IMG_4419.png",
         "caption": "Incredible sunrise a few mornings ago on Lan Ha Bay",
         "lat": 20.777302777777777,
@@ -2385,7 +2373,7 @@
       },
       {
         "id": "IMG_4467.png",
-        "caption": "Monkey on the nearly vertical cliffs above us while kayaking",
+        "caption": "Money on the nearly vertical cliffs above us while kayaking",
         "lat": 20.799511111111112,
         "lng": 107.09562777777778
       },
@@ -2412,15 +2400,33 @@
         "caption": "Sort of a boat village in Lan Ha Bay",
         "lat": 20.737277777777777,
         "lng": 107.06105
+      },
+      {
+        "id": "IMG_9622.png",
+        "caption": "My kayak buddy and I for the 1st day's kayak",
+        "lat": 20.7727,
+        "lng": 107.082275
+      },
+      {
+        "id": "IMG_9630.png",
+        "caption": "Kayaking on Lan Ha Bay",
+        "lat": 20.770605555555555,
+        "lng": 107.08211388888888
       }
     ]
   },
   {
-    "day": "Day 38",
-    "date": "07-09-25",
-    "description": "I'm on a 4-day motorcycle trip and couldn't bring my computer so I can't make updates until that's over!  Not sure I can get a pic up - if I can you'll see it.  Anyhow, I'll get back to posting in about 3 days from now",
-    "weather": "87\u00b0F, Overcast clouds, 67% humidity",
+    "day": "Day 41",
+    "date": "07-12-25",
+    "description": "Got in late tonight so just going to put one pic up.  I'll have a bunch of pics and vids from my awesome motorcycle trip tomorrow!",
+    "weather": "94\u00b0F, Broken clouds, 62% humidity",
     "photos": [
+      {
+        "id": "IMG_4902.png",
+        "caption": "Me and Tuon, my driver finishing up the Ha Giang Loop today!",
+        "lat": 22.91221388888889,
+        "lng": 104.95368888888889
+      }
     ]
   }
 ]

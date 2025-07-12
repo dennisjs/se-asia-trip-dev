@@ -1,9 +1,9 @@
-[ 
+[
   {
-    "place": "Yen Minh, Ha Giang Loop",
-    "lat": 23.12,
-    "lng": 105.137,
-    "arrival_date": "07-08-25",
+    "place": "Sapa",
+    "lat": 22.339,
+    "lng": 103.844,
+    "arrival_date": "07-12-25",
     "departure_date": ""
   },
   {
@@ -11,7 +11,7 @@
     "lat": 20.777,
     "lng": 107.08,
     "arrival_date": "07-06-25",
-    "departure_date": "07-08-25"
+    "departure_date": "07-12-25"
   },
   {
     "place": "Hanoi",
