@@ -569,5 +569,35 @@
       }
     ],
     "description": "Videos from the past several days on the motorcycle trip"
+  },
+    "2025-07-14": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/80290f97-7f78-4d4a-8315-d1bf4befae36.MP4",
+        "caption": "Potato quality drone vid of me and my moto-driver"
+      },
+      {
+        "type": "video",
+        "src": "media/9a4484e6-62a2-4969-ab70-e234816003bd.MP4",
+        "caption": "Our moto pack on the road"
+      },
+      {
+        "type": "video",
+        "src": "media/d4a8e4fd-ccb2-43a9-86df-e1d74085d3f9.MP4",
+        "caption": "Another of our group on the road"
+      },
+      {
+        "type": "video",
+        "src": "media/b361341c-a403-42fe-a3cf-0b9f2c8eacbb.MP4",
+        "caption": "Drone vid at one of our stops"
+      },
+      {
+        "type": "video",
+        "src": "media/19346bea-7359-4894-8f60-2b1249f0fa00.MP4",
+        "caption": "Another drone vid at one of our stops"
+      }
+    ],
+    "description": "Some vids I missed that our motorcycle tour company took"
   }
 }
