@@ -599,5 +599,20 @@
       }
     ],
     "description": "Some vids I missed that our motorcycle tour company took"
+  },
+    "2025-07-15": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5051.mp4",
+        "caption": "At the top of the mountain, looking down at Sapa where I'm staying.  It's a very long ways down!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5099.mp4",
+        "caption": "On the way down by the rice fields"
+      }
+    ],
+    "description": "A couple of vids from my mountain hike today"
   }
 }
