@@ -1,14 +1,21 @@
 [
   {
+    "place": "Ninh Binh / Tam Coc",
+    "lat": 20.216,
+    "lng": 105.935,
+    "arrival_date": "07-17-25",
+    "departure_date": ""
+  },
+  {
     "place": "Sapa",
     "lat": 22.339,
     "lng": 103.844,
     "arrival_date": "07-12-25",
-    "departure_date": ""
+    "departure_date": "07-17-25"
   },
   {
     "place": "Yen Minh, Ha Giang Loop",
-    "lat": 23.120,
+    "lat": 23.12,
     "lng": 105.137,
     "arrival_date": "07-08-25",
     "departure_date": "07-12-25"
