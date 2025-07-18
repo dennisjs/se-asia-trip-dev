@@ -614,5 +614,40 @@
       }
     ],
     "description": "A couple of vids from my mountain hike today"
+  },
+    "2025-07-18": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5204.mp4",
+        "caption": "Vietnamese Pirates of the Caribbean!  I so badly wanted to start in with "Yo Ho Yo Ho, A pirate's life for me!  But I was the only American and they would have thought me crazy."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5208.mp4",
+        "caption": "Hahaha - near the end you can see the paddler in front of us hitting the guy in front to lower his head - I got that many times too!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5213.mp4",
+        "caption": "I was sooo feeling the Pirates vibe that I kept getting the feeling that the water slide would be just ahead - I'm not joking it felt so much like that ride."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5232.mp4",
+        "caption": "Outside the caves in what I believe is actually a lake even though it looks like a river."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5239.mp4",
+        "caption": "Entering the 2nd cave!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5253.mp4",
+        "caption": "Entering the 3rd cave!  I'm mean so I said to my fellow riders, \"Man, it sure would be scary if the power went out!\""
+      }
+    ],
+    "description": "Some vids from the epic boat ride today"
   }
 }
