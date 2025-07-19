@@ -649,5 +649,15 @@
       }
     ],
     "description": "Some vids from the epic boat ride today"
+  },
+    "2025-07-19": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5265.mp4",
+        "caption": "Heavy storm hit when I was at dinner.  Dodged debris from the very heavy winds as I made my way home."
+      }
+    ],
+    "description": "One vid from today."
   }
 }
