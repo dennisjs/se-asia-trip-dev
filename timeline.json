@@ -2774,8 +2774,8 @@
       {
         "id": "IMG_4999.png",
         "caption": "THIS!  Coolest weather by far!  At the peak.  It was in high 60's in Sapa which is at 5K ft.  Not too shabby!",
-        "lat": 22.30,
-        "lng": 103.777
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_5002.png",
@@ -2996,7 +2996,7 @@
   {
     "day": "Day 47",
     "date": "07-18-25",
-    "description": "If not actually the hottest day of the trip it was the most heat-impactful day by a large margin.  It was hot, humid, with perfectly still air and not a spot of rain.  Went on a tour and the first stop was a 500 step, very steep climb up a large rock outcrop.  I had to have still been feeling the 2 big climbs from several days ago - my legs were hurting almost immediately.  And the heat really just immediately sapped me - I probably wasn't too far from heat stroke when I forced myself to stop in some shade and drink some (luckily) cold water I had in my pack.  Was pretty out of it for the next few hours.  Just kind of a miserable day for touring.  We caught a temple, some ruins of an ancient capital city, and finally a boat ride that I was not looking forward to.  I didn't know much about it but it was clear we'd be in the sun for a 2 hour boat ride.  What I didn't know was that a good chunk of it would be in a cave system.  That turned out to be pretty incredible.  And as I say in the photo captions, it bore a striking resemblance to The Pirates of the Carribean ride - minus pirates and water slides and all that jazz.  They were packing the boats in so we followed each other in close proximity, just like the ride.  It finally started cooling off just a little so we got a little bit of relief mid-trip.  God bless the woman paddling our boat the entire 2 hours - she got a good tip at the end.  Apparently Kong: Skull Island was shot in the area but not having seen the movie, I didn't get much out of that angle.  Finally made it back at about 5:30 after a very long, hot day - completely exhausted.  Tomorrow is another hot one and I will be taking it very easy.  It's supposed to cool down quite a bit after that.",
+    "description": "If not actually the hottest day of the trip it was the most heat-impactful day by a large margin.  It was hot, humid, with perfectly still air and not a spot of rain.  Went on a tour and the first stop was a 500 step, very steep climb up a large rock outcrop.  I had to have still been feeling the 2 big climbs from several days ago - my legs were hurting almost immediately.  And the heat really just immediately sapped me - I probably wasn't too far from heat stroke when I forced myself to stop in some shade and drink some (luckly) cold water I had in my pack.  Was pretty out of it for the next few hours.  Just kind of a miserable day for touring.  We caught a temple, some ruins of an ancient capital city, and finally a boat ride that I was not looking forward to.  I didn't know much about it but it was clear we'd be in the sun for a 2 hour boat ride.  What I didn't know was that a good chunk of it would be in a cave system.  That turned out to be pretty incredible.  And as I say in the photo captions, it bore a striking resemblance to The Pirates of the Carribean ride - minus pirates and water slides and all that jazz.  They were packing the boats in so we followed each other in close proximity, just like the ride.  It finally started cooling off just a little so we got a little bit of relief mid-trip.  God bless the woman paddling our boat the entire 2 hours - she got a good tip at the end.  Apparently Kong: Skull Island was shot in the area but not having seen the movie, I didn't much out of that angle.  Finally made it back at about 5:30 after a very long, hot day - completely exhausted.  Tomorrow is another hot one and I will be taking it very easy.  It's supposed to cool down quite a bit after that.",
     "weather": "96\u00b0F, Overcast clouds, 52% humidity",
     "photos": [
       {
@@ -3056,14 +3056,14 @@
       {
         "id": "IMG_5206.png",
         "caption": "This cave system was amazing.  As were the female paddlers that propelled us along",
-        "lat": 20.257,
-        "lng": 105.906
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_5218.png",
         "caption": "We were constantly getting poked in the back by our paddler to lower our heads. ",
-        "lat": 20.257,
-        "lng": 105.906
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_5226.png",
@@ -3080,12 +3080,12 @@
       {
         "id": "IMG_5241.png",
         "caption": "Into the 2nd cave!",
-        "lat": 20.251,
-        "lng": 105.906
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_5242.png",
-        "caption": "Exiting the 3rd and last cave into the restaurant...   Hahahaha, yeah there was no restaurant.",
+        "caption": "Exiting the 2nd and last cave into the restaurant...   Hahahaha, yeah there was no restaurant.",
         "lat": 20.247605555555555,
         "lng": 105.90739444444445
       },
@@ -3112,6 +3112,32 @@
         "caption": "A view of the \"village\" in the movie",
         "lat": 20.24877777777778,
         "lng": 105.91499444444445
+      }
+    ]
+  },
+  {
+    "day": "Day 48",
+    "date": "07-19-25",
+    "description": "Relax day in my air-conditioned room.  Got out once mid day and it was just brutally hot.  Tommorow should be better.  A huge storm hit as I was out for dinner at an excellent Indian restaurant.  It is gusting with very high speeds right now and the power remains off.  Back to the food:  I'm starting to have serious cravings of just simple foods back home - like a sandwich or burrito or whatever.  Vietnamese food not impressing me at the moment.  Maybe it will be better in the south - someone mentioned, and it makes sense, that most of the US Vietnamese food is southern in origin.  Northern Vientnamese food is a just uninspired - but to be honest I haven't ventured out greatly, in part due to my fear of the local food due to the food poisoning bout.  Actually have mostly been eating only 2 meals per day, if that, which is good for my gut.  Plan to schedule a tour tomorrow if we can get past this power outage soon.",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_5263.png",
+        "caption": "Before the storm",
+        "lat": 20.21606388888889,
+        "lng": 105.93721111111111
+      },
+      {
+        "id": "IMG_5264.png",
+        "caption": "Heard rave reviews at this place and it turned out to be excellent with a Naan bigger than my head",
+        "lat": 20.216533333333334,
+        "lng": 105.93808055555556
+      },
+      {
+        "id": "IMG_5266.png",
+        "caption": "Mid-storm.  The winds gusted at very high speed and it was a little dangerous running home and dodging the debris.  At the time of writing without power.",
+        "lat": 20.216080555555553,
+        "lng": 105.93769722222223
       }
     ]
   }
