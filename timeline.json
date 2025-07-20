@@ -3140,5 +3140,79 @@
         "lng": 105.93769722222223
       }
     ]
+  },
+  {
+    "day": "Day 49",
+    "date": "07-20-25",
+    "description": "The tour today was nothing special so not a ton of photos & no videos.  You can't win them all.  Tour group was nice but holy crap these youngsters just prattled on without pause the entire time - even during the nature hike.  Started to get quite annoying.  The father was really nice, and as I've done with a number of people I've sat down and lunched with, I offered my apologies for what is happening in America right now.  Anyhow.... I went back to that Indian place and feasted once more.  I figured I wasn't sick from the prior meal so I was likely safe.  Last thing:  did you hear about the boat capsizing in Halong Bay?  At least 35 dead.  I was on one of those boats about 2 weeks ago.  Pretty scary.",
+    "weather": "93\u00b0F, Overcast clouds, 54% humidity",
+    "photos": [
+      {
+        "id": "IMG_1804.png",
+        "caption": "Group photo of our tour uhhh... group.  The youth in this tour would not shut up for even a moment.",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_5271.png",
+        "caption": "There is a monkey in yonder tree.  This is a refuge so these are not exactly natural-in-the-wild monkeys",
+        "lat": 20.245622222222224,
+        "lng": 105.71525555555556
+      },
+      {
+        "id": "IMG_5274.png",
+        "caption": "Monkey in the refuge - I forgot the name of the breeds - sorry",
+        "lat": 20.246391666666668,
+        "lng": 105.71476111111112
+      },
+      {
+        "id": "IMG_5277.png",
+        "caption": "2 little monkies sitting in a cage",
+        "lat": 20.246236111111113,
+        "lng": 105.71536388888889
+      },
+      {
+        "id": "IMG_5279.png",
+        "caption": "THESE ARE NOT STICKS!!",
+        "lat": 20.246122222222223,
+        "lng": 105.71553055555556
+      },
+      {
+        "id": "IMG_5282.png",
+        "caption": "Stick monster attacking our guide",
+        "lat": 20.293230555555557,
+        "lng": 105.66804444444445
+      },
+      {
+        "id": "IMG_5283.png",
+        "caption": "Cool wall / roots nearby the cave we would soon be entering",
+        "lat": 20.293394444444445,
+        "lng": 105.66854722222223
+      },
+      {
+        "id": "IMG_5288.png",
+        "caption": "Cave entrance.  Bones and artifacts found from humans dated 7500 years ago here.",
+        "lat": 20.29353888888889,
+        "lng": 105.66864722222223
+      },
+      {
+        "id": "IMG_5289.png",
+        "caption": "You've got some bats in the cave",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_5295.png",
+        "caption": "Ummm - cave?  Kinda hard to photograph said dark cave",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_5299.png",
+        "caption": "This was one of the tour \"highlights\" - a very old, large tree.  Maybe 800 yrs old?",
+        "lat": null,
+        "lng": null
+      }
+    ]
   }
 ]
