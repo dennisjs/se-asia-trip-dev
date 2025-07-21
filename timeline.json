@@ -3214,5 +3214,61 @@
         "lng": null
       }
     ]
+  },
+  {
+    "day": "Day 50",
+    "date": "07-21-25",
+    "description": "Travel day to Phong Nha, southwards.  It's just north of Hue.  About a 6 hour drive.  The lunch stop was a truly hellish place and there was no way I was going to eat there.  Squat toilets - I mean, this place was really trying to draw the foreign crowd.  And no market.  There's *always* a market where you can get some chips, cookies, drinks, whatever.  So I got that burger in town later for a combo lunch-dinner - pretty good for a Vietnamese burger.  Drive was like 6 hrs - pretty standard.  The town is small - nothing special but the real draw here is the caves.  Planning on doing some cave tours tomorrow.  Oh, and exploring what an $8/night hotel is like.  It ain't bad.  No frills but not really missing anything either.  And it comes with a free breakfast.",
+    "weather": "75\u00b0F, Moderate rain, 97% humidity",
+    "photos": [
+      {
+        "id": "IMG_5306.png",
+        "caption": "Was waiting for my bus outside and peeked next door and saw these.  Yeah, \"TNT\".  I'm guessing they were empty but ...?",
+        "lat": 20.24236666666667,
+        "lng": 105.97319722222223
+      },
+      {
+        "id": "IMG_5307.png",
+        "caption": "Selfie in the sleeper bus on my way to next destination.  Mid-day so no sleepie.",
+        "lat": 20.213313888888887,
+        "lng": 105.96066388888889
+      },
+      {
+        "id": "IMG_5308.png",
+        "caption": "Countryside outside of Phong Nha from the bus - my new location",
+        "lat": 17.60582777777778,
+        "lng": 106.33551666666666
+      },
+      {
+        "id": "IMG_5309.png",
+        "caption": "This is what the main room of an $8/night hotel looks like here",
+        "lat": 17.61006111111111,
+        "lng": 106.31000555555555
+      },
+      {
+        "id": "IMG_5310.png",
+        "caption": "This is what the bathroom of an $8 hotel looks like.  Note the combo bath / shower - very common here.  Note the bum gun by the toilet - also standard.",
+        "lat": 17.61005,
+        "lng": 106.31000555555555
+      },
+      {
+        "id": "IMG_5312.png",
+        "caption": "Yeah, I admit I've been generally avoiding Vietnamese food.  Hadn't had a burger in awhile so found this nice resort and got one.  Note, it was about $7 and my hotel was $8.",
+        "lat": 17.60685555555556,
+        "lng": 106.30064444444444
+      },
+      {
+        "id": "IMG_5313.png",
+        "caption": "I've started to notice a proliferation of Christian churches and many in construction - as I've gotten south of Hanoi.  You can really see them since the smaller towns are flat and the churches are tall",
+        "lat": 17.610094444444446,
+        "lng": 106.30352777777777
+      },
+      {
+        "id": "IMG_5314.png",
+        "caption": "Main street of Phong Nha.  The thing this place is famous for is caves.  Plan to do one tomorrow.",
+        "lat": 17.611311111111114,
+        "lng": 106.30647222222223
+      }
+    ]
   }
 ]
