@@ -659,5 +659,20 @@
       }
     ],
     "description": "One vid from today."
+  },
+    "2025-07-22": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5392.mp4",
+        "caption": "A lot of people yes, but Paradise Cave was still awesome to visit.  It's amazing how recently it was explored.  The photos and videos can't convey the scale of the place.  The caverns were just massive."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5461.mp4",
+        "caption": "This was Phong Nha Cave, smaller than paradise but still quite large and impressive."
+      }
+    ],
+    "description": "Cave vids from today"
   }
 }
