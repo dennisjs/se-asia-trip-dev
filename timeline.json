@@ -3428,5 +3428,43 @@
         "lng": 106.28289166666667
       }
     ]
+  },
+  {
+    "day": "Day 52",
+    "date": "07-23-25",
+    "description": "Today was chill day.  Spent much of the day indoors.  Arranged transport for 2 days from now and tediously looked through more local tour options.  It doesn't look good as there just isn't a good not-too-involved option that I could find.  I'll come up with something for tomorrow even if it's just walking around or maybe a bike ride or something.  But it will likely be another generally quiet day.  Then southwards off to Hue.  Had a great dinner at a local place a good walk away.  Hoping I don't get into local food trouble - at least it was really good and it's nice to finally find an excellent very local dish.  Have been looking into Vietnam War history and I'm just about to get into the thick of the combat areas, Hue being one of them.  There are hints of war things here, one of which I'd like to tour but I haven't found a good way to get there and back yet - I might still try tomorrow.  It's another cave but with a war museum sort of thing going on as this area was apparently heavily bombed by the US since it's Ho Chi Minh Trail adjacent.  Locals often took refuge in the caves I toured and in many others.",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_5490.png",
+        "caption": "View from my back window in Phong Nha",
+        "lat": 17.610144444444447,
+        "lng": 106.310075
+      },
+      {
+        "id": "IMG_5493.png",
+        "caption": "I'm getting more adventurous with the local food.  This is a city-local dish called Banh Beo Chen.  The base is a soft rice cake dough topped with meat, etc.  Center dish is a thin, amazing peanut sauce",
+        "lat": 17.613675,
+        "lng": 106.31623055555555
+      },
+      {
+        "id": "IMG_5494.png",
+        "caption": "Normally don't like to show eaten food but think of this as cutaway to show the interior.",
+        "lat": 17.613680555555558,
+        "lng": 106.31623888888889
+      },
+      {
+        "id": "IMG_5497.png",
+        "caption": "Pic of that National Park sign from close up, near the restaurant I ate at",
+        "lat": 17.609597222222224,
+        "lng": 106.31665
+      },
+      {
+        "id": "IMG_5499.png",
+        "caption": "View of my hotel/homestay from the front",
+        "lat": 17.610308333333336,
+        "lng": 106.310075
+      }
+    ]
   }
 ]
