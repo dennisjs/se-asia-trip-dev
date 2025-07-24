@@ -3432,7 +3432,7 @@
   {
     "day": "Day 52",
     "date": "07-23-25",
-    "description": "Today was chill day.  Spent much of the day indoors.  Arranged transport for 2 days from now and tediously looked through more local tour options.  It doesn't look good as there just isn't a good not-too-involved option that I could find.  I'll come up with something for tomorrow even if it's just walking around or maybe a bike ride or something.  But it will likely be another generally quiet day.  Then southwards off to Hue.  Had a great dinner at a local place a good walk away.  Hoping I don't get into local food trouble - at least it was really good and it's nice to finally find an excellent very local dish.  Have been looking into Vietnam War history and I'm just about to get into the thick of the combat areas, Hue being one of them.  There are hints of war things here, one of which I'd like to tour but I haven't found a good way to get there and back yet - I might still try tomorrow.  It's another cave but with a war museum sort of thing going on as this area was apparently heavily bombed by the US since it's Ho Chi Minh Trail adjacent.  One source says \"During the war, the Phong Nha area was one of the North’s major staging areas for northern soldiers and supplies transiting to the front in the south. Soldiers would come from all over northern Vietnam and supplies would come from Hai Phong via a network of north-south roads in North Vietnam. Phong Nha was an entrepot; supplies would be stored in caves and then be re-loaded onto smaller vehicles, bicycles, or pedestrians for the trip south below the DMZ.\"",
+    "description": "Today was chill day.  Spent much of the day indoors.  Arranged transport for 2 days from now and tediously looked through more local tour options.  It doesn't look good as there just isn't a good not-too-involved option that I could find.  I'll come up with something for tomorrow even if it's just walking around or maybe a bike ride or something.  But it will likely be another generally quiet day.  Then southwards off to Hue.  Had a great dinner at a local place a good walk away.  Hoping I don't get into local food trouble - at least it was really good and it's nice to finally find an excellent very local dish.  Have been looking into Vietnam War history and I'm just about to get into the thick of the combat areas, Hue being one of them.  There are hints of war things here, one of which I'd like to tour but I haven't found a good way to get there and back yet - I might still try tomorrow.  It's another cave but with a war museum sort of thing going on as this area was apparently heavily bombed by the US since it's Ho Chi Minh Trail adjacent.  One source says \"During the war, the Phong Nha area was one of the North\u2019s major staging areas for northern soldiers and supplies transiting to the front in the south. Soldiers would come from all over northern Vietnam and supplies would come from Hai Phong via a network of north-south roads in North Vietnam. Phong Nha was an entrepot; supplies would be stored in caves and then be re-loaded onto smaller vehicles, bicycles, or pedestrians for the trip south below the DMZ.\"",
     "weather": "",
     "photos": [
       {
@@ -3464,6 +3464,50 @@
         "caption": "View of my hotel/homestay from the front",
         "lat": 17.610308333333336,
         "lng": 106.310075
+      }
+    ]
+  },
+  {
+    "day": "Day 53",
+    "date": "07-24-25",
+    "description": "It was a very quiet day which was fine by me, honestly.  Had a 3rd dinner at this restaurant on the other side of town.  I really like it because it has excellent gringo food - though at extreme prices.  Worth it.  They also had a 2 for 1 special on Gin & Tonics so if you detect an odd tone in my photos and photo descriptions today - where there it is.  Off to Hue tomorrow morning.",
+    "weather": "82\u00b0F, Overcast clouds, 78% humidity",
+    "photos": [
+      {
+        "id": "IMG_5504.png",
+        "caption": "Sunset tonight - Phong Nha",
+        "lat": 17.605722222222223,
+        "lng": 106.29965277777778
+      },
+      {
+        "id": "IMG_5509.png",
+        "caption": "That in-construction church is definitely Catholic.  They had a service at least the past 2 nights.  Not sure why I'm so fascinated by it - just wondering how the Pope is making an impact here.",
+        "lat": 17.61011388888889,
+        "lng": 106.30330555555555
+      },
+      {
+        "id": "IMG_5511.png",
+        "caption": "A hotel sign in B&W",
+        "lat": 17.61106388888889,
+        "lng": 106.30470277777778
+      },
+      {
+        "id": "IMG_5515.png",
+        "caption": "The Harmacy is a bad place as they tell it.  You don't want to go there.  Nothing good can come from it.",
+        "lat": 17.611075000000003,
+        "lng": 106.30722777777777
+      },
+      {
+        "id": "IMG_5516.png",
+        "caption": "The Pharmacy, next door, however is a great place.  I got some sunscreen there which suprisingly is more difficult that you'd expect.  The last bottle I got I threw away because it made your face ghost-white.  Not a great look.",
+        "lat": 17.611086111111113,
+        "lng": 106.30725
+      },
+      {
+        "id": "IMG_5517.png",
+        "caption": "That Khang guy - yeah, what a turd.",
+        "lat": 17.61039166666667,
+        "lng": 106.30912777777777
       }
     ]
   }
