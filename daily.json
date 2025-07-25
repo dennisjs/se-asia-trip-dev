@@ -674,5 +674,20 @@
       }
     ],
     "description": "Cave vids from today"
+  },
+    "2025-07-25": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5547.mp4",
+        "caption": "At the Perfume River in Hue, looking from the New City side"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5553.mp4",
+        "caption": "A rising star in V-Pop"
+      }
+    ],
+    "description": "A couple of random vids from today"
   }
 }
