@@ -3510,5 +3510,49 @@
         "lng": 106.30912777777777
       }
     ]
+  },
+  {
+    "day": "Day 54",
+    "date": "07-25-25",
+    "description": "Today was travel day.  The bus ride wasn't too long but I was literally in a row of people on a \"sleeper\" bus that was 5 PEOPLE WIDE.  Think about how wide a bus is and cramming 5 people in the width of it.  2 were in the two aisles where they put these beds in.  I was at the window so I had to crawl over the guy's bed next to me to get out.  I was literally rubbing elbows with the guy next to me.  It sucked.  I am now unofficially in South Vietnam, below the old DMZ which I think is about 19 miles north of Hue, the city I'm now staying in.  This was an old capital of Vietnam and there remains a Citadel which is surrounded by fortified walls and a moat.  In 1968, the North Vietnamese Army (NVA) broke a ceasefire and initiated the Tet Offensive and one city they assaulted was Hue.  American and South Vietnamese forces spent weeks to drive them out and it was an extensive battle.  The primary Marine base in Hue used to be a few blocks from where I'm staying in the \"New City\" south of the Perfume River which surrounds the \"Old City\" or Citadel, where the NVA had mostly taken control.  It was a major battle in the war and eventually the US and South Vietnamese drove the NVA out, with significant loss of life on both sides.  Also, just west of here is another region that saw heavy US involvement in fighting (Hamburger Hill, Khe Sanh, etc.).  I am taking an all-day tour romorrow of the DMZ, Khe Sanh, some NVA tunnels, and some other places.  I find these historical tours that I can semi-relate to quite interesting.",
+    "weather": "88\u00b0F, Broken clouds, 58% humidity",
+    "photos": [
+      {
+        "id": "IMG_5528.png",
+        "caption": "Trash collection in Hue.  The green cart is pulled by a lady.  She stop and bangs on a large, like, cowbell.  People walk out with their trashbags and throw into the green cart.",
+        "lat": 16.470322222222222,
+        "lng": 107.595
+      },
+      {
+        "id": "IMG_5529.png",
+        "caption": "While having some lunch these 3 girls is pajamas walked by.  ",
+        "lat": 16.47025833333333,
+        "lng": 107.59502499999999
+      },
+      {
+        "id": "IMG_5531.png",
+        "caption": "French place for lunch:  baguette, italian ham, blue cheese.  Excellent.  The French owner was really nice and just ragged all over the french people.  The french people I've met have been mostly nice, if reserved - it might be a language thing.  They tend to stick with themselves - again prolly a language thing.",
+        "lat": 16.470269444444444,
+        "lng": 107.59506944444443
+      },
+      {
+        "id": "IMG_5537.png",
+        "caption": "This is the bridge from the \"New City\" to the Citadel which is a very old ex-captial of Vietnam, surrounded by fortified walls and a moat.  This bridge was used by American during the Battle of Hue (1968) - before it was blown up by the NVA.",
+        "lat": 16.467988888888886,
+        "lng": 107.59015555555555
+      },
+      {
+        "id": "IMG_5548.png",
+        "caption": "The river Perfume, adajecent to the Citadel and the \"New City\".  Used by Marines in the Battle of Hue to access the Citadel.",
+        "lat": 16.468994444444444,
+        "lng": 107.591225
+      },
+      {
+        "id": "IMG_5556.png",
+        "caption": "The path from the Marine support base to the bridge leading to the Citadel.  I'm staying just a few blocks from here.",
+        "lat": 16.466519444444444,
+        "lng": 107.5914
+      }
+    ]
   }
 ]
