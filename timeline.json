@@ -3828,5 +3828,97 @@
         "lng": 107.58758611111111
       }
     ]
+  },
+  {
+    "day": "Day 57",
+    "date": "07-28-25",
+    "description": "Perhaps you're tiring of the battle stuff.  This should be the last day of it for awhile as tomorrow I exit Hue for Hoi An which is just south of Da Nang.  So I walked around in the general area of where I'm staying which saw fierce early fighting in the Battle of Hue.  There is still plenty of evidence today of the fighting (existing structures with damage and bullet holes).  Had a nice lunch at my favorite French sandwich shop and relaxed in my room then had a nice dinner at a recommended Japanese place.  Hue's been very interesting just historically.  My next stop, Hoi An should offer more scenery - though honestly the peak scenery was likely in the North and I'm now in the South so we might take a few hits in that department.  No crazy stories today other than I was pestered by another guy asking me where I was from, etc. - I ignored him.",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_5755.png",
+        "caption": "Woke up in the middle of the night due to loud rain and looked out the window",
+        "lat": 16.466549999999998,
+        "lng": 107.59451944444444
+      },
+      {
+        "id": "IMG_5756.png",
+        "caption": "Rainy streetlamp",
+        "lat": 16.46656388888889,
+        "lng": 107.59454444444444
+      },
+      {
+        "id": "IMG_5765.png",
+        "caption": "Sorry to do this to you, but I have some more war pics!  Anyhow, this is the bridge across the Perfume river.  It was severed at some point but obviously rebuilt with same structure as it is still littered with many, many bullet holes",
+        "lat": 16.468474999999998,
+        "lng": 107.58936944444444
+      },
+      {
+        "id": "IMG_5777.png",
+        "caption": "More bridge bullet impacts",
+        "lat": 16.467663888888886,
+        "lng": 107.59014166666667
+      },
+      {
+        "id": "IMG_5782.png",
+        "caption": "This is the rebuilt treasury building where a brutal battle took place.  Very close to where I'm staying.",
+        "lat": 16.46576111111111,
+        "lng": 107.59013333333333
+      },
+      {
+        "id": "IMG_5792.png",
+        "caption": "Just a cool tree near the bridge",
+        "lat": 16.467216666666666,
+        "lng": 107.58925555555555
+      },
+      {
+        "id": "IMG_5796.png",
+        "caption": "Another French baguette sandwich for lunch",
+        "lat": 16.470274999999997,
+        "lng": 107.59500833333333
+      },
+      {
+        "id": "IMG_5799.png",
+        "caption": "Getting braver - had some sushi for hamachi for dinner",
+        "lat": 16.46816388888889,
+        "lng": 107.59606944444444
+      },
+      {
+        "id": "IMG_5800.png",
+        "caption": "Fried Udon noodles from the Japanese restaurant I ate at tonight",
+        "lat": 16.46816388888889,
+        "lng": 107.59607777777778
+      },
+      {
+        "id": "treasury_comp.png",
+        "caption": "Some composite pics.  This shows a building where Marines were clustered across from the Treasury building",
+        "lat": 16.465,
+        "lng": 107.59
+      },
+      {
+        "id": "gate_comp.png",
+        "caption": "These gates still exist w/ scenes from the time of the battle",
+        "lat": 16.465,
+        "lng": 107.59
+      },
+      {
+        "id": "tank_comp.png",
+        "caption": "Fierce fighting on this street  The views closely match up",
+        "lat": 16.465,
+        "lng": 107.59
+      },
+      {
+        "id": "bridge_park.png",
+        "caption": "Composite with gazebo then and now",
+        "lat": 16.47,
+        "lng": 107.59
+      },
+      {
+        "id": "gate_rush_comp.png",
+        "caption": "Composite showing marines entering this gate very near to the Treasury",
+        "lat": 16.465,
+        "lng": 107.59
+      }
+    ]
   }
 ]
