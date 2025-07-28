@@ -689,5 +689,15 @@
       }
     ],
     "description": "A couple of random vids from today"
+  },
+    "2025-07-28": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5759.mp4",
+        "caption": "Middle-of-the-night rain"
+      }
+    ],
+    "description": "Not many vids lately.  A very short one for today."
   }
 }
