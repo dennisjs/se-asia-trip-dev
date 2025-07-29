@@ -699,5 +699,15 @@
       }
     ],
     "description": "Not many vids lately.  A very short one for today."
+  },
+    "2025-07-29": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5885.mp4",
+        "caption": "Lantern boats in Hoi An"
+      }
+    ],
+    "description": "One vid from today"
   }
 }
