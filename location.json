@@ -1,10 +1,17 @@
 [
   {
+    "place": "Hoi An",
+    "lat": 15.8852,
+    "lng": 108.329,
+    "arrival_date": "07-29-25",
+    "departure_date": ""
+  },
+  {
     "place": "Hue",
     "lat": 16.466,
     "lng": 107.594,
     "arrival_date": "07-25-25",
-    "departure_date": ""
+    "departure_date": "07-29-25"
   },
   {
     "place": "Phong Nha",
