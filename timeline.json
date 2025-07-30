@@ -3924,7 +3924,7 @@
   {
     "day": "Day 58",
     "date": "07-29-25",
-    "description": "Finally left the historically laden city of Hue.  I took the option of a bus/tour combo which was actually decent.  OK, there was only one good stop of the four, but it was a really good one (Marble Mountain in Da Nang).  In Hoi An now, which is a very old trading city with heavy Chinese and Japanese influences from those trading days.  The old town was really hopping.  Too much so actually - there were untold numbers of humanity milling about.  But there were so many shops, restaurants it didn't really feel crowded.  Ok it felt REALLY crowded.  But it was still a good vibe and it was fun to be in such a hip town/city with so many interesting food options.  I went Mexican and I don't regret it - I didn't expect much but it was fabulous.  It doesn't seem like a city where I'd go on a tour.  Rather just self-exploration.  There is supposed to be a nice beach area to the north but at the same time it's in the 90's now so I dunno.",
+    "description": "Finally left the historically laden city of Hue.  I took the option of a bus/tour combo which was actually decent.  OK, there was only one good stop of the four, but it was a really good one (Marble Mountain in Da Nang).  In Hoi An now, which is a very old trading city with heavy Chinese and Japanese influences from those trading days.  The old town was really hopping.  Too much so actually - there were untold number of humanity milling about.  But there were so many shops, restaurants it didn't really feel crowded.  Ok it felt REALLY crowded.  But it was still a good vibe and it was fun to be in such a hip town/city with so many interesting food options.  I went Mexican and I don't regret it - I didn't expect much but it was fabulous.  It doesn't seem like a city where I'd go on a tour.  Rather just self-exploration.  There is supposed to be a nice beach area to the north but at the same time it's in the 90's now so I dunno.",
     "weather": "89\u00b0F, Light rain, 65% humidity",
     "photos": [
       {
@@ -3953,7 +3953,7 @@
       },
       {
         "id": "IMG_5828.png",
-        "caption": "OK - so if you're male and over 40 in SE Asia, you are gifted with the honor of showing your big rotund belly at any point you desire.  And you get bonus points if you rub it there, fondly, in the sun.  I have not, myself, participated in this cultural phenomenon merely because I'm not sure if I am welcome as an outsider.",
+        "caption": "OK - so if you're male and over 40 in SE Asia, you are gifted with the honor of showing your big rotund belly at any point you desire.  And you get bonus points if you rub it there, fondly, in the sun.  I have not, myself, partaked in this cultural phenomenon merely because I'm not sure if I am welcome as an outsider.",
         "lat": 16.187369444444446,
         "lng": 108.13075277777777
       },
@@ -3972,8 +3972,8 @@
       {
         "id": "IMG_5842.png",
         "caption": "The cool thing about Marble Mountain is... YOU GET TO GO INSIDE THE MOUNTAIN",
-        "lat": 16.004,
-        "lng": 108.264
+        "lat": null,
+        "lng": null
       },
       {
         "id": "IMG_5848.png",
@@ -4088,6 +4088,56 @@
         "caption": "Street food on a bicycle.  This guy rolled up and within seconds was ready to sell his goods.",
         "lat": 15.878497222222222,
         "lng": 108.32885
+      }
+    ]
+  },
+  {
+    "day": "Day 59",
+    "date": "07-30-25",
+    "description": "Mostly a quiet day.  The tours available aren't really my cup of tea so opting to just hang and at least get out into the Old Town at night which is quite the scene.  I'm tempted to do a wood-carving demo / class that comes highly recommended.  Maybe.  Saw a very cool show in the vein of Cirque du Soleil tonight.  Front row seats!  Paid a fair amount (for Vietnam) but I think it was worth it.  THe acrobatics and staging were excellent and the music was fantastic with so many unusual cultural instruments of Vietnam.  And the costumes and theme was very much Vietnam culture so that was nice.  I really enjoyed it.  Sometimes I come from things like this more enthralled and inspired by the music.  The just radical instruments and tones, etc really speak my language.  I'm due for a haircut so that is on the agenda tomorrow - should be an experience.",
+    "weather": "88\u00b0F, Overcast clouds, 58% humidity",
+    "photos": [
+      {
+        "id": "IMG_5910.png",
+        "caption": "It doesn't look like much but this is the top-rated Banh Mi in the area.  Large crowd but they were like a factory putting these things out.  Really tasty.",
+        "lat": 15.885063888888888,
+        "lng": 108.32878888888888
+      },
+      {
+        "id": "IMG_5911.png",
+        "caption": "Doesn't look nearly as nice in the daylight",
+        "lat": 15.875802777777778,
+        "lng": 108.3275
+      },
+      {
+        "id": "IMG_5912.png",
+        "caption": "I went to a show that was in the vein of Cirque du Soleil.  But without the leotards and crazy French shit.  I couldn't take photos so this is nearly all you get.  It was FANSTASTIC.  ",
+        "lat": 15.875155555555557,
+        "lng": 108.32904166666667
+      },
+      {
+        "id": "IMG_5914.png",
+        "caption": "After-show photo ops",
+        "lat": 15.875269444444445,
+        "lng": 108.32872777777777
+      },
+      {
+        "id": "IMG_5917.png",
+        "caption": "A cool sculpture outside the theater",
+        "lat": 15.875241666666668,
+        "lng": 108.32869722222222
+      },
+      {
+        "id": "IMG_5920.png",
+        "caption": "Another lantern boat photo",
+        "lat": 15.875708333333334,
+        "lng": 108.32789722222222
+      },
+      {
+        "id": "IMG_5922.png",
+        "caption": "Alley to my hotel",
+        "lat": 15.885383333333333,
+        "lng": 108.32868888888889
       }
     ]
   }
