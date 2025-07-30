@@ -709,5 +709,15 @@
       }
     ],
     "description": "One vid from today"
+  },
+    "2025-07-30": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5915.mp4",
+        "caption": "After show photo ops with the cast"
+      }
+    ],
+    "description": "One vid from today.  You know my original idea was that I would post a lot of different things, including some of the A/V work I'm doing and maybe some musical stuff.  But the technicality of the A/V work is high and thus I'm still very much in the learning phase and also this means I've spent no time on music.  So it's basically a video page.  Ahh well..."
   }
 }
