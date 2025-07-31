@@ -719,5 +719,20 @@
       }
     ],
     "description": "One vid from today.  You know my original idea was that I would post a lot of different things, including some of the A/V work I'm doing and maybe some musical stuff.  But the technicality of the A/V work is high and thus I'm still very much in the learning phase and also this means I've spent no time on music.  So it's basically a video page.  Ahh well..."
+  },
+    "2025-07-30": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5938.mp4",
+        "caption": "Drum class!  Watch the teacher scold Crappy Drum Boy!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_5939.mp4",
+        "caption": "Drum class part 2:  they did better this time.  There's always something entertaining going on in the evenings at this spot"
+      }
+    ],
+    "description": "One vid from today.  You know my original idea was that I would post a lot of different things, including some of the A/V work I'm doing and maybe some musical stuff.  But the technicality of the A/V work is high and thus I'm still very much in the learning phase and also this means I've spent no time on music.  So it's basically a video page.  Ahh well..."
   }
 }
