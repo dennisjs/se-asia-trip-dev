@@ -4144,7 +4144,7 @@
   {
     "day": "Day 60",
     "date": "07-31-25",
-    "description": "Another fairly quiet day.  I think that's really what Hoi An is about.  It's not about sights and tours, it's about experiencing and hanging out in the town.  Not doing much day stuff either as we're solidly in the 90's right now.  But I did manage to get out and get a much needed haircut.  This place was great and they added a hair wash and head rub too.  These came after the haircut where I recall in the US you'd get a wash before??  I dunno, I only do a barber these days at home.  He did a great job and it was less than $8, which I suspect is expensive for here.  Had a nice night walk through town and had a light dinner as well. I signed up for a wood carving class for tomorrow that should be fun.",
+    "description": "Another fairy quiet day.  I think that's really what Hoi An is about.  It's not about sights and tours, it's about experiencing and hanging out in the town.  Not doing much day stuff either as we're solidly in the 90's right now.  But I did manage to get out and get a much needed haircut.  This place was great and they added a hair wash and head rub too.  These come after the haircut where I recall in the US you'd get a wash before??  I dunno, I only do a barber these days at home.  He did a great job and it was less than $8, which I suspect is expensive for here.  Had a nice night walk through town and had a light dinner as well. I signed up for a wood carving class for tomorrow that should be fun.",
     "weather": "95\u00b0F, Overcast clouds, 58% humidity",
     "photos": [
       {
@@ -4182,6 +4182,56 @@
         "caption": "I pass this open area every night on the way to Old Town.  There's always something going on - martial arts, what have you.  Tonight it was drum class and it was fun to watch - I would LOVE to play in a drum troop like this.",
         "lat": 15.882422222222223,
         "lng": 108.32977222222222
+      }
+    ]
+  },
+  {
+    "day": "Day 61",
+    "date": "08-01-25",
+    "description": "Another relatively quiet day.  In the morning went a little outside of Hoi An to a place that makes exquisite wood carvings.  Took a ~3 hour class where we made our own carving.  I did Baby Yoda.  It took a lot of patience - more than I think I have to take this on as a hobby.  But it was a lot of fun and the instructors were very helpful.  Temperatures and humidity pretty brutal right now but we have benn saved by some fair winds.  This kind of temp/humidity without wind makes it so, so much worse.  I suspect that having left the cooler, rainier regions, this is likely the norm until the end of the trip.  We'll see.  I'm heading back to Da Nang for several days staying in a high-rise just off the beach.  Then it's to Ho Chi Minh City AKA Saigon.",
+    "weather": "99\u00b0F, Overcast clouds, 43% humidity",
+    "photos": [
+      {
+        "id": "IMG_5941.png",
+        "caption": "At the carving place.  This thing is something like 4-5 ft. tall",
+        "lat": 15.849925,
+        "lng": 108.23660277777778
+      },
+      {
+        "id": "IMG_5942.png",
+        "caption": "Another cool sculpture from the wood carving place",
+        "lat": 15.849994444444444,
+        "lng": 108.23658055555556
+      },
+      {
+        "id": "IMG_5947.png",
+        "caption": "A not-so-cool carving that I made from the ~3 hr class.  ",
+        "lat": 15.849505555555556,
+        "lng": 108.23679444444444
+      },
+      {
+        "id": "IMG_5949.png",
+        "caption": "Me proudly holding my tiny carving",
+        "lat": 15.849511111111111,
+        "lng": 108.23686111111111
+      },
+      {
+        "id": "IMG_5951.png",
+        "caption": "The grounds of the wood carving place were beautiful - in the countryside outside of Hoi An",
+        "lat": 15.84941388888889,
+        "lng": 108.23693888888889
+      },
+      {
+        "id": "IMG_5953.png",
+        "caption": "Tool used for carving.  I used maybe 5 of these.",
+        "lat": 15.849511111111111,
+        "lng": 108.23678611111112
+      },
+      {
+        "id": "IMG_5955.png",
+        "caption": "Just a wood sculpture on the grounds looking out to the river",
+        "lat": 15.849469444444445,
+        "lng": 108.23704444444445
       }
     ]
   }
