@@ -734,5 +734,15 @@
       }
     ],
     "description": "Drum class videos"
+  },
+    "2025-08-02": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5981.mp4",
+        "caption": "Da Nang Beach early evening"
+      }
+    ],
+    "description": "Da Nang"
   }
 }
