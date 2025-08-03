@@ -744,5 +744,20 @@
       }
     ],
     "description": "Da Nang"
+  },
+    "2025-08-03": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_5997.mp4",
+        "caption": "At the beach in Da Nang, near the concert venue"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6005.mp4",
+        "caption": "Take-off!"
+      }
+    ],
+    "description": "Da Nang Beach"
   }
 }
