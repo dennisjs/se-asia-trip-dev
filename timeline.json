@@ -4278,5 +4278,73 @@
         "lng": 108.245025
       }
     ]
+  },
+  {
+    "day": "Day 63",
+    "date": "08-03-25",
+    "description": "A relaxing day - am enjoying the hi-rise ocean view.  I have to move to the city view side tomorrow boo...  Spent literally about 4 hours working out some late trip details:  hotels, flights, Cambodia itinerary, etc.  It's a lot of work and I have quite a bit of travel going on in Cambodia.  It's looks like a busy final weeks of the trip.",
+    "weather": "94\u00b0F, Overcast clouds, 56% humidity",
+    "photos": [
+      {
+        "id": "IMG_5994.png",
+        "caption": "It's not so bad relaxing on the balcony - for a few minutes",
+        "lat": 16.066522222222222,
+        "lng": 108.24490277777778
+      },
+      {
+        "id": "IMG_6001.png",
+        "caption": "The weather cooled off significantly this evening and the throngs headed for the beach",
+        "lat": 16.064083333333333,
+        "lng": 108.24672777777778
+      },
+      {
+        "id": "IMG_6003.png",
+        "caption": "Sunset",
+        "lat": 16.06341666666667,
+        "lng": 108.246825
+      },
+      {
+        "id": "IMG_6009.png",
+        "caption": "Paragliding kid",
+        "lat": 16.063491666666668,
+        "lng": 108.24691111111112
+      },
+      {
+        "id": "IMG_6010.png",
+        "caption": "The lit up stage from yesterday's pics appears to be \"free\".  This bad with really snazzy hats was playing this early evening",
+        "lat": 16.063702777777777,
+        "lng": 108.24681111111111
+      },
+      {
+        "id": "IMG_6013.png",
+        "caption": "The throngs of humanity",
+        "lat": 16.064486111111112,
+        "lng": 108.24670277777778
+      },
+      {
+        "id": "IMG_6016.png",
+        "caption": "My hotel is in this pic (I think 3rd tall one from the left)",
+        "lat": 16.066619444444445,
+        "lng": 108.24663611111112
+      },
+      {
+        "id": "IMG_6017.png",
+        "caption": "Almost stayed here but the shrubberies sort of impacted the view",
+        "lat": 16.067652777777777,
+        "lng": 108.24667222222223
+      },
+      {
+        "id": "IMG_6021.png",
+        "caption": "Looking out west away from the beach towards sunset",
+        "lat": 16.066497222222225,
+        "lng": 108.24491944444445
+      },
+      {
+        "id": "IMG_6023.png",
+        "caption": "Da Nang skyline to the east",
+        "lat": 16.06648888888889,
+        "lng": 108.24495
+      }
+    ]
   }
 ]
