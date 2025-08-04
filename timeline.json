@@ -4346,5 +4346,37 @@
         "lng": 108.24495
       }
     ]
+  },
+  {
+    "day": "Day 64",
+    "date": "08-04-25",
+    "description": "Very quiet day.  Not much to report.  Flying to Ho Chi Minh City tomorrow.",
+    "weather": "99\u00b0F, Few clouds, 47% humidity",
+    "photos": [
+      {
+        "id": "IMG_6032.png",
+        "caption": "Another Da Nang sunset",
+        "lat": 16.06651388888889,
+        "lng": 108.243225
+      },
+      {
+        "id": "IMG_6034.png",
+        "caption": "This tall building under construction has one lit floor.  Not the top floor, not the bottom floor.  Like, the 8th floor.",
+        "lat": 16.070183333333333,
+        "lng": 108.24670277777778
+      },
+      {
+        "id": "IMG_6038.png",
+        "caption": "View tonight down the coast on the beach in Da Nang",
+        "lat": 16.07603888888889,
+        "lng": 108.24722222222222
+      },
+      {
+        "id": "IMG_6040.png",
+        "caption": "View of that crazy garden hotel up close",
+        "lat": 16.068005555555555,
+        "lng": 108.24505555555555
+      }
+    ]
   }
 ]
