@@ -1,10 +1,17 @@
 [
   {
+    "place": "Ho Chi Minh City (Saigon)",
+    "lat": 10.766,
+    "lng": 106.695,
+    "arrival_date": "08-05-25",
+    "departure_date": ""
+  },
+  {
     "place": "Da Nang",
     "lat": 16.0667,
     "lng": 108.245,
     "arrival_date": "08-02-25",
-    "departure_date": ""
+    "departure_date": "08-05-25"
   },
   {
     "place": "Hoi An",
