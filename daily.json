@@ -759,5 +759,35 @@
       }
     ],
     "description": "Da Nang Beach"
+  },
+    "2025-08-06": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6066.mp4",
+        "caption": "One of the Cu Chi Tunnel entrances - we were told this had been somewhat enlarged"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6082.mp4",
+        "caption": "VIETNAM!  HO CHI MINH!  Across the Mekong River"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6086.mp4",
+        "caption": "Cruising on one of the islands in the Mekong Rier"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6094.mp4",
+        "caption": "Traditional singing/music at one of the stops"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6109.mp4",
+        "caption": "Boat ride (JUNGLE BOAT!) at one of the stops"
+      }
+    ],
+    "description": "Tour vids outside of Ho Chi Minh City (Saigon) to the Cu Chi Tunnel and the Mekong Delta"
   }
 }
