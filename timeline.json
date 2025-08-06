@@ -4382,7 +4382,7 @@
   {
     "day": "Day 65",
     "date": "08-05-25",
-    "description": "About 1hr, 15min flight from Da Nang to Ho Chi Minh City.  HMC is one massive city.  I looked it up, LA still has 2 million more than Saigon.  Back into sub $20 housing.  The proprieteo speaks really zero English and there is no tour, laundry, or other infrastructure I've been used to this whole trip.  So I'm on my own for all of that.  That said, I scheduled a tour for tomorrow morning - it's an all-day affair so should be pretty wiped out by evening.  Temp's are moderating slightly so hope that holds.",
+    "description": "About 1hr, 15min flight from Da Nang to Ho Chi Minh City.  HMC is one massive city.  I looked it up, LA still has 2 million more than Saigon.  Back into sub $20 housing.  The speaks really zero English and there is no tour, laundry, or other infrastructure I've been used to this whole trip.  So I'm on my own for all of that.  That said, I scheduled a tour for tomorrow morning - it's an all-day affair so should be pretty wiped out by evening.  Temp's are moderating slightly so hope that holds.",
     "weather": "94\u00b0F, Scattered clouds, 61% humidity",
     "photos": [
       {
@@ -4426,6 +4426,128 @@
         "caption": "Big intersection near my homestay",
         "lat": 10.771227777777778,
         "lng": 106.69299444444445
+      }
+    ]
+  },
+  {
+    "day": "Day 66",
+    "date": "08-06-25",
+    "description": "Took a full day tour with a fun group.  A LOT of driving - about 6 of the 12 hours was driving.  This is kind of the main tour in the area - at least the Cu Chi Tunnels part so it was very crammed with people but they had it set up pretty well to handle the numbers.  These tunnels are near the Cambodia border outside of Saigon and represent the end of the line of the Ho Chi Minh Trail / Supply Line.  As you might imagine the area was bombed a lot by the US and thus they had these crazy network of tunnels (remember Forest Gump?).  We saw just a few of them.  The tour guide was a nice guy but man did he rip the US a new arsehole.  Probably deserved over what happened but yeah, being the only American in a van full of other nationalities was fun while he ranted on and on.  I was willing to take the heat for that.  Some clear misrepresentations and of course Kennedy was killed by the CIA, etc., etc.  Anyhow - it was an interesting tour.  The 2nd half of the tour we drove to the Mekong Delta which is a vast region in the area of the Mekong River which is just massive at this point in its journey to the sea.  It was sort of an odd collection of stops on 2 different islands in the delta.  Every stop was selling something but they were still interesting just the same.  A lot of tip pressure for - I dunno - like 10 different people along the way.  Unlike all the other tours I've been on in that way where there was really no tip pressure at all.  Whatever - the tour wasn't as expensive as some of those others so I didn't mind too much.  Weather, while still very humid, was mostly forgiving today and we escaped any real heavy-duty heat.",
+    "weather": "96\u00b0F, Broken clouds, 41% humidity",
+    "photos": [
+      {
+        "id": "IMG_6062.png",
+        "caption": "Captured US guns at Cu Chi Tunnel near the Cambodia border",
+        "lat": 11.0629,
+        "lng": 106.52924444444444
+      },
+      {
+        "id": "IMG_6063.png",
+        "caption": "Spent US munitions",
+        "lat": 11.062866666666668,
+        "lng": 106.52921944444445
+      },
+      {
+        "id": "IMG_6070.png",
+        "caption": "US tank stopped by a mine at Cu Chi Tunnels and it's been there ever since",
+        "lat": 11.060991666666668,
+        "lng": 106.52729722222222
+      },
+      {
+        "id": "IMG_6073.png",
+        "caption": "Huge bomb crater @ Cu Chi Tunnels",
+        "lat": 11.060597222222222,
+        "lng": 106.528
+      },
+      {
+        "id": "IMG_6075.png",
+        "caption": "Going into one of the tunnels.  I only made it to the 2nd exit - it was very tight and was totally hunched over and had had enough",
+        "lat": 11.061208333333335,
+        "lng": 106.52791666666667
+      },
+      {
+        "id": "IMG_6076.png",
+        "caption": "Guard tower at Cu Chi Tunnels",
+        "lat": 11.061308333333335,
+        "lng": 106.52763333333333
+      },
+      {
+        "id": "IMG_6077.png",
+        "caption": "We tried a staple of the people staying in the tunnels during the war:  Steamed cassava root with some salt, sugar, chili powder.  Not bad!",
+        "lat": 11.060994444444445,
+        "lng": 106.52911388888889
+      },
+      {
+        "id": "IMG_6083.png",
+        "caption": "Next part of the tour was the Mekong Delta.  Here's we're having shots of this rice liquor sitting in a jar with like dead cobras and crap like that.  This is the 3rd such exhibit I've seen in SE Asia but the first I tried.",
+        "lat": 10.331275,
+        "lng": 106.37724999999999
+      },
+      {
+        "id": "IMG_6085.png",
+        "caption": "The nasty concoction",
+        "lat": 10.331163888888888,
+        "lng": 106.37735833333333
+      },
+      {
+        "id": "IMG_6093.png",
+        "caption": "These three guys weren't the best but the instruments were unique and I enjoyed it",
+        "lat": 10.327538888888888,
+        "lng": 106.38001388888888
+      },
+      {
+        "id": "IMG_6095.png",
+        "caption": "Singing traditional music as they fed us some fruits.  I'd say at least half this tour was a ploy for us to buy and/or tip our many hosts at the different stops.  I've never had such tip pressure as on this  tour.",
+        "lat": 10.32756388888889,
+        "lng": 106.38001388888888
+      },
+      {
+        "id": "IMG_6096.png",
+        "caption": "Having fruits while we are entertained with traditional music",
+        "lat": 10.327461111111111,
+        "lng": 106.38007222222221
+      },
+      {
+        "id": "IMG_6100.png",
+        "caption": "On a boat with another really nice tour member as this ancient lady behind us paddled us along",
+        "lat": 10.327488888888888,
+        "lng": 106.37966944444443
+      },
+      {
+        "id": "IMG_6103.png",
+        "caption": "This boat ride felt very much like the Jungle Boats at Disneyland, much like my previous ride going through caves felt like Pirates.  We boated around the island.  But no real wildlife present - real or animatronics - other than chickens.",
+        "lat": 10.327469444444445,
+        "lng": 106.37945555555555
+      },
+      {
+        "id": "IMG_6111.png",
+        "caption": "On the Jungle Boat ride!",
+        "lat": 10.328763888888888,
+        "lng": 106.37963055555555
+      },
+      {
+        "id": "IMG_6115.png",
+        "caption": "Jungle Boat with Grandma power",
+        "lat": 10.330680555555555,
+        "lng": 106.38031666666666
+      },
+      {
+        "id": "IMG_6118.png",
+        "caption": "Our engine",
+        "lat": 10.33076111111111,
+        "lng": 106.38136388888888
+      },
+      {
+        "id": "IMG_6122.png",
+        "caption": "Headed back across the Mekong river.  If you saw and recall, I was on a boat on this river in Laos almost 2 months ago!",
+        "lat": 10.337872222222224,
+        "lng": 106.37126944444444
+      },
+      {
+        "id": "IMG_6128.png",
+        "caption": "The Mekong before it hits the ocean.  It's insanely wide and this isn't the entire thing. ",
+        "lat": 10.35136111111111,
+        "lng": 106.36208333333333
       }
     ]
   }
