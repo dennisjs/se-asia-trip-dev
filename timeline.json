@@ -4432,7 +4432,7 @@
   {
     "day": "Day 66",
     "date": "08-06-25",
-    "description": "Took a full day tour with a fun group.  A LOT of driving - about 6 of the 12 hours was driving.  This is kind of the main tour in the area - at least the Cu Chi Tunnels part so it was very crammed with people but they had it set up pretty well to handle the numbers.  These tunnels are near the Cambodia border outside of Saigon and represent the end of the line of the Ho Chi Minh Trail / Supply Line.  As you might imagine the area was bombed a lot by the US and thus they had these crazy network of tunnels (remember Forest Gump?).  We saw just a few of them.  The tour guide was a nice guy but man did he rip the US a new arsehole.  Probably deserved over what happened but yeah, being the only American in a van full of other nationalities was fun while he ranted on and on.  I was willing to take the heat for that.  Some clear misrepresentations and of course Kennedy was killed by the CIA, etc., etc.  Anyhow - it was an interesting tour.  The 2nd half of the tour we drove to the Mekong Delta which is a vast region in the area of the Mekong River which is just massive at this point in its journey to the sea.  It was sort of an odd collection of stops on 2 different islands in the delta.  Every stop was selling something but they were still interesting just the same.  A lot of tip pressure for - I dunno - like 10 different people along the way.  Unlike all the other tours I've been on in that there was really no tip pressure at all.  Whatever - the tour wasn't as expensive as some of those others so I didn't mind too much.  Weather, while still very humid, was mostly forgiving today and we escaped any real heavy-duty heat.",
+    "description": "Took a full day tour with a fun group.  A LOT of driving - about 6 of the 12 hours was driving.  This is kind of the main tour in the area - at least the Cu Chi Tunnels part so it was very crammed with people but they had it set up pretty well to handle the numbers.  These tunnels are near the Cambodia border outside of Saigon and represent the end of the line of the Ho Chi Minh Trail / Supply Line.  As you might imagine the area was bombed a lot by the US and thus they had these crazy network of tunnels (remember Forest Gump?).  We saw just a few of them.  The tour guide was a nice guy but man did he rip the US a new arsehole.  Probably deserved over what happened but yeah, being the only American in a van full of other nationalities was fun while he ranted on and on.  I was willing to take the heat for that.  Some clear misrepresentations and of course Kennedy was killed by the CIA, etc., etc.  Anyhow - it was an interesting tour.  The 2nd half of the tour we drove to the Mekong Delta which is a vast region in the area of the Mekong River which is just massive at this point in its journey to the sea.  It was sort of an odd collection of stops on 2 different islands in the delta.  Every stop was selling something but they were still interesting just the same.  A lot of tip pressure for - I dunno - like 10 different people along the way.  Unlike all the other tours I've been on in that way where there was really no tip pressure at all.  Whatever - the tour wasn't as expensive as some of those others so I didn't mind too much.  Weather, while still very humid, was mostly forgiving today and we escaped any real heavy-duty heat.",
     "weather": "96\u00b0F, Broken clouds, 41% humidity",
     "photos": [
       {
@@ -4479,7 +4479,7 @@
       },
       {
         "id": "IMG_6083.png",
-        "caption": "Next part of the tour was the Mekong Delta.  Here we're having shots of this rice liquor sitting in a jar with like dead cobras and crap like that.  This is the 3rd such exhibit I've seen in SE Asia but the first I tried.",
+        "caption": "Next part of the tour was the Mekong Delta.  Here's we're having shots of this rice liquor sitting in a jar with like dead cobras and crap like that.  This is the 3rd such exhibit I've seen in SE Asia but the first I tried.",
         "lat": 10.331275,
         "lng": 106.37724999999999
       },
@@ -4548,6 +4548,80 @@
         "caption": "The Mekong before it hits the ocean.  It's insanely wide and this isn't the entire thing. ",
         "lat": 10.35136111111111,
         "lng": 106.36208333333333
+      }
+    ]
+  },
+  {
+    "day": "Day 67",
+    "date": "08-07-25",
+    "description": "Started early to avoid the late afternoon heat.  It ended up being *relatively* mild in terms of temperature - low 90's.  I decided to start off the day with a cheerful visit to the War Remnants Museum where as you might figure the USA isn't exactly the hero of the story.  It was interesting.  My main criticism is that it was - no exaggeration - about 90% photographs.  I kind of feel like a museum of photographs is quite lazy but hey, I'm not calling the government of Vietnam lazy - you hear that Charlie?  I didn't take any photos at the museum because, well, you wouldn't have wanted to see them and anyways, if you really did, you can just find all that info on the internet.  After that just joyful visit, I went to what is now named Independence Palace.  It was the seat of the French government when it reigned, and then the seat of the South Vietnamese government.  So when it fell to the North, it was effectively the end of the war.  Not a ton to see but the basement where they ran the war operation was kind of interesting.",
+    "weather": "93\u00b0F, Scattered clouds, 60% humidity",
+    "photos": [
+      {
+        "id": "IMG_6135.png",
+        "caption": "View of the gate to the former South Vietnamese leadership building, today known as Independence Palace.  This fell in 1975.",
+        "lat": 10.778197222222223,
+        "lng": 106.69645
+      },
+      {
+        "id": "IMG_6137.png",
+        "caption": "Independence Palace",
+        "lat": 10.777558333333333,
+        "lng": 106.69542777777778
+      },
+      {
+        "id": "IMG_6138.png",
+        "caption": "View of the entrance to Independence Palace",
+        "lat": 10.776969444444445,
+        "lng": 106.6957388888889
+      },
+      {
+        "id": "IMG_6142.png",
+        "caption": "Interior courtyard in Independent Palace",
+        "lat": 10.776941666666668,
+        "lng": 106.69522222222223
+      },
+      {
+        "id": "IMG_6149.png",
+        "caption": "Basement control room where the war was run by the south",
+        "lat": null,
+        "lng": null
+      },
+      {
+        "id": "IMG_6151.png",
+        "caption": "A long corridor in the basement of Independence Palace",
+        "lat": 10.777122222222223,
+        "lng": 106.69548055555556
+      },
+      {
+        "id": "IMG_6152.png",
+        "caption": "A cute Christmas snow globe",
+        "lat": 10.77686388888889,
+        "lng": 106.69555
+      },
+      {
+        "id": "IMG_6153.png",
+        "caption": "Found a place that sold Singaporean Chicken Rice - a much loved and missed dish from my days in Singapore.  This was actually very close and very tasty.",
+        "lat": 10.777847222222222,
+        "lng": 106.69148333333334
+      },
+      {
+        "id": "IMG_6154.png",
+        "caption": "Beautiful tall trees in a park in Saigon",
+        "lat": 10.775716666666668,
+        "lng": 106.692025
+      },
+      {
+        "id": "IMG_6155.png",
+        "caption": "Ben Thanh Market.  I bought a hat here because the hat I brought was being laundered",
+        "lat": 10.772883333333334,
+        "lng": 106.69786111111111
+      },
+      {
+        "id": "IMG_6156.png",
+        "caption": "Me with that amazing new hat",
+        "lat": 10.771972222222223,
+        "lng": 106.69834166666666
       }
     ]
   }
