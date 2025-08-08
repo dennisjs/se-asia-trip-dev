@@ -4570,12 +4570,6 @@
         "lng": 106.69542777777778
       },
       {
-        "id": "saigon_gates_tank.png",
-        "caption": "This shows the moment the NVA stormed the gates of Independence Palace in 1975",
-        "lat": 10.777558333333333,
-        "lng": 106.69542777777778
-      },
-      {
         "id": "IMG_6138.png",
         "caption": "View of the entrance to Independence Palace",
         "lat": 10.776969444444445,
@@ -4628,6 +4622,38 @@
         "caption": "Me with that amazing new hat",
         "lat": 10.771972222222223,
         "lng": 106.69834166666666
+      },
+      {
+        "id": "saigon_gates_tank.png",
+        "caption": "This shows the moment the NVA stormed the gates of Independence Palace in 1975",
+        "lat": 10.777558333333333,
+        "lng": 106.69542777777778
+      }
+    ]
+  },
+  {
+    "day": "Day 68",
+    "date": "08-08-25",
+    "description": "A quiet, relaxing, last day in Saigon.  Was inspired and searched for a bagel shop and found one and had an amazing bagel with cream cheese and Vietnamese iced coffee.  The best!  And that was my day's highlight hahahahah.  Had lunch at KFC which was fun.  Ate on the 2nd floor.  They actually have a 3rd floor but that's for bathrooms, etc.  Enjoyed a nice couple of beers and peanuts for happy hour then had probably the best banana / mango smoothie I've had to date for like $1.50.  I can't recall if I've mentioned this before but crossing busy streets here requires a very delicate balance of aggression and caution.  You *have* to be aggressive or you just won't get across but in general everyone is out for themselves and trying to get a leg up on the next patsy so you definitely need to track the 20-odd scooters and vehicles trying to run you over.  Generally no ones wants to hurt anybody and remarkably I have seen no collisions.  It's like a delicate chaos out there.  Pretty much ready to go for my very short flight to Phnom Penh, Cambodia tomorrow afternoon.  It's been so long since I've been in another country!",
+    "weather": "92\u00b0F, Broken clouds, 63% humidity",
+    "photos": [
+      {
+        "id": "IMG_6162.png",
+        "caption": "Evening beer in the alley where I'm staying.  Last night in Saigon!",
+        "lat": 10.765822222222223,
+        "lng": 106.69545000000001
+      },
+      {
+        "id": "IMG_6163.png",
+        "caption": "Alley where I'm staying.  Not actually *in* the alley - I do have a bed, etc.",
+        "lat": 10.765838888888888,
+        "lng": 106.69538055555556
+      },
+      {
+        "id": "IMG_6168.png",
+        "caption": "Insane rush-hour traffic Saigon, near my homestay",
+        "lat": 10.768147222222224,
+        "lng": 106.69526666666667
       }
     ]
   }
