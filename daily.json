@@ -789,5 +789,19 @@
       }
     ],
     "description": "Tour vids outside of Ho Chi Minh City (Saigon) to the Cu Chi Tunnel and the Mekong Delta"
-  }
+  },
+    "2025-08-08": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6167.mp4",
+        "caption": "The dreaded rush hour large street crossing!  No fear!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6174.mp4",
+        "caption": "And the crossing back!  Mind you, I'm am going with the light and have the complete right of way."
+      }
+    ],
+    "description": "Saigon rush hour traffic"
 }
