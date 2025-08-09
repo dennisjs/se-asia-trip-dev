@@ -1,10 +1,17 @@
 [
   {
+    "place": "Phnom Penh, Cambodia",
+    "lat": 11.559,
+    "lng": 104.92,
+    "arrival_date": "08-09-25",
+    "departure_date": ""
+  },
+  {
     "place": "Ho Chi Minh City (Saigon)",
     "lat": 10.766,
     "lng": 106.695,
     "arrival_date": "08-05-25",
-    "departure_date": ""
+    "departure_date": "08-09-25"
   },
   {
     "place": "Da Nang",
