@@ -804,5 +804,35 @@
       }
     ],
     "description": "Saigon rush hour traffic"
+  },
+    "2025-08-10": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6200.mp4",
+        "caption": "Monks on parade!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6210.mp4",
+        "caption": "Monks marching for peace"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6228.mp4",
+        "caption": "I love the counterpoint of their response to the leader - it's not quite the same timing"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6230.mp4",
+        "caption": "Just after it was over the monks all headed in different directions.  Presumably to the pub for happy hour."
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6253.mp4",
+        "caption": "Traditional music at the night market.  This guys music and singing really grew on me - he was awesome."
+      }
+    ],
+    "description": "Monks and Market"
   }
 }
