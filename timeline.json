@@ -4834,5 +4834,91 @@
         "lng": 104.92997777777778
       }
     ]
+  },
+  {
+    "day": "Day 71",
+    "date": "08-11-25",
+    "description": "A bummer tour day but I knew that going in.  1st part was visiting the \"Killing Fields\" - maybe you've heard of the movie.  There are many of these but the one we visited is just outside the city center of Phnom Penh.  I won't get into the details as it's all online but quick summary is that this is where the Pol Pot regime (Khmer Rouge) executed their political enemies (over 1 million of them).  After this we went to the \"genocide museum\" which is a former prison / interrogation camp of the Khmer Rouge.  All of it was interesting, etc, but enough of all that.  Had an amazing lunch/dinner:  Fish Amok, the national dish of Cambodia and it was amazing.  I'm definitely getting more of that in the future.  Not much else went on today.",
+    "weather": "88\u00b0F, Scattered clouds, 89% humidity",
+    "photos": [
+      {
+        "id": "IMG_6257.png",
+        "caption": "Visited the Killing Fields - a place of mass execution by the Khmer Rouge in the 70's.  Don't worry, I only took 2 monument photos.",
+        "lat": 11.484747222222222,
+        "lng": 104.901725
+      },
+      {
+        "id": "IMG_6258.png",
+        "caption": "This is the main memorial.  There are actually many \"killing fields\" in Cambodia.  This one is just outside the main city of Phnom Penh.",
+        "lat": 11.484380555555555,
+        "lng": 104.90146666666668
+      },
+      {
+        "id": "IMG_6260.png",
+        "caption": "2nd stop on the Happy Tour.  This was a Khmer Rouge Prison maybe 1/4 mile from where I'm staying.  Not many prisoners survived this place and it's still largley intact.",
+        "lat": 11.549683333333332,
+        "lng": 104.91751111111111
+      },
+      {
+        "id": "IMG_6261.png",
+        "caption": "Cells in the prison which was largely a place of interrogation and torture.  This all stopped upon the defeat of the Khmer Rouge in 1979.",
+        "lat": 11.549508333333334,
+        "lng": 104.91763333333334
+      },
+      {
+        "id": "IMG_6262.png",
+        "caption": "The grounds of the prison, which used to be a high school prior to it being a prison.",
+        "lat": 11.549847222222223,
+        "lng": 104.91778611111111
+      },
+      {
+        "id": "IMG_6263.png",
+        "caption": "More cells",
+        "lat": 11.549502777777777,
+        "lng": 104.917625
+      },
+      {
+        "id": "IMG_6264.png",
+        "caption": "More cells",
+        "lat": 11.549969444444445,
+        "lng": 104.91745
+      },
+      {
+        "id": "IMG_6265.png",
+        "caption": "The walls still have the barbed wire",
+        "lat": 11.548997222222223,
+        "lng": 104.91792222222223
+      },
+      {
+        "id": "IMG_6267.png",
+        "caption": "Saw this guy today.  Classic SE Asia.  You can't quite see the extend of the trailer but what he was hauling was massive and the front of his motorcycle kept coming off the ground.  Just nuts.",
+        "lat": 11.555052777777778,
+        "lng": 104.92047222222223
+      },
+      {
+        "id": "IMG_6272.png",
+        "caption": "Got a straw with my beer today so I was happy to oblige",
+        "lat": 11.558861111111112,
+        "lng": 104.92401944444445
+      },
+      {
+        "id": "IMG_6273.png",
+        "caption": "This is the national dish of Cambodia:  Fish Amok.  It's in a sort of coconut curry sauce.  It was amazing.",
+        "lat": 11.558780555555556,
+        "lng": 104.9239888888889
+      },
+      {
+        "id": "IMG_6274.png",
+        "caption": "Plated with some rice.  I inhaled this dish it was so good.  One of the best dishes I've had on this trip.",
+        "lat": 11.558925,
+        "lng": 104.92402777777778
+      },
+      {
+        "id": "IMG_6275.png",
+        "caption": "Oh lookie who comes around when I get my fish dish?  I don't think my little friend...",
+        "lat": 11.558930555555555,
+        "lng": 104.92405000000001
+      }
+    ]
   }
 ]
