@@ -834,5 +834,15 @@
       }
     ],
     "description": "Monks and Market"
+  },
+    "2025-08-11": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6259.mp4",
+        "caption": "DANGER"
+      }
+    ],
+    "description": "Coconuts"
   }
 }
