@@ -4920,5 +4920,55 @@
         "lng": 104.92405000000001
       }
     ]
+  },
+  {
+    "day": "Day 72",
+    "date": "08-12-25",
+    "description": "Toured the Royal Palace and Silver Pagoda and got yelled at by one of the staff when I forgot at the last moment that pics weren't allowed.  Oopsie - he seemed excessively mad...  These sites weren't all that interesting honestly and it was getting pretty hot by that point so I called it a day.  At 10am.  Not much else done today but went out for a late lunch/early dinner.  Long travel day tomorrow by bus to Siem Reap, where Angkor Wat is.  Not looking forward to 6 hours on a bus but the temples should be amazing.",
+    "weather": "91\u00b0F, Scattered clouds, 62% humidity",
+    "photos": [
+      {
+        "id": "IMG_6277.png",
+        "caption": "The Royal Palace",
+        "lat": 11.564002777777779,
+        "lng": 104.93152500000001
+      },
+      {
+        "id": "IMG_6278.png",
+        "caption": "Royal Palace Inside",
+        "lat": 11.563866666666668,
+        "lng": 104.93112222222223
+      },
+      {
+        "id": "IMG_6279.png",
+        "caption": "Cambodia does have a king.  No, he doesn't hang out in his palace much.",
+        "lat": 11.56371388888889,
+        "lng": 104.93138055555556
+      },
+      {
+        "id": "IMG_6282.png",
+        "caption": "Palace detail",
+        "lat": 11.564119444444446,
+        "lng": 104.93147222222223
+      },
+      {
+        "id": "IMG_6289.png",
+        "caption": "Some something on the grounds of the palace",
+        "lat": 11.562066666666666,
+        "lng": 104.9319
+      },
+      {
+        "id": "IMG_6290.png",
+        "caption": "Tried Khmer Noodles (with chicken).  Not my fave.  Should have stuck with the Fish Amok.",
+        "lat": 11.558802777777778,
+        "lng": 104.92403333333334
+      },
+      {
+        "id": "IMG_6292.png",
+        "caption": "Oh, it's you again!  Yeah, I was at the same restaurant yesterday.",
+        "lat": 11.558866666666667,
+        "lng": 104.92400277777779
+      }
+    ]
   }
 ]
