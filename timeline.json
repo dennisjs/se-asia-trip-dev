@@ -5034,6 +5034,12 @@
         "lng": 103.86252499999999
       },
       {
+        "id": "cambodia_flag.png",
+        "caption": "Cambodia National Flag",
+        "lat": 13.41165,
+        "lng": 103.863
+      },
+      {
         "id": "IMG_6328.png",
         "caption": "You'd be thinking that in arriving in the dark at about 5am, you'd be pretty much alone.  You'd be thinking wrong.",
         "lat": 13.41221111111111,
@@ -5082,12 +5088,6 @@
         "lng": 103.86270833333333
       },
       {
-        "id": "cambodia_flag.png",
-        "caption": "Cambodia National Flag",
-        "lat": 13.41165,
-        "lng": 103.863
-      },
-      {
         "id": "IMG_6378.png",
         "caption": "Monks on the grounds of Angkor Wat",
         "lat": 13.411694444444445,
@@ -5120,6 +5120,12 @@
       {
         "id": "IMG_6397.png",
         "caption": "A pic of the pic being taken that you should see next.",
+        "lat": 13.411772222222222,
+        "lng": 103.86447222222222
+      },
+      {
+        "id": "extra2.png",
+        "caption": "Group photo, Angkor Wat",
         "lat": 13.411772222222222,
         "lng": 103.86447222222222
       },
@@ -5244,6 +5250,12 @@
         "lng": 103.85906944444444
       },
       {
+        "id": "extra2.png",
+        "caption": "Group photo Bayon Temple",
+        "lat": 13.441011111111111,
+        "lng": 103.85906944444444
+      },
+      {
         "id": "IMG_6520.png",
         "caption": "Heading to Ta Prohm Temple, AKA \"Tomb Raider Temple\" as the movie was partially shot here.",
         "lat": 13.434752777777778,
@@ -5322,16 +5334,10 @@
         "lng": 103.89515555555556
       },
       {
-        "id": "extra2.png",
-        "caption": "Group photo at Angkor Wat",
-        "lat": 13.3117,
-        "lng": 103.8645
-      },
-      {
-        "id": "extra1.png",
-        "caption": "Group photo at Bayon",
-        "lat": 13.441,
-        "lng": 103.8591
+        "id": "extra3.png",
+        "caption": "Group photo at Ta Prohm (Tomb Raider Temple)",
+        "lat": 13.43,
+        "lng": 103.8952
       }
     ]
   }
