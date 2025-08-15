@@ -5034,12 +5034,6 @@
         "lng": 103.86252499999999
       },
       {
-        "id": "cambodia_flag.png",
-        "caption": "Cambodia National Flag",
-        "lat": 13.41165,
-        "lng": 103.863
-      },
-      {
         "id": "IMG_6328.png",
         "caption": "You'd be thinking that in arriving in the dark at about 5am, you'd be pretty much alone.  You'd be thinking wrong.",
         "lat": 13.41221111111111,
@@ -5120,12 +5114,6 @@
       {
         "id": "IMG_6397.png",
         "caption": "A pic of the pic being taken that you should see next.",
-        "lat": 13.411772222222222,
-        "lng": 103.86447222222222
-      },
-      {
-        "id": "extra2.png",
-        "caption": "Group photo, Angkor Wat",
         "lat": 13.411772222222222,
         "lng": 103.86447222222222
       },
@@ -5250,12 +5238,6 @@
         "lng": 103.85906944444444
       },
       {
-        "id": "extra1.png",
-        "caption": "Group photo Bayon Temple",
-        "lat": 13.441011111111111,
-        "lng": 103.85906944444444
-      },
-      {
         "id": "IMG_6520.png",
         "caption": "Heading to Ta Prohm Temple, AKA \"Tomb Raider Temple\" as the movie was partially shot here.",
         "lat": 13.434752777777778,
@@ -5334,10 +5316,48 @@
         "lng": 103.89515555555556
       },
       {
+        "id": "cambodia_flag.png",
+        "caption": "Cambodia National Flag",
+        "lat": 13.41165,
+        "lng": 103.863
+      },
+      {
+        "id": "extra2.png",
+        "caption": "Group photo, Angkor Wat",
+        "lat": 13.411772222222222,
+        "lng": 103.86447222222222
+      },
+      {
+        "id": "extra1.png",
+        "caption": "Group photo Bayon Temple",
+        "lat": 13.441011111111111,
+        "lng": 103.85906944444444
+      },
+      {
         "id": "extra3.png",
         "caption": "Group photo at Ta Prohm (Tomb Raider Temple)",
         "lat": 13.43,
         "lng": 103.8952
+      }
+    ]
+  },
+  {
+    "day": "Day 75",
+    "date": "08-15-25",
+    "description": "A quiet, mostly relax and planning day today.  It was a good thing I hadn't tried to do some temple touring as the rains were coming down quite hard for quite awhile.  I booked a long tour for tomorrow.  Will be at the northern border with Thailand for part of it so wish me well.",
+    "weather": "86\u00b0F, Overcast clouds, 68% humidity",
+    "photos": [
+      {
+        "id": "IMG_6617.png",
+        "caption": "Rainy day by the river in Siem Reap",
+        "lat": 13.3537,
+        "lng": 103.85713333333332
+      },
+      {
+        "id": "IMG_6618.png",
+        "caption": "Camodia dogs sleep wherever they damn well please",
+        "lat": 13.352302777777778,
+        "lng": 103.85348611111111
       }
     ]
   }
