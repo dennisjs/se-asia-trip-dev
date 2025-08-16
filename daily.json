@@ -869,5 +869,35 @@
       }
     ],
     "description": "Angkor Wat Complex Videos"
+  },
+    "2025-08-16": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6696.mp4",
+        "caption": "Beng Mealea temple"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6697.mp4",
+        "caption": "More Beng Mealea temple"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6699.mp4",
+        "caption": "Last one at Beng Mealea temple"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6747.mp4",
+        "caption": "Temple at Koh Ker Complex"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6788.mp4",
+        "caption": "Another temple at Koh Ker Complex + cool bird call"
+      }
+    ],
+    "description": "Beng Mealea & Koh Ker videos"
   }
 }
