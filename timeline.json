@@ -5387,7 +5387,7 @@
       },
       {
         "id": "IMG_6645.png",
-        "caption": "Beng Mealea - it was cool to see it in its virtually discovered state (minus the jungle)",
+        "caption": "Beng Mealea - it was cool to see it in it's virtually discovered state (minus the jungle)",
         "lat": 13.475525,
         "lng": 104.22960555555555
       },
@@ -5423,7 +5423,7 @@
       },
       {
         "id": "IMG_6725.png",
-        "caption": "Fallen walls and really nice wall sculpture, Beng Mealea",
+        "caption": "Fallen walls, Beng Mealea",
         "lat": 13.476344444444445,
         "lng": 104.22816388888889
       },
@@ -5494,12 +5494,6 @@
         "lng": 104.55002499999999
       },
       {
-        "id": "IMG_6903.png",
-        "caption": "Here is that elephant on the 50000 kip bill",
-        "lat": 13.348105555555556,
-        "lng": 103.85018888888888
-      },
-      {
         "id": "IMG_6795.png",
         "caption": "The main attraction at Koh Ker is this very large pyramid-like temple, made of 7 floors",
         "lat": 13.78325,
@@ -5531,7 +5525,7 @@
       },
       {
         "id": "IMG_6821.png",
-        "caption": "This temple wasn't the largest or the tallest but it was unique in both its stone colors (yellow/orange) and the very intricate carving work",
+        "caption": "This temple was the largest or the tallest but it was unique in both its stone colors (yellow/orange) and the very intricate carving work",
         "lat": 13.598830555555557,
         "lng": 103.96434722222223
       },
@@ -5630,6 +5624,26 @@
         "caption": "View as we left Banteay Srei",
         "lat": 13.598902777777779,
         "lng": 103.96277500000001
+      },
+      {
+        "id": "IMG_6903.png",
+        "caption": "Here is that elephant on the 50000 kip bill",
+        "lat": 13.348105555555556,
+        "lng": 103.85018888888888
+      }
+    ]
+  },
+  {
+    "day": "Day 77",
+    "date": "08-17-25",
+    "description": "Not much to report today.  I'm off to Battembang tomorrow morning!",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_6616.png",
+        "caption": "Haven't seen one of these tabs in a long time!",
+        "lat": 13.354044444444444,
+        "lng": 103.85887777777778
       }
     ]
   }
