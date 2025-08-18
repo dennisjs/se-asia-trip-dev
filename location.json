@@ -1,5 +1,12 @@
 [
   {
+    "place": "Battambang",
+    "lat": 13.10,
+    "lng": 103.202,
+    "arrival_date": "08-18-25",
+    "departure_date": "08-21-25"
+  },
+  {
     "place": "Siem Reap",
     "lat": 13.348,
     "lng": 103.85,
