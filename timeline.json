@@ -5646,5 +5646,67 @@
         "lng": 103.85887777777778
       }
     ]
+  },
+  {
+    "day": "Day 78",
+    "date": "08-18-25",
+    "description": "Fairly short travel day to Battambang via bus.  I spent the rest of the afternoon planning and booking my final days in Cambodia.  I'm staying on the cheap for the next week but then will stay at a fancy pants beach resort on an island for a whopping $130/night - by a wide margin the most expensive of the entire trip.",
+    "weather": "91\u00b0F, Overcast clouds, 52% humidity",
+    "photos": [
+      {
+        "id": "IMG_6913.png",
+        "caption": "Tuk Tuk snap of the riverside in Battambang",
+        "lat": 13.103475,
+        "lng": 103.20107222222222
+      },
+      {
+        "id": "IMG_6916.png",
+        "caption": "Oh lookie who's in the mirror!",
+        "lat": 13.10651388888889,
+        "lng": 103.19873055555556
+      },
+      {
+        "id": "IMG_6929.png",
+        "caption": "Statue drive-by in the tuk tuk",
+        "lat": 13.107613888888888,
+        "lng": 103.19359722222222
+      },
+      {
+        "id": "IMG_6944.png",
+        "caption": "Went to see this fairly janky circus tonight - still fun!  They apparently set a world record for longest circus act (24 hrs)",
+        "lat": 13.111880555555555,
+        "lng": 103.18608055555556
+      },
+      {
+        "id": "IMG_6950.png",
+        "caption": "It's a very budget / high school version of an acrobatic circus but they still had some skillz",
+        "lat": 13.112066666666665,
+        "lng": 103.18622500000001
+      },
+      {
+        "id": "IMG_6952.png",
+        "caption": "This is a school (high school?) of Performing Arts",
+        "lat": 13.112066666666665,
+        "lng": 103.18624166666667
+      },
+      {
+        "id": "IMG_6953.png",
+        "caption": "Puppets / shadowbox at the circus",
+        "lat": 13.112086111111111,
+        "lng": 103.18626388888889
+      },
+      {
+        "id": "IMG_6957.png",
+        "caption": "This school was started to help young children deal with loss after all of the revolution carnage",
+        "lat": 13.112077777777777,
+        "lng": 103.18625555555556
+      },
+      {
+        "id": "IMG_6958.png",
+        "caption": "Performers.  I don't think these were high schoolers but they do offer training for this to students.",
+        "lat": 13.111944444444443,
+        "lng": 103.18621111111112
+      }
+    ]
   }
 ]
