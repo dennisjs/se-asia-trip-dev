@@ -899,5 +899,45 @@
       }
     ],
     "description": "Beng Mealea & Koh Ker videos"
+  },
+    "2025-08-19": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_6994.mp4",
+        "caption": "Train disassembly so other train could pass"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_6996.mp4",
+        "caption": "Putting the train back together again!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7001.mp4",
+        "caption": "On the bamboo train, training through the countryside"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7012.mp4",
+        "caption": "More train shenanigans!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7091.mp4",
+        "caption": "Bats leaving the cave"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7096.mp4",
+        "caption": "Bats making cool patterns as they exit the cave"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7102.mp4",
+        "caption": "Last bat vid, same bat channel"
+      }
+    ],
+    "description": "Tour Day in Battambang"
   }
 }
