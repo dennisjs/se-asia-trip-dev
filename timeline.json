@@ -5712,7 +5712,7 @@
   {
     "day": "Day 79",
     "date": "08-19-25",
-    "description": "Half-day tour.  First we saw a few miscellaneous sites today, nothing special, then we went to the famous Bamboo Train, which actually is a single train 'cart'.  There are several of these depending upon how many tourists are there.  They  did an up and back with a forced 10 minute wait at the terminus to get you to buy stuff from the ad-hoc shops there.  These things moved pretty quickly.  Of course they were relatively dangerous.  Since it was an up and back you'd come upon riders heading in the opposite direction.  So you have to both stop and one cart gets removed (in pieces: the platform, then the axles separately) to let the other go by.  Oh, and these tracks are shared with a regular full-sized train.  Not the safest transport but it was a lot of fun and the countryside was beautiful.  Most of this trip we were in the rural countryside which was really nice.  Then lunch, then the Killing Cave which was another Khmer Rouge site.  I won't get into the details but 8,000 people were killed in this cave.  The 45 minute talk our guide gave us was very interesting.  Pretty much every family in Cambodia has felt the pain of this era and have lost family members.  In his family's story, his father was accused of being a teacher (yep, being a teacher meant death) but he managed to impersonate being a farmer - long story but he had several close calls but survived and moved his family to Thailand where there were refugee camps.  This is where our guide was born.  Then later they made it back to Battambang.  Finally we went to the famous Bat Cave where the was a crowd of maybe 100 or so waiting.  They came out after sunset in a medium-sized stream.  I expected a large cloud but that's not how it went.  They exit over a period of 15-30 minutes then return very early in the morning.  It was a fun day and a fun tour and the people on it were also very nice and fun to hang out with.",
+    "description": "Half-day tour.  First we saw a few miscellaneous sites today, nothing special, then we went to the famous Bamboo Train, which actually is a single train 'cart'.  There are several of these depending upon how many tourists are there.  They  did an up and back with a forced 10 minute wait at the terminus to get you to buy stuff from the ad-hoc shops there.  These things moved pretty quickly.  Of course they were relatively dangerous.  Since it was an up and back you'd come upon riders heading in the opposite direction.  So you have to both stop and one cart gets removed (in pieces: the platform, then the axles separately) to let the other go by.  Oh, and these tracks are shared with a regular full-sized train.  Not the safest transport but it was a lot of fun and the countryside was beautiful.  Most of this trip we were in the rural countryside which was really nice.  Then lunch, then the Killing Cave which was another Khmer Rouge site.  I won't get into the details but 8,000 people were killed in this cave.  The 45 minute talk our guide gave us was very interesting.  Pretty much every family in Cambodia has felt the pain of this era and have lost family members.  In his family's story, his father was accused of being a teacher (yep, being a teacher meant death) but he managed to impersonate being a farmer - long story but he had several close calls but survived and moved his family to Thailand where there were refugee camps.  This is where our guide was born.  Then later they made it back to Battambang.  Finally we went to the famous Bat Cave where there was a crowd of maybe 100 or so waiting.  They came out after sunset in a medium-sized stream.  I expected a large cloud but that's not how it went.  They exit over a period of 15-30 minutes then return very early in the morning.  It was a fun day and a fun tour and the people on it were also very nice and fun to hang out with.",
     "weather": "89\u00b0F, Overcast clouds, 56% humidity",
     "photos": [
       {
@@ -5844,26 +5844,82 @@
       {
         "id": "761e95f8-9369-4d5c-823b-0d053ca6c6bf.png",
         "caption": "Guide photo of us on the bamboo train",
-        "lat": 13.00855,
-        "lng": 103.24485833333334
+        "lat": null,
+        "lng": null
       },
       {
         "id": "add7e8fc-ce27-4995-a779-58f887ad57bb.png",
         "caption": "Ready to meet our fate on the bamboo train",
-        "lat": 13.00855,
-        "lng": 103.24485833333334
+        "lat": null,
+        "lng": null
       },
       {
         "id": "81a25489-d549-48d1-920d-2c4500a877ce.png",
         "caption": "Lunch with a great tour group!",
-        "lat": 13.01,
-        "lng": 103.24485833333334
+        "lat": null,
+        "lng": null
       },
       {
         "id": "de573de5-5cce-4f6d-b9da-f324528d9753.png",
         "caption": "In our Tuk Tuk",
-        "lat": 13.026969444444445,
-        "lng": 103.09980833333333
+        "lat": null,
+        "lng": null
+      }
+    ]
+  },
+  {
+    "day": "Day 80",
+    "date": "08-20-25",
+    "description": "Relax day and my last day in Battambang.  Not a ton to do in the city but did take a nice evening walk around.  So many people out doing exercise, walking, aerobics, etc.  I have a very long travel day tomorrow - about 9 hours of van transit if things go correctly.  My first van canceled on me so was forced to get a cheaper, less comfy ride and have to transit through Phnom Penh (quite out of the way) to get to my destination: Kampot.  I sure hope it goes smoothly.",
+    "weather": "93\u00b0F, Overcast clouds, 49% humidity",
+    "photos": [
+      {
+        "id": "IMG_7120.png",
+        "caption": "Sunset, my last night in Battambang",
+        "lat": 13.097372222222223,
+        "lng": 103.19990555555556
+      },
+      {
+        "id": "IMG_7122.png",
+        "caption": "\"Aerobic Park\".  Tons of people out walking, doing aerobics, etc.",
+        "lat": 13.094266666666668,
+        "lng": 103.19988333333333
+      },
+      {
+        "id": "IMG_7124.png",
+        "caption": "Sangker River, Battambang",
+        "lat": 13.094222222222223,
+        "lng": 103.19976944444444
+      },
+      {
+        "id": "IMG_7131.png",
+        "caption": "Battambang",
+        "lat": 13.094561111111112,
+        "lng": 103.19960833333333
+      },
+      {
+        "id": "IMG_7139.png",
+        "caption": "Sangker River, dusk",
+        "lat": 13.097136111111112,
+        "lng": 103.19954722222222
+      },
+      {
+        "id": "IMG_7146.png",
+        "caption": "Sangker RIver",
+        "lat": 13.097194444444446,
+        "lng": 103.19927222222222
+      },
+      {
+        "id": "IMG_7156.png",
+        "caption": "I'm pretty sure I Pasta'd this place yesterday on the Tuk Tuk",
+        "lat": 13.103544444444443,
+        "lng": 103.20089722222222
+      },
+      {
+        "id": "IMG_7157.png",
+        "caption": "Also, pretty sure this is the Dark Lord of the monks",
+        "lat": 13.101669444444443,
+        "lng": 103.20062222222222
       }
     ]
   }
