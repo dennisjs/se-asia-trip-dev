@@ -939,5 +939,20 @@
       }
     ],
     "description": "Tour Day in Battambang"
+  },
+    "2025-08-20": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_7121.mp4",
+        "caption": "Aerobics!"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7158.mp4",
+        "caption": "This is unusual.  I heard this singing from my room, went outside and followed the noise.  Got sorta close then it stopped.  I asked the guy at the hotel and he said it was that an older person had died and this is like a memorial song.  Really haunting, but beautiful music."
+      }
+    ],
+    "description": "Just a few videos from this evening in Battambant"
   }
 }
