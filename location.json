@@ -1,7 +1,14 @@
 [
   {
+    "place": "Kampot",
+    "lat": 10.6093,
+    "lng": 104.1802,
+    "arrival_date": "08-21-25",
+    "departure_date": ""
+  },
+  {
     "place": "Battambang",
-    "lat": 13.10,
+    "lat": 13.1,
     "lng": 103.202,
     "arrival_date": "08-18-25",
     "departure_date": "08-21-25"
@@ -11,7 +18,7 @@
     "lat": 13.348,
     "lng": 103.85,
     "arrival_date": "08-13-25",
-    "departure_date": ""
+    "departure_date": "08-21-25"
   },
   {
     "place": "Phnom Penh, Cambodia",
