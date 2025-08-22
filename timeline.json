@@ -5926,7 +5926,7 @@
   {
     "day": "Day 81",
     "date": "08-21-25",
-    "description": "Long travel day.  Very concerned for my safety with drivers of both stretches but the 1st really stressed me out.  BTW, today was the first day of my trip where it rained the entire day for me.  Pretty remarkable.  But the wet 2-lane, undivided roadway with huge trucks and a million scooters and the driver's insane speeds just made for a very scary ride.  Not great.  It's still raining here in my new location of Kampot.  Getting pretty near the western coast of Cambodia at this point.  It's supposed to rain a fair amount tomorrow so will likely make that the 'relax day' and the next 1 or 2 'tour days'.  Staying at another excellent under-$20 hotel.  Very nice room and hopefully hot water in the morning.",
+    "description": "Long travel day.  Very concerned for my safety with both drivers of the day but the 1st really stressed me out.  BTW, today was the first day of my trip where it rained the entire day for me.  Pretty remarkable.  But the wet 2-lane, undivided roadway with huge trucks and a million scooters and the drivers insane speeds just made for a very scary ride.  Not great.  It's still raining here in my new location of Kampot.  Getting pretty near the western coast of Cambodia at this point.  It's supposed to rain a fair amount tomorrow so will likely make that the 'relax day' and the next 1 or 2 'tour days'.  Staying at another excellent under-$20 hotel.  Very nice room and hopefully hot water in the morning.",
     "weather": "82\u00b0F, Overcast clouds, 72% humidity",
     "photos": [
       {
@@ -5937,15 +5937,101 @@
       },
       {
         "id": "IMG_7178.png",
-        "caption": "There were obviously some very large factories in this area (no idea what companies) and this is how they hauled their employees to/from work.  They were ass-to-naval and packed in there like cattle.  Seems quite wrong to me and these weren't right-down-the-street trips.",
+        "caption": "There were obviously some very large factories in this area (no idea what companies) and this is how they hauled their employees to/from work.  There were ass-to-naval in there like cattle.  Seems quite wrong to me and these weren't right-down-the-street trips.",
         "lat": 11.005666666666666,
         "lng": 104.67060833333333
+      }
+    ]
+  },
+  {
+    "day": "Day 82",
+    "date": "08-22-25",
+    "description": "Given that the weather was looking good, it ended up being a tour day.  We some some rain in the afternoon but it wasn't bad.  Tour started with a salt farm tour.  But salt season is like January - March or something so there was nothing to see.  Though we still went there.  Then we visited Phnom Chhngok Cave which wasn't the most impressive cave I've seen on the trip (maybe the 5th most impressive) but it was still nice and we all had a fresh coconut and coconut water which was excellent.  Then we hit the pepper farm to ensure we made it to all of the major seasonings.  You wouldn't believe it but they actually had an hour long tour at the pepper farm.  Followed by about a 30-40 minute pepper tasting.  Yes, you heard right, a pepper tasting.  And these weren't primarily like chili peppers (there were a few), but peppercorn peppers.  I bought some green pepper hot sauce and some peppered dried pineapple to bring back home.  Pineapple may not make it that far.  Then we headed to Kep, a nearby beach town and had lunch at a crab place - very good.  Then home.  An enjoyable day!",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_7182.png",
+        "caption": "This is your typical SE Asia password though this one has an added level of security in that they're doubling the numbers",
+        "lat": 10.609505555555556,
+        "lng": 104.18096944444444
       },
       {
-        "id": "IMG_7163.GIF",
-        "caption": "Quite a bit of flooding observed during my long travel day",
-        "lat": 11.2,
-        "lng": 104.7
+        "id": "IMG_7185.png",
+        "caption": "Phnom Chhngok Cave entrance",
+        "lat": 10.642380555555555,
+        "lng": 104.26941666666667
+      },
+      {
+        "id": "IMG_7194.png",
+        "caption": "Phnom Chhngok Cave inside looking out",
+        "lat": 10.642955555555556,
+        "lng": 104.26898888888888
+      },
+      {
+        "id": "IMG_7198.png",
+        "caption": "Phnom Chhngok Cave",
+        "lat": 10.643005555555556,
+        "lng": 104.26895277777777
+      },
+      {
+        "id": "IMG_7199.png",
+        "caption": "Phnom Chhngok Cave next to temple",
+        "lat": 10.643013888888888,
+        "lng": 104.26895277777777
+      },
+      {
+        "id": "IMG_7203.png",
+        "caption": "Inside the temple built in ~600AD",
+        "lat": 10.643019444444445,
+        "lng": 104.26895277777777
+      },
+      {
+        "id": "IMG_7205.png",
+        "caption": "Inside temple illuminated by flashlight",
+        "lat": 10.643019444444445,
+        "lng": 104.26895277777777
+      },
+      {
+        "id": "IMG_7211.png",
+        "caption": "Outside the temple inside the cave outside the city of Kampot",
+        "lat": 10.643025,
+        "lng": 104.26895277777777
+      },
+      {
+        "id": "IMG_7215.png",
+        "caption": "A bowl full of flowers",
+        "lat": 10.642355555555556,
+        "lng": 104.26918055555555
+      },
+      {
+        "id": "IMG_7219.png",
+        "caption": "Visit to a pepper farm.  This is the pepper plant.  We actually did pepper tastings, can you believe it?  They did have some \"chili\" peppers but most were the peppercorn kind",
+        "lat": 10.612472222222221,
+        "lng": 104.31754166666666
+      },
+      {
+        "id": "IMG_7220.png",
+        "caption": "Close up of very juvenile peppers",
+        "lat": 10.612630555555555,
+        "lng": 104.3176111111111
+      },
+      {
+        "id": "IMG_7223.png",
+        "caption": "Shrubbery & clouds at the pepper farm",
+        "lat": 10.612405555555554,
+        "lng": 104.31684166666666
+      },
+      {
+        "id": "IMG_7231.png",
+        "caption": "Kep beach, not far from Kampot.  We had crab lunch here.",
+        "lat": 10.479341666666667,
+        "lng": 104.29366388888889
+      },
+      {
+        "id": "5a24da8d-bd37-4804-83d1-6d6bd693a904.png",
+        "caption": "This is a photo from my last stay in Battambang sent by the hotel in a bid to get me to leave a good review.  Review pressure is an ever-present thing here.",
+        "lat": null,
+        "lng": null
       }
     ]
   }
