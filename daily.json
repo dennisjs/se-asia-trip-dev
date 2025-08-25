@@ -959,5 +959,20 @@
       }
     ],
     "description": "Battambang music scene"
+  },
+    "2025-08-25": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_7303.mp4",
+        "caption": "Koh Rong - The Secret Garden Resort.  Hotel room tour"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7312.mp4",
+        "caption": "A very quiet beach at Koh Rong"
+      }
+    ],
+    "description": "Koh Rong Island"
   }
 }
