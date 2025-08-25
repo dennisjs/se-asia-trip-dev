@@ -6122,5 +6122,43 @@
         "lng": 104.1801138888889
       }
     ]
+  },
+  {
+    "day": "Day 85",
+    "date": "08-25-25",
+    "description": "Travel day.  Not as bad as I feared.  Weather started pretty rough this morning but later it mellowed out a bit.  It's not exactly sunny here at my new beach resort destination but it's certainly not cold either - it's quite nice actually and no rain here so far.  Took a boat to get here - some crazy waves and people getting splashed but we made it safe and the captain was a good one.  The Secret Garden is a very nice resort.  The resort fees are high but I was looking at the menu and it's actually fairly reasonable, considering.  There really isn't a town nearby I don't think but I heard you can rent a bike or scooter to make for a day trip.  Check out my room tour video - it's an interesting room.",
+    "weather": "82\u00b0F, Overcast clouds, 80% humidity",
+    "photos": [
+      {
+        "id": "IMG_7304.png",
+        "caption": "Just outside of my balcony",
+        "lat": 10.718013888888889,
+        "lng": 103.29081666666667
+      },
+      {
+        "id": "IMG_7308.png",
+        "caption": "Looking down the beach from outside my room",
+        "lat": 10.718255555555556,
+        "lng": 103.29101666666666
+      },
+      {
+        "id": "IMG_7309.png",
+        "caption": "Panorama of where I'm staying.  There actually were more people that showed up just after this but I happened to check in before them and so got out to the beach before anyone.  But it's still very uncrowded here.",
+        "lat": 10.718944444444444,
+        "lng": 103.29075555555555
+      },
+      {
+        "id": "IMG_7310.png",
+        "caption": "Looking up-beach toward the resort",
+        "lat": 10.718972222222222,
+        "lng": 103.290725
+      },
+      {
+        "id": "IMG_7316.png",
+        "caption": "The sand is so white and fluffy",
+        "lat": 10.717888888888888,
+        "lng": 103.29121388888889
+      }
+    ]
   }
 ]

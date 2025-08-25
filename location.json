@@ -1,10 +1,17 @@
 [
   {
+    "place": "Koh Rong",
+    "lat": 10.718,
+    "lng": 103.291,
+    "arrival_date": "08-25-25",
+    "departure_date": ""
+  },
+  {
     "place": "Kampot",
     "lat": 10.6093,
     "lng": 104.1802,
     "arrival_date": "08-21-25",
-    "departure_date": ""
+    "departure_date": "08-25-25"
   },
   {
     "place": "Battambang",
