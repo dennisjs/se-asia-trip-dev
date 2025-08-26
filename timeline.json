@@ -6166,5 +6166,37 @@
         "lng": 103.29118333333334
       }
     ]
+  },
+  {
+    "day": "Day 86",
+    "date": "08-26-25",
+    "description": "Had a nice day at the beach resort.  Didn't do too much other than beach life.  It's been overcast and a bit rainy but that's kept the temperatures really, really pleasant.  I prefer it to zero rain and 100 deg plus temps.",
+    "weather": "",
+    "photos": [
+      {
+        "id": "IMG_7325.png",
+        "caption": "I have searched far and wide for maple syrup in SE Asia.  I have climbed the highest mountains and swimmed the deepest seas to no avail.  That is, until I arrived on this little island of Koh Rong where honest-to-god maple syrup accompanied my French Toast at breakfast.  No honey (blech), no weird thin chocolate sauce. MAPLE-F'ING-SYRUP BY GOD!!!",
+        "lat": 10.717408333333333,
+        "lng": 103.29100833333334
+      },
+      {
+        "id": "IMG_7327.png",
+        "caption": "Short little beach hike today.  Ran into some local hacking off some sort of sea creatures off the rocks with hatchets.",
+        "lat": 10.722997222222222,
+        "lng": 103.289575
+      },
+      {
+        "id": "IMG_7331.png",
+        "caption": "Dinner was excellent.  Dessert was disappointing.  Last night I had this boozy chocolate milkshake.  Tonight that only had coconut ice cream.  Which accompanied my dessert and which was ICY.  Ice cream should be CREAMY, not ICY.",
+        "lat": 10.717469444444445,
+        "lng": 103.29089444444445
+      },
+      {
+        "id": "IMG_7334.png",
+        "caption": "Oh and lookie who showed up when the food arrived?  There are at least 3-4 dogs (very friendly, nice dogs unlike 90% of the dogs in Cambodia) who have staked their livelihoods on this fancy restaurant and boy has it paid off.  I saw a staff member slip one of them a full strip of bacon at breakfast this morning.  And then there are the patrons.  They've got a good gig going.  BTW, odd are very, very high that if it's a female dog, she's pregnant or feeding.  No such thing as dog birth control here. ",
+        "lat": 10.717516666666667,
+        "lng": 103.29096111111112
+      }
+    ]
   }
 ]
