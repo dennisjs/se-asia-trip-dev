@@ -6198,5 +6198,31 @@
         "lng": 103.29096111111112
       }
     ]
+  },
+  {
+    "day": "Day 87",
+    "date": "08-27-25",
+    "description": "Another nice relaxing day with intermittant rain keeping temperatures in check.  It's very nice but I'm definitely looking forward to the trip home.  One more day here then several transit / buffer days before I head back to the mess of country we have right now hahahaha.",
+    "weather": "83\u00b0F, Overcast clouds, 71% humidity",
+    "photos": [
+      {
+        "id": "IMG_7335.png",
+        "caption": "I ordered a breakfast burrito.  That is ketchup.  It will be nice to get back home.",
+        "lat": 10.717508333333333,
+        "lng": 103.29105277777778
+      },
+      {
+        "id": "IMG_7336.png",
+        "caption": "After dark, Koh Rong Island",
+        "lat": 10.717816666666668,
+        "lng": 103.29099166666667
+      },
+      {
+        "id": "IMG_7339.png",
+        "caption": "Koh Rong, 8pm",
+        "lat": 10.717847222222222,
+        "lng": 103.29116944444445
+      }
+    ]
   }
 ]
