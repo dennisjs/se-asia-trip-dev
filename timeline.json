@@ -6224,5 +6224,37 @@
         "lng": 103.29116944444445
       }
     ]
+  },
+  {
+    "day": "Day 88",
+    "date": "08-28-25",
+    "description": "Last full day in Koh Rong!  It's been very relaxing.  The slowness actually got me to doing some music-making for the first time of the trip!  Hadn't expected that but was doing other technical things / learnings when I wasn't touring so music got the short end of that stick.  I travel to Phnom Penh tomorrow for 1 night, then a flight tomorrow back to Bangkok.",
+    "weather": "82\u00b0F, Broken clouds, 79% humidity",
+    "photos": [
+      {
+        "id": "IMG_7346.png",
+        "caption": "Sunset Koh Rong",
+        "lat": 10.71915,
+        "lng": 103.29083888888889
+      },
+      {
+        "id": "IMG_7360.png",
+        "caption": "Opposite direction - few people about",
+        "lat": 10.719988888888889,
+        "lng": 103.29050555555555
+      },
+      {
+        "id": "IMG_7379.png",
+        "caption": "Clear beaches both directions",
+        "lat": 10.718941666666666,
+        "lng": 103.29094722222221
+      },
+      {
+        "id": "IMG_7395.png",
+        "caption": "Sunset Koh Rong - my last full day here!",
+        "lat": 10.71925,
+        "lng": 103.29070277777778
+      }
+    ]
   }
 ]
