@@ -1,10 +1,17 @@
 [
   {
+    "place": "Phnom Penh",
+    "lat": 11.558,
+    "lng": 104.921,
+    "arrival_date": "08-29-25",
+    "departure_date": ""
+  },
+  {
     "place": "Koh Rong",
     "lat": 10.718,
     "lng": 103.291,
     "arrival_date": "08-25-25",
-    "departure_date": ""
+    "departure_date": "08-29-25"
   },
   {
     "place": "Kampot",
