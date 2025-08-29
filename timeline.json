@@ -6256,5 +6256,43 @@
         "lng": 103.29070277777778
       }
     ]
+  },
+  {
+    "day": "Day 89",
+    "date": "08-29-25",
+    "description": "Travel day back to Phnom Penh - went pretty smoothly.  Just walked around a bit.  Flying to Bangkok early next morning.",
+    "weather": "90\u00b0F, Scattered clouds, 74% humidity",
+    "photos": [
+      {
+        "id": "IMG_7409.png",
+        "caption": "Dawn, Koh Rong",
+        "lat": 10.718044444444445,
+        "lng": 103.29073333333334
+      },
+      {
+        "id": "IMG_7410.png",
+        "caption": "Dawn clouds",
+        "lat": 10.717836111111112,
+        "lng": 103.29165
+      },
+      {
+        "id": "IMG_7418.png",
+        "caption": "Was out and about in Phnom Penh when the heavens opened up.  This wash garage let me hang out and even offered me a chair.",
+        "lat": 11.559369444444446,
+        "lng": 104.92425555555556
+      },
+      {
+        "id": "IMG_7419.png",
+        "caption": "Walking around Phnom Penh this evening - temple",
+        "lat": 11.565347222222224,
+        "lng": 104.93202222222223
+      },
+      {
+        "id": "IMG_7429.png",
+        "caption": "National monument, Phnom Penh",
+        "lat": 11.556925000000001,
+        "lng": 104.92861111111111
+      }
+    ]
   }
 ]
