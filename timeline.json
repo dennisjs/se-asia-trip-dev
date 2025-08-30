@@ -6294,5 +6294,67 @@
         "lng": 104.92861111111111
       }
     ]
+  },
+  {
+    "day": "Day 90",
+    "date": "08-30-25",
+    "description": "Very smooth transit and immigration coming from Cambodia and entering Thailand.  Bangkok unchanged from as I left it.  Revisited several of my favorite food places and it's Saturday so it was good timing to check out the Night Market in Chinatown.  I have several - now unneeded - buffer days here before my flight home on Tuesday.  Not really planning on any tours but you never now.",
+    "weather": "92\u00b0F, Overcast clouds, 47% humidity",
+    "photos": [
+      {
+        "id": "IMG_7435.png",
+        "caption": "Went back for this amazing green curry that I tried the last time I was in Bangkok.  It's in this alley and I only found it by checking the location on my last photo there",
+        "lat": 13.743766666666666,
+        "lng": 100.509025
+      },
+      {
+        "id": "IMG_7438.png",
+        "caption": "A very nice - right? - alley near the green curry place, which itself was in an alley",
+        "lat": 13.743155555555555,
+        "lng": 100.5084138888889
+      },
+      {
+        "id": "IMG_7439.png",
+        "caption": "Night market in Chinatown, Bangkok",
+        "lat": 13.74087222222222,
+        "lng": 100.50859722222222
+      },
+      {
+        "id": "IMG_7441.png",
+        "caption": "Seafod on display at the night market",
+        "lat": 13.740649999999999,
+        "lng": 100.50931666666666
+      },
+      {
+        "id": "IMG_7442.png",
+        "caption": "Things are hopping at the night market",
+        "lat": 13.740569444444443,
+        "lng": 100.50935277777778
+      },
+      {
+        "id": "IMG_7444.png",
+        "caption": "Yummy mango sticky rice at the night market",
+        "lat": 13.739988888888888,
+        "lng": 100.51036944444445
+      },
+      {
+        "id": "IMG_7445.png",
+        "caption": "This transformer guy at the night market",
+        "lat": 13.739655555555554,
+        "lng": 100.51108611111111
+      },
+      {
+        "id": "IMG_7450.png",
+        "caption": "Hahaha the Moneky Poo Garden Bar.  Oh wait, that's a 'D'",
+        "lat": 13.744683333333333,
+        "lng": 100.55778611111111
+      },
+      {
+        "id": "IMG_7453.png",
+        "caption": "Cool Tuk Tuk near my hotel in Bangkok",
+        "lat": 13.744977777777777,
+        "lng": 100.55793055555556
+      }
+    ]
   }
 ]

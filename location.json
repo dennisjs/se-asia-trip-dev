@@ -1,10 +1,17 @@
 [
   {
+    "place": "Bangkok",
+    "lat": 13.7417,
+    "lng": 100.5602,
+    "arrival_date": "08-30-25",
+    "departure_date": ""
+  },
+  {
     "place": "Phnom Penh",
     "lat": 11.558,
     "lng": 104.921,
     "arrival_date": "08-29-25",
-    "departure_date": ""
+    "departure_date": "08-30-25"
   },
   {
     "place": "Koh Rong",
