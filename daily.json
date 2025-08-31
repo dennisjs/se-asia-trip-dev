@@ -974,5 +974,20 @@
       }
     ],
     "description": "Koh Rong Island"
+  },
+    "2025-08-31": {
+    "items": [
+      {
+        "type": "video",
+        "src": "media/IMG_7519.mp4",
+        "caption": "These women in costume were shooting a video as they play-acted that they were talking about something"
+      },
+      {
+        "type": "video",
+        "src": "media/IMG_7521.mp4",
+        "caption": "More costume posing!"
+      }
+    ],
+    "description": "Ayutthaya"
   }
 }
