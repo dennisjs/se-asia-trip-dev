@@ -6360,7 +6360,7 @@
   {
     "day": "Day 91",
     "date": "08-31-25",
-    "description": "Ultimately decided to book a tour today and I'm glad I did.  It was more temples but they were unique to the others I've seen.  These temples were in Ayutthaya which is about 40km north of Bangkok.  This was the former capital city of Thailand.  One thing unique about Ayutthaya - compared to Angkor Wat - is that is still is very much an active city.  Whereas Angkor Wat was fully abandoned.  It was a full day tour and met some nice people and even some Americans which is unique for this trip.",
+    "description": "Ultimately decided to book a tour today and I'm glad I did.  It was more temples but they were unique to the others I've seen.  These temples were in Ayutthaya which is about 40km north of Bangkok.  This was the former capital city of Thailand.  Once thing unique about Ayutthaya - compared to Angkor Wat - is that is still is very much an active city.  Whereas Angkor Wat was fully abandoned.  It was a full day tour and met some nice people and even some Americans which is unique for this trip.",
     "weather": "86\u00b0F, Overcast clouds, 64% humidity",
     "photos": [
       {
@@ -6476,6 +6476,50 @@
         "caption": "Was recommended to go to this Pad Thai place by out tour guide.  Not the best I've had in Bangkok, though",
         "lat": 13.745491666666666,
         "lng": 100.53550833333333
+      }
+    ]
+  },
+  {
+    "day": "Day 92",
+    "date": "09-01-25",
+    "description": "This will be my last entry!  It's been a great trip - I really enjoyed it!  Some highs, some lows, but overall really fantastic.  In the future I'd probably lean towards no more than 2 months.  3 is just a little long for my taste.  I will miss the daily adventures and every day wondering what crazy thing will happen because it usually was on that schedule haha.  Thanks for joining me!",
+    "weather": "91\u00b0F, Broken clouds, 59% humidity",
+    "photos": [
+      {
+        "id": "IMG_7540.png",
+        "caption": "Last bowl of Khao Soi for probably a VERY long time!  ",
+        "lat": 13.729655555555556,
+        "lng": 100.56813888888888
+      },
+      {
+        "id": "IMG_7541.png",
+        "caption": "Pint of Guinness on draft for my last night in Bangkok!",
+        "lat": 13.731644444444445,
+        "lng": 100.56804722222222
+      },
+      {
+        "id": "IMG_7542.png",
+        "caption": "Ahh Bangkok traffic you will not be missed",
+        "lat": 13.736663888888888,
+        "lng": 100.56118888888889
+      },
+      {
+        "id": "IMG_7543.png",
+        "caption": "Check out these Japanese grapes.  They are even bigger than they look here - like small plums!",
+        "lat": 13.737444444444444,
+        "lng": 100.56019722222221
+      },
+      {
+        "id": "IMG_7544.png",
+        "caption": "Bought this sticky rice in charred bamboo.  Have wanted to try.  I took a bite - not terrible but then realized the higher risk of food-borne illness, not really knowing the life of where this was made, etc.  So I ended up tossing it.  Gotta get on that plane tomorrow!",
+        "lat": 13.745122222222221,
+        "lng": 100.55756388888888
+      },
+      {
+        "id": "IMG_7547.png",
+        "caption": "Last pic of photo posing!  Taken on a rooftop pool across from my hotel room.",
+        "lat": 13.745111111111111,
+        "lng": 100.55754722222223
       }
     ]
   }
